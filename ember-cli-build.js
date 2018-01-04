@@ -2,6 +2,10 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const StaticSiteJson = require('broccoli-static-site-json');
+const BroccoliMergeTrees = require('broccoli-merge-trees');
+
+const jsonTree = new StaticSiteJson(`content/ember/v2`, {});
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -21,5 +25,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  return new BroccoliMergeTrees([app.toTree(), jsonTree]);
 };
