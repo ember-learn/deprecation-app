@@ -5,7 +5,12 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const StaticSiteJson = require('broccoli-static-site-json');
 const BroccoliMergeTrees = require('broccoli-merge-trees');
 
-const jsonTree = new StaticSiteJson(`content/ember/v2`, {});
+const jsonTree = new StaticSiteJson(`content/ember/v2`, {
+  collections: [{
+    src: 'content/ember/v2',
+    output: 'ember-v2.json',
+  }]
+});
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {

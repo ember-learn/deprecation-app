@@ -3,4 +3,6 @@
 cycle.</p>
 <p>For more information on deprecations in Ember, see the <a href="/deprecations">main deprecations page</a>.</p>
 
-{{deprecation-article model=model}}
+{{#each model as |deprecation|}}
+  {{deprecation-article model=deprecation}}
+{{/each}}
