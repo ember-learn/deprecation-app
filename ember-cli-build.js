@@ -6,6 +6,7 @@ const StaticSiteJson = require('broccoli-static-site-json');
 const BroccoliMergeTrees = require('broccoli-merge-trees');
 
 const jsonTree = new StaticSiteJson(`content/ember/v2`, {
+  attributes: ['title', 'since', 'until'],
   collections: [{
     src: 'content/ember/v2',
     output: 'ember-v2.json',
