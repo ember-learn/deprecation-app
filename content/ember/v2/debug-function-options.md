@@ -1,6 +1,6 @@
 ---
 id: ember-debug.deprecate-options-missing, ember-debug.deprecate-id-missing, ember-debug.deprecate-until-missing, ember-debug.warn-options-missing, ember-debug.warn-id-missing
-name: Ember debug function options
+title: Ember debug function options
 until: 3.0.0
 since: 2.1
 ---

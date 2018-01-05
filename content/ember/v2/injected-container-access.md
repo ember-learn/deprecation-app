@@ -1,6 +1,6 @@
 ---
 id: ember-application.injected-container
-name: Injected container access
+title: Injected container access
 until: 3.0.0
 since: 2.3
 ---

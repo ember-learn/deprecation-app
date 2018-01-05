@@ -1,6 +1,6 @@
 ---
 id: ember-metal.binding
-name: Ember.Binding
+title: Ember.Binding
 until: 3.0.0
 since: 2.7
 ---

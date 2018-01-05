@@ -1,6 +1,6 @@
 ---
 id: ember-application.app-instance-registry
-name: Ember.Application#registry / Ember.ApplicationInstance#registry
+title: Ember.Application#registry / Ember.ApplicationInstance#registry
 until: 3.0.0
 since: 2.1
 ---

@@ -1,6 +1,6 @@
 ---
 id: ember-runtime.enumerable-contains
-name: Enumerable#contains
+title: Enumerable#contains
 until: 3.0.0
 since: 2.8
 ---

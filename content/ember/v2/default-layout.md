@@ -1,6 +1,6 @@
 ---
 id: ember-views.component.defaultLayout
-name: Ember.Component#defaultLayout
+title: Ember.Component#defaultLayout
 until: 3.0.0
 since: 2.1
 ---
