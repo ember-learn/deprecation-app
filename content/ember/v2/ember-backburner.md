@@ -1,6 +1,6 @@
 ---
 id: ember-metal.ember-backburner
-name: Ember.Backburner
+title: Ember.Backburner
 until: 2.8.0
 since: 2.7
 ---

@@ -1,6 +1,6 @@
 ---
 id: ember-application.app-instance-container
-name: Ember.ApplicationInstance#container
+title: Ember.ApplicationInstance#container
 until: 3.0.0
 since: 2.1
 ---

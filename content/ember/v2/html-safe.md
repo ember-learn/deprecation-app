@@ -1,6 +1,6 @@
 ---
 id: ember-htmlbars.ember-handlebars-safestring
-name: Use Ember.String.htmlSafe over Ember.Handlebars.SafeString
+title: Use Ember.String.htmlSafe over Ember.Handlebars.SafeString
 until: 3.0.0
 since: 2.8
 ---

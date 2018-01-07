@@ -1,6 +1,6 @@
 ---
 id: ember-view.current-state
-name: Ember.Component#currentState
+title: Ember.Component#currentState
 until: 2.3.0
 since: 2.1
 ---
