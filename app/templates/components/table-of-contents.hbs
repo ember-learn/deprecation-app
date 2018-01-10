@@ -3,5 +3,14 @@
     <a class="slide-widget-head" href="#toc toc_deprecations-added-in-ember-2-x">
       Deprecations added in {{result.since}}
     </a>
+    <ol style="display:block">
+      {{#each result.contents as |content|}}
+        <li class="level-3">
+          <a href="#toc">
+            {{content.title}}
+          </a>
+        </li>
+      {{/each}}
+    </ol>
   </li>
 {{/each}}
