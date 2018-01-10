@@ -1,10 +1,10 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model() {
+  model(params) {
     return this.store.query('content', {
-      path: 'ember',
-      version: 'v2',
+      path: params.project,
+      version: params.version,
     })
   }
 });
