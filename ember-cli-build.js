@@ -10,7 +10,7 @@ const jsonTree = new StaticSiteJson(`content/ember/v2`, {
   type: 'contents',
   collections: [{
     src: 'content/ember/v2',
-    output: 'ember-v2.json',
+    output: 'ember-v2.x.json',
   }]
 });
 

@@ -7,7 +7,12 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('v2');
+  this.route('ember', {
+    path: ':version'
+  });
+  this.route('show', {
+    path: ':project/:version'
+  });
 });
 
 export default Router;
