@@ -2,6 +2,10 @@ import Controller from '@ember/controller';
 import EmberObject, { computed } from '@ember/object';
 
 export default Controller.extend({
+  init() {
+    this._super(...arguments);
+    this.sortDefinition = ['since'];
+  },
   groupedResults: computed('sortedResults.[]', function() {
     let result = [];
     this.get('content').forEach(function(item) {
@@ -16,6 +20,5 @@ export default Controller.extend({
     });
     return result;
   }),
-  sortDefinition: ['since'],
   sortedResults: computed.sort('content.[]', 'sortDefinition')
 });
