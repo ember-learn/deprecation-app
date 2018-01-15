@@ -1,6 +1,8 @@
-<h4>{{model.title}}</h4>
-<h6>UNTIL: {{model.until}}</h6>
-<h6>SINCE: {{model.since}}</h6>
+<h3 class="anchorable-toc">Deprecations Added in {{model.since}}</h3>
+<h4 class="anchorable-toc" id={{idForTitle}}>{{model.title}}</h4>
+<h5 class="anchorable-toc" id={{idForUntil}}>until: {{model.until}}</h5>
+<h5 class="anchorable-toc">id: {{model.id}}</h5>
+
 <p>
   {{markdown-to-html model.content}}
 </p>
