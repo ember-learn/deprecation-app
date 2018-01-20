@@ -6,7 +6,7 @@ export default Controller.extend({
     this._super(...arguments);
     this.sortDefinition = ['since'];
   },
-  groupedResults: computed('sortedResults.[]', function() {
+  groupedResults: computed('content.[]', function() {
     let result = [];
     this.get('content').forEach(function(item) {
       let since = result.findBy('since', item.get('since'));
@@ -20,5 +20,5 @@ export default Controller.extend({
     });
     return result;
   }),
-  sortedResults: computed.sort('content.[]', 'sortDefinition')
+  sortedGroupedResults: computed.sort('groupedResults', 'sortDefinition'),
 });

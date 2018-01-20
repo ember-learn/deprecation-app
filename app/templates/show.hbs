@@ -1,5 +1,5 @@
 <div id="sidebar" class="sidebar" role="complementary">
-  {{table-of-contents groupedResults=groupedResults}}
+  {{table-of-contents sortedGroupedResults=sortedGroupedResults}}
   <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
 </div>
 
@@ -10,7 +10,10 @@
   cycle.</p>
   <p>For more information on deprecations in Ember, see the <a href="/deprecations">main deprecations page</a>.</p>
 
-  {{#each sortedResults as |deprecation|}}
-    {{deprecation-article model=deprecation}}
+  {{#each sortedGroupedResults as |result|}}
+    <h3 class="anchorable-toc">Deprecations Added in {{result.since}} </h3>
+      {{#each result.contents as |content|}}
+        {{deprecation-article model=content}}
+      {{/each}}
   {{/each}}
 </div>
