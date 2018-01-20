@@ -1,8 +1,8 @@
 ---
 id: ember-view.current-state
 title: Ember.Component#currentState
-until: 2.3.0
-since: 2.1
+until: '2.3.0'
+since: '2.1'
 ---
 
 The `currentState` property on `Ember.Component` instances is a private property that Ember uses

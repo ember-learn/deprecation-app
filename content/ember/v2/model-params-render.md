@@ -1,8 +1,8 @@
 ---
 id: ember-template-compiler.deprecate-render-model
 title: Model param in render helper
-until: 3.0.0
-since: 2.6
+until: '3.0.0'
+since: '2.6'
 ---
 
 Using the model param in the `{{render` helper is deprecated in favor of using

@@ -1,8 +1,8 @@
 ---
 id: ember-template-compiler.deprecate-render-block
 title: render helper with block
-until: 2.4.0
-since: 2.4
+until: '2.4.0'
+since: '2.4'
 ---
 
 The `{{render}}` helper was never intended to support a block form, but unfortunatley (mostly

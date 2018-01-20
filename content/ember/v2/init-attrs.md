@@ -1,8 +1,8 @@
 ---
 id: ember-views.did-init-attrs
 title: Ember.Component#didInitAttrs
-until: 3.0.0
-since: 2.6
+until: '3.0.0'
+since: '2.6'
 ---
 
 Using `didInitAttrs` is deprecated in favour of using `init`. When `init` is called the attrs sent in with the component will be

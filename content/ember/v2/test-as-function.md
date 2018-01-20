@@ -1,8 +1,8 @@
 ---
 id: ember-debug.deprecate-test-as-function
 title: Function as test in Ember.deprecate, Ember.warn, Ember.assert
-until: 2.5.0
-since: 2.2
+until: '2.5.0'
+since: '2.2'
 ---
 
 Calling `Ember.deprecate`, `Ember.warn` or `Ember.assert` with a function as test argument is deprecated.

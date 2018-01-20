@@ -1,8 +1,8 @@
 ---
 id: ember-application.app-initializer-initialize-arguments
 title: Initializer Arity
-until: 3.0.0
-since: 2.1
+until: '3.0.0'
+since: '2.1'
 ---
 
 In prior versions of Ember initializers have taken two arguments (generally labeled as

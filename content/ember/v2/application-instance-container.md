@@ -1,8 +1,8 @@
 ---
 id: ember-application.app-instance-container
 title: Ember.ApplicationInstance#container
-until: 3.0.0
-since: 2.1
+until: '3.0.0'
+since: '2.1'
 ---
 
 When instance initializers were added, using `appInstance.container.lookup` was suggested in lieu of using the first argument

@@ -1,8 +1,8 @@
 ---
 id: ember-metal.ember-backburner
 title: Ember.Backburner
-until: 2.8.0
-since: 2.7
+until: '2.8.0'
+since: '2.7'
 ---
 
 `Ember.Backburner` was private throughout the Ember 2.x series and will be

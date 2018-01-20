@@ -1,8 +1,8 @@
 ---
 id: ember-routing-view.deprecated-current-when
 title: Link-to's `currentWhen`
-until: 3.0.0
-since: 2.0
+until: '3.0.0'
+since: '2.0'
 ---
 
 When developers wanted to customize in what route a `{{link-to}}` should be considered "active" they
