@@ -1,8 +1,8 @@
 ---
 id: ember-string-utils.fmt
 title: Ember.String.fmt
-until: 3.0.0
-since: 2.0
+until: '3.0.0'
+since: '2.0'
 ---
 
 `Ember.String.fmt` was designed at a time when interpolating values in a JavaScript
