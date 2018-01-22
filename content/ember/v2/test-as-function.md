@@ -39,7 +39,7 @@ You have 3 options to refactor second argument from `function` to `boolean`:
 
 Example:
 
-``` javascript
+```javascript
 // ... message, options omitted for brevity
 
 // passing IIFE (1)
