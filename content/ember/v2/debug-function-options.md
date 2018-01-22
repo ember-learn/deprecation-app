@@ -1,8 +1,8 @@
 ---
 id: ember-debug.deprecate-options-missing, ember-debug.deprecate-id-missing, ember-debug.deprecate-until-missing, ember-debug.warn-options-missing, ember-debug.warn-id-missing
 title: Ember debug function options
-until: 3.0.0
-since: 2.1
+until: '3.0.0'
+since: '2.1'
 ---
 
 Starting in Ember 2.1 various debug functions now require a third argument (commonly called `options`).
