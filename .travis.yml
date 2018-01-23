@@ -43,5 +43,4 @@ jobs:
       if: branch = master AND NOT type = pull_request
       script: ember deploy production --activate
       env:
-        - JSON_ONLY=true
         - secure: "izMsb8cIFUK/hrUdYS1bsIly+Z3FgZgyoSIf+DavFxS0kb15sxlcNTDyRedf/iZenZutEHDaVcJhjvLamgJbTPpWRDkBk/IkO6kKPJSSSE/AmKEZOEUBIGKDb/wK64d6v+WZYUA1g/4Fj3c/ukaTfhaMxTnQxGzNuZTnQ6p/SNi27TyMU9f9noMeVOjlTovgKhvnal3XaGq9TLWMe4tlocTdmbk/Fqg4OYjcwKaPaAJTzP18kB+5+ZppnkLO/9Mw73SBtvPAXjbRNGbM5fwo0LhsK8vWUdDR0lnShdn44/n3QGf21XYyto4MmSJZzM5vwek4SrubRocdC6+aqh1R7xx8Uq7K9U8B4jOSTjO5aI1g5ziIEGT84MeK2/QchXvez7FkYyyzVPojJB+m/N717+zqbKoQB+QegjA+7SXgJjPoQhNpM0oMSo36HtMAVJEVXDhwOe/06qqto42BoaznO8lewJuO/Gu0y/5VsriwrWElOjgr6Atk1Pa0jFk/6jVWhu/R5ZHtch900+6JdmDtNVzF1mAJ2shjKhqfgUuQrtyKCyueAxiKA+nw2aaJk3fSi0qdc+5JL03/jbLP3zSoAoPzMZu7iGprDNezRZvdFzvnYMeWv1Brc0H5StOPfYbeTrpDKVa8Vev7bhjpMiwQTBVArUNOmQmwm1AAFKYZ7L8="
