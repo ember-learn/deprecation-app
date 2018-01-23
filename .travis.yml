@@ -1,3 +1,4 @@
+---
 language: node_js
 node_js:
   - "8"
@@ -6,24 +7,32 @@ sudo: required
 dist: trusty
 group: deprecated-2017Q4
 
+branches:
+  only:
+    - master
+
 addons:
   chrome: stable
 
 cache:
-  yarn: true
+  directories:
+    - $HOME/.npm
 
 env:
   global:
     # See https://git.io/vdao3 for details.
     - JOBS=1
-
+    - secure: "XxPiqUb7TfiqrrRvd1qeJIaw3ittaWbfk3kx31u8YIpTJL2bnLfDgWSAib1rXMCAch2kdwarNl1sq0+8McoRgwUJKA1V0hlePJVKBm7/NMu1/Bg2ihncfcCDtCCLRfirt98Rftmw/z+wID22tVmgozzHX1k1df4RJd0cTtsAv/SBXVZx24pPfssbcKzs4NaOlyMxOT3Id9WBrTYRRQkGQxUaE6xaw5CgXZppYC+UOWpnpJt0c9z50/y+Dpynyc3jdm+bAZt/QYzfpTf9tN/b5znoSwan048+gvGlb2e7WfMwcxXmcdRzPUTBB+cg++wwuO+iuj6z1UM1QDeSJMmnidudx/Zj9/F1mwCB8xgnXs+FrogJ9z1w8CZ3owSdELsHAzFTP8VNU4mzBnND76nFlG+ceVxx40iPyklNhaGJBKBF2qVKa7juCi8ut0QdOQFnN+5/cW/ykbbE7Nu4HIzg3+1rJsVyHYD8QoVhZL0L77sMnkPoFA0ea4THFRJvoslLKbxKabtWtpcma8dTAZfUfPuy8PGV6XImLeyVNPTBStPgVn/pbY19pSolWZETvHcAWa3QGb0SnuCb3hqSoIXwQ5k5UYEeuqBo710APh6LZk5UONfCJNWFDaX28WGXdz2AxGKDCcrzt1lzOsThRDApClsfI8kgLYfy+02lQzaajZs="
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
+  - npm install -g npm@5
+  - npm config set spin false
 
-install:
-  - yarn install --non-interactive
-
-script:
-  - yarn lint:js
-  - yarn test
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run lint:js
+        - npm test
+    - stage: Staging Deployment
+      if: branch = master AND NOT type = pull_request
+      script: ember deploy production --activate
