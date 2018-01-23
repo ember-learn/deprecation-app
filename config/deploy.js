@@ -1,25 +1,57 @@
-/* eslint-env node */
-'use strict';
+/* jshint node: true */
+
+let credentials;
+
+try {
+  credentials = require('./credentials.json');
+} catch (e) {
+  credentials = {};
+}
 
 module.exports = function(deployTarget) {
-  let ENV = {
-    build: {}
-    // include other plugin configuration that applies to all deploy targets here
+  var ENV = {
+    build: {
+      environment: "production"
+    },
+    pipeline: {
+      alias: {
+        s3: { as: ['s3-standard', 's3-static'] },
+      },
+      activateOnDeploy: true
+    },
+    "revision-data": {
+      "type": "version-commit"
+    },
+    's3-standard': {
+    },
+    's3-static': {
+      filePattern: '**/*.{json,html}',
+      cacheControl: 'max-age=3600, public',
+    },
+    's3-index': {
+      allowOverwrite: true
+    },
   };
 
-  if (deployTarget === 'development') {
-    ENV.build.environment = 'development';
-    // configure other plugins for development deploy target here
-  }
-
-  if (deployTarget === 'staging') {
-    ENV.build.environment = 'production';
-    // configure other plugins for staging deploy target here
-  }
-
   if (deployTarget === 'production') {
-    ENV.build.environment = 'production';
-    // configure other plugins for production deploy target here
+
+    const bucket = 'emberdeprecationsapp.stonecircle.io';
+    const region = 'eu-west-1'
+
+    ENV['s3-standard'].accessKeyId = credentials.key || process.env.AWS_KEY;
+    ENV['s3-standard'].secretAccessKey = credentials.secret || process.env.AWS_SECRET;
+    ENV['s3-standard'].bucket = bucket;
+    ENV['s3-standard'].region = region;
+
+    ENV['s3-static'].accessKeyId = credentials.key || process.env.AWS_KEY;
+    ENV['s3-static'].secretAccessKey = credentials.secret || process.env.AWS_SECRET;
+    ENV['s3-static'].bucket = bucket;
+    ENV['s3-static'].region = region;
+
+    ENV["s3-index"].accessKeyId = credentials.key || process.env.AWS_KEY;
+    ENV["s3-index"].secretAccessKey = credentials.secret || process.env.AWS_SECRET;
+    ENV["s3-index"].bucket = bucket;
+    ENV["s3-index"].region = region;
   }
 
   // Note: if you need to build some configuration asynchronously, you can return

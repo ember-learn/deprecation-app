@@ -15,7 +15,11 @@ const jsonTree = new StaticSiteJson(`content/ember/v2`, {
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    prember: {
+      urls: [
+        '/ember/v2.x'
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
