@@ -13,12 +13,18 @@ const jsonTree = new StaticSiteJson(`content/ember/v2`, {
   }]
 });
 
+let urls = [];
+
+if (!process.env.JSON_ONLY) {
+  urls = [
+    '/ember/v2.x'
+  ];
+}
+
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     prember: {
-      urls: [
-        '/ember/v2.x'
-      ]
+      urls,
     }
   });
 

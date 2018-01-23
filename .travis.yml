@@ -33,7 +33,13 @@ jobs:
       script:
         - npm run lint:js
         - npm test
-    - stage: Staging Deployment
+    - stage: Staging Deployment JSON
+      if: branch = master AND NOT type = pull_request
+      script: ember deploy production --activate
+      env:
+        - JSON_ONLY=true
+        - secure: "XxPiqUb7TfiqrrRvd1qeJIaw3ittaWbfk3kx31u8YIpTJL2bnLfDgWSAib1rXMCAch2kdwarNl1sq0+8McoRgwUJKA1V0hlePJVKBm7/NMu1/Bg2ihncfcCDtCCLRfirt98Rftmw/z+wID22tVmgozzHX1k1df4RJd0cTtsAv/SBXVZx24pPfssbcKzs4NaOlyMxOT3Id9WBrTYRRQkGQxUaE6xaw5CgXZppYC+UOWpnpJt0c9z50/y+Dpynyc3jdm+bAZt/QYzfpTf9tN/b5znoSwan048+gvGlb2e7WfMwcxXmcdRzPUTBB+cg++wwuO+iuj6z1UM1QDeSJMmnidudx/Zj9/F1mwCB8xgnXs+FrogJ9z1w8CZ3owSdELsHAzFTP8VNU4mzBnND76nFlG+ceVxx40iPyklNhaGJBKBF2qVKa7juCi8ut0QdOQFnN+5/cW/ykbbE7Nu4HIzg3+1rJsVyHYD8QoVhZL0L77sMnkPoFA0ea4THFRJvoslLKbxKabtWtpcma8dTAZfUfPuy8PGV6XImLeyVNPTBStPgVn/pbY19pSolWZETvHcAWa3QGb0SnuCb3hqSoIXwQ5k5UYEeuqBo710APh6LZk5UONfCJNWFDaX28WGXdz2AxGKDCcrzt1lzOsThRDApClsfI8kgLYfy+02lQzaajZs="
+    - stage: Staging Deployment Pre-Render
       if: branch = master AND NOT type = pull_request
       script: ember deploy production --activate
       env:
