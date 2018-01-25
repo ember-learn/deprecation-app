@@ -6,7 +6,7 @@
     <ol style="display:block">
       {{#each result.contents as |content|}}
         <li class="level-3">
-          <a href="#toc">
+          <a href="#{{id-for-deprecation content.id}}">
             {{content.title}}
           </a>
         </li>
