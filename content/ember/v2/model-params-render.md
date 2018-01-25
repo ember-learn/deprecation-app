@@ -14,11 +14,11 @@ For example, if you had:
 {{render 'foo-bar' someModel}}
 ```
 
-```app/templates/foo-bar.hbs
+```handlebars {data-filename=app/templates/foo-bar.hbs}
 <p>{{someProp}} template stuff here</p>
 ```
 
-```app/controllers/foo-bar.js
+```javascript {data-filename=app/controllers/foo-bar.js}
 export default Controller.extend({
   someProp: Ember.computed('model.yolo', function() {
     return this.get('model.yolo');
@@ -32,11 +32,11 @@ Would be refactored to:
 {{foo-bar model=someModel}}
 ```
 
-```app/templates/components/foo-bar.hbs
+```handlebars {app/templates/components/foo-bar.hbs}
 <p>{{someProp}} template stuff here</p>
 ```
 
-```app/components/foo-bar.js
+```javascript {app/components/foo-bar.js}
 export default Component.extend({
   someProp: Ember.computed('model.yolo', function() {
     return this.get('model.yolo');

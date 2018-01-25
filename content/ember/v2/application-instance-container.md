@@ -16,7 +16,7 @@ Please refactor from using `appInstance.container.lookup` to `appInstance.lookup
 
 Before:
 
-```app/initializers/preload-store.js
+```javascript {data-filename=app/initializers/preload-store.js}
 export function initialize(appInstance) {
   let store = appInstance.container.lookup('service:store');
 
@@ -31,7 +31,7 @@ export default {
 
 After:
 
-```app/instance-initializers/preload-store.js
+```javascript {data-filename=app/instance-initializers/preload-store.js}
 export function initialize(appInstance) {
   let store = appInstance.lookup('service:store');
 

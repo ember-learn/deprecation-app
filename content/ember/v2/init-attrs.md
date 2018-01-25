@@ -16,7 +16,7 @@ Given a htmlbars template like this:
 
 Before:
 
-```js
+```javascript
 export default Ember.Component.extend({
   didInitAttrs() {
     this._super(...arguments);
@@ -27,7 +27,7 @@ export default Ember.Component.extend({
 
 After:
 
-```js
+```javascript
 export default Ember.Component.extend({
   init() {
     this._super(...arguments);

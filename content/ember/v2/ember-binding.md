@@ -18,7 +18,7 @@ to start for creating and consuming services to replace your global bindings.
 In general though, you will replace your global with a service and consume it
 like this:
 
-```js
+```javascript
 export default Ember.Component.extend({
   // will load the service in file /app/services/cool-service.js
   coolService: Ember.inject.service()
@@ -27,7 +27,7 @@ export default Ember.Component.extend({
 
 This would replace a binding that may have looked like this:
 
-```js
+```javascript
 export default Ember.Component.extend({
   boringObjectBinding: 'MyApp.boringObject'
 });
@@ -38,7 +38,7 @@ less work:
 
 If you had this:
 
-```js
+```javascript
 export default Ember.Component.extend({
   thingContainer: …,
   thingOneBinding: Ember.Binding.oneWay('thingContainer.thingOne'),
@@ -48,7 +48,7 @@ export default Ember.Component.extend({
 
 You could change it to this:
 
-```js
+```javascript
 export default Ember.Component.extend({
   thingContainer: …,
   thingOne: Ember.computed.readOnly('thingContainer.thingOne'),

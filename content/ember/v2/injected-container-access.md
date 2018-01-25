@@ -21,7 +21,7 @@ Note that the `getOwner` API is natively available in Ember versions 2.3 and up,
 
 Before:
 
-```js
+```javascript
 // Ember < 2.3
 import Ember from 'ember';
 
@@ -44,7 +44,7 @@ ember install ember-getowner-polyfill
 
 After it installs, use as follows:-
 
-```js
+```javascript
 // Ember < 2.3 needs the polyfill installed, Ember >= 2.3 available natively.
 import Ember from 'ember';
 

@@ -13,7 +13,7 @@ for testing inclusion while `includes` uses [SameValueZero algorithm](https://tc
 
 Before:
 
-```js
+```javascript
 var arr = ['a', 'b', 'c', NaN, undefined, null];
 
 arr.contains('b');        // true
@@ -25,7 +25,7 @@ arr.contains(undefined);  // false
 
 After:
 
-```js
+```javascript
 var arr = ['a', 'b', 'c', NaN, undefined, null];
 
 arr.includes('b');        // true
@@ -37,7 +37,7 @@ arr.includes(undefined);  // true
 
 `includes` also allows a second optional parameter `startAt` to specify the index at which to begin searching:
 
-```js
+```javascript
 var arr = ['a', 'b', 'c', NaN];
 
 arr.includes('c', 2);   // true
@@ -50,7 +50,7 @@ Note that the second `startAt` parameter is only available for `Ember.Array` bec
 
 Before:
 
-```js
+```javascript
 var arr = ['a', 'b'];
 
 arr.addObject(NaN);       // ['a', 'b', NaN]
@@ -60,7 +60,7 @@ arr.without(NaN);         // ['a', 'b', NaN, NaN]
 
 After:
 
-```js
+```javascript
 var arr = ['a', 'b'];
 
 arr.addObject(NaN);       // ['a', 'b', NaN]
