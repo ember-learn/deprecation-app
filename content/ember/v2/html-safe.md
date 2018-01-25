@@ -6,7 +6,7 @@ since: '2.8'
 ---
 Creating safe strings. Before:
 
-```js
+```javascript
 import Ember from 'ember';
 const { computed } = Ember;
 
@@ -19,7 +19,7 @@ export default Ember.Component.extend({
 
 After:
 
-```js
+```javascript
 import Ember from 'ember';
 const { computed } = Ember;
 
@@ -32,7 +32,7 @@ export default Ember.Component.extend({
 
 Detecting safe strings. Before:
 
-```js
+```javascript
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -49,7 +49,7 @@ export default Ember.Component.extend({
 
 After:
 
-```js
+```javascript
 import Ember from 'ember';
 
 export default Ember.Component.extend({
