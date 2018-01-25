@@ -52,7 +52,7 @@ export default Component.extend({
         this.$(code.parentNode).wrap(`<div class="filename ${ext}" style="position: relative;"></div>`);
 
         if (filename) {
-          this.$(code.parentNode.parentNode).prepend(this.$(`<span>${'filename'}</span>`));
+          this.$(code.parentNode.parentNode).prepend(this.$(`<span>${filename}</span>`));
         }
         this.$(code.parentNode.parentNode).prepend('<div class="ribbon"></div>');
       });
