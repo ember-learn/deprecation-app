@@ -1,0 +1,162 @@
+/*  Remove and replace with ember-styleguide components when they are shipped */
+
+/* begin custom additions */
+.footer a {
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #f2ece9;
+  border-top: 1px solid #f9e7e4;
+  border-top: 1px solid #e5dbd6;
+  text-align: left;
+  /* margin-top: 60px;   NEED TO REMOVE or override in later CSS */
+  .footer-statement {
+    text-align: center;
+  }
+}
+/* end custom additions */
+
+/* All CSS below copied from  https://github.com/ember-learn/glimmer-styleguide/blob/a96a0b243420d5e916de0942912d25f34d806aa4/src/ui/styles/main-footer.scss */
+
+.footer > .container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.not-responsive .footer > .container {
+  width: 960px;
+}
+.not-responsive .footer {
+  min-width: 960px;
+}
+
+.footer a:hover {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .footer .container {
+    padding: 2rem 1rem;
+
+    .footer-info {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    .footer-statement {
+      margin: 1.1rem 0;
+    }
+    .footer-social {
+      line-height: 32px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.footer .container {
+  padding: 1.875rem 1rem
+}
+
+.footer .container {
+  align-items:top;
+  display: flex
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .footer .container {
+    text-align: center;
+    display: block;
+  }
+}
+
+.footer .footer-info {
+  color: #555;
+  // font-size: 0.75rem;
+  font-size: 11px;
+  line-height: 24px;
+  font-weight: 600;
+  margin: 0.875rem 0;
+  text-transform: uppercase
+}
+
+.footer .footer-info {
+  flex:0 0 18em;
+  text-align: left
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .footer .footer-info {
+    text-align: center;
+  }
+
+  .responsive .footer .footer-statement {
+    text-align: center;
+  }
+
+  .responsive .footer .footer-tagline {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+.footer .footer-info a {
+  color: #C0260B
+}
+
+.footer .footer-statement {
+  color: #666;
+  flex: 1;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  line-height: 26.4px;
+}
+
+.footer .footer-social {
+  margin: 1rem 0
+}
+
+.footer .footer-contributions {
+  font-size: 11px;
+  text-align: center;
+}
+
+.footer .footer-contributions .contributor {
+  flex: 1 0 11em;
+}
+
+.footer .footer-contributions .logo-heroku {
+  max-height: 35px;
+}
+
+.footer .footer-contributions .logo-fastly {
+  max-height: 45px;
+}
+
+@media screen and (min-width: 53.75rem) {
+  .footer .footer-contributions {
+    display: flex;
+    flex:0 0 21em;
+  }
+}
+
+.footer .footer-social a {
+  -webkit-transition: opacity 200ms, color 200ms;
+  -moz-transition: opacity 200ms, color 200ms;
+  transition: opacity 200ms, color 200ms;
+  color: #999;
+  font-size: 1.5rem;
+  margin-left: 0.75rem;
+  opacity: 0.7
+}
+
+@media screen and (max-width: 53.75rem) {
+  .footer .footer-social a:first-child {
+    margin-left: 0;
+  }
+}
+
+
+.footer .footer-social a:hover {
+  color: #dd6a58;
+  opacity: 1
+}

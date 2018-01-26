@@ -4,15 +4,13 @@
 <!--[if gte IE 9]><!-->
 <!--<![endif]-->
 {{set-body-class "deprecations deprecations_v2 responsive"}}
-<header class="header">
-  {{navigation-header}}
-</header>
+
+{{navigation-header}}
 
 <div id="content-wrapper" class="content-wrapper">
   {{outlet}}
 </div>
 
-<div class="footer">
-  {{navigation-footer}}
-</div>
+{{navigation-footer}}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
