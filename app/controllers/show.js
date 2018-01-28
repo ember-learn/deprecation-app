@@ -1,7 +1,9 @@
 import Controller from '@ember/controller';
 import EmberObject, { computed } from '@ember/object';
+import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
+  content: alias('model'),
   init() {
     this._super(...arguments);
     this.sortDefinition = ['since'];
