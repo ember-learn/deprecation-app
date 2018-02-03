@@ -16,16 +16,12 @@ const jsonTrees = contentFolders.map((type) => new StaticSiteJson(`content/${typ
 ]
 }));
 
-let urls = [];
-
-if (!process.env.JSON_ONLY) {
-  urls = [
-    '/ember/v2.x',
-    '/ember/v1.x',
-    '/ember-data/v2.x',
-    '/ember-cli/v2.x'
-  ];
-}
+let urls = [
+  '/ember/v2.x',
+  '/ember/v1.x',
+  '/ember-data/v2.x',
+  '/ember-cli/v2.x'
+];
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -36,7 +32,9 @@ module.exports = function(defaults) {
       'theme': 'okaidia',
       'components': ['scss', 'javascript', 'handlebars', 'http', 'json'],
       'plugins': ['line-numbers', 'normalize-whitespace']
-    }
+    },
+    merge: BroccoliMergeTrees(jsonTrees),
   });
-  return new BroccoliMergeTrees([app.toTree(), ...jsonTrees]);
+
+  return app.toTree();
 };

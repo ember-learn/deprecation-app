@@ -23,7 +23,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['emberdeprecationsapp.stonecircle.io', 'localhost:4200']
+      hostWhitelist: ['localhost:4200', 'emberdeprecationsapp.stonecircle.io']
     },
   };
 
