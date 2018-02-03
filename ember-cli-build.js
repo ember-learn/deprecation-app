@@ -36,7 +36,9 @@ module.exports = function(defaults) {
       'theme': 'okaidia',
       'components': ['scss', 'javascript', 'handlebars', 'http', 'json'],
       'plugins': ['line-numbers', 'normalize-whitespace']
-    }
+    },
+    merge: BroccoliMergeTrees(jsonTrees),
   });
-  return new BroccoliMergeTrees([app.toTree(), ...jsonTrees]);
+
+  return app.toTree();
 };
