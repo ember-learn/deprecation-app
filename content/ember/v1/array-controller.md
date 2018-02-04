@@ -12,7 +12,7 @@ deprecation](http://emberjs.com/deprecations/v1.x/#toc_objectcontroller).
 To migrate from an explicitly defined array controller, first convert
 the class definition to inherit from `Ember.Controller`. For example:
 
-```js
+```javascript
 import Ember from "ember";
 
 // Change:

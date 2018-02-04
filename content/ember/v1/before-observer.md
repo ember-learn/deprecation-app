@@ -9,7 +9,7 @@ Before observers are deprecated due to the negative performance implications the
 
 Typically they were used to have access to the old value of a property when it's about to change, but you can get same functionality in an even more efficient way with just a few lines of code:
 
-```js
+```javascript
 function fooObserver(obj){
   var newFoo = obj.get('foo');
   if (obj._oldFoo !== newFoo) {

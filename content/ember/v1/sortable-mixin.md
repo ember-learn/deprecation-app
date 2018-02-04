@@ -9,7 +9,7 @@ Along with `Ember.ArrayController`, `Ember.SortableMixin` will be removed in Emb
 
 You can migrate away from using `Ember.SortableMixin` by using `Ember.computed.sort`. Using this example:
 
-```js
+```javascript
 const SongsController = Ember.ArrayController.extend(Ember.SortableMixin, {
   model: null,
   sortProperties: ['trackNumber'],
@@ -21,7 +21,7 @@ let songsController = SongsController.create({ songs: songList });
 
 You can transition to using `Ember.computed.sort` like this:
 
-```js
+```javascript
 const SongsController = Ember.Controller.extend({
   model: null,
   sortedSongs: Ember.computed.sort('model', 'songSorting'),

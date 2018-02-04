@@ -22,7 +22,7 @@ listed object controllers as a concept to be removed from the framework.
 To migrate from an explicitly defined object controller, first convert
 the class definition to inherit from `Ember.Controller`. For example:
 
-```js
+```javascript
 import Ember from "ember";
 
 // Change:

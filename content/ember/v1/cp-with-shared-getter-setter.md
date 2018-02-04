@@ -12,7 +12,7 @@ property's descriptor.
 For example, this computed property splits a full name into two
 parts when set:
 
-```js
+```javascript
   fullName: Ember.computed("firstName", "lastName", function(key, newName) {
     if (arguments.length > 1) {
       var parts = newName.split(" ");
@@ -27,7 +27,7 @@ parts when set:
 These uses should be converted to use the new discrete getter and setter
 syntax introduced in 1.12:
 
-```js
+```javascript
   fullName: Ember.computed("firstName", "lastName", {
     get: function() {
       return this.get("firstName") + " " + this.get("lastName");

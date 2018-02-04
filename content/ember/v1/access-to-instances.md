@@ -13,7 +13,7 @@ change it to use an instance initializer.
 
 Change code that looks like this:
 
-```js
+```javascript
 App.initializer({
   name: "clock",
 
@@ -27,7 +27,7 @@ App.initializer({
 
 To:
 
-```js
+```javascript
 App.initializer({
   name: "clock",
 

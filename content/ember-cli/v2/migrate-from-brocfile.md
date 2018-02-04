@@ -14,7 +14,7 @@ information into the function exported by `ember-cli-build.js` and avoid the iss
 The migration from `Brocfile.js` to `ember-cli-build.js` is fairly straight forward:
 
 Migrate `Brocfile.js` from:
-```js
+```javascript
 // Brocfile.js
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var app = new EmberApp();
@@ -23,7 +23,7 @@ module.exports = app.toTree();
 
 To `ember-cli-build.js`:
 
-```js
+```javascript
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {

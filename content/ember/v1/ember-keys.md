@@ -9,7 +9,7 @@ since: '1.13'
 regarding `Object.keys`, please
 [read the MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
 
-```js
+```javascript
 const food = Ember.keys({
   yellow: 'banana',
   green: 'pickle'
@@ -18,7 +18,7 @@ const food = Ember.keys({
 
 to
 
-```js
+```javascript
 const food = Object.keys({
   yellow: 'banana',
   green: 'pickle'

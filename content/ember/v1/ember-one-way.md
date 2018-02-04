@@ -8,7 +8,7 @@ since: '1.13'
 `Ember.oneWay` is deprecated in favor for `Ember.computed.oneWay`. Please
 change all instances of `Ember.oneWay` from:
 
-```js
+```javascript
 let User = Ember.Object.extend({
   firstName: null,
   nickName: Ember.oneWay('firstName')
@@ -17,7 +17,7 @@ let User = Ember.Object.extend({
 
 to
 
-```js
+```javascript
 let User = Ember.Object.extend({
   firstName: null,
   nickName: Ember.computed.oneWay('firstName')

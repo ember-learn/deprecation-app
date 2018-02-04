@@ -10,7 +10,7 @@ library may need to update its suggested usage.
 
 One solution for such a library is to provide mixins instead of classes:
 
-```js
+```javascript
 // usage is {{view "list"}}
 var App.ListView = Ember.View.extend(ListView);
 ```
@@ -18,7 +18,7 @@ var App.ListView = Ember.View.extend(ListView);
 A more advanced solution is to use an initializer to register the plugin's
 views on the application:
 
-```js
+```javascript
 // usage is {{view "list"}}
 Ember.Application.initializer({
   name: 'list-view',

@@ -11,7 +11,7 @@ will result in a deprecation warning.
 In many cases you can move your logic earlier in the component lifecycle by implementing the `didReceiveAttrs` hook, one of
 [the new hooks introduced in 1.13](http://emberjs.com/blog/2015/06/12/ember-1-13-0-released.html#toc_component-lifecycle-hooks).
 
-```js
+```javascript
   didReceiveAttrs() {
     this._super(...arguments);
     this.set('myValue', value);
@@ -20,7 +20,7 @@ In many cases you can move your logic earlier in the component lifecycle by impl
 
 It may even be possible, if your value is constant, to move the change to `init`, where the value can only be set once.
 
-```js
+```javascript
   init() {
     this._super(...arguments);
     this.set('myValue', myValue);
@@ -36,7 +36,7 @@ Still can't find it?
 
 In rare cases, you may be measuring the DOM rendered and want to set an attribute based on that. In this case, it is ok to cause a second render:
 
-```js
+```javascript
   didInsertElement() {
     this._super(...arguments);
     run.schedule('afterRender', this, this.measureAndSet);

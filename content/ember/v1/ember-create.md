@@ -11,7 +11,7 @@ regarding `Object.create`, please
 
 Please change this:
 
-```js
+```javascript
 const doug = Ember.create({
   firstName: 'Doug'
 });
@@ -19,7 +19,7 @@ const doug = Ember.create({
 
 to
 
-```js
+```javascript
 const doug = Object.create({
   firstName: 'Doug'
 });
