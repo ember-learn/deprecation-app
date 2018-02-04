@@ -21,8 +21,13 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your app at [http://localhost:4200/ember/v2.x](http://localhost:4200/ember/v2.x).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+
+## Troubleshooting
+Do you only see a blank page with a header and footer? Or maybe a 404? Make sure to visit
+[http://localhost:4200/ember/v2.x](http://localhost:4200/ember/v2.x) to view the app
+with data loaded in.
 
 ### Code Generators
 
