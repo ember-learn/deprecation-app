@@ -31,14 +31,14 @@ export default Ember.Component.extend({
 });
 ```
 
-```app/templates/components/user-profile.hbs
+```handlebars {data-filename=app/templates/components/user-profile.hbs}
 <div {{bind-attr class="isActiveUser"}}>
 </div>
 ```
 
 Should be replaced with:
 
-```app/templates/components/user-profile.hbs
+```handlebars {data-filename=app/templates/components/user-profile.hbs}
 <div class="{{if isActiveUser 'is-active-user'}}">
 </div>
 ```

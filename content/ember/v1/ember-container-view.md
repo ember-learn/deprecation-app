@@ -22,7 +22,7 @@ export default Ember.Component.extend({
 })
 ```
 
-```app/templates/components/component-container.hbs
+```handlebars {data-filename=app/templates/components/component-container.hbs}
 {{#each childComponents as |childComponent|}}
   {{component childComponent}}
 {{/each}}

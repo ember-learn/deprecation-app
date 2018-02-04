@@ -28,11 +28,11 @@ export default Ember.Helper.extend({
 
 Then if you have these two components:
 
-```app/templates/components/dog-component.hbs
+```handlebars {data-filename=app/templates/components/dog-component.hbs}
 {{animal.name}} is a dog!
 ```
 
-```app/templates/components/cat-component.hbs
+```handlebars {data-filename=app/templates/components/cat-component.hbs}
 {{animal.name}} is a cat!
 ```
 
@@ -49,7 +49,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-```app/templates/animals.hbs
+```handlebars {data-filename=app/templates/animals.hbs}
 <ul>
 {{#each animals as |animal|}}
   <li>

@@ -19,7 +19,7 @@ data-down, actions-up paradigm in one's codebase.
 For example, to create a component that displays a prompt and a list of
 dropdown options, the following code could be used:
 
-```app/templates/components/my-select.hbs
+```handlebars {data-filename=app/templates/components/my-select.hbs}
 <select {{action 'change' on='change'}}>
   {{#each content key="@index" as |item|}}
     <option value="{{item}}" selected={{is-equal item selectedValue}}>
@@ -72,7 +72,7 @@ export default Ember.Helper.helper(function([leftSide, rightSide]) {
 This component could be used in a template by supplying it an array of strings
 as `content` and an action to call when the user makes a selection as `change`:
 
-```app/templates/application.hbs
+```handlebars {data-filename=app/templates/application.hbs}
 The currently selected item: {{mySelectedItem}}.
 
 {{! myItems is an array of strings: ['first', 'second', 'third',...] }}

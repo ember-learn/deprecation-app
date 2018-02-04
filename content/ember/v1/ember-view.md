@@ -24,7 +24,7 @@ deprecated. If you were using this class, please migrate to `Ember.Component`.
 In most cases Ember views can be replaced with a component. For example
 this view and usage:
 
-```app/templates/show-menu.hbs
+```handlebars {data-filename=app/templates/show-menu.hbs}
 {{view.title}}
 ```
 
@@ -40,7 +40,7 @@ export default Ember.View.extend({
 
 Can be replaced with this component:
 
-```app/templates/components/show-menu.hbs
+```handlebars {data-filename=app/templates/components/show-menu.hbs}
 {{title}}
 ```
 
@@ -95,7 +95,7 @@ export default Ember.Component.extend({
 });
 ```
 
-```app/templates/components/reverse-name.hbs
+```handlebars {data-filename=app/templates/components/reverse-name.hbs}
 {{yield reversedName}}
 ```
 
@@ -147,7 +147,7 @@ export default Ember.Router.map(function() {
 });
 ```
 
-```app/templates/about.hbs
+```handlebars {data-filename=app/templates/about.hbs}
 <div class="{{if isActive 'active'}}">
   <!-- something something -->
 </div>
@@ -163,7 +163,7 @@ export default Ember.Router.map(function() {
 });
 ```
 
-```app/templates/about.hbs
+```handlebars {data-filename=app/templates/about.hbs}
 {{#active-layout isActive=isActive}}
   <!-- something something -->
 {{/active-layout}}
