@@ -28,7 +28,7 @@ this view and usage:
 {{view.title}}
 ```
 
-```app/views/show-menu.js
+```javascript {data-filename=app/views/show-menu.js}
 import Ember from "ember";
 
 // Usage: {{view "show-menu"}}
@@ -44,7 +44,7 @@ Can be replaced with this component:
 {{title}}
 ```
 
-```app/components/show-menu.js
+```javascript {data-filename=app/components/show-menu.js}
 import Ember from "ember";
 
 // Usage: {{show-menu}}
@@ -66,7 +66,7 @@ if data is needed it should be passed upon invocation. For example:
 Some notable differences exist between yielded view blocks and yielded component
 blocks. A view could be used this way:
 
-```app/views/reverse-name.js
+```javascript {data-filename=app/views/reverse-name.js}
 import Ember from "ember";
 
 export default Ember.View.extend({
@@ -85,7 +85,7 @@ export default Ember.View.extend({
 Components introduced block params. This concept achieves data passing
 without the confusion over what `{{view}}` refers to. For example:
 
-```app/components/reverse-name.js
+```javascript {data-filename=app/components/reverse-name.js}
 import Ember from "ember";
 
 export default Ember.Component.extend({
@@ -115,7 +115,7 @@ When a template for a given route is rendered, if there is a view with the
 same name that view will also be used. For example this view is attached
 to the rendered route template:
 
-```app/router.js
+```javascript {data-filename=app/router.js}
 import Ember from "ember";
 
 export default Ember.Router.map(function() {
@@ -123,7 +123,7 @@ export default Ember.Router.map(function() {
 });
 ```
 
-```app/views/about.js
+```javascript {data-filename=app/views/about.js}
 import Ember from "ember";
 
 export default Ember.View.extend({
@@ -139,7 +139,7 @@ There are only two reasons a view may be used for a route.
 You should migrate away from routed views. For example to attach
 bindings an element in the template is sufficient:
 
-```app/router.js
+```javascript {data-filename=app/router.js}
 import Ember from "ember";
 
 export default Ember.Router.map(function() {
@@ -155,7 +155,7 @@ export default Ember.Router.map(function() {
 
 If attaching events or sharing DOM is necessary, consider a component:
 
-```app/router.js
+```javascript {data-filename=app/router.js}
 import Ember from "ember";
 
 export default Ember.Router.map(function() {
@@ -169,7 +169,7 @@ export default Ember.Router.map(function() {
 {{/active-layout}}
 ```
 
-```app/components/active-layout.js
+```javascript {data-filename=app/components/active-layout.js}
 import Ember from "ember";
 
 export default Ember.Component.extend({

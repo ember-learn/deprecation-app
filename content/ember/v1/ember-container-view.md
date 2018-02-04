@@ -13,7 +13,7 @@ Legacy support of `Ember.ContainerView` will be provided via the [ember-legacy-v
 
 In most cases container view can be replaced using the `{{each}}` helper in combination with the `{{component}}` helper.
 
-```app/components/component-container.js
+```javascript {data-filename=app/components/component-container.js}
 import Ember from 'ember';
 
 export default Ember.Component.extend({

@@ -15,7 +15,7 @@ In most cases collection view can be replaced using the `{{each}}` helper in com
 
 To be able to programmatically decide which component to use for an item, you can use a `Ember.Helper`
 
-```app/helpers/animal-component.js
+```javascript {data-filename=app/helpers/animal-component.js}
 import Ember from 'ember';
 
 export default Ember.Helper.extend({
@@ -38,7 +38,7 @@ Then if you have these two components:
 
 Then you can render your different animals like this:
 
-```app/controllers/animals.js
+```javascript {data-filename=app/controllers/animals.js}
 import Ember from 'ember';
 
 export default Ember.Controller.extend({

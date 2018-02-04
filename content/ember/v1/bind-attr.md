@@ -25,7 +25,7 @@ This makes it possible to express a number of concepts directly in the template 
 
 Ember 1.11's attribute binding syntax no longer supports dasherizing for boolean values. For example:
 
-```app/components/user-profile.js
+```javascript {data-filename=app/components/user-profile.js}
 export default Ember.Component.extend({
   isActiveUser: true
 });

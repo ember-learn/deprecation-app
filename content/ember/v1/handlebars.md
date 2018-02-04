@@ -21,7 +21,7 @@ a component with the same name as the view helper you registered.
 
 If you have for example:
 
-```app/helpers/foo-bar.js
+```javascript {data-filename=app/helpers/foo-bar.js}
 export default Ember.HTMLBars.makeBoundHelper(function(firstArg, secondArg, options) {
   let { hash } = options;
   // helper code

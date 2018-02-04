@@ -29,7 +29,7 @@ dropdown options, the following code could be used:
 </select>
 ```
 
-```app/components/my-select.js
+```javascript {data-filename=app/components/my-select.js}
 import Ember from "ember";
 
 export default Ember.Component.extend({
@@ -60,7 +60,7 @@ export default Ember.Component.extend({
 });
 ```
 
-```app/helpers/is-equal.js
+```javascript {data-filename=app/helpers/is-equal.js}
 // is-equal helper is necessary to determine which option is currently selected.
 import Ember from "ember";
 
