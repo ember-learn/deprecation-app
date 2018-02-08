@@ -1,9 +1,30 @@
 ---
-id: ds.serializer.rest.queryRecord-array-response
-title: Store.queryRecord Array Response with RESTSerializer
+id: ds.store.recordIsLoaded
+title: recordIsLoaded
 until: '3.0.0'
 since: '2.11'
 ---
+
+`recordIsLoaded` has been deprecated and is an alias for `hasRecordForId`, which should be used instead.
+
+If you have this:
+
+```javascript
+store.recordIsLoaded('post', 1); // false
+store.findRecord('post', 1).then(function() {
+  store.recordIsLoaded('post', 1); // true
+});
+```
+
+You can change it to this:
+
+```javascript
+store.hasRecordForId('post', 1); // false
+store.findRecord('post', 1).then(function() {
+  store.hasRecordForId('post', 1); // true
+});
+```
+
 
 When using
 [`DS.RESTSerializer`](http://emberjs.com/api/data/classes/DS.RESTSerializer.html)
