@@ -30,7 +30,7 @@ when you fetch a `post`:
 
 Previously, you would want to override `modelNameFromPayloadKey` to remove the
 namespace:
-```js {data-filename=app/serializers/post.js}
+```javascript {data-filename=app/serializers/post.js}
 import DS from 'ember-data';
 
 export default DS.JSONAPISerializer.extend({
@@ -43,7 +43,7 @@ export default DS.JSONAPISerializer.extend({
 You can remove this deprecation by refactoring your serializer to instead use
 [`payloadTypeFromModelName`](http://emberjs.com/api/data/classes/DS.JSONAPISerializer.html#method_payloadTypeFromModelName):
 
-```js {data-filename=app/serializers/post.js}
+```javascript {data-filename=app/serializers/post.js}
 import DS from 'ember-data';
 
 export default DS.JSONAPISerializer.extend({

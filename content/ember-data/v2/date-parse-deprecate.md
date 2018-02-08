@@ -16,7 +16,7 @@ extension.
 
 With Ember >= v2.7.0, disable the prototype extension for `Date`:
 
-```js {data-filename=config/environment.js}
+```javascript {data-filename=config/environment.js}
 ENV = {
   EmberENV: {
     EXTEND_PROTOTYPES: {
@@ -28,7 +28,7 @@ ENV = {
 
 With Ember < v2.7.0, values must be provided for all prototype extensions:
 
-```js {data-filename=config/environment.js}
+```javascript {data-filename=config/environment.js}
 var ENV = {
   EmberENV: {
     EXTEND_PROTOTYPES: {

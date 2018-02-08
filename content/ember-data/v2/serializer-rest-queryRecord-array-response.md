@@ -16,7 +16,7 @@ and returning the first model.
 
 Deprecated payload example with an array as the primary data:
 
-```js
+```javascript
 // GET /users?username="GummyBear"
 
 {
@@ -29,7 +29,7 @@ Deprecated payload example with an array as the primary data:
 
 Expected payload example with a single object as the primary data:
 
-```js
+```javascript
 // GET /users?username="GummyBear"
 
 {
@@ -56,7 +56,7 @@ Another option is to override
 [`normalizeQueryRecordResponse`](http://emberjs.com/api/data/classes/DS.RESTSerializer.html#method_normalizeQueryRecordResponse)
 in your serializer, manipulating the payload so it matches the expected format:
 
-```app/serializers/user.js
+```javascript {data-filename=app/serializers/user.js}
 import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
@@ -78,7 +78,7 @@ object as its primary data. This can be done by overriding
 [`urlForQueryRecord`](http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_urlForQueryRecord)
 in your adapter:
 
-```app/adapters/user.js
+```javascript {data-filename=app/adapters/user.js}
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({

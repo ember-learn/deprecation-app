@@ -37,7 +37,7 @@ and returning the first model.
 
 Deprecated payload example with an array as the primary data:
 
-```js
+```javascript
 // GET /users?username="GummyBear"
 
 {
