@@ -2,7 +2,7 @@
 id: ds.references.belongs-to.push-record
 title: BelongsToReference.push(DS.Model)
 until: '4.0.0'
-since: 'Deprecations Added in Pending Features'
+since: 'Pending Features'
 ---
 ###### feature: ds-overhaul-references
 

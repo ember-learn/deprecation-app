@@ -2,7 +2,7 @@
 id: ds.references.has-many.push-array
 title: HasManyReference.push(array)
 until: '4.0.0'
-since: 'Deprecations Added in Pending Features'
+since: 'Pending Features'
 ---
 ###### feature: ds-overhaul-references
 

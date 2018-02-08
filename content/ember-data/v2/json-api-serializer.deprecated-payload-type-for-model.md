@@ -2,7 +2,7 @@
 id: ds.json-api-serializer.deprecated-payload-type-for-model
 title: JSONAPISerializer.payloadKeyFromModelName for Resource
 until: '4.0.0'
-since: 'Deprecations Added in Pending Features'
+since: 'Pending Features'
 ---
 ###### feature: ds-payload-type-hooks
 
