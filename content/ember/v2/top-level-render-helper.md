@@ -9,16 +9,16 @@ Before named outlets were introduced to Ember the render helper was used to decl
 
 For example this code uses the render helper as a target for a special sidebar present on the index route. The special sidebar is in a template named `index-sidebar`:
 
-```app/templates/application.hbs
+```handlebars {data-filename=app/templates/application.hbs}
 <div class="sidebar">{{render 'sidebar'}}</div>
 <div class="main">{{outlet}}</div>
 ```
 
-```app/templates/index.hbs
+```handlebars {data-filename=app/templates/index.hbs}
 Index Content
 ```
 
-```app/routes/index.js
+```javascript {data-filename=app/routes/index.js}
 App.IndexRoute = Ember.Route.extend({
   renderTemplate() {
     this._super(...arguments);
@@ -37,12 +37,12 @@ App.IndexRoute = Ember.Route.extend({
 
 It should be refactored to use [ember-elsewhere](https://github.com/ef4/ember-elsewhere). The sidebar content must be implemented as a component, in this case named `index-sidebar`. The logic previously used in the route file can be removed. The refactored example:
 
-```app/templates/application.hbs
+```handlebars {data-filename=app/templates/application.hbs}
 <div class="sidebar">{{from-elsewhere name='sidebar'}}</div>
 <div class="main">{{outlet}}</div>
 ```
 
-```app/templates/index.hbs
+```handlebars {data-filename=app/templates/index.hbs}
 {{to-elsewhere named='sidebar' send=(component 'index-sidebar')}}
 Index Content
 ```
