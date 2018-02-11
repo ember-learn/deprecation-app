@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 import EmberObject, { computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
-import semverCompare from 'npm:semver-compare';
+import semverCompare from 'semver-compare';
 
 export default Controller.extend({
   content: alias('model'),
