@@ -28,12 +28,20 @@ module.exports = function(defaults) {
     prember: {
       urls,
     },
+
     'ember-prism': {
       'theme': 'okaidia',
       'components': ['scss', 'javascript', 'handlebars', 'http', 'json'],
       'plugins': ['line-numbers', 'normalize-whitespace']
     },
+
     merge: BroccoliMergeTrees(jsonTrees),
+
+    'ember-bootstrap': {
+      'bootstrapVersion': 3,
+      'importBootstrapFont': true,
+      'importBootstrapCSS': false
+    }
   });
 
   return app.toTree();
