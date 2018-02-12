@@ -8,8 +8,12 @@ div.filename {
   background-color: #292929;
 }
 
-pre[class*="language-"] {
+pre {
   background-color: #444545;
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
 }
 
 .filename {
