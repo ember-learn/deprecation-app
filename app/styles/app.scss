@@ -3128,8 +3128,12 @@ a.survey-h2:hover:after {
   position: relative;
 }
 
-a.toc-anchor {
+.anchorable-toc:hover a.toc-anchor {
   display: block;
+}
+
+a.toc-anchor {
+  display: none;
   position: absolute;
   text-decoration: none;
   border: none;
