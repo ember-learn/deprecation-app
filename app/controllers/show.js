@@ -1,6 +1,7 @@
 import Controller from '@ember/controller';
 import EmberObject, { computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
+import semverCompare from 'semver-compare';
 
 export default Controller.extend({
   content: alias('model'),
@@ -22,5 +23,11 @@ export default Controller.extend({
     });
     return result;
   }),
-  sortedGroupedResults: computed.sort('groupedResults', 'sortDefinition'),
+  sortedGroupedResults: computed('groupedResults', function() {
+    let sorted = this.get('groupedResults').sort((a, b) => semverCompare(a.since, b.since));
+    let upComingFeatures = sorted.shift();
+    sorted.push(upComingFeatures);
+    return sorted;
+  })
 });
+

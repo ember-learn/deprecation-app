@@ -36,5 +36,11 @@ module.exports = function(defaults) {
     merge: BroccoliMergeTrees(jsonTrees),
   });
 
+  app.import('node_modules/semver-compare/index.js', {
+    using: [
+      { transformation: 'cjs', as: 'semver-compare'}
+    ]
+  });
+
   return app.toTree();
 };
