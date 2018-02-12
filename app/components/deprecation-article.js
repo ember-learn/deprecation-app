@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import { get, computed } from '@ember/object';
 import { inject as service } from '@ember/service';
+import $ from 'jquery';
 
 export default Component.extend({
   prism: service(),
@@ -53,6 +54,12 @@ export default Component.extend({
         this.$(code.parentNode.parentNode).prepend('<div class="ribbon"></div>');
       });
     }
+
+    this.$(".anchorable-toc").each(function () {
+      let currentToc = $(this);
+
+      currentToc.prepend(`<a class="toc-anchor" href="#${currentToc.attr('id')}"></a>`)
+    })
 
     get(this, 'prism').highlight();
   }
