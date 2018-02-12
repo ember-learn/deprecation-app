@@ -1,8 +1,10 @@
-/* global Prism */
 import Component from '@ember/component';
-import { computed } from '@ember/object';
+import { get, computed } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
+  prism: service(),
+
   idForTitle: computed('model.title', function() {
     return `toc_${this.get('model.title')}`;
   }),
@@ -52,6 +54,6 @@ export default Component.extend({
       });
     }
 
-    Prism.highlightAll();
+    get(this, 'prism').highlight();
   }
 });
