@@ -4,7 +4,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const StaticSiteJson = require('broccoli-static-site-json');
 const BroccoliMergeTrees = require('broccoli-merge-trees');
 
-const contentFolders = ['ember/v1', 'ember/v2', 'ember-data/v2', 'ember-cli/v2'];
+const contentFolders = ['ember/v1', 'ember/v2', 'ember/v3', 'ember-data/v2', 'ember-cli/v2'];
 
 const jsonTrees = contentFolders.map((type) => new StaticSiteJson(`content/${type}`, {
   attributes: ['title', 'since', 'until'],
@@ -17,6 +17,7 @@ const jsonTrees = contentFolders.map((type) => new StaticSiteJson(`content/${typ
 }));
 
 let urls = [
+  '/ember/v3.x',
   '/ember/v2.x',
   '/ember/v1.x',
   '/ember-data/v2.x',
