@@ -2,7 +2,7 @@
 id: ds.json-api-serializer.deprecated-payload-type-for-belongs-to
 title: JSONAPISerializer.payloadKeyFromModelName for belongsTo Relationship
 until: '4.0.0'
-since: 'Pending Features'
+since: 'Upcoming Features'
 ---
 ###### feature: ds-payload-type-hooks
 

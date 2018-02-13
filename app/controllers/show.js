@@ -25,8 +25,11 @@ export default Controller.extend({
   }),
   sortedGroupedResults: computed('groupedResults', function() {
     let sorted = this.get('groupedResults').sort((a, b) => semverCompare(a.since, b.since));
-    let upComingFeatures = sorted.shift();
-    sorted.push(upComingFeatures);
+    let match = sorted[0].since.match(/Upcoming Features/)
+    if (match && match[0] == "Upcoming Features") {
+      let upComingFeatures = sorted.shift();
+      sorted.push(upComingFeatures);
+    }
     return sorted;
   })
 });
