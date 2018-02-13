@@ -1,37 +1,31 @@
-{{!-- Remove and replace with ember-styleguide components when they are shipped  --}}
-
-<div class="responsive">
-  <header class="header">
-    <nav role="navigation" aria-label="main">
-      <ul class="header-nav container">
-        <li class="header-logo">
-          <a href="http://emberjs.com/"><span class="visually-hidden">Ember homepage</span></a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/learn">Learn</a>
-        </li>
-        <li class="active" aria-label="You are here">
-          <a href="/">Guides</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/api">API</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/community">Community</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/blog">Blog</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/builds">Builds</a>
-        </li>
-
-        <li class="header-search">
-          <form>
-            <input type="text" id="search-input" class="search-input" placeholder="Search the guides"/>
-          </form>
-        </li>
-      </ul>
-    </nav>
-  </header>
-</div>
+ <header>
+ <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          {{#basic-dropdown as |dd|}}
+          {{#dd.trigger class="dropdown"}}
+              <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+          {{/dd.trigger}}
+          {{#dd.content}}
+            <ul class="dropdown-menu">
+              <li><a href="http://emberjs.com/guides">Guides</a></li>
+              <li><a href="http://emberjs.com/guides">Guides</a></li>
+              <li><a href="http://emberjs.com/guides">Guides</a></li>
+            </ul>
+          {{/dd.content}}
+          {{/basic-dropdown}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
