@@ -7,7 +7,6 @@ export default Controller.extend({
   content: alias('model'),
   init() {
     this._super(...arguments);
-    this.sortDefinition = ['since'];
   },
   groupedResults: computed('content.[]', function() {
     let result = [];
@@ -31,6 +30,19 @@ export default Controller.extend({
       sorted.push(upComingFeatures);
     }
     return sorted;
+  }),
+  version: computed('content', function() {
+    let version = this.get('content.query.version');
+    return version.match(/[0-9].*/)[0];
+  }),
+  project: computed('content', function() {
+    let projects = {
+      'ember': 'Ember',
+      'ember-cli': 'Ember CLI',
+      'ember-data': 'Ember Data'
+    }
+    let project = this.get('content.query.path');
+    return projects[project];
   })
 });
 
