@@ -5,7 +5,9 @@
 <!--<![endif]-->
 {{set-body-class "deprecations deprecations_v2 responsive"}}
 
-{{main-header}}
+{{#es-header}}
+  {{es-navbar links=links}}
+{{/es-header}}
 
 <div id="content-wrapper" class="content-wrapper">
   {{outlet}}
