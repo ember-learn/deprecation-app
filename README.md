@@ -1,7 +1,6 @@
 # deprecation-app [![Build Status](https://travis-ci.org/ember-learn/deprecation-app.svg?branch=master)](https://travis-ci.org/ember-learn/deprecation-app)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the app that serves https://emberjs.com/deprecations/
 
 ## Prerequisites
 
@@ -16,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd deprecation-app`
-* `npm install`
+* `npm install` / `yarn`
 
 ## Running / Development
 
@@ -25,6 +24,7 @@ You will need the following things properly installed on your computer.
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 ## Troubleshooting
+
 Do you only see a blank page with a header and footer? Or maybe a 404? Make sure to visit
 [http://localhost:4200/ember/v2.x](http://localhost:4200/ember/v2.x) to view the app
 with data loaded in.
