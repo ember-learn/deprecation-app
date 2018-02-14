@@ -15,7 +15,8 @@ addons:
   chrome: stable
 
 cache:
-  yarn: true
+  directories:
+    - $HOME/.npm
 
 env:
   global:
@@ -23,15 +24,15 @@ env:
     - JOBS=1
 
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
+  - npm install -g npm@5
+  - npm config set spin false
 
 jobs:
   include:
     - stage: test
       script:
-        - yarn lint:js
-        - yarn test
+        - npm run lint:js
+        - npm test
     - stage: Staging Deployment
       if: branch = master AND NOT type = pull_request
       script: ember deploy production --activate
