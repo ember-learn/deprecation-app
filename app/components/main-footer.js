@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['container'],
+  tagName: 'footer',
+  classNames: ['footer'],
   currentYear: new Date().getFullYear()
 });
