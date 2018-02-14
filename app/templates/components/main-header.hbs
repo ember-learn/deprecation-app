@@ -1,37 +1,92 @@
-{{!-- Remove and replace with ember-styleguide components when they are shipped  --}}
-
-<div class="responsive">
-  <header class="header">
-    <nav role="navigation" aria-label="main">
-      <ul class="header-nav container">
-        <li class="header-logo">
-          <a href="http://emberjs.com/"><span class="visually-hidden">Ember homepage</span></a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/learn">Learn</a>
-        </li>
-        <li class="active" aria-label="You are here">
-          <a href="/">Guides</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/api">API</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/community">Community</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/blog">Blog</a>
-        </li>
-        <li>
-          <a href="http://emberjs.com/builds">Builds</a>
-        </li>
-
-        <li class="header-search">
-          <form>
-            <input type="text" id="search-input" class="search-input" placeholder="Search the guides"/>
-          </form>
-        </li>
-      </ul>
-    </nav>
-  </header>
-</div>
+ <header>
+ <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          {{#basic-dropdown as |dd|}}
+            {{#dd.trigger class="dropdown"}}
+                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+            {{/dd.trigger}}
+            {{#dd.content}}
+              <ul class="dropdown-menu">
+                {{#menu-dropdown-item href="http://emberjs.com/guides" autoFocus=true}}Guides{{/menu-dropdown-item}}
+                <li><a href="http://emberjs.com/api">API Reference</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://emberjs.com/learn">Learn Ember</a></li>
+              </ul>
+            {{/dd.content}}
+          {{/basic-dropdown}}
+          {{#basic-dropdown as |dd|}}
+            {{#dd.trigger class="dropdown"}}
+                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Releases<span class="caret"></span></a>
+            {{/dd.trigger}}
+            {{#dd.content}}
+              <ul class="dropdown-menu">
+                <li><a href="http://emberjs.com/builds">Channels</a></li>
+                <li><a href="http://emberjs.com/builds/release">-- Stable</a></li>
+                <li><a href="http://emberjs.com/builds/beta">-- Beta</a></li>
+                <li><a href="http://emberjs.com/builds/beta">-- Canary</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/deprecations">Deprecations</a></li>
+                <li><a href="http://emberjs.com/statusboard">Statusboard</a></li>
+              </ul>
+            {{/dd.content}}
+          {{/basic-dropdown}}
+          <li><a href="http://emberjs.com/blog">Blog</a></li>
+          {{#basic-dropdown as |dd|}}
+            {{#dd.trigger class="dropdown"}}
+                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Community<span class="caret"></span></a>
+            {{/dd.trigger}}
+            {{#dd.content}}
+              <ul class="dropdown-menu">
+                <li><a href="http://emberjs.com/community">The Ember Community</a></li>
+                <li><a href="http://emberjs.com/guidelines">Guidelines</a></li>
+                <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://emberjs.com/community/meetups">Meetups</a></li>
+                <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://emberconf.com/">Ember Conf</a></li>
+              </ul>
+            {{/dd.content}}
+          {{/basic-dropdown}}
+          {{#basic-dropdown as |dd|}}
+            {{#dd.trigger class="dropdown"}}
+                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+            {{/dd.trigger}}
+            {{#dd.content}}
+              <ul class="dropdown-menu">
+                <li><a href="http://emberjs.com/team">The Team</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://emberjs.com/logos">Logos</a></li>
+                <li><a href="http://github.com/mascots">Mascots</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://emberjs.com/ember-users">Who uses Ember</a></li>
+                <li><a href="http://emberjs.com/sponsors">Sponsors</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://emberjs.com/legal">Legal</a></li>
+                <li><a href="http://emberjs.com/security">Security</a></li>
+              </ul>
+            {{/dd.content}}
+          {{/basic-dropdown}}
+          <form class="navbar-form navbar-right searchbox">
+          <div class="input-group">
+            <label for="search-input" class="control-label sr-only">Search</label>
+              <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="text" class="form-control search input ds-input" placeholder="Search..." id="search-input" role="combobox" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" autocorrect="off" autocapitalize="none" spellcheck="false" autocomplete="off" aria-autocomplete="list" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, &quot;Helvetica Neue&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
+              <span></span>
+          </div>
+        </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
