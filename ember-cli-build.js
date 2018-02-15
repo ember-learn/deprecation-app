@@ -11,9 +11,19 @@ let urls = [
 ];
 
 module.exports = function(defaults) {
+  let prepend = "";
+
+  if ("FASTLY_CDN_URL" in process.env) {
+    prepend = `https://${process.env.FASTLY_CDN_URL}`;
+  }
+
   let app = new EmberApp(defaults, {
     prember: {
       urls
+    },
+
+    fingerprint: {
+      prepend
     },
 
     "ember-prism": {
