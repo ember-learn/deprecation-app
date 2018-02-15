@@ -48,7 +48,7 @@
     "ember-resolver": "^4.0.0",
     "ember-set-body-class": "^0.3.0",
     "ember-source": "~3.0.0",
-    "ember-styleguide": "github:rwwagner90/ember-styleguide#navbar",
+    "ember-styleguide": "github:ember-learn/ember-styleguide#170e94742d310bd7cd28f1cb757c741816a58d16",
     "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
     "prember": "github:stonecircle/prember#feature/static-files",
