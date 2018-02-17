@@ -5,7 +5,7 @@ import $ from 'jquery';
 
 export default Component.extend({
   prism: service(),
-
+  renderIdOrUntil: true,
   idForTitle: computed('model.title', function() {
     return `toc_${this.get('model.title')}`;
   }),

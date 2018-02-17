@@ -1,6 +1,6 @@
 ---
 id: ember-createwithmixins
-title: ember-createwithmixins
+title: Ember CreateWithMixins
 until: ''
 since: '1.13'
 ---
