@@ -43,6 +43,16 @@ export default Controller.extend({
     }
     let project = this.get('content.query.path');
     return projects[project];
+  }),
+  renderIdOrUntil: computed('content', function() {
+    let version = this.get('content.query.version');
+    let versionsWithoutId = ['v1.x'];
+    if (versionsWithoutId.includes(version)) {
+      return false;
+    } else {
+      return true;
+    }
   })
+
 });
 
