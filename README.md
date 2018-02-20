@@ -2,6 +2,10 @@
 
 This is the app that serves https://emberjs.com/deprecations/
 
+## Adding new deprecations
+
+The [content](https://github.com/ember-learn/deprecation-app/tree/master/content/) folder contains all the deprecations that are listed by the website. To add a new deprecation, add it to the appropriate folder by creating a new file. The content of the file needs to follow a specific format for the app to work. You can see [this sample](https://raw.githubusercontent.com/ember-learn/deprecation-app/master/content/ember/v3/getting-each.md) for reference.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
