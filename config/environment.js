@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment,
     rootURL: "/",
     routerRootURL: "/",
+    apiHost: "",
     locationType: "auto",
     EmberENV: {
       FEATURES: {
@@ -50,7 +51,9 @@ module.exports = function(environment) {
 
   if (environment === "production") {
     // here you can enable a production-specific feature
+
     ENV.routerRootURL = "/deprecations/";
+    ENV.apiHost = process.env.API_HOST_URL;
   }
 
   return ENV;
