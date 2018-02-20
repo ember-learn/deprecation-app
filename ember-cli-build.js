@@ -13,8 +13,8 @@ let urls = [
 module.exports = function(defaults) {
   let prepend = "";
 
-  if ("FASTLY_CDN_URL" in process.env) {
-    prepend = process.env.FASTLY_CDN_URL;
+  if ("CDN_URL" in process.env) {
+    prepend = process.env.CDN_URL;
   }
 
   let app = new EmberApp(defaults, {
