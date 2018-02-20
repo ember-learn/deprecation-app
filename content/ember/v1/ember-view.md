@@ -61,6 +61,8 @@ if data is needed it should be passed upon invocation. For example:
 ```handlebars
 {{show-menu options=controller.menuOptions}}
 ```
+
+<!-- Should 5 pound signs not be bolded / different from regular text at all? Seems wrong on emberjs.com rn too. -->
 ##### Differences in yielded blocks
 
 Some notable differences exist between yielded view blocks and yielded component

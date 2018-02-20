@@ -35,4 +35,4 @@ context that may be important.
 Because the helper itself offers no clue about the context-shifting behavior, it is easy (even for more experienced
 Ember developers) to get confused when skimming a template about which object a value refers to.
 
-The context-shifting forms of `#each` and `#with` have been deprecated in favor of the named-parameter forms. In Ember 1.12, the `in` and `as` syntax are further deprecated in favor of block params syntax. See the [deprecation notes for in](/deprecations/v1.x/#toc_code-in-code-syntax-for-code-each-code) and [deprecation notes for as](/deprecations/v1.x/#toc_code-in-code-syntax-for-code-each-code).
+The context-shifting forms of `#each` and `#with` have been deprecated in favor of the named-parameter forms. In Ember 1.12, the `in` and `as` syntax are further deprecated in favor of block params syntax. See the [deprecation notes for in](/ember/v1.x/#toc_id-code-in-code-syntax-for-code-each-code) and [deprecation notes for as](/ember/v1.x/#toc_id-code-as-code-sytnax-for-code-with-code).

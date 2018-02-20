@@ -61,4 +61,4 @@ export default Ember.Controller.extend({
 </ul>
 ```
 
-You can [view and manipulate this example on jsbin](http://emberjs.jsbin.com/qegikoliri/1/edit?html,js,output)
+You can [view and manipulate this example on jsbin](http://emberjs.jsbin.com/qegikoliri/1/edit?html,js,output).

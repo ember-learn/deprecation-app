@@ -48,5 +48,8 @@ App.instanceInitializer({
 
 Added in [PR #10256](https://github.com/emberjs/ember.js/pull/10256).
 
+<!-- Link isn't working? am a bit confused by repo setup?  -->
 For more information, see [the instance initializer deprecation
-guide](../instance-initializers).
+guide](/ember/instance-initializers).
+
+<!-- Missing this section: https://www.emberjs.com/deprecations/v1.x/#toc_warnings-added-in-1-11 -->

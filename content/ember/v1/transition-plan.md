@@ -5,6 +5,8 @@ until: ''
 since: '1.9'
 ---
 
+<!-- It seems like this should be moved to more-consistent-handlebars-scope.md, maybe with a header for "Transition Plan"? -->
+
 To transition your code to the new syntax, you can change templates that look like this:
 
 ```handlebars
