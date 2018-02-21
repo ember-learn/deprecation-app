@@ -1,5 +1,5 @@
 ---
-id: cli.brocfile
+id: migrate-from-brocfile-js-to-ember-cli-build-js
 title: Migrate from Brocfile.js to ember-cli-build.js
 until: '3.0.0'
 since: '2.0.0'

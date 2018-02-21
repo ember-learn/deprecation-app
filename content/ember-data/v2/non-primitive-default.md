@@ -1,5 +1,5 @@
 ---
-id: ds.defaultValue.complex-object
+id: non-primitive-defaultvalue-for-model-attributes
 title: Non-primitive defaultValue for Model Attributes
 until: '3.0.0'
 since: '2.3'

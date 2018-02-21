@@ -1,5 +1,5 @@
 ---
-id: ember-application.injected-container
+id: injected-container-access
 title: Injected container access
 until: '3.0.0'
 since: '2.3'

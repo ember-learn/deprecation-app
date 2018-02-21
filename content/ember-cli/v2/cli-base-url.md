@@ -1,5 +1,5 @@
 ---
-id: cli.baseURL
+id: base-url
 title: Base URL
 until: '3.0.0'
 since: '2.7.0'

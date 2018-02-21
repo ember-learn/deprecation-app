@@ -1,5 +1,5 @@
 ---
-id: ds.deprecated-initializers
+id: unused-initializers
 title: Unused Initializers
 until: '3.0.0'
 since: '2.13'

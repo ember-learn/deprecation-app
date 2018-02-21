@@ -1,5 +1,5 @@
 ---
-id: code-as-code-sytnax-for-code-with-code
+id: code-as-code-syntax-for-code-with-code
 title: as syntax for {{with}}
 until: ''
 since: '1.12'

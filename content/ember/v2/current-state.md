@@ -1,5 +1,5 @@
 ---
-id: ember-view.current-state
+id: ember-component-currentstate
 title: Ember.Component#currentState
 until: '2.3.0'
 since: '2.1'

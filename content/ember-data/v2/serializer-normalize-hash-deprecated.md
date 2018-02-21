@@ -1,5 +1,5 @@
 ---
-id: ds.serializer.normalize-hash-deprecated
+id: restserializer-normalizehash
 title: RESTSerializer.normalizeHash
 until: '3.0.0'
 since: '2.6'

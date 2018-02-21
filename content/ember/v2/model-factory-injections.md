@@ -1,5 +1,5 @@
 ---
-id: 'ember-metal.model\_factory\_injections'
+id: ember-model_factory_injections-removed
 title: 'Ember.MODEL_FACTORY_INJECTIONS removed'
 until: '2.17.0'
 since: '2.14'

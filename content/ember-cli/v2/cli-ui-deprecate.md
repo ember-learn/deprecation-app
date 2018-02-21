@@ -1,5 +1,5 @@
 ---
-id: cli.ui.deprecate
+id: deprecate-utility
 title: Deprecate Utility
 until: '3.0.0'
 since: '2.2.0'

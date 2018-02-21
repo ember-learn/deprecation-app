@@ -1,5 +1,5 @@
 ---
-id: ds.json-api-serializer.deprecated-payload-type-for-belongs-to
+id: jsonapiserializer-payloadkeyfrommodelname-for-belongsto-relationship
 title: JSONAPISerializer.payloadKeyFromModelName for belongsTo Relationship
 until: '4.0.0'
 since: 'Upcoming Features'

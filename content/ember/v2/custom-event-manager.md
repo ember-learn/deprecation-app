@@ -1,5 +1,5 @@
 ---
-id: 'ember-views.event-dispatcher.canDispatchToEventManager'
+id: custom-eventmanager-deprecated
 title: Custom eventManager deprecated
 until: '2.17.0'
 since: '2.14'

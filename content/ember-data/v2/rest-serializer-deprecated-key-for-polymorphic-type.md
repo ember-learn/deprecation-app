@@ -1,8 +1,8 @@
 ---
-id: ds.rest-serializer.deprecated-key-for-polymorphic-type
+id: restserializer-keyforpolymorphictype
 title: RESTSerializer.keyForPolymorphicType
 until: '3.0.0'
-since: '2.3' 
+since: '2.3'
 ---
 
 Previous versions of the

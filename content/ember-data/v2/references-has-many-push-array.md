@@ -1,5 +1,5 @@
 ---
-id: ds.references.has-many.push-array
+id: hasmanyreference-push-array
 title: HasManyReference.push(array)
 until: '4.0.0'
 since: 'Upcoming Features'

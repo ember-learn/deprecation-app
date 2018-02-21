@@ -1,5 +1,5 @@
 ---
-id: container-lookupFactory
+id: migrating-from-_lookupfactory-to-factoryfor
 title: Migrating from _lookupFactory to factoryFor
 until: '2.13.0'
 since: '2.12'

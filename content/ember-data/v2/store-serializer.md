@@ -1,5 +1,5 @@
 ---
-id: ds.store.serialize
+id: store-serialize
 title: Store.serialize
 until: '3.0.0'
 since: '2.11'

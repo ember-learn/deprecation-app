@@ -1,5 +1,5 @@
 ---
-id: ember-application.app-initializer-initialize-arguments
+id: initializer-arity
 title: Initializer Arity
 until: '3.0.0'
 since: '2.1'

@@ -1,5 +1,5 @@
 ---
-id: ds.store.lookupAdapter
+id: lookupadapter
 title: lookupAdapter
 until: '3.0.0'
 since: '2.11'

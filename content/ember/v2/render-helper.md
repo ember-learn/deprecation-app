@@ -1,5 +1,5 @@
 ---
-id: ember-template-compiler.deprecate-render-block
+id: render-helper-with-block
 title: render helper with block
 until: '2.4.0'
 since: '2.4'

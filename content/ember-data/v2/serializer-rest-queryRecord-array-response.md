@@ -1,5 +1,5 @@
 ---
-id: ds.serializer.rest.queryRecord-array-response
+id: store-queryrecord-array-response-with-restserializer
 title: Store.queryRecord Array Response with RESTSerializer
 until: '3.0.0'
 since: '2.7'

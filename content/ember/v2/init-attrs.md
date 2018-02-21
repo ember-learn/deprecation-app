@@ -1,5 +1,5 @@
 ---
-id: ember-views.did-init-attrs
+id: ember-component-didinitattrs
 title: Ember.Component#didInitAttrs
 until: '3.0.0'
 since: '2.6'
