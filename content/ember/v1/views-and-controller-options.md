@@ -1,6 +1,6 @@
 ---
 id: view-and-controller-options-on-the-code-each-code-helper
-title: View and Controller options on the `{{each}}` helper
+title: View and Controller options on the {{each}} helper
 until: ''
 since: '1.13'
 ---
@@ -50,5 +50,3 @@ component.
 
 We replaced `tagName="ul"` part by just surrounding the `{{each}}` block with
 `<ul>` tags.
-
-

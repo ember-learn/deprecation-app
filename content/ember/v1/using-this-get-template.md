@@ -1,6 +1,6 @@
 ---
 id: using-code-this-get-template-code
-title: Using `this.get('template')`
+title: Using this.get('template')
 until: ''
 since: '1.13'
 ---
