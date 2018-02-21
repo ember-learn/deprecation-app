@@ -7,7 +7,7 @@ since: '1.13'
 
 Just as the `Freezable` mixin is deprecated in favor of functionality in
 core JavaScript, the `frozenCopy` method of the Copyable mixin is also
-deprecated in favor of [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
+deprecated in favor of [Object.freeze()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
 
 Replace the following code:
 

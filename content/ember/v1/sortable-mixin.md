@@ -31,6 +31,6 @@ const SongsController = Ember.Controller.extend({
 let songsController = SongsController.create({ songs: songList });
 ```
 
-You can [read more about `Ember.computed.sort` in the Ember API documentation](http://emberjs.com/api/classes/Ember.computed.html#method_sort)
+You can [read more about Ember.computed.sort in the Ember API documentation](http://emberjs.com/api/classes/Ember.computed.html#method_sort)
 
 Legacy support of `Ember.SortableMixin` will be provided via the [ember-legacy-controllers](https://github.com/emberjs/ember-legacy-controllers) addon.

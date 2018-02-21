@@ -5,7 +5,7 @@ until: ''
 since: '1.13'
 ---
 
-`needs` for controllers will be removed in Ember 2.0. You can migrate away from this using `Ember.inject.controller`
+`needs` for controllers will be removed in Ember 2.0. You can migrate away from this using `Ember.inject.controller`.
 
 Lets say you have a `post` controller like this:
 
@@ -29,4 +29,4 @@ export default Ember.Controller.extend({
 });
 ```
 
-You can [read more about `Ember.inject.controller` in the Ember API documentation](http://emberjs.com/api/classes/Ember.inject.html#method_controller)
+You can [read more about Ember.inject.controller in the Ember API documentation](http://emberjs.com/api/classes/Ember.inject.html#method_controller).

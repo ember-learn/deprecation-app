@@ -18,7 +18,7 @@ specified controller as the context within the block.
 ```
 
 Similar to the
-[deprecated `{{each}}` helper controller options](http://emberjs.com/deprecations/v1.x#toc_view-and-controller-options-on-the-code-each-code-helper)
+[deprecated {{each}} helper controller options](http://emberjs.com/deprecations/v1.x#toc_view-and-controller-options-on-the-code-each-code-helper)
 , this approach triggers less performant compatibility code and is deprecated in
 favor of using local properties or components.
 
