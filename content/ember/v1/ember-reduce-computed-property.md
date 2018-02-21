@@ -1,5 +1,5 @@
 ---
-id: ember-reducecomputed-ember-arraycomputed
+id: ember-reducecomputedproperty-ember-arraycomputedproperty
 title: Ember.ReduceComputedProperty / Ember.ArrayComputedProperty
 until: ''
 since: '1.13'
