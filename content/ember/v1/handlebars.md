@@ -7,8 +7,8 @@ since: '1.13'
 
 All the various ways to create helpers on the Handlebars and HTMLBars namespace
 have been deprecated in favor of the
-[`Ember.Helper`](http://emberjs.com/api/classes/Ember.Helper.html) class and it's
-[`Ember.Helper.helper`](http://emberjs.com/api/classes/Ember.Helper.html#method_helper)
+[Ember.Helper](http://emberjs.com/api/classes/Ember.Helper.html) class and it's
+[Ember.Helper.helper](http://emberjs.com/api/classes/Ember.Helper.html#method_helper)
 function. The `makeViewHelper` method has been deprecated in favor of just using
 an `Ember.Component`.
 
