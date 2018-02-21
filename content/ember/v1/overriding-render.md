@@ -1,6 +1,6 @@
 ---
 id: overriding-code-render-code-when-extending-a-component-or-view
-title: Overriding `render` When Extending a Component or View.
+title: Overriding render When Extending a Component or View
 until: ''
 since: '1.13'
 ---
