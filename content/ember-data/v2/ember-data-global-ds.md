@@ -1,5 +1,5 @@
 ---
-id: ember-data.global-ds
+id: global-version-of-ds
 title: Global version of DS
 until: '3.0.0'
 since: '2.7'

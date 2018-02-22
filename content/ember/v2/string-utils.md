@@ -1,5 +1,5 @@
 ---
-id: ember-string-utils.fmt
+id: ember-string-fmt
 title: Ember.String.fmt
 until: '3.0.0'
 since: '2.0'

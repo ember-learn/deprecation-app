@@ -1,5 +1,5 @@
 ---
-id: ds.store.recordIsLoaded
+id: recordisloaded
 title: recordIsLoaded
 until: '3.0.0'
 since: '2.11'

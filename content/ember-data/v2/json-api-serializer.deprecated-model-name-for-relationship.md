@@ -1,5 +1,5 @@
 ---
-id: ds.json-api-serializer.deprecated-model-name-for-relationship
+id: jsonapiserializer-modelnamefrompayloadkey-for-relationship
 title: JSONAPISerializer.modelNameFromPayloadKey for Relationship
 until: '4.0.0'
 since: 'Upcoming Features'

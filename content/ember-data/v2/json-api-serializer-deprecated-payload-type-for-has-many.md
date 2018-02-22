@@ -1,5 +1,5 @@
 ---
-id: ds.json-api-serializer.deprecated-payload-type-for-has-many
+id: jsonapiserializer-payloadkeyfrommodelname-for-hasmany-relationship
 title: JSONAPISerializer.payloadKeyFromModelName for hasMany Relationship
 until: '4.0.0'
 since: 'Upcoming Features'

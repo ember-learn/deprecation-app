@@ -1,5 +1,5 @@
 ---
-id: ember-routing-view.deprecated-current-when
+id: link-to-s-code-currentwhen-code
 title: Link-to's `currentWhen`
 until: '3.0.0'
 since: '2.0'

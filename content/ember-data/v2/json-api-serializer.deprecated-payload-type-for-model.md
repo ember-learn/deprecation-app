@@ -1,5 +1,5 @@
 ---
-id: ds.json-api-serializer.deprecated-payload-type-for-model
+id: jsonapiserializer-payloadkeyfrommodelname-for-resource
 title: JSONAPISerializer.payloadKeyFromModelName for Resource
 until: '4.0.0'
 since: 'Upcoming Features'

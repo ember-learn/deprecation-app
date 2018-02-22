@@ -1,5 +1,5 @@
 ---
-id: ds.serializer.private-should-serialize-has-many
+id: jsonserializer-shouldserializehasmany
 title: JSONSerializer.shouldSerializeHasMany
 until: '3.0.0'
 since: '2.12'

@@ -1,5 +1,5 @@
 ---
-id: deferredmixin-and-ember-deferred
+id: ember-deferredmixin-and-ember-deferred
 title: Ember.DeferredMixin and Ember.Deferred
 until: ''
 since: '1.7'

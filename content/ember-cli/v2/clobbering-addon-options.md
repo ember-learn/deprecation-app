@@ -1,4 +1,5 @@
 ---
+id: clobbering-addon-options
 title: Clobbering Addon#options
 since: '2.12.0'
 ---

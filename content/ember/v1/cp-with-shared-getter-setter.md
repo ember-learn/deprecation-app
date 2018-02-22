@@ -1,5 +1,5 @@
 ---
-id: deprecate-using-the-same-function-as-getter-and-setter-in-computed-properties
+id: computed-properties-with-a-shared-getter-and-setter
 title: Computed Properties With a Shared Getter And Setter
 until: ''
 since: '1.12'

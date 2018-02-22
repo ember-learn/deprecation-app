@@ -1,5 +1,5 @@
 ---
-id: ember-metal.ember-k
+id: code-ember-k-code
 title: 'Ember.K'
 until: '3.0.0'
 since: '2.12'

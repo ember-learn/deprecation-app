@@ -1,5 +1,5 @@
 ---
-id: ember-metal.binding
+id: ember-binding
 title: Ember.Binding
 until: '3.0.0'
 since: '2.7'

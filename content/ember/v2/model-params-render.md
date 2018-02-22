@@ -1,5 +1,5 @@
 ---
-id: ember-template-compiler.deprecate-render-model
+id: model-param-in-code-render-code-helper
 title: Model param in render helper
 until: '3.0.0'
 since: '2.6'

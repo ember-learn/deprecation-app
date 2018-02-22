@@ -1,5 +1,5 @@
 ---
-id: ember-views.render-to-element
+id: code-rendertoelement-code
 title: renderToElement
 until: '2.12.0'
 since: '2.11'

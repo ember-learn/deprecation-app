@@ -1,5 +1,5 @@
 ---
-id: ember-router.router
+id: ember-router-router-renamed-to-ember-router-_routermicrolib
 title: Ember.Router.router renamed to Ember.Router._routerMicrolib
 until: '2.16.0'
 since: '2.13'

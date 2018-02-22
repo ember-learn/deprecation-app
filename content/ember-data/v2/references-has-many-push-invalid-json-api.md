@@ -1,5 +1,5 @@
 ---
-id: ds.references.has-many.push-invalid-json-api
+id: hasmanyreference-push-invalid-data
 title: HasManyReference.push Invalid Data
 until: '4.0.0'
 since: 'Upcoming Features'

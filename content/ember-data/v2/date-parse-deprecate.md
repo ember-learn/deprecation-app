@@ -1,5 +1,5 @@
 ---
-id: ds.date.parse-deprecate
+id: date-prototype-extension
 title: Date Prototype Extension
 until: '3.0.0'
 since: '2.7'

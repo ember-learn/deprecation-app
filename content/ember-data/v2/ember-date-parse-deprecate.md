@@ -1,5 +1,5 @@
 ---
-id: ds.ember.date.parse-deprecate
+id: ember-date-parse
 title: Ember.Date.parse
 until: '3.0.0'
 since: '2.7'

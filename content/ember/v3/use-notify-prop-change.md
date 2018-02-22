@@ -1,5 +1,5 @@
 ---
-id: ember-metal.deprecate-propertyWillChange, ember-metal.deprecate-propertyDidChange
+id: use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange
 title: Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
 until: '3.5.0'
 since: '3.1'

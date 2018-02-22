@@ -1,5 +1,5 @@
 ---
-id: ember-runtime.controller.content-alias
+id: controller-content-alias
 title: Controller#content alias
 until: '2.17.0'
 since: '2.16'

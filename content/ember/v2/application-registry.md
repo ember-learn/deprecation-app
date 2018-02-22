@@ -1,5 +1,5 @@
 ---
-id: ember-application.app-instance-registry
+id: ember-application-registry-ember-applicationinstance-registry
 title: Ember.Application#registry / Ember.ApplicationInstance#registry
 until: '3.0.0'
 since: '2.1'
