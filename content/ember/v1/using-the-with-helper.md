@@ -1,6 +1,6 @@
 ---
 id: using-the-code-with-code-helper-with-the-code-controller-code-option
-title: Using the {{with}} Helper with the controller option
+title: Using the `{{with}}` Helper with the `controller` option
 until: ''
 since: '1.13'
 ---

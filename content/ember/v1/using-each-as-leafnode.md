@@ -1,6 +1,6 @@
 ---
 id: using-code-each-code-as-a-leaf-node-in-a-dependent-key
-title: Using @each as a leaf node in a dependent key
+title: Using `@each` as a leaf node in a dependent key
 until: ''
 since: '1.13'
 ---

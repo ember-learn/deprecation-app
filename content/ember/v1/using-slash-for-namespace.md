@@ -1,6 +1,6 @@
 ---
 id: using-code-code-for-namespace-in-the-code-render-code-helper
-title:  Using / for namespace in the {{render}} helper
+title:  Using `/` for namespace in the `{{render}}` helper
 until: ''
 since: '1.13'
 ---

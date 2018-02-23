@@ -1,6 +1,6 @@
 ---
 id: using-code-trackedarray-code-or-code-subarray-code
-title: Using TrackedArray or SubArray
+title: Using `TrackedArray` or `SubArray`
 until: ''
 since: '1.13'
 ---
