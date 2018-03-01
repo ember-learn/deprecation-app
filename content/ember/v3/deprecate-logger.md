@@ -51,3 +51,11 @@ if (console.debug) {
   console.log(message);
 }
 ```
+
+#### Add-on Authors
+
+If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will 
+need to test for the existence of `console` before calling its methods. If you 
+do much logging, you may find it convenient to define your own wrapper. Writing
+the wrapper as a service will provide for dependency injection by tests and 
+perhaps even clients.
