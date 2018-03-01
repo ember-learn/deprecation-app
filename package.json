@@ -12,7 +12,7 @@
   "repository": "https://github.com/ember-learn/deprecation-app.git",
   "scripts": {
     "build": "ember build",
-    "build-production": "ember build -e production",
+    "build-production": "ember deploy production",
     "lint:js": "eslint ./*.js app config lib server tests",
     "start": "ember serve",
     "test": "ember test"
