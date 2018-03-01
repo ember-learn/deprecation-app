@@ -12,6 +12,8 @@ module.exports = function(deployTarget) {
     if (fastlyDomain) {
       process.env.API_HOST_URL = `https://${fastlyDomain}`;
       process.env.CDN_URL = `https://${fastlyDomain}/`
+    } else {
+      process.env.CDN_URL = '/';
     }
   }
 

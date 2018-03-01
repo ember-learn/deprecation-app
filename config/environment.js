@@ -54,6 +54,7 @@ module.exports = function(environment) {
 
     ENV.routerRootURL = "/deprecations/";
     ENV.apiHost = process.env.API_HOST_URL;
+    ENV.rootURL = process.env.CDN_URL;
   }
 
   return ENV;
