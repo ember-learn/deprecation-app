@@ -1,5 +1,5 @@
 {
   "https_only": true,
-  "root": "tmp/deploy-dist",
+  "root": "dist",
   "error_page": "_empty.html"
 }
