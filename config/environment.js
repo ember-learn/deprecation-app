@@ -52,9 +52,13 @@ module.exports = function(environment) {
   if (environment === "production") {
     // here you can enable a production-specific feature
 
+    let fastlyDomain = process.env.FASTLY_DOMAIN;
+    if (fastlyDomain) {
+      ENV.apiHost = `https://${fastlyDomain}`;
+      ENV.rootURL = `https://${fastlyDomain}/`;
+    }
+
     ENV.routerRootURL = "/deprecations/";
-    ENV.apiHost = process.env.API_HOST_URL;
-    ENV.rootURL = process.env.CDN_URL;
   }
 
   return ENV;
