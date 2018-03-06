@@ -16,8 +16,9 @@ let urls = [
 module.exports = function(defaults) {
   let prepend = "";
 
-  if ("CDN_URL" in process.env) {
-    prepend = process.env.CDN_URL;
+  let fastlyDomain = process.env.FASTLY_DOMAIN;
+  if ("FASTLY_DOMAIN" in process.env) {
+    prepend = `https://${fastlyDomain}/`;
   }
 
   let app = new EmberApp(defaults, {
