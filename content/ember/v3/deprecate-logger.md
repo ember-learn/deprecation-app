@@ -2,7 +2,7 @@
 id: ember-console.deprecate-logger
 title: Use console rather than Ember.Logger
 until: '4.0.0'
-since: 'Upcoming Versions'
+since: '3.2'
 ---
 
 Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`.
@@ -54,8 +54,8 @@ if (console.debug) {
 
 #### Add-on Authors
 
-If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will 
-need to test for the existence of `console` before calling its methods. If you 
+If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will
+need to test for the existence of `console` before calling its methods. If you
 do much logging, you may find it convenient to define your own wrapper. Writing
-the wrapper as a service will provide for dependency injection by tests and 
+the wrapper as a service will provide for dependency injection by tests and
 perhaps even clients.
