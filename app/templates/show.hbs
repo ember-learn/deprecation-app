@@ -4,13 +4,13 @@
 </div>
 
 <div class="main has-sidebar" id="content" role="main">
-  <h2>Deprecations Added in {{project}} {{version}}</h2>
+  <h1>Deprecations Added in {{project}} {{version}}</h1>
   <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
   cycle.</p>
   <p>For more information on deprecations in {{project}}, see the {{#link-to 'index'}}main deprecations page{{/link-to}}.</p>
 
   {{#each sortedGroupedResults as |result|}}
-    <h3 class="anchorable-toc">Deprecations Added in {{result.since}} </h3>
+    <h2 class="anchorable-toc">Deprecations Added in {{result.since}} </h2>
       {{renderId}}
       {{#each result.contents as |content|}}
         {{deprecation-article model=content renderIdOrUntil=renderIdOrUntil}}
