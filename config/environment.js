@@ -8,6 +8,10 @@ module.exports = function(environment) {
     routerRootURL: "/",
     apiHost: "",
     locationType: "auto",
+    "ember-algolia": {
+      algoliaId: "BH4D90D16A",
+      algoliaKey: "760969ef081fcadc7e0e60faefdb0907"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

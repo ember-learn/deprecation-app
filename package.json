@@ -18,9 +18,12 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "algoliasearch": "^3.25.1",
     "broccoli-asset-rev": "^2.6.0",
     "broccoli-static-site-json": "^1.3.0",
     "ember-ajax": "^3.0.0",
+    "ember-algolia": "0.0.10",
+    "ember-browserify": "^1.2.1",
     "ember-cli": "3.0.0",
     "ember-cli-app-version": "^3.1.3",
     "ember-cli-babel": "^6.11.0",
@@ -41,18 +44,23 @@
     "ember-collapsible-panel": "^2.1.1",
     "ember-data": "~3.0.1",
     "ember-export-application-global": "^2.0.0",
+    "ember-learn-search-components": "github:ember-learn/ember-learn-search-components#feature/styling",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "0.1.6",
     "ember-prism": "^0.2.0",
     "ember-resolver": "^4.5.0",
     "ember-set-body-class": "^0.3.0",
     "ember-source": "~3.0.0",
-    "ember-styleguide": "github:ember-learn/ember-styleguide#170e94742d310bd7cd28f1cb757c741816a58d16",
+    "ember-styleguide": "github:ember-learn/ember-styleguide#092d4877b0c75a2ecf978edade6c39cea1ad7953",
+    "ember-tether": "^1.0.0-beta.1",
     "eslint-plugin-ember": "^5.0.3",
     "loader.js": "^4.6.0",
     "prember": "github:stonecircle/prember#feature/static-files",
     "semver-compare": "^1.0.0"
   },
+  "fastbootDependencies": [
+    "algoliasearch"
+  ],
   "engines": {
     "node": ">=8",
     "npm": "5"
