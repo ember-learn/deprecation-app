@@ -4,7 +4,13 @@ This is the app that serves https://emberjs.com/deprecations/
 
 ## Adding new deprecations
 
-The [content](https://github.com/ember-learn/deprecation-app/tree/master/content/) folder contains all the deprecations that are listed by the website. To add a new deprecation, add it to the appropriate folder by creating a new file. The content of the file needs to follow a specific format for the app to work. You can see [this sample](https://raw.githubusercontent.com/ember-learn/deprecation-app/master/content/ember/v3/getting-each.md) for reference.
+To add a new deprecation, you can use the `ember generate deprecation` command. For example, the following command:
+
+```bash
+ember generate ember/v3/deprecate-logger
+```
+
+Would generate a new deprecation in the appropriate sub-folder of [content](https://github.com/ember-learn/deprecation-app/tree/master/content/) for the Ember v3.0.0 deprecation of `Ember.Logger`. folder contains all the deprecations that are listed by the website. You can see [this sample](https://raw.githubusercontent.com/ember-learn/deprecation-app/master/content/ember/v3/getting-each.md) for reference.
 
 ## Prerequisites
 
