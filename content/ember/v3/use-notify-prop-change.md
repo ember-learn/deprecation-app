@@ -34,6 +34,6 @@ doStuff(object);
 object.notifyPropertyChange('someProperty');
 ```
 
-If you are an addon author and need to support both you can use the polyfill
+If you are an addon author and need to support both Ember applications greater
+than 3.1 *and* less than 3.1 you can use the polyfill
 [ember-notify-property-change-polyfill](https://github.com/rondale-sc/ember-notify-property-change-polyfill)
-to support both pre and post Ember 3.1
