@@ -3,6 +3,7 @@
 const EmberApp = require("ember-cli/lib/broccoli/ember-app");
 
 let urls = [
+  "/",
   "/v3.x",
   "/v2.x",
   "/v1.x",
