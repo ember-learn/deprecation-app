@@ -1,0 +1,61 @@
+.ember-version-graphic {
+  $ember-orange-color: #E04E39;
+  $white-color: #FFFFFF;
+
+  $mascots: (
+    tomster-lts: 'https://emberjs.com/images/tomsters/lts-8974c71c.png',
+    tomster: 'https://emberjs.com/images/tomsters/teaching-c05e27c7.png',
+    zoey: 'https://emberjs.com/images/tomsters/zoey-2f531686.png'
+  );
+
+  $container-background-color: $ember-orange-color;
+  $container-border-radius: 4px;
+  $container-height: 200px;
+  $container-width: floor($container-height / 1.77);
+  $text-color: $white-color;
+  $text-font-size: 72px;
+  $text-shadow-color: darken($container-background-color, 100%);
+
+  width: $container-width;
+  height: $container-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: $container-border-radius;
+  background-color: $container-background-color;
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease-out;
+  will-change: background-color, background-position;
+
+  .text {
+    line-height: 0.9;
+    color: $text-color;
+    font-size: $text-font-size;
+    font-weight: bold;
+    vertical-align: baseline;
+    transition: all 0.4s ease;
+    will-change: text-shadow;
+  }
+
+  &:hover {
+    background-color: darken($container-background-color, 10%);
+    background-position: center;
+
+    &.tomster {
+      background-position: 15% center;
+    }
+
+    .text {
+      text-shadow: 3px 3px 0 $text-shadow-color, -1px -1px 0 $text-shadow-color, 1px -1px 0 $text-shadow-color, -1px 1px 0 $text-shadow-color, 1px 1px 0 $text-shadow-color;
+    }
+
+    @each $name, $url in $mascots {
+      &.#{$name} {
+        background-image: url($url);
+      }
+    }
+  }
+}
