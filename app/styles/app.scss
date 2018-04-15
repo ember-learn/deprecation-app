@@ -5028,3 +5028,16 @@ body.tomster_faq #subcontent #back-to-top {
 .screenshot {
   margin-left: -60px;
 }
+
+
+@import "ember-version-graphic";
+
+.ember-version-graphics {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 10px;
+  }
+}
