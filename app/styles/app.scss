@@ -5033,11 +5033,52 @@ body.tomster_faq #subcontent #back-to-top {
 @import "ember-version-graphic";
 
 .ember-version-graphics {
+  $spacing: 15px;
+  $ember-orange-color: #E04E39;
   display: flex;
   margin: 0;
   padding: 0;
+  justify-content: center;
 
-  li {
-    margin: 10px;
+  .item {
+    margin: $spacing;
+    padding: 0;
+    border: 1px solid $ember-orange-color;
+
+    .links {
+      min-width: 120px;
+      margin: 0 !important;
+      padding: 0 !important;
+      border-top: 1px solid $ember-orange-color;
+
+      li {
+        margin: $spacing;
+      }
+    }
+  }
+
+  @media screen and (min-width: 0) and (max-width: 710px) {
+    & {
+      flex-wrap: wrap;
+
+      .item {
+        display: flex;
+        width: 100%;
+
+        .ember-version-graphic {
+          $height: 132px;
+          width: $height;
+          height: $height;
+
+          .text {
+            font-size: 64px;
+          }
+        }
+
+        .links {
+          border-top: 0;
+        }
+      }
+    }
   }
 }
