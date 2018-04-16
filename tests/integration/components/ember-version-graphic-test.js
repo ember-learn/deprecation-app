@@ -12,7 +12,7 @@ module('Integration | Component | ember-version-graphic', function(hooks) {
 
     await render(hbs`{{ember-version-graphic}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), '0.x');
 
     // Template block usage:
     await render(hbs`
