@@ -11,8 +11,11 @@ module('Integration | Component | ember-version-graphic', function(hooks) {
     // Handle any actions with this.set('myAction', function(val) { ... });
 
     await render(hbs`{{ember-version-graphic}}`);
-
     assert.equal(this.element.textContent.trim(), '0.x');
+
+    this.set('textToPass', '1.x');
+    await render(hbs`{{ember-version-graphic text=textToPass}}`);
+    assert.equal(this.element.textContent.trim(), '1.x');
 
     // Template block usage:
     await render(hbs`
