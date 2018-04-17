@@ -1,0 +1,41 @@
+.ember-version-graphic {
+  $ember-orange-color: #E04E39;
+  $white-color: #FFFFFF;
+
+  $mascots: (
+    tomster-deprecated: 'https://emberjs.com/images/tomsters/deprecated-24565384.png',
+    tomster-lts: 'https://emberjs.com/images/tomsters/lts-8974c71c.png',
+    zoey: 'https://emberjs.com/images/tomsters/zoey-2f531686.png'
+  );
+
+  $container-background-color: $ember-orange-color;
+  $container-border-radius: 4px;
+  $container-height: 250px;
+  $container-width: floor($container-height / 1.77);
+  $text-color: $white-color;
+  $text-font-size: 72px;
+  $text-shadow-color: darken($container-background-color, 100%);
+
+  width: $container-width + 50px;
+  height: $container-height;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  @each $name, $url in $mascots {
+    &.#{$name} {
+      background: $container-background-color url($url) no-repeat bottom center;
+      background-size: contain;
+    }
+  }
+
+  .text {
+    line-height: 0.8;
+    color: $text-color;
+    font-size: $text-font-size;
+    font-weight: bold;
+    text-shadow: 3px 3px 0 $text-shadow-color, -1px -1px 0 $text-shadow-color, 1px -1px 0 $text-shadow-color, -1px 1px 0 $text-shadow-color, 1px 1px 0 $text-shadow-color;
+  }
+}
