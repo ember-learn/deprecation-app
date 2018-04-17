@@ -1,7 +1,7 @@
 ---
 id: ember-string.namespace
 title: Ember.String namespace
-until: '3.5.0'
+until: '4.0.0'
 since: 'Upcoming Features'
 ---
 
@@ -32,16 +32,16 @@ You should `ember install @ember/string`.
 Go from:
 
 ```javascript
-import Ember from 'ember';
+import Ember from "ember";
 
-Ember.String.camelize("my string") // MyString
-Ember.String.capitalize("my string") // My String
-Ember.String.classify("my string") // MyString
-Ember.String.dasherize("my string") // my-string
-Ember.String.decamelize("MyString") // my string
-Ember.String.underscore("my string") // my_string
+Ember.String.camelize("my string"); // MyString
+Ember.String.capitalize("my string"); // My String
+Ember.String.classify("my string"); // MyString
+Ember.String.dasherize("my string"); // my-string
+Ember.String.decamelize("MyString"); // my string
+Ember.String.underscore("my string"); // my_string
 
-Ember.String.w("my string") // 
+Ember.String.w("my string"); //
 ```
 
 To:
@@ -53,17 +53,17 @@ import {
   classify,
   dasherize,
   decamelize,
-  underscore,
-} from '@ember/string'
+  underscore
+} from "@ember/string";
 
-camelize("my string") // MyString
-capitalize("my string") // My String
-classify("my string") // MyString
-dasherize("my string") // my-string
-decamelize("MyString") // my string
-underscore("my string") // my_string
+camelize("my string"); // MyString
+capitalize("my string"); // My String
+classify("my string"); // MyString
+dasherize("my string"); // my-string
+decamelize("MyString"); // my string
+underscore("my string"); // my_string
 
-w("my string") // 
+w("my string"); //
 ```
 
 ##### `Ember.String.htmlSafe` and `Ember.String.isHTMLSafe`
@@ -71,34 +71,34 @@ w("my string") //
 Go from:
 
 ```javascript
-import Ember from 'ember';
+import Ember from "ember";
 
 let myString = "my string";
 
-Ember.String.htmlSafe(myString)
-Ember.String.isHTMLSafe(myString)
+Ember.String.htmlSafe(myString);
+Ember.String.isHTMLSafe(myString);
 ```
 
 or:
 
 ```javascript
-import { htmlSafe, isHTMLSafe } from '@ember/component';
+import { htmlSafe, isHTMLSafe } from "@ember/component";
 
 let myString = "my string";
 
-htmlSafe(myString)
-isHTMLSafe(myString)
+htmlSafe(myString);
+isHTMLSafe(myString);
 ```
 
 To:
 
 ```javascript
-import { htmlSafe, isHTMLSafe } from '@ember/template';
+import { htmlSafe, isHTMLSafe } from "@ember/template";
 
 let myString = "my string";
 
-htmlSafe(myString)
-isHTMLSafe(myString)
+htmlSafe(myString);
+isHTMLSafe(myString);
 ```
 
 ##### `Ember.String.loc` and `import { loc } from '@ember/string'`
