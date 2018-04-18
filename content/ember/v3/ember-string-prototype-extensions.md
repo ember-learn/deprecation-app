@@ -1,7 +1,7 @@
 ---
 id: ember-string.prototype_extensions
 title: Ember.String prototype extensions
-until: '3.5.0'
+until: '4.0.0'
 since: 'Upcoming Features'
 ---
 
