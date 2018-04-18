@@ -9,7 +9,7 @@ module.exports = function(environment) {
     apiHost: "",
     locationType: "auto",
     "ember-algolia": {
-      algoliaId: "BH4D90D16A",
+      algoliaId: "BH4D9OD16A",
       algoliaKey: "760969ef081fcadc7e0e60faefdb0907"
     },
     EmberENV: {
