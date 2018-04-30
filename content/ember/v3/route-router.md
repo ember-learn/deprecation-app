@@ -5,7 +5,7 @@ until: '3.5.0'
 since: '3.2'
 ---
 
-The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined
+The `Route#router` private API has been renamed to `Route#_router` to avoid collisions with user-defined
 properties or methods.
 If you want access to the router, you are probably better served injecting the router service into
 the route like this:
