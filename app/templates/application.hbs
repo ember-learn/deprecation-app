@@ -6,7 +6,11 @@
 {{set-body-class "deprecations deprecations_v2 responsive"}}
 
 {{#es-header}}
-  {{es-navbar links=links}}
+  {{#es-navbar links=links}}
+    <form>
+      {{search-input projectVersion='v3.0.0'}}
+    </form>
+  {{/es-navbar}}
 {{/es-header}}
 
 <div id="content-wrapper" class="content-wrapper">
