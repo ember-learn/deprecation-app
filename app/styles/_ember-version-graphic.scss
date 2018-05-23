@@ -10,8 +10,8 @@
 
   $container-background-color: $ember-orange-color;
   $container-border-radius: 4px;
-  $container-height: 250px;
-  $container-width: floor($container-height / 1.77);
+  $container-height: 230px;
+  $container-width: floor($container-height / 1.6);
   $text-color: $white-color;
   $text-font-size: 72px;
   $text-shadow-color: darken($container-background-color, 100%);
@@ -31,11 +31,21 @@
     }
   }
 
+  &.tomster-deprecated { background-position-x: 12px; }
+
   .text {
     line-height: 0.8;
     color: $text-color;
     font-size: $text-font-size;
     font-weight: bold;
     text-shadow: 3px 3px 0 $text-shadow-color, -1px -1px 0 $text-shadow-color, 1px -1px 0 $text-shadow-color, -1px 1px 0 $text-shadow-color, 1px 1px 0 $text-shadow-color;
+  }
+}
+
+@media screen and (min-width: 710px) {
+  .ember-version-graphic {
+    &.tomster-lts { background-size: 81%; }
+    &.zoey { background-size: 76%; }
+    &.tomster-deprecated { background-position: 6px 16px; }
   }
 }
