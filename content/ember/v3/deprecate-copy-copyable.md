@@ -7,7 +7,7 @@ since: '3.3'
 
 Since Ember's earliest days, the `copy` function and `Copyable` mixin from `@ember/object/internals` were intended to be treated as an Ember internal mechanism. The `Copyable` mixin, in particular, has always been marked private, and it is required in order to use `copy` with any Ember `Object`-derived class without receiving an assertion. 
 
-`Copyable` hasn't been used by any code inside of Ember for a very long time, except for the `NativeArray` mixin, inherited by Ember arrays. The deprecated `copy` function now handles array copies directly, no longer delegating to `NativeArray.copy`. With this deprecation, `NativeArray` no longer inherits from `Copyable` and the  `copy` method of `NativeArray`, its `Copyable` implemention, which was never explicitly documented, is also now deprecated.  
+`Copyable` hasn't been used by any code inside of Ember for a very long time, except for the `NativeArray` mixin, inherited by Ember arrays. The deprecated `copy` function now handles array copies directly, no longer delegating to `NativeArray.copy`. With this deprecation, `NativeArray` no longer inherits from `Copyable` and its implementation of `copy` is also deprecated.
 
 For shallow copies of data where you use `copy(x)` or `copy(x, false)`, the ES6 `Object.assign({}, x)` will provide the desired effect. For deep copies, `copy(x, true)`, the most efficient and concise approach varies with the situation, but several options are available in open source.
 
