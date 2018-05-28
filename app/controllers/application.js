@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import links from 'ember-styleguide/data/navbar-links';
+import links from '../links';
 
 export default Controller.extend({
   links,
