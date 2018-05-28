@@ -3414,9 +3414,9 @@ ember-source@~3.1.0:
     jquery "^3.3.1"
     resolve "^1.5.0"
 
-ember-styleguide@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-styleguide/-/ember-styleguide-1.0.0.tgz#951133e3b5e7778931c12ffe5a9fabe6d1ed8248"
+ember-styleguide@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ember-styleguide/-/ember-styleguide-1.1.0.tgz#dee7e6e13a65c944ef5146b3598505ad9e83cb95"
   dependencies:
     bootstrap "^4.0.0"
     broccoli-funnel "^2.0.1"
