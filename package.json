@@ -44,7 +44,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "0.1.6",
     "ember-prism": "^0.2.0",
-    "ember-resolver": "^4.5.0",
+    "ember-resolver": "^4.5.5",
     "ember-set-body-class": "^0.3.0",
     "ember-source": "~3.0.0",
     "ember-styleguide": "github:ember-learn/ember-styleguide#170e94742d310bd7cd28f1cb757c741816a58d16",
