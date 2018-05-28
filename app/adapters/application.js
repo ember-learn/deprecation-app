@@ -28,7 +28,7 @@ export default DS.JSONAPIAdapter.extend({
       return this._super(...arguments);
     }
 
-    let host = get(this, 'host');
+    let host = this.host;
     let prefix = this.urlPrefix();
 
     if (prefix) { url.unshift(prefix); }

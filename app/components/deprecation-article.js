@@ -61,6 +61,6 @@ export default Component.extend({
       currentToc.prepend(`<a class="toc-anchor" href="#${currentToc.attr('id')}"></a>`)
     })
 
-    get(this, 'prism').highlight();
+    this.prism.highlight();
   }
 });

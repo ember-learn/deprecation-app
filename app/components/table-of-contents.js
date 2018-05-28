@@ -5,7 +5,7 @@ export default Component.extend({
     elementId: 'toc-list',
     tagName: 'ol',
     tocLevel: computed('level', function() {
-      return `level-${get(this, 'level')}`;
+      return `level-${this.level}`;
     }),
     level: '1',
 });
