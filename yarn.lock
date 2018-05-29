@@ -3384,9 +3384,9 @@ ember-runtime-enumerable-includes-polyfill@^2.0.0:
     ember-cli-babel "^6.9.0"
     ember-cli-version-checker "^2.1.0"
 
-ember-set-body-class@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/ember-set-body-class/-/ember-set-body-class-0.3.1.tgz#076d082832f27e23510093b650a099d04f33a3a7"
+ember-set-body-class@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ember-set-body-class/-/ember-set-body-class-0.4.0.tgz#958abed09d73d910b8bf9f83f12ddc963ed36e74"
   dependencies:
     ember-cli-babel "^6.6.0"
 
