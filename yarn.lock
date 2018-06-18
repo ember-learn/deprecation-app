@@ -2784,6 +2784,12 @@ ember-cli-get-dependency-depth@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-dependency-depth/-/ember-cli-get-dependency-depth-1.0.0.tgz#e0afecf82a2d52f00f28ab468295281aec368d11"
 
+ember-cli-google-fonts@^2.16.2:
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-google-fonts/-/ember-cli-google-fonts-2.16.2.tgz#6cdb5a908e763dac38f066616adf98922c622dc2"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-cli-htmlbars-inline-precompile@^1.0.0, ember-cli-htmlbars-inline-precompile@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars-inline-precompile/-/ember-cli-htmlbars-inline-precompile-1.0.3.tgz#332ff96c06fc522965162f1090d78a615379c3c2"
@@ -3415,15 +3421,16 @@ ember-source@~3.1.0:
     jquery "^3.3.1"
     resolve "^1.5.0"
 
-ember-styleguide@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/ember-styleguide/-/ember-styleguide-1.1.0.tgz#dee7e6e13a65c944ef5146b3598505ad9e83cb95"
+ember-styleguide@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ember-styleguide/-/ember-styleguide-2.0.0.tgz#d53f4c5a73f1d10b1c9acad98ea0414072b18129"
   dependencies:
     bootstrap "^4.0.0"
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
     ember-bootstrap "^1.2.0"
     ember-cli-babel "^6.6.0"
+    ember-cli-google-fonts "^2.16.2"
     ember-cli-htmlbars "^2.0.1"
     ember-cli-sass "^7.1.4"
     ember-svg-jar "^1.1.1"
