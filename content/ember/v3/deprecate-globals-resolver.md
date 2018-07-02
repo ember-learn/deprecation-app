@@ -9,7 +9,7 @@ Over the past years we have transitioned to using Ember-CLI as the main way to c
 
 If at all possible, it is highly recommended that you transition to using ember-cli to build your Ember applications. Most of the community already uses it and it provides many benefits including a rich addon ecosystem.
 
-However, if you dp have a custom build system, or are using Ember App Kit,
+However, if you do have a custom build system, or are using Ember App Kit,
 you can adapt your current build tools and configuration instead of using ember-cli if you really need to.
 
 Instead of extending from Ember.DefaultResolver or @ember/globals-resolver,
