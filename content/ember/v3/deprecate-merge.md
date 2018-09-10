@@ -2,7 +2,7 @@
 id: ember-polyfills.deprecate-merge
 title: Ember.merge
 until: '4.0.0'
-since: '3.5'
+since: '3.6'
 ---
 
 `Ember.merge` predates `Ember.assign`, but since `Ember.assign` has been released, `Ember.merge` has been mostly unnecessary.
