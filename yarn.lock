@@ -3784,6 +3784,12 @@ ember-concurrency@^0.8.7:
     ember-cli-babel "^6.8.2"
     ember-maybe-import-regenerator "^0.1.5"
 
+ember-copy@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-copy/-/ember-copy-1.0.0.tgz#426554ba6cf65920f31d24d0a3ca2cb1be16e4aa"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-data@~3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.4.2.tgz#675cc4f1be8df1f5c0bfe4191afa6986377721c0"
@@ -4002,9 +4008,9 @@ ember-source@~3.1.0:
     jquery "^3.3.1"
     resolve "^1.5.0"
 
-ember-styleguide@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ember-styleguide/-/ember-styleguide-2.1.0.tgz#2298a246103cebb8af0aba61ba837b1b803d33cf"
+ember-styleguide@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/ember-styleguide/-/ember-styleguide-2.2.0.tgz#1af64689c067c67dfa29d6c6bdbb043d13b6a2fd"
   dependencies:
     bootstrap "^4.0.0"
     broccoli-funnel "^2.0.1"
@@ -4014,12 +4020,12 @@ ember-styleguide@2.1.0:
     ember-cli-google-fonts "^2.16.2"
     ember-cli-htmlbars "^2.0.1"
     ember-cli-sass "^7.1.4"
-    ember-svg-jar "^1.1.1"
+    ember-svg-jar "^1.2.0"
     ember-truth-helpers "^2.0.0"
 
-ember-svg-jar@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/ember-svg-jar/-/ember-svg-jar-1.2.0.tgz#d53fc455964513a90b0359270f89e7f482d078c2"
+ember-svg-jar@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ember-svg-jar/-/ember-svg-jar-1.2.1.tgz#a6f2c2404eec72aaa819b66407cec0ebe72be99b"
   dependencies:
     broccoli-caching-writer "^3.0.3"
     broccoli-funnel "^2.0.1"
@@ -4029,6 +4035,7 @@ ember-svg-jar@^1.1.1:
     broccoli-symbolizer "^0.6.0"
     cheerio "^0.22.0"
     ember-cli-babel "^6.6.0"
+    ember-copy "^1.0.0"
     lodash "^4.13.1"
     mkdirp "^0.5.1"
     path-posix "^1.0.0"
