@@ -21,7 +21,7 @@ Then throughout your app, instead of compiling to:
 
 transpile to named amd strict syntax with module name of
 
-**&lt;appName/type-of-things/name-of-things&gt;**
+**&lt;app-name/type-of-things/name-of-things&gt;**
 
 which looks like this after transpilation
 
@@ -64,5 +64,6 @@ define('my-app/utils/...', /*...*/);
 ```
 
 If you need additional help transitioning your globals build system,
-feel free to reach out to someone on the Ember Community Slack
+feel free to reach out to someone on the Ember Community
+[Discord](https://discordapp.com/invite/zT3asNS)
 or the [Discourse](https://discuss.emberjs.com) forum.
