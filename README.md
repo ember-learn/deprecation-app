@@ -49,7 +49,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+This app is deployed via CI/CD on merges to the master branch. 
 
 ## Further Reading / Useful Links
 
