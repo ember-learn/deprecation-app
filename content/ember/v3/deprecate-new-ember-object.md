@@ -75,7 +75,7 @@ class Person {
 let rwjblue = new Person('Rob', 'Jackson');
 ```
 
-This is closer to the way native classes are meant to work, and can help a with 
+This is closer to the way native classes are meant to work, and can help with 
 low level performance concerns such as shaping. It also enforces clear 
-interfaces which can help define the function of a class more transparently.
+interfaces which can help define the purpose of a class more transparently.
 
