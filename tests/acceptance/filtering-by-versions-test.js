@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit, currentURL, findAll, pauseTest } from '@ember/test-helpers';
+import { visit, currentURL, findAll } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import { select } from 'deprecation-app/tests/helpers/x-select';
 
