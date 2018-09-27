@@ -1,0 +1,25 @@
+<div class="main">
+  From:
+  {{#x-select value=selectedFrom action=(action (mut from)) as |xs|}}
+    {{#each fromVersions as |version|}}
+      {{#xs.option value=version}}
+        {{version}}
+      {{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+
+  To:
+  {{#x-select value=selectedTo action=(action (mut to)) as |xs|}}
+    {{#each toVersions as |version|}}
+      {{#xs.option value=version}}
+        {{version}}
+      {{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+
+  Number of deprecations: {{filteredDeprecations.length}}
+
+  {{#each filteredDeprecations as |deprecation|}}
+    {{deprecation-article model=deprecation renderIdOrUntil=renderIdOrUntil}}
+  {{/each}}
+</div>
