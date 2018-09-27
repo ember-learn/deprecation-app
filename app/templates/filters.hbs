@@ -1,23 +1,27 @@
-<div class="main">
-  From:
-  {{#x-select data-test-select-from=true value=selectedFrom action=(action (mut from)) as |xs|}}
-    {{#each fromVersions as |version|}}
-      {{#xs.option value=version}}
-        {{version}}
-      {{/xs.option}}
-    {{/each}}
-  {{/x-select}}
+<div class="main" id="content" role="main">
+  <h2>Filter deprecations by version range</h2>
 
-  To:
-  {{#x-select data-test-select-to=true value=selectedTo action=(action (mut to)) as |xs|}}
-    {{#each toVersions as |version|}}
-      {{#xs.option value=version}}
-        {{version}}
-      {{/xs.option}}
-    {{/each}}
-  {{/x-select}}
+  <span id="select-to">
+    From:
+    {{#x-select data-test-select-from=true value=selectedFrom action=(action (mut from)) as |xs|}}
+      {{#each fromVersions as |version|}}
+        {{#xs.option value=version}}
+          {{version}}
+        {{/xs.option}}
+      {{/each}}
+    {{/x-select}}
+  </span>
 
-  Number of deprecations: {{filteredDeprecations.length}}
+  <span id="select-to">
+    To:
+    {{#x-select data-test-select-to=true value=selectedTo action=(action (mut to)) as |xs|}}
+      {{#each toVersions as |version|}}
+        {{#xs.option value=version}}
+          {{version}}
+        {{/xs.option}}
+      {{/each}}
+    {{/x-select}}
+  </span>
 
   {{#each filteredDeprecations as |deprecation|}}
     {{deprecation-article
