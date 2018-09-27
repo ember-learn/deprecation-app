@@ -47,10 +47,12 @@
     "ember-set-body-class": "^0.3.0",
     "ember-source": "~3.1.0",
     "ember-styleguide": "2.2.0",
+    "ember-test-selectors": "^1.0.0",
     "emberx-select": "^3.1.1",
     "eslint-plugin-ember": "^5.0.3",
     "loader.js": "^4.6.0",
     "prember": "github:stonecircle/prember#feature/static-files",
+    "qunit-dom": "^0.8.0",
     "semver": "^5.5.1",
     "semver-compare": "^1.0.0"
   },

@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import config from 'deprecation-app/config/environment';
-import { all, map } from 'rsvp';
+import { all } from 'rsvp';
 
 export default Route.extend({
   model() {
