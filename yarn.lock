@@ -4367,6 +4367,14 @@ ember-wormhole@^0.5.4:
     ember-cli-babel "^6.10.0"
     ember-cli-htmlbars "^2.0.1"
 
+emberx-select@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/emberx-select/-/emberx-select-3.1.1.tgz#e410bd667c85d8ee43f51cf9a4ceacd4c39167f0"
+  integrity sha512-2/8D33xbqo5mYrPIwj8hn9yfKcS7O2nhYyQ/ZWTR7tPaOo+FlOD4Czrw3+jhkQjT8dJt57oRt0IBApY3x5reZw==
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^2.0.1"
+
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"

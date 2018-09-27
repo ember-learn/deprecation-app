@@ -13,6 +13,7 @@ Router.map(function() {
   this.route("show", {
     path: ":project/:version"
   });
+  this.route('filters');
 });
 
 export default Router;
