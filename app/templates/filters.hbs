@@ -20,6 +20,6 @@
   Number of deprecations: {{filteredDeprecations.length}}
 
   {{#each filteredDeprecations as |deprecation|}}
-    {{deprecation-article model=deprecation renderIdOrUntil=renderIdOrUntil}}
+    {{deprecation-article model=deprecation renderIdOrUntil=deprecation.until}}
   {{/each}}
 </div>
