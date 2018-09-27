@@ -1,6 +1,6 @@
 <div class="main">
   From:
-  {{#x-select value=selectedFrom action=(action (mut from)) as |xs|}}
+  {{#x-select data-test-select-from=true value=selectedFrom action=(action (mut from)) as |xs|}}
     {{#each fromVersions as |version|}}
       {{#xs.option value=version}}
         {{version}}
@@ -9,7 +9,7 @@
   {{/x-select}}
 
   To:
-  {{#x-select value=selectedTo action=(action (mut to)) as |xs|}}
+  {{#x-select data-test-select-to=true value=selectedTo action=(action (mut to)) as |xs|}}
     {{#each toVersions as |version|}}
       {{#xs.option value=version}}
         {{version}}
@@ -20,6 +20,10 @@
   Number of deprecations: {{filteredDeprecations.length}}
 
   {{#each filteredDeprecations as |deprecation|}}
-    {{deprecation-article model=deprecation renderIdOrUntil=deprecation.until}}
+    {{deprecation-article
+      data-test-deprecation-article=true
+      model=deprecation
+      renderIdOrUntil=deprecation.until
+    }}
   {{/each}}
 </div>
