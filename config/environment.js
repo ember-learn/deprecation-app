@@ -1,4 +1,5 @@
 "use strict";
+const contentFolders = require('../content-folder-list');
 
 module.exports = function(environment) {
   let ENV = {
@@ -26,7 +27,9 @@ module.exports = function(environment) {
 
     fastboot: {
       hostWhitelist: ["localhost:4200"]
-    }
+    },
+
+    contentFolders,
   };
 
   if (environment === "development") {

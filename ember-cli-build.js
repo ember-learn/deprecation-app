@@ -1,6 +1,7 @@
 "use strict";
 
 const EmberApp = require("ember-cli/lib/broccoli/ember-app");
+const contentFolders = require('./content-folder-list');
 
 let urls = [
   "/",
@@ -41,7 +42,9 @@ module.exports = function(defaults) {
       bootstrapVersion: 4,
       importBootstrapFont: false,
       importBootstrapCSS: false
-    }
+    },
+
+    contentFolders
   });
 
   app.import("node_modules/semver-compare/index.js", {
