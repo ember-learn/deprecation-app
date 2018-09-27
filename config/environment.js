@@ -1,4 +1,5 @@
-'use strict';
+"use strict";
+const contentFolders = require('../content-folder-list');
 
 module.exports = function(environment) {
   let ENV = {
@@ -24,13 +25,10 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: [/localhost:\d+/]
+      hostWhitelist: ["localhost:4200"]
     },
 
-    'algolia': {
-      algoliaId: 'Y1OMR4C7MF',
-      algoliaKey: '5d01c83734dc36754d9e94cbf6f8964d'
-    },
+    contentFolders,
   };
 
   if (environment === 'development') {

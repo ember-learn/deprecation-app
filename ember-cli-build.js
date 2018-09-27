@@ -1,6 +1,7 @@
 "use strict";
 
 const EmberApp = require("ember-cli/lib/broccoli/ember-app");
+const contentFolders = require('./content-folder-list');
 
 module.exports = function(defaults) {
   let prepend = "";
@@ -40,14 +41,8 @@ module.exports = function(defaults) {
       importBootstrapFont: false,
       importBootstrapCSS: false
     },
-    // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
-    'ember-cli-uglify': {
-      uglify: {
-        compress: {
-          collapse_vars: false
-        }
-      }
-    },
+
+    contentFolders
   });
 
   app.import("node_modules/semver-compare/index.js", {
