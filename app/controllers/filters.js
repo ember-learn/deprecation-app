@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 import { computed } from '@ember/object';
-import semverCompare from 'semver-compare';
+import semver from 'semver';
 
 export default Controller.extend({
   queryParams: ['from', 'to'],
@@ -17,7 +17,8 @@ export default Controller.extend({
 
   versions: computed('flattenedDeprecations.@each.since', function() {
     let versionsList = this.flattenedDeprecations.reduce((acc, elem) => {
-      let version = elem.since;
+      let coerced = semver.coerce(elem.since);
+      let version = coerced && coerced.version;
 
       if (!acc.includes(version) && parseFloat(version)) {
         acc.push(version);
@@ -31,13 +32,13 @@ export default Controller.extend({
 
   fromVersions: computed('versions.[]', 'to', function() {
     return this.to ?
-      this.versions.filter(version => version < this.to) :
+      this.versions.filter(version => semver.lt(version, this.to)) :
       this.versions;
   }),
 
   toVersions: computed('versions.[]', 'from', function() {
     return this.from ?
-      this.versions.filter(version => version > this.from) :
+      this.versions.filter(version => semver.gt(version, this.from)) :
       this.versions;
   }),
 
