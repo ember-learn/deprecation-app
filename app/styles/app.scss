@@ -247,8 +247,17 @@ ol {
 p {
   margin: 1em 0;
 }
+
+section {
+  margin: 1em 0;
+}
 @media screen and (min-width: 0) and (max-width: 991px) {
   p {
+    margin: 0 auto;
+    padding: 0.5em;
+  }
+
+  section {
     margin: 0 auto;
     padding: 0.5em;
   }
