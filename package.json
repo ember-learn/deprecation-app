@@ -21,6 +21,7 @@
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-static-site-json": "^2.1.2",
     "ember-ajax": "^3.1.2",
+    "ember-auto-import": "^1.2.15",
     "ember-cli": "~3.5.0",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^7.1.2",
@@ -42,6 +43,7 @@
     "ember-collapsible-panel": "^3.1.1",
     "ember-data": "~3.5.0",
     "ember-export-application-global": "^2.0.0",
+    "ember-href-to": "^1.15.1",
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "0.1.6",
     "ember-percy": "^1.5.0",
@@ -51,6 +53,7 @@
     "ember-set-body-class": "^0.4.0",
     "ember-source": "~3.5.0",
     "ember-styleguide": "2.3.2",
+    "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
     "prember": "github:stonecircle/prember#feature/static-files",
@@ -65,5 +68,8 @@
     "paths": [
       "lib/content-docs-generator"
     ]
+  },
+  "dependencies": {
+    "algoliasearch": "^3.30.0"
   }
 }

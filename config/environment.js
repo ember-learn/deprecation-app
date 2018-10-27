@@ -26,7 +26,12 @@ module.exports = function(environment) {
 
     fastboot: {
       hostWhitelist: ["localhost:4200"]
-    }
+    },
+
+    'algolia': {
+      algoliaId: 'Y1OMR4C7MF',
+      algoliaKey: '5d01c83734dc36754d9e94cbf6f8964d'
+    },
   };
 
   if (environment === "development") {
