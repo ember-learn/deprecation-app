@@ -41,7 +41,15 @@ module.exports = function(defaults) {
       bootstrapVersion: 4,
       importBootstrapFont: false,
       importBootstrapCSS: false
-    }
+    },
+    // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
+    'ember-cli-uglify': { 
+      uglify: {
+        compress: {
+          collapse_vars: false
+        }
+      }
+    },
   });
 
   app.import("node_modules/semver-compare/index.js", {
