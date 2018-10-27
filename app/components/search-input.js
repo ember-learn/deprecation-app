@@ -54,7 +54,6 @@ export default Component.extend({
 
     const searchObj = {
       hitsPerPage: 15,
-      restrictSearchableAttributes: ['content'],
       query
     };
 
