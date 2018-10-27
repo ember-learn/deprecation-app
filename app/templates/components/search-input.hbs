@@ -1,0 +1,40 @@
+<input
+  id='search-input'
+  type='search'
+  value={{value}}
+    oninput={{perform search value='target.value'}}
+  placeholder="Search deprecations"
+  autocomplete="off"
+>
+
+{{!-- Search results dropdown --}}
+{{#ember-tether
+  target='#search-input'
+  targetAttachment='bottom left'
+  attachment='top left'
+  constraints=_resultTetherConstraints
+  class='ds-dropdown-results'
+}}
+  {{#if response.hits}}
+    <span class="ds-suggestions ds-dropdown-menu">
+      <div class="ds-suggestion">
+        <div class="algolia-docsearch-suggestion algolia-docsearch-suggestion__main">
+          <div class="algolia-docsearch-suggestion--category-header">
+            <span class="algolia-docsearch-suggestion--category-header-lvl0">
+                    Search Results
+            </span>
+          </div>
+          <div class="algolia-docsearch-suggestion--wrapper"></div>
+        </div>
+      </div>
+      {{#each response.hits as |result|}}
+        {{search-result result=result}}
+      {{/each}}
+      <div class="powered-by-algolia">
+        <a href="https://www.algolia.com/" target="_blank">
+          <img src="/images/search-by-algolia.svg" alt="Search Powered by Algolia">
+        </a>
+      </div>
+    </span>
+  {{/if}}
+{{/ember-tether}}

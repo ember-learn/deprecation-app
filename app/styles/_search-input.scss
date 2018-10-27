@@ -1,0 +1,302 @@
+
+// Typography
+$base-font-family: 'Source Sans Pro', sans-serif;
+$heading-font-family: $base-font-family;
+$monospace-font-family: Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace;
+$footer-font-family: proxima-nova, sans-serif;
+
+// Font Sizes
+$base-font-size: 1rem;
+$small-font-size: 0.75rem;
+$large-font-size: 1.5rem;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Spacing
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
+$top-spacing: $base-spacing * 3.333; // 80px
+
+
+// Colors
+$ember-orange: #dd6a58;
+$light-brown: #b67d47;
+$brown: #865931;
+$medium-gray: #999;
+$dark-gray: #444545;
+$tan: #fffdf9;
+$white: #fff;
+$black: #000;
+$creme: #FFFBF5;
+$linen: #f9e7e4;
+$near-black: #444;
+
+$base-background-color: #FDFDFD;
+$sidebar-background-color: #FFFDF9;
+
+// Code Highlighting
+$highlight-yellow: #F5E090;
+$highlight-green: #C3F590;
+$highlight-red: #EC605E;
+$highlight-blue: #90D7F5;
+$highlight-cyan: #78CEC8;
+$highlight-added: #5D7D5D;
+$highlight-removed: #905454;
+$code-background: $dark-gray;
+$code-header-background: shade($code-background, 40%);
+// $code-line-number-background: mix($code-background, $code-header-background);
+
+$highlight-colors: (
+  attribute-name: $highlight-red,
+  comment: $medium-gray,
+  content: $highlight-cyan,
+  function: $highlight-red,
+  key: $highlight-red,
+  keyword: $highlight-yellow,
+  local-variable: $highlight-red,
+  string: $highlight-cyan,
+  tag: $highlight-red,
+);
+
+// Font Colors
+$base-font-color: $near-black;
+$dark-font-color: $dark-gray;
+$light-font-color: $light-brown;
+$action-color: $ember-orange;
+
+// Border
+$base-border-radius: 3px;
+$base-border-color: #F8E7CF;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$duration: 200ms;
+
+// Z-indices
+$base-z-index: 0;
+
+
+$mobile-portrait-screen: 30em; // 480px
+$medium-screen: 40em; // 640px
+$large-screen: 54em; // 864px
+
+
+// https://github.com/algolia/docsearch/blob/master/src/styles/main.scss
+$color-border: darken($base-border-color, 10%);
+$color-border-light: $base-border-color;
+$color-category-header-background: $ember-orange;
+$color-highlight-header-background: lighten($color-category-header-background, 15%);
+$color-highlight-text: $highlight-red;
+$color-selected-background: white;
+$color-selected-text: darken($action-color, 15%);
+$color-left-column-bg: $sidebar-background-color;
+$color-left-column: $base-font-color;
+
+$breakpoint-medium: $medium-screen;
+$breakpoint-large: $large-screen;
+
+$dropdown-min-width-medium: 100%;
+$dropdown-min-width-large: 600px;
+
+// The dropdown adapts to screen size, to provide three different displays.
+// - A simple list of matching results
+// - Same list, but with text snippetting added if size is large enough
+// - Adding a second colum to let the content breath if enough room available
+
+.search-input {
+  input {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 0;
+    padding-left: 2.5em;
+    border: none;
+    border-radius: 35px;
+    outline: none;
+    appearance: none;
+    background: url("/images/search-icon.svg") rgba(255,255,255,0.1) 10px 10px no-repeat;
+    box-shadow: none;
+    line-height: 35px;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+  input,
+  input::placeholder {
+    font-size: 0.9rem;
+    color: #fff;
+  }
+  input::-webkit-search-cancel-button {
+    margin-right: 10px;
+  }
+}
+
+.ds-dropdown-results {
+  z-index: 10;
+
+  a {
+    color: #000000;
+  }
+}
+// Main autocomplete wrapper
+.ds-dropdown-menu {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  color: black;
+  display: block;
+  font-size: 12.8px;
+  margin: 6px 0 0;
+  text-align: left;
+}
+
+// Each suggestion
+.algolia-docsearch-suggestion {
+  color: #333;
+  cursor: pointer;
+  overflow: hidden;
+  border-bottom: 1px solid $color-border;
+}
+
+// Main category headers
+.algolia-docsearch-suggestion--category-header {
+  display: none;
+  border: 2px solid white;
+  background: $color-category-header-background;
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  text-align: left;
+  // Only show it when flagged as "__main"
+  .algolia-docsearch-suggestion__main & {
+    display: block;
+  }
+}
+
+// Highlight
+.algolia-docsearch-suggestion--subcategory-column-text em, .algolia-docsearch-suggestion--title em {
+  padding: 0;
+  font-style: normal;
+  color: $color-highlight-text;
+  background: none;
+  font-weight: 600;
+  // Highlight the background in header
+  .algolia-docsearch-suggestion--category-header & {
+    color: inherit;
+    background: $color-highlight-header-background;
+  }
+}
+
+// Selected suggestion
+.aa-cursor .algolia-docsearch-suggestion--content {
+  color: $color-selected-text;
+}
+.aa-cursor .algolia-docsearch-suggestion {
+  background: $color-selected-background;
+}
+
+// The secondary column is hidden on small screens
+.algolia-docsearch-suggestion--subcategory-column {
+  display: none;
+}
+// The text snippet is hidden on small screens
+.algolia-docsearch-suggestion--text {
+  display: none;
+
+  // If text parent node has --no-results
+  // we should display the content
+  .algolia-docsearch-suggestion--no-results & {
+    display: block;
+  }
+}
+
+.algolia-docsearch-suggestion--content {
+  padding: 3px 5px;
+}
+
+.algolia-docsearch-suggestion--subcategory-inline {
+  display: inline-block;
+  font-weight: bold;
+  &:after {
+    content: " › ";
+  }
+}
+.algolia-docsearch-suggestion--title {
+  display: inline;
+}
+
+// Footer
+.powered-by-algolia {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: .5em;
+}
+
+// BREAKPOINT 1:
+// Screen is big enough to display the text snippets
+@media (min-width: $breakpoint-medium) {
+  .ds-dropdown-menu {
+    min-width: $dropdown-min-width-medium;
+  }
+  .algolia-docsearch-suggestion--text {
+    display: block;
+    font-size: .9em;
+    padding: 2px 0;
+  }
+}
+
+// BREAKPOINT 2:
+// Screen is big enough to display results in two columns
+@media (min-width: $breakpoint-large) {
+  .ds-dropdown-menu {
+    width: $dropdown-min-width-large;
+  }
+  .algolia-docsearch-suggestion {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid $color-border-light;
+  }
+  .algolia-docsearch-suggestion--subcategory-column {
+    border-right: 1px solid $color-border-light;
+    background: $color-left-column-bg;
+    color: $color-left-column;
+    display: table-cell;
+    overflow: hidden;
+    padding: 3px 7px 3px 5px;
+    text-align: right;
+    text-overflow: ellipsis;
+    vertical-align: top;
+
+    width: 135px; // Hardcoded
+    max-width: 135px; // Hardcoded
+    min-width: 135px; // Hardcoded
+  }
+
+  .algolia-docsearch-suggestion--subcategory-column-text {
+    display: none;
+
+    .algolia-docsearch-suggestion__secondary & {
+      display: block;
+    }
+  }
+  .algolia-docsearch-suggestion--content {
+    display: table-cell;
+    padding: 3px 10px;
+  }
+  .algolia-docsearch-suggestion--subcategory-inline {
+    display: none;
+  }
+  .algolia-docsearch-suggestion--title {
+    font-weight: 600;
+  }
+  .algolia-docsearch-suggestion--text {
+    display: block;
+    font-weight: normal;
+    padding: 2px;
+  }
+}
