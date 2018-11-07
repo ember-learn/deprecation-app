@@ -2,7 +2,7 @@
 id: events.remove-all-listeners
 title: Remove All Listeners/Observers
 until: '3.9.0'
-since: 'Upcoming Features'
+since: '3.6'
 ---
 
 When using both the `removeListener` and `removeObserver` methods, users can
