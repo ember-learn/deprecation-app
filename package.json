@@ -54,7 +54,7 @@
     "ember-source": "~3.5.0",
     "ember-styleguide": "2.3.3",
     "ember-tether": "^1.0.0",
-    "eslint-plugin-ember": "^5.2.0",
+    "eslint-plugin-ember": "^5.4.0",
     "loader.js": "^4.7.0",
     "prember": "github:stonecircle/prember#feature/static-files",
     "sass": "^1.14.3",
