@@ -29,7 +29,7 @@ export default Route.extend({
   }
 
   actions: {
-    sendAnaltics() {
+    sendAnalytics() {
       let routeInfo = this.router.currentRoute;
       ga.send('pageView', {
         pageName: routeInfo.name,
