@@ -70,6 +70,6 @@
     ]
   },
   "dependencies": {
-    "algoliasearch": "^3.30.0"
+    "algoliasearch": "^3.32.0"
   }
 }
