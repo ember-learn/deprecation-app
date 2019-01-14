@@ -51,7 +51,7 @@
     "ember-qunit": "^4.2.0",
     "ember-resolver": "^5.0.1",
     "ember-set-body-class": "^0.4.2",
-    "ember-source": "~3.6.1",
+    "ember-source": "~3.7.0",
     "ember-styleguide": "2.5.0",
     "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^6.1.0",
