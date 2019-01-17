@@ -2,7 +2,7 @@
 id: component-manager-string-lookup
 title: Component Manager Factory Function
 until: '4.0.0'
-since: '3.8.0'
+since: '3.8'
 ---
 
 `setComponentManager` no longer takes a string to associate the custom component class and the component manager. Instead you must pass a factory function that produces an instance of the component manager.
