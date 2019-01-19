@@ -25,26 +25,50 @@ jQuery object of the component's element. So instead of that you can use the `el
 reference to a native DOM element:
 
 ```js
-this.$().on('transitionend', () => this.doSomething());
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.$().on('transitionend', () => this.doSomething());
+  }
+});
 ```
 
 should be changed to:
 
 ```js
-this.element.addEventListener('transitionend', () => this.doSomething());
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.element.addEventListener('transitionend', () => this.doSomething());
+  }
+});
 ```
 
 If you used `this.$()` to query for child elements, you can do so as well with native DOM APIs:
 
 ```js
-this.$('.animated').on('transitionend', () => this.doSomething());
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.$('.animated').on('transitionend', () => this.doSomething());
+  }
+});
 ```
 
 should be changed to:
 
 ```js
-this.element.querySelectorAll('.animated')
-  .forEach((el) => el.addEventListener('transitionend', () => this.doSomething()));
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.element.querySelectorAll('.animated')
+      .forEach((el) => el.addEventListener('transitionend', () => this.doSomething()));
+  }
+});
 ```
 
 This applies in a similar fashion to component tests using the `setupRenderingTest()` helper. Instead of using 
@@ -53,7 +77,7 @@ This applies in a similar fashion to component tests using the `setupRenderingTe
 
 ```js
 test('it disables the button', async function(assert) {
-  ...
+  // ...
   
   assert.ok(this.$('button').prop('disabled'), 'Button is disabled');
 });
@@ -63,7 +87,7 @@ should be changed to:
 
 ```js
 test('it disables the button', async function(assert) {
-  ...
+  // ...
   
   assert.ok(this.element.querySelector('button').disabled, 'Button is disabled');
 });
@@ -76,8 +100,7 @@ If you do continue to use jQuery, please make sure to always import it like this
 import jQuery from 'jquery';
 ```
 
-Accessing it from the `Ember` namespace as `Ember.$` (either directly or through destructuring) is and will remain 
-deprecated.
+Accessing it from the `Ember` namespace as `Ember.$` is and will remain deprecated.
 
 #### Opting into jQuery
 
