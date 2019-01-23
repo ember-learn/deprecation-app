@@ -5,23 +5,23 @@ until: '4.0.0'
 since: '3.8'
 ---
 
-As jQuery will be removed from Ember by default, APIs that are coupled to jQuery have been deprecated.
+As of Ember 3.4.0, Ember no longer requires that all applications include jQuery, therefore APIs that are coupled to jQuery have been deprecated.
 
-The rationale behind it is that jQuery is not needed by Ember itself anymore, and as many apps (e.g. mobile apps) are 
-sensitive about performance in general and here in particular their bundle size, it is often beneficial for those to
-not ship with jQuery. If however this is not a major concern for your app, and you see value in using jQuery, it is 
-absolutely legit to continue doing so. It is just not included by default anymore, and you would have to opt in to
+Since jQuery is not needed by Ember itself anymore, and many apps (e.g. mobile apps) are 
+sensitive about performance, it is often beneficial for those to
+avoid shipping jQuery. If this is not a major concern for your app, and you see value in using jQuery, it is 
+absolutely fine to continue doing so. It is just not included by default anymore, so you have to opt in to
 using it with the `@ember/jquery` package as described below.
 
 For addons it is a bit different as they are not aware of the context in which they are used. Any addon that still 
 relies on jQuery will either force their consuming apps to continue bundling jQuery, or will not be usable for apps
-that decide not to do so. Therefor it is highly recommended to not rely on jQuery in general, unless there is a good
+that decide not to do so. Therefore it is highly recommended to avoid relying on jQuery in general, unless there is a good
 reason (e.g. an addon wrapping a jQuery plugin).
 
 #### Added deprecations
 
-The main jQuery integration API that has been deprecated is the component's `$()` method, which would give you a 
-jQuery object of the component's element. So instead of that you can use the `element` property, which provides a 
+The main jQuery integration API that has been deprecated is `this.$()` inside of an `Ember.Component`, which would give you a 
+jQuery object of the component's element. Instead, you can use the `this.element` property, which provides a 
 reference to a native DOM element:
 
 ```js
@@ -104,8 +104,8 @@ Accessing it from the `Ember` namespace as `Ember.$` is and will remain deprecat
 
 #### Opting into jQuery
 
-For apps and addons which are ok to work only with jQuery, you can opt into the jQuery integration now provided by
-the `@ember/jquery` package. This will provide the `Ember.Component.$()` API without any deprecation warnings, and
+Apps and addons which require jQuery, can opt into the jQuery integration now provided by
+the `@ember/jquery` package. This will provide the `this.$()` API to `Ember.Component`s without deprecation warnings, and
 will make sure that the `EventDispatcher` will provide jQuery events to a component's event handler methods to 
 maintain compatibility.  
 
