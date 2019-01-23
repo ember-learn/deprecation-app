@@ -2,7 +2,7 @@
 id: jquery-apis
 title: Replace jQuery APIs
 until: '4.0.0'
-since: '3.8'
+since: '3.9'
 ---
 
 As of Ember 3.4.0, Ember no longer requires that all applications include jQuery, therefore APIs that are coupled to jQuery have been deprecated.
