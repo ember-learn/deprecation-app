@@ -9,64 +9,8 @@ Application-wide transition monitoring events belong on the Router service, not 
 
 In addition, they receive handlerInfos in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
 
-Given services are [singletons](https://en.wikipedia.org/wiki/Singleton_pattern), you may need to adjust some of the behavior of Route specific `willTransition` or `didTransition` logic.
 
-Below is how you would transition both the `Route` and `Router` usages of `willTransition` and `didTransition`.
-
-### Route
-
-From:
-
-```javascript
-import Route from '@ember/routing/route';
-
-export default Route.extend({
-  actions: {
-    willTransition(transition) {
-      if (this.controller.get('userHasEnteredData') &&
-          !confirm('Are you sure you want to abandon progress?')) {
-        transition.abort();
-      } else {
-        // Bubble the `willTransition` action so that
-        // parent routes can decide whether or not to abort.
-        return true;
-      }
-    },
-
-    didTransition() {
-      this.controller.get('errors.base').clear();
-      return true; // Bubble the didTransition event
-    }
-  }
-});
-```
-
-To:
-
-```js
-import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
-
-export default Route.extend({
-  router: service(),
-  activate() {
-    this._super(...arguments);
-    // we attach this behavior once so the handler
-    // does not keep firing on transitions for other routes
-    this.router.one('routeWillChange', transition => {
-      if (this.controller.get('userHasEnteredData') &&
-        !confirm('Are you sure you want to abandon progress?')) {
-        transition.abort();
-      }
-    });
-    this.router.one('routeDidChange', transition => {
-      this.controller.get('errors.base').clear();
-    });
-  }
-});
-```
-
-### Router
+Below is how you would transition `Router` usages of `willTransition` and `didTransition`.
 
 From:
 
