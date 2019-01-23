@@ -9,6 +9,8 @@ Application-wide transition monitoring events belong on the Router service, not 
 
 In addition, they receive handlerInfos in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
 
+Given services are [singletons](https://en.wikipedia.org/wiki/Singleton_pattern), you may need to adjust some of the behavior of Route specific `willTransition` or `didTransition` logic.
+
 Below is how you would transition both the `Route` and `Router` usages of `willTransition` and `didTransition`.
 
 ### Route
@@ -47,22 +49,21 @@ import { inject as service } from '@ember/service';
 
 export default Route.extend({
   router: service(),
-  init() {
+  activate() {
     this._super(...arguments);
-    this.router.on('routeWillChange', transition => {
+    // we attach this behavior once so the handler
+    // does not keep firing on transitions for other routes
+    this.router.one('routeWillChange', transition => {
       if (this.controller.get('userHasEnteredData') &&
-          !confirm('Are you sure you want to abandon progress?')) {
+        !confirm('Are you sure you want to abandon progress?')) {
         transition.abort();
       }
-
-      // No need to return, no longer in a bubbling API
     });
-
-    this.router.on('routeDidChange', transition => {
+    this.router.one('routeDidChange', transition => {
       this.controller.get('errors.base').clear();
-      // No need to return, no longer in a bubbling API
     });
   }
+});
 ```
 
 ### Router
