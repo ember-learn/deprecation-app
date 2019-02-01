@@ -1,5 +1,5 @@
 ---
-id: events.prototype-function-listeners
+id: events.inherited-function-listeners
 title: Prototype Function Listeners
 until: '3.9.0'
 since: 'Upcoming Features'
@@ -46,6 +46,7 @@ In cases where function listeners have been added to a prototype, and those
 functions _do_ exist on the prototype, replace them with string listeners:
 
 Before:
+
 ```js
 class Foo {
   method() {}
@@ -55,6 +56,7 @@ addListener(Foo, 'event', null, Foo.prototype.method);
 ```
 
 After:
+
 ```js
 class Foo {
   method() {}
@@ -68,6 +70,7 @@ functions which do not exist on the prototype, you can convert the function to a
 method, create a wrapper function, or add the listener on the instance instead:
 
 Before:
+
 ```js
 function foo() {}
 
@@ -77,6 +80,7 @@ addListener(Foo, 'event', null, foo);
 ```
 
 After:
+
 ```js
 class Foo {
   foo() {}
