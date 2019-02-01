@@ -20,22 +20,18 @@ export default EmberObject.extend({
 });
 ```
 
-This can be refactored into a shared utility function:
+This can be refactored into having one function call the other directly:
 
 ```js
 import EmberObject from '@ember/object';
 
-function logFoo(obj) {
-  console.log(obj.foo);
-}
-
 export default EmberObject.extend({
   foo: 123,
   bar() {
-    logFoo(this);
+    console.log(this.foo);
   },
   baz() {
-    logFoo(this);
+    this.bar(...arguments);
   },
 });
 ```
