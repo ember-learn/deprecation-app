@@ -40,7 +40,7 @@
     "ember-cli-showdown": "^4.4.4",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^2.1.0",
-    "ember-collapsible-panel": "^3.1.1",
+    "ember-collapsible-panel": "^3.2.1",
     "ember-data": "~3.5.0",
     "ember-export-application-global": "^2.0.0",
     "ember-href-to": "^2.0.1",
