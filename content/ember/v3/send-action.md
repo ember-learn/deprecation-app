@@ -101,7 +101,7 @@ strings:
 {{input enter="handleEnter"}}
 ```
 
-Since this uses `sendAction` underneath is also deprecated and must also be replaced by closure actions:
+Since this uses `sendAction` underneath it is also deprecated and must also be replaced by closure actions:
 
 ```hbs
 {{input enter=(action "handleEnter")}}
