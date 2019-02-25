@@ -57,7 +57,7 @@
     "eslint-plugin-ember": "^6.2.0",
     "loader.js": "^4.7.0",
     "prember": "github:stonecircle/prember#feature/static-files",
-    "sass": "^1.17.0",
+    "sass": "^1.17.2",
     "semver-compare": "^1.0.0"
   },
   "engines": {
