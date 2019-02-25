@@ -49,7 +49,7 @@
     "ember-percy": "^1.5.0",
     "ember-prism": "^0.4.0",
     "ember-qunit": "^4.2.0",
-    "ember-resolver": "^5.1.1",
+    "ember-resolver": "^5.1.3",
     "ember-set-body-class": "^0.4.2",
     "ember-source": "~3.7.3",
     "ember-styleguide": "2.5.0",
