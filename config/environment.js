@@ -25,7 +25,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ["localhost:4200"]
+      hostWhitelist: [/localhost:\d+/]
     },
 
     'algolia': {
