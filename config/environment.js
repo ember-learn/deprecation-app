@@ -62,8 +62,6 @@ module.exports = function(environment) {
       ENV.apiHost = `https://${fastlyDomain}`;
       ENV.rootURL = `https://${fastlyDomain}/`;
     }
-
-    ENV.routerRootURL = "/deprecations/";
   }
 
   return ENV;
