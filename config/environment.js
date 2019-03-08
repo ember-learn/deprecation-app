@@ -59,7 +59,6 @@ module.exports = function(environment) {
     let fastlyDomain = process.env.FASTLY_DOMAIN;
     if (fastlyDomain) {
       ENV.apiHost = `https://${fastlyDomain}`;
-      ENV.rootURL = `https://${fastlyDomain}/`;
     }
   }
 
