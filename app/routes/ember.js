@@ -1,12 +1,3 @@
-import Route from '@ember/routing/route';
+import EmberRoute from './deprecations/ember';
 
-export default Route.extend({
-  controllerName: 'show',
-  templateName: 'show',
-  model(params) {
-    return this.store.query('content', {
-      path: 'ember',
-      version: params.version,
-    })
-  }
-});
+export default EmberRoute;

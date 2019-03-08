@@ -1,10 +1,3 @@
-import Route from '@ember/routing/route';
+import ShowRoute from './deprecations/show';
 
-export default Route.extend({
-  model(params) {
-    return this.store.query('content', {
-      path: params.project,
-      version: params.version,
-    })
-  }
-});
+export default ShowRoute;

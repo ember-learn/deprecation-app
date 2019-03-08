@@ -10,7 +10,8 @@ addons:
   chrome: stable
 
 cache:
-  yarn: true
+  directories:
+    - $HOME/.npm
 
 env:
   global:
@@ -18,12 +19,10 @@ env:
     - JOBS=1
 
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
-
-install:
-  - yarn install --no-lockfile --non-interactive
+  - npm install -g npm@6
+  - npm config set spin false
 
 script:
-  - yarn lint:js
-  - yarn test
+  - npm run lint:js
+  - npm test
+  - npx ember build -e production

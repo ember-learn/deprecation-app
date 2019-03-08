@@ -2,18 +2,6 @@
 
 const EmberApp = require("ember-cli/lib/broccoli/ember-app");
 
-let urls = [
-  "/",
-  "/v3.x",
-  "/v2.x",
-  "/v1.x",
-  "/ember/v3.x",
-  "/ember/v2.x",
-  "/ember/v1.x",
-  "/ember-data/v2.x",
-  "/ember-cli/v2.x"
-];
-
 module.exports = function(defaults) {
   let prepend = "";
 
@@ -24,7 +12,28 @@ module.exports = function(defaults) {
 
   let app = new EmberApp(defaults, {
     prember: {
-      urls
+      urls: [
+        "/",
+        "/v3.x",
+        "/v2.x",
+        "/v1.x",
+        "/ember/v3.x",
+        "/ember/v2.x",
+        "/ember/v1.x",
+        "/ember-data/v2.x",
+        "/ember-cli/v2.x",
+
+        // TODO: remove this after website is fully deployed
+        "/deprecations/",
+        "/deprecations/v3.x",
+        "/deprecations/v2.x",
+        "/deprecations/v1.x",
+        "/deprecations/ember/v3.x",
+        "/deprecations/ember/v2.x",
+        "/deprecations/ember/v1.x",
+        "/deprecations/ember-data/v2.x",
+        "/deprecations/ember-cli/v2.x",
+      ]
     },
 
     fingerprint: {
@@ -43,7 +52,7 @@ module.exports = function(defaults) {
       importBootstrapCSS: false
     },
     // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
-    'ember-cli-uglify': { 
+    'ember-cli-uglify': {
       uglify: {
         compress: {
           collapse_vars: false
