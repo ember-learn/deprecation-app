@@ -6,7 +6,7 @@ export default Route.extend({
   model(params) {
     if (
       window.location &&
-      window.location.href.match(/(deprecations.emberjs.com|localhost:4200)/) &&
+      window.location.href.match(/(deprecations.emberjs.com|ember-deprecations.netlify.com)/) &&
       this.routeName === 'deprecations.ember'
     ) {
       return this.replaceWith('ember', params.version)
