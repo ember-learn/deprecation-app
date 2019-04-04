@@ -1,6 +1,6 @@
 # deprecation-app [![Build Status](https://travis-ci.org/ember-learn/deprecation-app.svg?branch=master)](https://travis-ci.org/ember-learn/deprecation-app)
 
-This is the app that serves https://emberjs.com/deprecations/
+This is the app that serves https://deprecations.emberjs.com/
 
 ## Adding new deprecations
 
