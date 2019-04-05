@@ -12,8 +12,7 @@ not the behavior that developers are after. Volatile properties are usually used
 to simulate the behavior of native getters, which means that they would
 otherwise behave like normal properties.
 
-To update, consider upgrading to native class syntax and using native getters
-directly instead:
+To update, use native getters directly instead:
 
 Before:
 
@@ -28,9 +27,9 @@ const Person = EmberObject.extend({
 After:
 
 ```js
-class Person {
+const Person = EmberObject.extend({
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
-}
+});
 ```
