@@ -13,15 +13,6 @@ Router.map(function() {
   this.route("show", {
     path: ":project/:version"
   });
-
-  this.route('deprecations', function() {
-    this.route("ember", {
-      path: ":version"
-    });
-    this.route("show", {
-      path: ":project/:version"
-    });
-  })
 });
 
 export default Router;
