@@ -22,17 +22,6 @@ module.exports = function(defaults) {
         "/ember/v1.x",
         "/ember-data/v2.x",
         "/ember-cli/v2.x",
-
-        // TODO: remove this after website is fully deployed
-        "/deprecations/",
-        "/deprecations/v3.x",
-        "/deprecations/v2.x",
-        "/deprecations/v1.x",
-        "/deprecations/ember/v3.x",
-        "/deprecations/ember/v2.x",
-        "/deprecations/ember/v1.x",
-        "/deprecations/ember-data/v2.x",
-        "/deprecations/ember-cli/v2.x",
       ]
     },
 
