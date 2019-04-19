@@ -51,7 +51,7 @@ const Person = EmberObject.extend({
     },
 
     set(key, value) {
-      this._fullName = value;
+      return this._fullName = value;
     }
   })
 });
