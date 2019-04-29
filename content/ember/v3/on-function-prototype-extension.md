@@ -24,7 +24,7 @@ import { sendEvent } from '@ember/object/events';
 let Job = EmberObject.extend({
   logCompleted: function() {
     console.log('Job completed!');
-  }.on('on')
+  }.on('completed')
 });
 
 let job = Job.create();
