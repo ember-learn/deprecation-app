@@ -40,6 +40,7 @@ module.exports = function(defaults) {
       importBootstrapFont: false,
       importBootstrapCSS: false
     },
+
     // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
     'ember-cli-uglify': {
       uglify: {
@@ -52,6 +53,10 @@ module.exports = function(defaults) {
 
   app.import("node_modules/semver-compare/index.js", {
     using: [{ transformation: "cjs", as: "semver-compare" }]
+  });
+
+  app.import("node_modules/semver/semver.js", {
+    using: [{ transformation: "cjs", as: "semver" }]
   });
 
   return app.toTree();

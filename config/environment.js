@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function(environment) {
   let ENV = {
@@ -27,7 +27,7 @@ module.exports = function(environment) {
       hostWhitelist: [/localhost:\d+/]
     },
 
-    'algolia': {
+    algolia: {
       algoliaId: 'Y1OMR4C7MF',
       algoliaKey: '5d01c83734dc36754d9e94cbf6f8964d'
     },
