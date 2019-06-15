@@ -22,23 +22,27 @@
   <h3 class="anchorable-toc" id="toc_ember">Versions</h3>
   <ul class="ember-version-graphics">
     <li class="item">
-      {{ember-version-graphic mascot="tomster-deprecated" text="1.x"}}
+      <EmberVersionGraphic @mascot="tomster-deprecated" @text="1.x" />
+
       <ul class="links">
-        <li>{{#link-to "ember" "v1.x"}}Ember{{/link-to}}</li>
+        <li><LinkTo @route="ember" @model="v1.x">Ember</LinkTo></li>
       </ul>
     </li>
     <li class="item">
+      <EmberVersionGraphic @mascot="tomster-lts" @text="2.x" />
       {{ember-version-graphic mascot="tomster-lts" text="2.x"}}
+
       <ul class="links">
-        <li>{{#link-to "ember" "v2.x"}}Ember{{/link-to}}</li>
-        <li>{{#link-to "show" "ember-data" "v2.x"}}Ember Data{{/link-to}}</li>
-        <li>{{#link-to "show" "ember-cli" "v2.x"}}Ember CLI{{/link-to}}</li>
+        <li><LinkTo @route="ember" @model="v2.x">Ember</LinkTo></li>
+        <li><LinkTo @route="show" @models={{array "ember-data" "v2.x"}}>Ember Data</LinkTo></li>
+        <li><LinkTo @route="show" @models={{array "ember-cli" "v2.x"}}>Ember CLI</LinkTo></li>
       </ul>
     </li>
     <li class="item">
-      {{ember-version-graphic mascot="zoey" text="3.x"}}
+      <EmberVersionGraphic @mascot="zoey" @text="3.x" />
+
       <ul class="links">
-        <li>{{#link-to "ember" "v3.x"}}Ember{{/link-to}}</li>
+        <li><LinkTo @route="ember" @model="v3.x">Ember</LinkTo></li>
       </ul>
     </li>
   </ul>
