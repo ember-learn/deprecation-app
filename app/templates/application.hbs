@@ -1,18 +1,17 @@
 {{set-body-class "deprecations deprecations_v2 responsive"}}
 
-{{#es-header}}
-
-  {{#es-navbar}}
+<ESHeader>
+  <ESNavBar>
     <form>
-      {{search-input}}
+      <SearchInput />
     </form>
-  {{/es-navbar}}
-{{/es-header}}
+  </ESNavBar>
+</ESHeader>
 
 <div id="content-wrapper" class="content-wrapper">
   {{outlet}}
 </div>
 
-{{es-footer}}
+<ESFooter />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
