@@ -4,7 +4,7 @@
 let credentials;
 
 try {
-  credentials = require('./credentials.json');
+  credentials = require('./credentials.json'); // eslint-disable-line
 } catch (e) {
   credentials = {};
 }
