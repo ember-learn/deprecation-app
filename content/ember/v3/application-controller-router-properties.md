@@ -7,7 +7,7 @@ since: '3.10'
 
 If you are reliant on the `currentPath` and `currentRouteName` properties of the `ApplicationController`, you can get the same functionality from the `Router` service.
 
-To migrate, inject the `Router` service and read the `currentRouteName` or `currentPath` off of it.
+To migrate, inject the `Router` service and read the `currentRouteName` off of it.
 
 Before:
 
