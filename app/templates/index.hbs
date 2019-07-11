@@ -3,9 +3,13 @@
   <p>Periodically, various APIs in Ember.js may be deprecated. During a minor
   release, for instance when upgrading from version 1.9 to 1.10, you may see new
   deprecations fire in your codebase. Until a major revision such as 2.0 lands,
-  code firing such deprecations is still supported by the Ember community. After
-  the next major revision lands, the supporting code may be removed. This style
-  of change management is commonly referred to as <a href="http://semver.org/">Semantic Versioning</a>.</p>
+  code firing such deprecations for public API is still supported. After
+  the next major revision lands, the supporting public API code may be removed. 
+  Private API may be removed at any time without warning in patch or minor releases,
+  regardless of whether it has a deprecation warning.
+  This style of change management is commonly referred to as
+  <a href="http://semver.org/">Semantic Versioning</a>.
+  </p>
 
   <p>
     You can use newer versions of the CLI with older Ember apps. It's a good
