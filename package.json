@@ -19,7 +19,7 @@
     "test": "ember test"
   },
   "devDependencies": {
-    "@ember-decorators/babel-transforms": "^3.1.5",
+    "@ember-decorators/babel-transforms": "^5.2.0",
     "@ember/jquery": "^0.6.1",
     "@ember/optional-features": "^0.7.0",
     "algoliasearch": "^3.33.0",
