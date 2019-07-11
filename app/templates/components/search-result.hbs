@@ -1,21 +1,23 @@
 {{#if version}}
   <div class="algolia-docsearch-suggestion algolia-docsearch-suggestion__secondary">
-  <div class="algolia-docsearch-suggestion--wrapper">
-    <div class="algolia-docsearch-suggestion--subcategory-column">
-      <span class="algolia-docsearch-suggestion--subcategory-column-text">{{sectionTitle}}</span>
-    </div>
-    <div class="algolia-docsearch-suggestion--content">
+    <div class="algolia-docsearch-suggestion--wrapper">
+      <div class="algolia-docsearch-suggestion--subcategory-column">
+        <span class="algolia-docsearch-suggestion--subcategory-column-text">{{sectionTitle}}</span>
+      </div>
+      <div class="algolia-docsearch-suggestion--content">
         <a href="{{href-to "show" project version}}#{{result.anchor}}" data-href-to-ignore>
-        <div class="algolia-docsearch-suggestion--title">
-          {{#each remainingHeadings as |heading index|}}
-            {{#if index}}
-              >
-            {{/if}}
-            {{{heading.value}}}
-          {{/each}}
-        </div>
-      </a>
+          <div class="algolia-docsearch-suggestion--title">
+            {{#each remainingHeadings as |heading index|}}
+              {{#if index}}
+                >
+              {{/if}}
+              {{! template-lint-disable }}
+              {{{heading.value}}}
+              {{! template-lint-enable }}
+            {{/each}}
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 {{/if}}

@@ -9,7 +9,7 @@
         </li>
       {{/panel.toggle}}
       {{#panel.body}}
-        <ol style="display:block">
+        <ol style="display:block" {{! template-lint-disable }}>
           {{#each result.contents as |content|}}
             <li class="level-3">
               <a href="#{{id-for-deprecation content.id}}">
