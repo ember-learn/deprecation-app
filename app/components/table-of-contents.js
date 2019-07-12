@@ -1,15 +1,11 @@
-import { tagName } from '@ember-decorators/component';
 import Component from '@ember/component';
-import { computed } from '@ember-decorators/object';
+import { computed } from '@ember/object';
 
-@tagName('ol')
-export default class TableOfContents extends Component {
-  elementId = 'toc-list';
-
-  @computed('level')
-  get tocLevel() {
-    return `level-${this.level}`;
-  }
-
-  level = '1';
-}
+export default Component.extend({
+    elementId: 'toc-list',
+    tagName: 'ol',
+    tocLevel: computed('level', function() {
+      return `level-${this.level}`;
+    }),
+    level: '1',
+});
