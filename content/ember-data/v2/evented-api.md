@@ -37,7 +37,7 @@ class User extends Model {
 ```
 
 
-side-effects driven by user app code
+Side-effects Driven by User App Code
 ======
 **before**
 
