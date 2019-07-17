@@ -9,7 +9,7 @@ As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 
 Any code that relies on these objects using the `Evented` API should be removed. A few scenarios are outlined below.
 
-derived state
+Derived State
 =====
 **before**
 
