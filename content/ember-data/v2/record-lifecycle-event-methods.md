@@ -12,7 +12,7 @@ As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 
 The  work of lifecycle events can be acheived with a CP on a relevant property or kick off additional work when performing the operation.
 
-### Some example CP alternative:
+### Some Examples of CP Alternatives:
 * **becameError** - CP on [isError](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isError?anchor=isError)
 * **becameInvalid** - CP on [isValid](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isValid?anchor=isValid)
 * **didCreate** - CP on [isNew](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isNew?anchor=isNew)
