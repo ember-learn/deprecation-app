@@ -20,7 +20,7 @@ The  work of lifecycle events can be acheived with a CP on a relevant property o
 * **didLoad** - CP on [isLoaded](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isLoaded?anchor=isLoaded)
 * **didUpdate** - CP on [hasDirtyAttributes](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/hasDirtyAttributes?anchor=hasDirtyAttributes)
 
-Other work arounds can be done at the time of interacting with the model.
+Other workarounds can be done at the time of interacting with the model.
 For example, the following could be an alternative to using the didLoad event.
 
 ```javascript
