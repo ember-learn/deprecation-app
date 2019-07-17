@@ -61,4 +61,4 @@ tracking.registerDeletion(userRecord);
 
 Side-effects Driven by Addon Extensions
 =====
-Addons that were using these events for managing record state tracking and buffering should consider migrating to providing a custom RecordData implementation.
+Addons that were using these events for managing record state tracking and buffering should consider migrating to providing a custom `RecordData` implementation.
