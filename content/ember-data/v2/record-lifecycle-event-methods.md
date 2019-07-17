@@ -10,7 +10,7 @@ As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 >
 > When a model is instantiated for the first time with any of these methods a deprecation warning will be logged notifiying the user that this method will be deprecated and the user should use an computed or overide the model's init method instead.
 
-The  work of lifecycle events can be acheived with a CP on a relevant property or kick off additional work when performing the operation.
+The work of lifecycle events can be achieved with a computed property on a relevant property or kick off additional work when performing the operation.
 
 ### Some Examples of CP Alternatives:
 * **becameError** - CP on [isError](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isError?anchor=isError)
