@@ -7,7 +7,7 @@ since: '3.12.0'
 As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 > Ember.Evented functionality on DS.Model, DS.ManyArray, DS.Errors, DS.RecordArray, and DS.PromiseManyArray will be deprecated and eventually removed in a future release. This includes the following methods from the Ember.Evented class: has, off, on, one, and trigger.
 
-Any code that relies on these objects using the Evented api should be removed. A few scenarios are outlined below.
+Any code that relies on these objects using the `Evented` API should be removed. A few scenarios are outlined below.
 
 derived state
 =====
