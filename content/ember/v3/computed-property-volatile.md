@@ -2,7 +2,7 @@
 id: computed-property.volatile
 title: Computed Property Volatility
 until: '4.0.0'
-since: '3.8'
+since: '3.9'
 ---
 
 `.volatile()` is a computed property modifier which makes a computed property

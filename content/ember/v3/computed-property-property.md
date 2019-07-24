@@ -2,7 +2,7 @@
 id: computed-property.property
 title: Computed Property `.property()` Modifier
 until: '4.0.0'
-since: '3.8'
+since: '3.9'
 ---
 
 `.property()` is a modifier that adds additional property dependencies to an
