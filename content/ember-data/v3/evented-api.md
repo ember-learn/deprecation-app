@@ -13,7 +13,7 @@ Derived State
 =====
 **before**
 
-```ts
+```javascript
 class User extends Model {
   @attr() username;
 
@@ -26,7 +26,7 @@ class User extends Model {
 
 **after**
 
-```ts
+```javascript
 class User extends Model {
   @attr() username;
   @computed('isValid')
@@ -41,7 +41,7 @@ Side-effects Driven by User App Code
 ======
 **before**
 
-```ts
+```javascript
 class User extends Model {
   @service() tracking;
   @attr() username;
@@ -54,7 +54,7 @@ class User extends Model {
 ```
 
 **after**
-```ts
+```javascript
 userRecord.deleteRecord();
 tracking.registerDeletion(userRecord);
 ```
