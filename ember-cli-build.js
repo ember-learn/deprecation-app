@@ -31,7 +31,7 @@ module.exports = function(defaults) {
 
     "ember-prism": {
       theme: "okaidia",
-      components: ["javascript", "handlebars", "markup-templating"],
+      components: ["javascript", "handlebars", "markup-templating", "typescript"],
       plugins: ["line-numbers", "normalize-whitespace"]
     },
 
