@@ -21,6 +21,7 @@ module.exports = function(defaults) {
         "/ember/v2.x",
         "/ember/v1.x",
         "/ember-data/v2.x",
+        "/ember-data/v3.x",
         "/ember-cli/v2.x",
       ]
     },
