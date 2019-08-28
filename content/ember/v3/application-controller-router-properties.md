@@ -2,7 +2,7 @@
 id: application-controller.router-properties
 title: Application controller router properties
 until: '4.0.0'
-since: '3.10'
+since: '3.9'
 ---
 
 If you are reliant on the `currentPath` and `currentRouteName` properties of the `ApplicationController`, you can get the same functionality from the `Router` service.
