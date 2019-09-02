@@ -21,7 +21,7 @@
   "devDependencies": {
     "@ember/jquery": "^0.6.1",
     "@ember/optional-features": "^0.7.0",
-    "algoliasearch": "^3.33.0",
+    "algoliasearch": "^3.34.0",
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-static-site-json": "^3.3.2",
     "ember-ajax": "^5.0.0",
