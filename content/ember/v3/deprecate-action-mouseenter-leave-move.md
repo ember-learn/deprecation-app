@@ -2,7 +2,7 @@
 id: action.mouseenter-leave-move
 title: Deprecate mouseEnter/Leave/Move events in {{action}} modifier
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.13'
 ---
 
 As `mouseenter`, `mouseleave` and `mousemove` events fire very frequently, are rarely used and have a higher
