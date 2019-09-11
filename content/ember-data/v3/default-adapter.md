@@ -12,3 +12,5 @@ To remove this deprecation warnings, create an `app/adapters/application.js` wit
     import { JSONAPIAdapter } from '@ember-data/adapters';
 
     export default JSONAPIAdapter.extend();
+
+More information about custom adapters can be found on the [ember.js/guides](https://guides.emberjs.com/release/models/customizing-adapters/)
