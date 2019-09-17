@@ -14,12 +14,16 @@ If you were not setting this value previously, the following should be sufficien
 
 create the file app/adapters/application.js with the following:
 
-export { default } from '@ember-data/adapters/json-api';
+```js
+    export { default } from '@ember-data/adapters/json-api';
+```
 
 
 If you were setting the adapter property previously to <adapter-name>, create the file app/adapters/application.js with the following:
 
-export { default } from './<adapter-name>';
+```js
+    export { default } from './<adapter-name>';
+```
 
 
  More information about custom adapters can be found on the [ember.js/guides](https://guides.emberjs.com/release/models/customizing-adapters/) and in the [API DOCs](https://api.emberjs.com/ember-data/release/modules/@ember-data%2Fadapter)
