@@ -9,7 +9,7 @@ since: '3.12.0'
 Previously, if no application or type-specific serializer was specified, the store would attempt to lookup a serializer via the `defaultSerializer` property on the type's adapter. This behavior is deprecated in favor of explicitly defining a type-specific serializer or application serializer as described in "clearing these deprecations" below.
 
 ### -default serializer fallback in store.serializerFor
-When absolutely no serializer has been defined by the app, i.e. there is no model, application, or adapter serializer, the default (`-json-api`) serializer must be used. This behavior is deprecated in favor of explicitly defining a serializer for the type or application as a whole as described below.
+Previously, when no type-specific serializer, application serializer, or adapter defaultSerializer had been defined by the app, the `-default` serializer would be used which defaulted to `-json-api`. This behavior is deprecated in favor of explicitly defining an application or type-specific serializer as described below.
 
 ## clearing these deprecations
 More information about custom serializers can be found on the [ember.js/guides](https://guides.emberjs.com/release/models/customizing-serializers/#toc_customizing-serializers)
