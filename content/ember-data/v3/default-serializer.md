@@ -6,7 +6,7 @@ since: '3.12.0'
 ---
 ## Default serializer deprecations
 ### deprecate adapter.serializer and adapter.defaultSerializer fallbacks
-If no application and type specific serializer is specified, the store will lookup the default serializer from the type's adapter. This behavior is now deprecated. This behavior is deprecated in favor of explicitly defining a serializer for the type or application as a whole as described below.
+Previously, if no application or type-specific serializer was specified, the store would attempt to lookup a serializer via the `defaultSerializer` property on the type's adapter. This behavior is deprecated in favor of explicitly defining a type-specific serializer or application serializer as described in "clearing these deprecations" below.
 
 ### -default serializer fallback in store.serializerFor
 When absolutely no serializer has been defined by the app, i.e. there is no model, application, or adapter serializer, the default (`-json-api`) serializer must be used. This behavior is deprecated in favor of explicitly defining a serializer for the type or application as a whole as described below.
