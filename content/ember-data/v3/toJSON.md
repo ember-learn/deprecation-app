@@ -12,33 +12,35 @@ To clear this deprecation users may call record.serialize() or implement their o
 An example of the simple refactor is below:
 ### before
 
-  `app/models/post.js`
+```js
+  //app/models/post.js
+  import Model from '@ember-data/model';
 
-    import Model from '@ember-data/model';
+  export default class Post extends Model {};
 
-    export default Model.extend({});
-
-  `other app code`
-
-    const record = store.peekRecord('post');
-    // users the default serializer, will have a deprecation warning
-    const output = record.toJSON();
+  //other app code
+  const record = store.peekRecord('post');
+  // users the default serializer, will have a deprecation warning
+  const output = record.toJSON();
+```
 
 ### after
-  `app/models/post.js`
+```js
+  //app/models/post.js
+  import Model from '@ember-data/model';
+  import { JSONAPISerializer } from '@ember-data/serializers';
 
-    import Model from '@ember-data/model';
-    import { JSONAPISerializer } from '@ember-data/serializers';
+  export default class Post extends Model {
+    toJSON(options) {
+      /* Create a JSON object with relevant data by either:
+          - iterating the attributes / relationships of the record into a POJO
+          - calling this.serialize and then munge output into the desired shape
+      */
+    }
+  };
 
-    export default Model.extend({
-      toJSON(options) {
-        let snapshot = this._internalModel.createSnapshot();
-        return JSONAPISerializer.serialize(snapshot, options);
-      }
-    });
-
-  `other app code`
-
-    const record = store.peekRecord('post');
-    // users the default serializer
-    const output = record.toJSON();
+  //other app code
+  const record = store.peekRecord('post');
+  // users the default serializer
+  const output = record.toJSON();
+```
