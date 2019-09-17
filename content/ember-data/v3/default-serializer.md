@@ -4,7 +4,7 @@ title: Default serializers usage
 until: '4.0.0'
 since: '3.12.0'
 ---
-## Default serializer derprecations
+## Default serializer deprecations
 ### deprecate adapter.serializer and adapter.defaultSerializer fallbacks
 If no application and type specific serializer is specified, the store will lookup the default serializer from the type's adapter. This behavior is now deprecated. This behavior is deprecated in favor of explicitly defining a serializer for the type or application as a whole as described below.
 
