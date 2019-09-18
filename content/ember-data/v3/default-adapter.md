@@ -19,7 +19,7 @@ create the file app/adapters/application.js with the following:
 ```
 
 
-If you were setting the adapter property previously to <adapter-name>, create the file app/adapters/application.js with the following:
+If you were setting the adapter property previously to `<adapter-name>`, create the file app/adapters/application.js with the following:
 
 ```js
     export { default } from './<adapter-name>';
