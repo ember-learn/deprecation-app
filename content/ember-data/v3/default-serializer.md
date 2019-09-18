@@ -34,7 +34,7 @@ More information about custom serializers can be found in the [Serializer API Do
 If a specific model type requires custom serialization, a type-specific serializer can be created. A single `application` serializer can be used a for any model types not requiring custom serialization. To define a type-specific serializer, create an `app/serializers/[type].js` with the following:
 
 ```js
-    import RESTSerializer from '@ember-data/serializers/rest';
+    import RESTSerializer from '@ember-data/serializer/rest';
 
     export default class UserSerializer extends RESTSerializer {
       /*custom code*/
