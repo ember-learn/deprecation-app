@@ -8,7 +8,7 @@ since: '3.12.0'
 
 Previously, applications could define the store.adapter property which would be used by defaultAdapter and adapterFor as a fallback for when an adapter was not found by an exact name match.
 
-[RFC 522](https://github.com/emberjs/rfcs/pull/522) Deprecated specifying and using these properties in favor of an explicit application adapter fallback.
+[RFC 522](https://github.com/emberjs/rfcs/pull/522) Deprecated specifying and using this property in favor of an explicit application adapter fallback.
 
 If you were not setting this value previously, the following should be sufficient to resolve this deprecation:
 
