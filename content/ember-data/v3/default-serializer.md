@@ -19,7 +19,9 @@ If a specific model type requires custom serialization, a type-specific serializ
 ```js
     import { JSONAPISerializer } from '@ember-data/serializers';
 
-    export default class UserSerializer extends JSONApiSerializer { /*custom code*/ };
+    export default class UserSerializer extends JSONApiSerializer {
+      /*custom code*/
+    }
 ```
 
 Defining a serializer for the entire application can be done by adding the file `app/serializers/application.js` with the following:
