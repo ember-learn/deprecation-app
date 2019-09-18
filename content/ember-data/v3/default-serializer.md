@@ -44,5 +44,5 @@ If a specific model type requires custom serialization, a type-specific serializ
 Defining a serializer for the entire application can be done by adding the file `app/serializers/application.js` with the following:
 
 ```js
-    export { default } from '@ember-data/serializers/json-api';
+    export { default } from '@ember-data/serializer/json-api';
 ```
