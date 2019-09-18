@@ -14,7 +14,7 @@ Previously, when no type-specific serializer, application serializer, or adapter
 ## clearing these deprecations
 More information about custom serializers can be found in the [Serializer API Docs](https://api.emberjs.com/ember-data/release/modules/@ember-data%2Fserializer) or on the [ember.js/guides](https://guides.emberjs.com/release/models/customizing-serializers/#toc_customizing-serializers)
 
-If a specific model type requires custom serialization, a type-specific serializer can be created.. Defining a type-specific serializer will clear the first deprecation, but won't clear both deprecations unless a type-specific serializer is defined for every type of model used in the application. To do this, create an `app/serializers/[type].js` with the following:
+If a specific model type requires custom serialization, a type-specific serializer can be created. A single `application` serializer can be used a for any model types not requiring custom serialization. To define a type-specific serializer, create an `app/serializers/[type].js` with the following:
 
 ```js
     import { JSONAPISerializer } from '@ember-data/serializers';
