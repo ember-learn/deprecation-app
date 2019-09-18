@@ -22,7 +22,7 @@ If a specific model type requires custom serialization, a type-specific serializ
     export default class UserSerializer extends JSONApiSerializer { /*custom code*/ };
 ```
 
-Defining a serializer for the entire application will clear the second deprecation, and can clear both deprecations if the app doesn't require any type-specific serialization. To do this, create an `app/serializers/application.js` with the following:
+Defining a serializer for the entire application can be done by adding the file `app/serializers/application.js` with the following:
 
 ```js
     export { JSONAPISerializer } from '@ember-data/serializers';
