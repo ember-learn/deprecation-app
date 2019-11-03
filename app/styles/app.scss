@@ -22,6 +22,11 @@ table {
   color: #42474f;
 }
 
+.sidebar ol {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 code:not([class*="language-"]) {
 	background-color: #DCE0E6;
 	border-radius: 3px;
