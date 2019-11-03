@@ -1,16 +1,16 @@
-<div id="sidebar" class="sidebar" role="complementary">
+<div class="sidebar col-2-large col-6" role="complementary">
   {{table-of-contents sortedGroupedResults=sortedGroupedResults}}
   <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
 </div>
 
-<div class="main has-sidebar" id="content" role="main">
-  <h2>Deprecations Added in {{project}} {{version}}</h2>
+<div class="main has-sidebar col-4-large col-6" id="content" role="main">
+  <h1>Deprecations Added in {{project}} {{version}}</h1>
   <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
   cycle.</p>
   <p>For more information on deprecations in {{project}}, see the {{#link-to 'index'}}main deprecations page{{/link-to}}.</p>
 
   {{#each sortedGroupedResults as |result|}}
-    <h3 class="anchorable-toc">Deprecations Added in {{result.since}} </h3>
+    <h2 class="anchorable-toc">Deprecations Added in {{result.since}} </h2>
       {{renderId}}
       {{#each result.contents as |content|}}
         {{deprecation-article model=content renderIdOrUntil=renderIdOrUntil}}

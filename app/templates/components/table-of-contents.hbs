@@ -1,17 +1,20 @@
 {{#cp-panels accordion=true as |panels|}}
+  <div class="large padding-bottom-small">
+    Jump to:
+  </div>
   {{#each sortedGroupedResults as |result|}}
     {{#panels.panel as |panel|}}
       {{#panel.toggle}}
-        <li class="level-1">
-          <a class="slide-widget-head" href="#toc toc_deprecations-added-in-ember-2-x">
-            Deprecations added in {{result.since}}
+        <li class="level-1 list-unstyled">
+          <a class="slide-widget-head large" href="#toc toc_deprecations-added-in-ember-2-x">
+            {{result.since}}
           </a>
         </li>
       {{/panel.toggle}}
       {{#panel.body}}
         <ol style="display:block">
           {{#each result.contents as |content|}}
-            <li class="level-3">
+            <li class="level-3 list-unstyled">
               <a href="#{{id-for-deprecation content.id}}">
                 {{content.title}}
               </a>

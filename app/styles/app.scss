@@ -3,6 +3,15 @@ table {
   border-spacing: 0;
 }
 
+// override ember-styleguide. Needed to contain code blocks.
+.main {
+  max-width: 700px;
+}
+
+.level-1, .level-3 {
+  padding: 0.5em 0;
+}
+
 caption,
 td,
 th {
@@ -46,18 +55,12 @@ p a:hover {
   cursor: pointer;
 }
 
-
-
-ul {
-  list-style-type: disc;
-}
-
 #slider {
   list-style-type: none;
 }
 
-ol {
-  list-style-type: decimal;
+.sidebar ol {
+  margin-top: 0;
 }
 
 .lead {
@@ -80,50 +83,6 @@ ol {
   border-bottom: 1px solid lightgray;
 }
 
-.content-wrapper {
-  max-width: 960px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.content-wrapper::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-.content-wrapper .main {
-  padding: 3em 0;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 65vh;
-}
-
-.content-wrapper .main::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-@media screen and (min-width: 0) and (max-width: 991px) {
-  .content-wrapper .main {
-    padding: 1em 0;
-    min-height: auto;
-  }
-}
-
-.section {
-  margin: 0 auto;
-  max-width: 100%;
-}
-@media screen and (max-width: 991px) {
-  .section {
-    max-width: 100%;
-    text-align: center;
-    display: block;
-    clear: both;
-    margin: 0 auto;
-  }
-}
 /*! HiDPI v2.0.1 | MIT License | git.io/hidpi */
 
 .ds-dropdown-menu {
