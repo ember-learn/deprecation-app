@@ -5,7 +5,7 @@ until: ''
 since: ''
 ---
 
-## Deprecate Access to Instance Initializers
+#### Deprecate Access to Instance Initializers
 
 When we initially designed Ember, we only had the use case of apps that
 run in the browser in mind. In that world, you would load your app and

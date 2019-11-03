@@ -4,7 +4,7 @@ title: HasManyReference.push Invalid Data
 until: '4.0.0'
 since: 'Upcoming Features'
 ---
-###### feature: ds-overhaul-references
+#### feature: ds-overhaul-references
 
 In previous versions of Ember Data, `HasManyReference#push` supported pushing
 data that was almost formatted as a [JSON API Relationship

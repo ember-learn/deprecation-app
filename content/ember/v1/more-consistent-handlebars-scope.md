@@ -37,7 +37,7 @@ Ember developers) to get confused when skimming a template about which object a 
 
 The context-shifting forms of `#each` and `#with` have been deprecated in favor of the named-parameter forms. In Ember 1.12, the `in` and `as` syntax are further deprecated in favor of block params syntax. See the [deprecation notes for in](/deprecations/v1.x/#toc_code-in-code-syntax-for-code-each-code) and [deprecation notes for as](/deprecations/v1.x/#toc_code-in-code-syntax-for-code-each-code).
 
-##### Transition Plan
+#### Transition Plan
 To transition your code to the new syntax, you can change templates that look like this:
 
 ```handlebars

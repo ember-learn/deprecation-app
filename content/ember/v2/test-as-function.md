@@ -29,7 +29,7 @@ Ember.assert(message, () => true, options);
 
 [Demo.](http://ember-twiddle.com/34d36b9121e017d2388f)
 
-##### Refactoring
+#### Refactoring
 
 You have 3 options to refactor second argument from `function` to `boolean`:
 

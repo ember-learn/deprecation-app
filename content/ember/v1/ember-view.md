@@ -19,7 +19,7 @@ is released.
 Along with the deprecation of `Ember.View`, the `Ember.CoreView` class is also
 deprecated. If you were using this class, please migrate to `Ember.Component`.
 
-##### Migrating away from the view helper
+#### Migrating away from the view helper
 
 In most cases Ember views can be replaced with a component. For example
 this view and usage:
@@ -61,7 +61,7 @@ if data is needed it should be passed upon invocation. For example:
 ```handlebars
 {{show-menu options=controller.menuOptions}}
 ```
-##### Differences in yielded blocks
+#### Differences in yielded blocks
 
 Some notable differences exist between yielded view blocks and yielded component
 blocks. A view could be used this way:
@@ -109,7 +109,7 @@ Just as passing values to a component allow access to those values in the
 isolated template of that component, yielding block params allow for values
 from the component to be passed to the location the component was called at.
 
-##### Routable Views
+#### Routable Views
 
 When a template for a given route is rendered, if there is a view with the
 same name that view will also be used. For example this view is attached
@@ -179,7 +179,7 @@ export default Ember.Component.extend({
   }
 });
 ```
-##### view and controller template keywords
+#### view and controller template keywords
 
 View and controller keywords provided a way to access the view or controller
 backing a template, even across scopes that you might expect to be isolated. In
@@ -191,7 +191,7 @@ the guide on [differences in yielded blocks](http://emberjs.com/deprecations/v1.
 for a complete example of using block params over the `{{view}}` keyword.
 
 
-##### `view` and `viewClass` arguments to `{{outlet}}`
+#### `view` and `viewClass` arguments to `{{outlet}}`
 
 Since the View API is deprecated starting in 1.13, providing the `view` or `viewClass` argument to the `{{outlet}}`
 helper is likewise deprecated in favor of migrating to component-based approaches, as explained earlier in this

@@ -4,7 +4,7 @@ title: JSONAPISerializer.payloadKeyFromModelName for hasMany Relationship
 until: '4.0.0'
 since: 'Upcoming Features'
 ---
-###### feature: ds-payload-type-hooks
+#### feature: ds-payload-type-hooks
 
 Using `JSONAPISerializer.payloadKeyFromModelName` to serialize the type of a
 `hasMany` relationship has been deprecated in favor of

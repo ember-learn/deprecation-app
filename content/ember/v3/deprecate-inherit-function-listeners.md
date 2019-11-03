@@ -40,7 +40,7 @@ class Foo {
 But in this case, the listener doesn't need to be applied to the prototype
 either.
 
-## Updating
+#### Updating
 
 In cases where function listeners have been added to a prototype, and those
 functions _do_ exist on the prototype, replace them with string listeners:

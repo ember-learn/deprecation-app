@@ -8,8 +8,36 @@ table {
   max-width: 700px;
 }
 
+// override ember-styleguide. Looks like normal text otherwise.
+.main h4 {
+  font-weight: bold;
+  padding-top: 0.5em;
+}
+
 .level-1, .level-3 {
   padding: 0.5em 0;
+}
+
+.level-3 a {
+  color: #42474f;
+}
+
+code:not([class*="language-"]) {
+	background-color: #DCE0E6;
+	border-radius: 3px;
+	font-size: .9em;
+	padding: .2em .5em;
+	margin: 0 .1em;
+	-webkit-font-feature-settings: "kern","tnum";
+	-moz-font-feature-settings: "kern","tnum";
+	-ms-font-feature-settings: "kern","tnum";
+  font-feature-settings: "kern","tnum";
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 1em;
 }
 
 caption,

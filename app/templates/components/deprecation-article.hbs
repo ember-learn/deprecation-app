@@ -1,12 +1,15 @@
 <div class="padding-vertical-small">
   <h3 class="anchorable-toc" id="{{id-for-deprecation model.id}}">{{model.title}}</h3>
-  {{#if renderIdOrUntil}}
-    <h4>until: {{model.until}}</h4>
-  {{/if}}
-  {{#if renderIdOrUntil}}
-    <h4>id: {{model.id}}</h4>
-  {{/if}}
+  <p class="em">
+    {{#if renderIdOrUntil}}
+      <div><span class="bold">until: </span>{{model.until}}</div>
+    {{/if}}
+    {{#if renderIdOrUntil}}
+      <div><span class="bold">id: </span>{{model.id}}</div>
+    {{/if}}
+  </p>
   <section>
     {{markdown-to-html model.content}}
   </section>
 </div>
+<hr>

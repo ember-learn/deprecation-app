@@ -12,7 +12,7 @@
         </li>
       {{/panel.toggle}}
       {{#panel.body}}
-        <ol style="display:block">
+        <ol class="list-unstyled" style="display:block">
           {{#each result.contents as |content|}}
             <li class="level-3 list-unstyled">
               <a href="#{{id-for-deprecation content.id}}">

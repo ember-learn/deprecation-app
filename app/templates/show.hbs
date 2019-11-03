@@ -10,7 +10,7 @@
   <p>For more information on deprecations in {{project}}, see the {{#link-to 'index'}}main deprecations page{{/link-to}}.</p>
 
   {{#each sortedGroupedResults as |result|}}
-    <h2 class="anchorable-toc">Deprecations Added in {{result.since}} </h2>
+    <h2 class="anchorable-toc bg-light-muted rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
       {{renderId}}
       {{#each result.contents as |content|}}
         {{deprecation-article model=content renderIdOrUntil=renderIdOrUntil}}

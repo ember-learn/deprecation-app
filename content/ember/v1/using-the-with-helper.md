@@ -22,7 +22,7 @@ Similar to the
 , this approach triggers less performant compatibility code and is deprecated in
 favor of using local properties or components.
 
-#####Using local properties
+#### Using local properties
 
 ```javascript
 {{#with item.posts as |myPosts|}}
@@ -30,7 +30,7 @@ favor of using local properties or components.
 {{with}}
 ```
 
-#####Using a component
+#### Using a component
 
 ```javascript
 {{! prints the number of posts (if available) }}

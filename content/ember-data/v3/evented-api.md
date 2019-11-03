@@ -9,8 +9,8 @@ As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 
 Any code that relies on these objects using the `Evented` API should be removed. A few scenarios are outlined below.
 
-Derived State
-=====
+#### Derived State
+
 **before**
 
 ```javascript
@@ -37,8 +37,8 @@ class User extends Model {
 ```
 
 
-Side-effects Driven by User App Code
-======
+#### Side-effects Driven by User App Code
+
 **before**
 
 ```javascript
@@ -59,6 +59,6 @@ userRecord.deleteRecord();
 tracking.registerDeletion(userRecord);
 ```
 
-Side-effects Driven by Addon Extensions
-=====
+#### Side-effects Driven by Addon Extensions
+
 Addons that were using these events for managing record state tracking and buffering should consider migrating to providing a custom `RecordData` implementation.

@@ -4,7 +4,7 @@ title: JSONAPISerializer.modelNameFromPayloadKey for Resource
 until: '4.0.0'
 since: 'Upcoming Features'
 ---
-###### feature: ds-payload-type-hooks
+#### feature: ds-payload-type-hooks
 
 Using `JSONAPISerializer.modelNameFromPayloadKey` to normalize the type of a
 resource has been deprecated in favor of

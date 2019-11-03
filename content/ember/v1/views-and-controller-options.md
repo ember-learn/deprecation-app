@@ -14,7 +14,7 @@ triggers a less performant compatibility mode.
 
 The usage of all the above mentioned options should be replaced with components.
 
-##### An example
+#### An example
 
 ```handlebars
 {{each view.comments itemController="comment"
@@ -35,7 +35,7 @@ Can be replaced with:
 </ul>
 ```
 
-##### Breaking the example down
+#### Breaking the example down
 
 The `comment` controller and `commentView` view have been refactored into the
 `{{post-comment}}` component.

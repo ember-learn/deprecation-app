@@ -4,9 +4,9 @@ title: Default serializers usage
 until: '4.0.0'
 since: '3.12.0'
 ---
-## Default serializer deprecations
+#### Default serializer deprecations
 
-### deprecate adapter.defaultSerializer fallback
+##### deprecate adapter.defaultSerializer fallback
 
 Previously, if no application or type-specific serializer was specified, the store would attempt to lookup a serializer via the `defaultSerializer` property on the type's adapter. This behavior is deprecated in favor of explicitly defining a type-specific serializer or application serializer.
 
@@ -23,11 +23,11 @@ If the application adapter is triggering this deprecation, then an application s
 
 More information on adding these serializers can be found in "clearing these deprecations" below.
 
-### -default serializer fallback in store.serializerFor
+##### -default serializer fallback in store.serializerFor
 
 Previously, when no type-specific serializer, application serializer, or adapter defaultSerializer had been defined by the app, the `-default` serializer would be used which defaulted to the `JSONSerializer`. This behavior is deprecated in favor of explicitly defining an application or type-specific serializer as described below.
 
-## clearing these deprecations
+##### clearing these deprecations
 
 More information about custom serializers can be found in the [Serializer API Docs](https://api.emberjs.com/ember-data/release/modules/@ember-data%2Fserializer) or on the [ember.js/guides](https://guides.emberjs.com/release/models/customizing-serializers/#toc_customizing-serializers)
 
