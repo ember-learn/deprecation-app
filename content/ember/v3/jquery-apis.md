@@ -105,9 +105,9 @@ Accessing it from the `Ember` namespace as `Ember.$` is and will remain deprecat
 #### Opting into jQuery
 
 Apps and addons which require jQuery, can opt into the jQuery integration now provided by
-the `@ember/jquery` package. This will provide the `this.$()` API to `Ember.Component`s without deprecation warnings, and
+the `@ember/jquery` package. This will provide the `this.$()` API to `Ember.Component`s, and
 will make sure that the `EventDispatcher` will provide jQuery events to a component's event handler methods to 
-maintain compatibility.  
+maintain compatibility. `this.$()` deprecation warnings will still be displayed.
 
 ```bash
 ember install @ember/jquery
