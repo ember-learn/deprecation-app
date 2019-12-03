@@ -37,7 +37,7 @@ click(event) {
 
 For those other properties it was necessary to get access to the native event object through `originalEvent` though. 
 To prevent your code from being coupled to jQuery, use the `normalizeEvent` function provided by `ember-jquery-legacy`, 
-which will work with our without jQuery to provide the native event without triggering any deprecations.
+which will work with or without jQuery to provide the native event without triggering any deprecations.
 
 ```bash
 ember install ember-jquery-legacy
