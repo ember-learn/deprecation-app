@@ -2,7 +2,7 @@
 id: ember.deprecate-globals-resolver
 title: Use ember-cli resolver rather than legacy globals resolver
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.16'
 ---
 
 Over the past years we have transitioned to using Ember-CLI as the main way to compile Ember apps. The globals resolver is a holdover and primarily facilitates use of Ember without Ember-CLI.
