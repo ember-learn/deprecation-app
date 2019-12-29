@@ -30,7 +30,7 @@ let Person = EmberObject.extend({
 
   fullName: function() {
     return `${this.firstName} ${this.lastName}`;
-  }.computed('firstName', 'lastName')
+  }.property('firstName', 'lastName')
 });
 
 let client = Person.create();
