@@ -17,26 +17,36 @@ export default Route.extend({
     this._super(...arguments);
     this.router.on('routeWillChange', transition => {
       let { to: toRouteInfo, from: fromRouteInfo } = transition;
-      console.log(`Transitioning from -> ${fromRouteInfo.name}`);
-      console.log(`From QPs: ${JSON.stringify(fromRouteInfo.queryParams)}`);
-      console.log(`From Params: ${JSON.stringify(fromRouteInfo.params)}`);
-      console.log(`From ParamNames: ${fromRouteInfo.paramNames.join(', ')}`);
-      console.log(`to -> ${toRouteInfo.name}`);
-      console.log(`To QPs: ${JSON.stringify(toRouteInfo.queryParams)}`);
-      console.log(`To Params: ${JSON.stringify(toRouteInfo.params)}`);
-      console.log(`To ParamNames: ${toRouteInfo.paramNames.join(', ')}`);
+      if (fromRouteInfo) {
+        console.log(`Transitioning from -> ${fromRouteInfo.name}`);
+        console.log(`From QPs: ${JSON.stringify(fromRouteInfo.queryParams)}`);
+        console.log(`From Params: ${JSON.stringify(fromRouteInfo.params)}`);
+        console.log(`From ParamNames: ${fromRouteInfo.paramNames.join(', ')}`);
+      }
+      
+      if (toRouteInfo) {
+        console.log(`to -> ${toRouteInfo.name}`);
+        console.log(`To QPs: ${JSON.stringify(toRouteInfo.queryParams)}`);
+        console.log(`To Params: ${JSON.stringify(toRouteInfo.params)}`);
+        console.log(`To ParamNames: ${toRouteInfo.paramNames.join(', ')}`);
+      }
     });
 
     this.router.on('routeDidChange', transition => {
       let { to: toRouteInfo, from: fromRouteInfo } = transition;
-      console.log(`Transitioned from -> ${fromRouteInfo.name}`);
-      console.log(`From QPs: ${JSON.stringify(fromRouteInfo.queryParams)}`);
-      console.log(`From Params: ${JSON.stringify(fromRouteInfo.params)}`);
-      console.log(`From ParamNames: ${fromRouteInfo.paramNames.join(', ')}`);
-      console.log(`to -> ${toRouteInfo.name}`);
-      console.log(`To QPs: ${JSON.stringify(toRouteInfo.queryParams)}`);
-      console.log(`To Params: ${JSON.stringify(toRouteInfo.params)}`);
-      console.log(`To ParamNames: ${toRouteInfo.paramNames.join(', ')}`);
+      if (fromRouteInfo) {
+        console.log(`Transitioned from -> ${fromRouteInfo.name}`);
+        console.log(`From QPs: ${JSON.stringify(fromRouteInfo.queryParams)}`);
+        console.log(`From Params: ${JSON.stringify(fromRouteInfo.params)}`);
+        console.log(`From ParamNames: ${fromRouteInfo.paramNames.join(', ')}`);
+      }
+      
+      if (toRouteInfo) {
+        console.log(`to -> ${toRouteInfo.name}`);
+        console.log(`To QPs: ${JSON.stringify(toRouteInfo.queryParams)}`);
+        console.log(`To Params: ${JSON.stringify(toRouteInfo.params)}`);
+        console.log(`To ParamNames: ${toRouteInfo.paramNames.join(', ')}`);
+      }
     });
   }
 
