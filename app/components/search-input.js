@@ -54,9 +54,10 @@ export default Component.extend({
 
     const searchObj = {
       hitsPerPage: 15,
+      query
     };
 
-    let res = yield this.searchFunction('query', searchObj);
+    let res = yield this.searchFunction(searchObj);
 
     return set(this, 'response', res);
   }).restartable(),
