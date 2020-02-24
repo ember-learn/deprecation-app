@@ -784,6 +784,10 @@ body.community_meetups_index.responsive #subcontent {
 @import 'highlight';
 @import "search-input";
 
+.search-form {
+  align-self: center;
+}
+
 .tabs {
   margin-top: 1em;
   border: 1px solid #e0e0e0;
