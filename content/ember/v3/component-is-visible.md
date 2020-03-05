@@ -1,6 +1,10 @@
+---
+id: ember-component.is-visible
+title: Deprecate `Component#isVisible`
 until: '4.0.0'
 since: '3.15'
 ---
+
 In ember earlier versions, we had the concept of 'A controller should never call method or change property on its associated view '( Ember.View class)', instead the view should bind the state of its associated controller.'
 
 So, we were using something like this,
