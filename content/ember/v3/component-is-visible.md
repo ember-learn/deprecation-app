@@ -5,6 +5,7 @@ In ember earlier versions, we had the concept of 'A controller should never call
 
 So, we were using something like this,
 ```js
+import Ember from 'ember';
 App.MyView = Ember.View.extend({
   isVisible: Ember.computed.alias('controller.myViewVisible')
 }
@@ -13,7 +14,11 @@ App.MyView = Ember.View.extend({
 or in the component
 
 ```js
-  isVisible: Ember.computed.alias('myViewVisible')
+import Component from '@ember/component';
+import { alias } from '@ember/object/computed';
+export default Component.extend({
+  isVisible: alias('myViewVisible');
+});
 ```
 
 We are deprecating usage of the `isVisible` in classic components in accordance with [RFC #324](https://github.com/emberjs/rfcs/blob/master/text/0324-deprecate-component-isvisible.md).
@@ -22,23 +27,32 @@ Instead of setting the `isVisible` property on classic components, consider eith
 
 ```js
   {{! app/templates/components/my-question.js }}
-    get students() {
-      return A(['john', 'peter']);
-    }
+import Component from '@glimmer/component';
+import { A } from '@ember/array';
+export default class MyQuestion extends Component {
+  get students() {
+    return A(['john', 'peter']);
+  }
+}
 ```
+
+```hbs
 {{! app/templates/components/my-question.hbs }}
 {{! `if` helper }}
 {{#if this.students.length}}
   <MyComponent />
 {{/if}}
 ```
-or in the html element, we can use [`hidden`] (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) attribute and pass the value dynamically:
+or in the html element, we can use the [`hidden`] (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) attribute and pass the value dynamically:
 
-``js
+```js
   {{! app/templates/components/my-question.js }}
+import Component from '@glimmer/component';
+export default class MyQuestions extends Component {
   get hideMe() {
     return true;
   }
+}
 ```
 
 ```hbs
