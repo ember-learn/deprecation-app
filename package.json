@@ -67,7 +67,7 @@
     "semver-compare": "^1.0.0"
   },
   "engines": {
-    "node": "8.* || >= 10.*",
+    "node": "10.* || >=12.*",
     "npm": "6"
   },
   "ember-addon": {
