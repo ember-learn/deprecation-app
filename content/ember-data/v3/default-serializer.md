@@ -6,7 +6,7 @@ since: '3.12.0'
 ---
 #### Default serializer deprecations
 
-##### deprecate adapter.defaultSerializer fallback
+### Deprecate adapter.defaultSerializer fallback
 
 Moving forward, every app or addon that uses Ember Data must have a serializer explicitly defined.
 
