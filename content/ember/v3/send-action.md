@@ -17,8 +17,7 @@ to go undetected.
 
 Closure actions solve those problems and on top are also more intuitive to use.
 
-```js
-// controllers/index.js
+```js {data-filename=app/controllers/index.js}
 export default Controller.extend({
   actions: {
     sendData(data) {
@@ -28,20 +27,17 @@ export default Controller.extend({
 })
 ```
 
-```handlebars
-{{!-- templates/index.hbs --}}
+```handlebars {data-filename=app/templates/index.hbs}
 {{my-component submit="sendData"}}
 ```
 
-```js
-// my-component.js
+```js {data-filename=app/components/my-component.js}
 this.sendAction('submit');
 ```
 
 Should be changed to:
 
-```js
-// controllers/index.js
+```js {data-filename=app/controllers/index.js}
 export default Controller.extend({
   actions: {
     sendData(data) {
@@ -51,13 +47,11 @@ export default Controller.extend({
 })
 ```
 
-```handlebars
-{{!-- templates/index.hbs --}}
+```handlebars {data-filename=app/templates/index.hbs}
 {{my-component submit=(action "sendData")}}
 ```
 
-```js
-// my-component.js
+```js {data-filename=app/components/my-component.js}
 export default Component.extend({
   click() {
     this.submit();
@@ -83,8 +77,7 @@ export default Component.extend({
 Another alternative is to define an empty action on the component, which helps clarify that the function
 is not mandatory:
 
-```js
-// my-component.js
+```js {data-filename=app/components/my-component.js}
 export default Component.extend({
   submit: () => {},
   //...
@@ -97,13 +90,13 @@ export default Component.extend({
 This deprecation also affects the built-in `{{input}}` helper that used to allow passing actions as
 strings:
 
-```hbs
+```handlebars
 {{input enter="handleEnter"}}
 ```
 
 Since this uses `sendAction` underneath it is also deprecated and must also be replaced by closure actions:
 
-```hbs
+```handlebars
 {{input enter=(action "handleEnter")}}
 ```
 

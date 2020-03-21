@@ -10,17 +10,24 @@ Ember 2.0 for the same reasons mentioned in [1.11's ObjectController
 deprecation](http://emberjs.com/deprecations/v1.x/#toc_objectcontroller).
 
 To migrate from an explicitly defined array controller, first convert
-the class definition to inherit from `Ember.Controller`. For example:
+the class definition to inherit from `Ember.Controller`.
+
+Before:
 
 ```javascript
 import Ember from "ember";
 
-// Change:
 export default Ember.ArrayController.extend({
-// To:
-export default Ember.Controller.extend({
+});
+```
 
-// ...
+After:
+
+```javascript
+import Ember from "ember";
+
+export default Ember.Controller.extend({
+});
 ```
 
 Next update any use of `{{modelPropertyName}}` in templates with `{{model.modelPropertyName}}`.

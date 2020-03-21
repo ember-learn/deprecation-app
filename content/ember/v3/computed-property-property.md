@@ -30,17 +30,21 @@ In the case of the `filter`, `map`, and `sort` computed property macros, it was
 previously possible to need to add dependencies because they weren't available
 in the public APIs of those macros. An optional second parameter has now been
 added to these macros which is an array of additional dependent keys, allowing
-you to pass these dependencies to them:
+you to pass these dependencies to them.
+
+Before:
 
 ```js
-// before
 const Person = EmberObject.extend({
   friendNames: map('friends', function(friend) {
     return friend[this.get('nameKey')];
   }).property('nameKey')
 });
+```
 
-// after
+After:
+
+```js
 const Person = EmberObject.extend({
   friendNames: map('friends', ['nameKey'], function(friend) {
     return friend[this.get('nameKey')];

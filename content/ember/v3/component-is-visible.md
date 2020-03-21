@@ -8,6 +8,7 @@ since: '3.15'
 In ember earlier versions, we had the concept of 'A controller should never call method or change property on its associated view '( Ember.View class)', instead the view should bind the state of its associated controller.'
 
 So, we were using something like this,
+
 ```js
 import Ember from 'ember';
 App.MyView = Ember.View.extend({
@@ -29,8 +30,7 @@ We are deprecating usage of the `isVisible` in classic components in accordance 
 
 Instead of setting the `isVisible` property on classic components, consider either using `{{#if}}` helper like below
 
-```js
-  {{! app/templates/components/my-question.js }}
+```js {data-filename=app/templates/components/my-question.js}
 import Component from '@glimmer/component';
 import { A } from '@ember/array';
 export default class MyQuestion extends Component {
@@ -40,17 +40,16 @@ export default class MyQuestion extends Component {
 }
 ```
 
-```hbs
-{{! app/templates/components/my-question.hbs }}
+```handlebars {data-filename=app/templates/components/my-question.hbs}
 {{! `if` helper }}
 {{#if this.students.length}}
   <MyComponent />
 {{/if}}
 ```
-or in the html element, we can use the [`hidden`] (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) attribute and pass the value dynamically:
 
-```js
-  {{! app/templates/components/my-question.js }}
+or in the HTML element, we can use the [`hidden`] (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) attribute and pass the value dynamically:
+
+```js {data-filename=app/templates/components/my-question.js}
 import Component from '@glimmer/component';
 export default class MyQuestions extends Component {
   get hideMe() {
@@ -59,8 +58,7 @@ export default class MyQuestions extends Component {
 }
 ```
 
-```hbs
-  {{! app/templates/components/my-question.hbs }}
-  {{! `hidden` attribute }}
-  <div hidden={{this.hideMe}}></div>
+```handlebars {data-filename=app/templates/components/my-question.hbs}
+{{! `hidden` attribute }}
+<div hidden={{this.hideMe}}></div>
 ```
