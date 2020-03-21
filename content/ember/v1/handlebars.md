@@ -39,8 +39,7 @@ Ember.Handlebars.registerHelper('foo-bar', function(firstArg, secondArg, options
 
 you can replace those with:
 
-```javascript
-// app/helpers/foo-bar.js
+```javascript {data-filename=app/helpers/foo-bar.js}
 export default Ember.Helper.helper(function([firstArg, secondArg], hash) {
   // helper code
 });

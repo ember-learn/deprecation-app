@@ -11,13 +11,13 @@ not be used with the `{{action}}` modifier anymore.
 
 Before:
 
-```hbs
+```handlebars
 <button {{action "handleMouseEnter" on="mouseEnter"}}>Hover</button>
 ```
 
 After:
 
-```hbs
+```handlebars
 <button {{on "mouseenter" this.handleMouseEnter}}>Hover</button>
 ```
 

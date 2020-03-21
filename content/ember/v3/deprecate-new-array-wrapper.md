@@ -34,13 +34,15 @@ used as a constructor, but as a side effect of transpilation it was turned into
 a normal function which could.
 
 To update, remove any usage of `new` with `A`, and call `A` as a standard
-function:
+function. Before:
 
 ```js
-// before
 let arr = new A();
+```
 
-// after
+After:
+
+```js
 let arr = A();
 ```
 

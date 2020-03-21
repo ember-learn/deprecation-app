@@ -62,7 +62,7 @@ export default class MyComponent extends Component {
 }
 ```
 
-```hbs
+```handlebars
 <div {{on "mouseenter" this.handleMouseEnter}}>
   ...
 </div>
