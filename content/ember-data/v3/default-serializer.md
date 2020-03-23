@@ -10,7 +10,7 @@ since: '3.12.0'
 
 Moving forward, every app or addon that uses Ember Data must have a serializer explicitly defined.
 
-Previously, if no application or model-type-specific serializer was specified, the store would attempt to lookup a serializer via the `defaultSerializer` property on the type's adapter. This behavior is deprecated in favor of explicitly defining a type-specific serializer or application serializer.
+Previously, if no application or model-type-specific serializer was specified, the store would attempt to look up a serializer via the `defaultSerializer` property on the type's adapter. This behavior is deprecated in favor of explicitly defining a model-type-specific serializer or application serializer.
 
 You may be relying on the `defaultSerializer` property set by the `Adapter`, `RESTAdapter` or `JSONAPIAdapter` classes.
 These classes specified the following `defaultSerializer`
