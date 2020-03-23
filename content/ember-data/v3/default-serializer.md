@@ -24,7 +24,7 @@ These classes specified the following `defaultSerializer`
 If all the adapters in your app are the same kind (such as JSONAPI, REST, or JSON), you should create an
 application serializer to match.
 
-For example, if you use only JSONAPI adapters, creating the file below in `app/serializers/application.js`
+For example, if you use only JSONAPI adapters, creating the following application serializer
 will resolve the deprecation:
 
 ```javascript {data-filename=app/serializers/application.js
