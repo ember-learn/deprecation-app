@@ -27,8 +27,7 @@ application serializer to match.
 For example, if you use only JSONAPI adapters, creating the file below in `app/serializers/application.js`
 will resolve the deprecation:
 
-```javascript
-// app/serializers/application.js
+```javascript {data-filename=app/serializers/application.js
 
 export { default } from '@ember-data/serializer/json-api';
 ```
