@@ -3,9 +3,24 @@ table {
   border-spacing: 0;
 }
 
+.layout-grid {
+  display: grid;
+  grid-template:
+    "sidebar  main" auto /
+    15rem 3fr 300px;
+}
+
+.padding-vertical-small {
+  margin-top: 2rem;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
 // override ember-styleguide. Needed to contain code blocks.
 .main {
+  grid-area: main;
   max-width: 700px;
+  margin-left: 3rem;
 }
 
 // override ember-styleguide. Looks like normal text otherwise.
@@ -14,17 +29,21 @@ table {
   padding-top: 0.5em;
 }
 
+.sidebar {
+  grid-area: sidebar;
+}
+
+.sidebar ol {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .level-1, .level-3 {
   padding: 0.5em 0;
 }
 
 .level-3 a {
   color: #42474f;
-}
-
-.sidebar ol {
-  margin-left: 0;
-  padding-left: 0;
 }
 
 code:not([class*="language-"]) {
