@@ -38,12 +38,27 @@ table {
   padding-left: 0;
 }
 
+#toc-list {
+  background: #ebeef2;
+  margin-top: 2rem;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-top: 0;
+}
+
+#back-to-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding-top: 1rem;
+}
+
 .level-1, .level-3 {
   padding: 0.5em 0;
 }
 
 .level-3 a {
-  color: #42474f;
+  word-wrap: break-word;
 }
 
 code:not([class*="language-"]) {
