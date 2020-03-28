@@ -112,7 +112,7 @@ a {
 
 a :focus,
 a:hover {
-  color: #9b2918;
+  color: #E04E39;
 }
 
 p a {
@@ -156,14 +156,13 @@ p a:hover {
 
 .ds-dropdown-menu {
   background-color: #FFF;
-  border-radius: 4px;
+  border-radius: 6px;
   margin: 6px 0 0;
   text-align: left;
   box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .algolia-docsearch-suggestion {
-  color: #333;
   cursor: pointer;
   overflow: hidden;
   border-bottom: 1px solid #f2d1a2;
@@ -171,9 +170,9 @@ p a:hover {
 
 .algolia-docsearch-suggestion--category-header {
   display: none;
-  border: 2px solid #fdfdfd;
-  background: #E04E39;
-  color: #fdfdfd;
+  border: 0;
+  background: #ebeef2;
+  color: #E04E39;
   font-weight: 600;
   padding: 5px 10px;
   text-align: left;
@@ -185,14 +184,14 @@ p a:hover {
 
 .algolia-docsearch-suggestion--highlight {
   padding: 0;
-  color: #FFECEC;
+  color: #E04E39;
   background: none;
   font-weight: 600;
 }
 
 .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
   color: inherit;
-  background: #ea897b;
+  background: #ebeef2;
 }
 
 .aa-cursor .algolia-docsearch-suggestion--content {
@@ -233,7 +232,7 @@ p a:hover {
   text-align: right;
   font-size: 12px;
   padding: 4px 2px 0 0;
-  color: #333;
+  color: #E04E39;
 }
 
 .algolia-docsearch-footer .algolia-docsearch-footer--logo {
@@ -267,13 +266,13 @@ p a:hover {
   .algolia-docsearch-suggestion {
     display: table;
     width: 100%;
-    border-bottom: 1px solid #F8E7CF;
+    border-bottom: 1px solid #ebeef2;
   }
 
   .algolia-docsearch-suggestion--subcategory-column {
-    border-right: 1px solid #F8E7CF;
+    border-right: 1px solid #ebeef2;
     background: #fdfdfd;
-    color: #865931;
+
     display: table-cell;
     overflow: hidden;
     padding: 3px 7px 3px 5px;
