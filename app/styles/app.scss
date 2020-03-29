@@ -33,6 +33,7 @@ table {
 
 .sidebar {
   grid-area: sidebar;
+  max-width: 700px;
 }
 
 .sidebar ol {
@@ -61,6 +62,34 @@ table {
 
 .level-3 a {
   word-wrap: break-word;
+}
+
+@media (max-width: 1007px) {
+  .layout-grid {
+    display: grid;
+    grid-template:
+      "sidebar" auto
+      "main" auto /
+      1fr;
+  }
+
+  .main {
+    grid-area: main;
+    overflow: auto;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .sidebar {
+    overflow: auto;
+    grid-area: sidebar;
+    max-width: 700px;
+    max-width: 100%;
+  }
+
+  #back-to-top {
+    display: none;
+  }
 }
 
 code:not([class*="language-"]) {
