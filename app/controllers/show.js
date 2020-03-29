@@ -52,7 +52,17 @@ export default Controller.extend({
     } else {
       return true;
     }
-  })
+  }),
 
+  actions: {
+    toggleToc() {
+      this.set('isToc', !this.isToc);
+
+      window.scrollTo({
+        top: 0,
+        left: 0,
+      });
+    }
+  }
 });
 

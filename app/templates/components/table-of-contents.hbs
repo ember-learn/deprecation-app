@@ -16,7 +16,7 @@
           <ol class="list-unstyled" style="display:block">
             {{#each result.contents as |content|}}
               <li class="level-3 list-unstyled">
-                <a href="#{{id-for-deprecation content.id}}">
+                <a class="bg-none" href="#{{id-for-deprecation content.id}}" {{action "toggleToc"}}>
                   {{content.title}}
                 </a>
               </li>
