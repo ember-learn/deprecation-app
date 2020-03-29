@@ -12,10 +12,9 @@ table {
     15rem 3fr 300px;
 }
 
-.padding-vertical-small {
-  margin-top: 2rem;
-  border-radius: 6px;
-  padding: 1.5rem;
+.article-card {
+  border-color: #ebeef2;
+  background-color: #ebeef2;
 }
 
 // override ember-styleguide. Needed to contain code blocks.
@@ -36,17 +35,14 @@ table {
   max-width: 700px;
 }
 
+.sidebar-card {
+  border-color: #ebeef2;
+  background-color: #ebeef2;
+}
+
 .sidebar ol {
   margin-left: 0;
   padding-left: 0;
-}
-
-#toc-list {
-  background: #ebeef2;
-  margin-top: 2rem;
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin-top: 0;
 }
 
 #back-to-top {
