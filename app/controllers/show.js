@@ -4,6 +4,7 @@ import { alias } from '@ember/object/computed';
 import semverCompare from 'semver-compare';
 
 export default Controller.extend({
+  isToc: false,
   content: alias('model'),
   init() {
     this._super(...arguments);
@@ -56,7 +57,7 @@ export default Controller.extend({
 
   actions: {
     toggleToc() {
-      this.set('isToc', !this.isToc);
+      this.toggleProperty('isToc');
 
       window.scrollTo({
         top: 0,

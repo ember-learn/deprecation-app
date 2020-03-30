@@ -1,19 +1,17 @@
 <div class="layout-grid">
-  <div class="mobile-sidebar {{if this.isToc "desktop" "mobile"}}" role="complementary">
+  <div class="mobile-sidebar {{if this.isToc "mobile" "desktop"}}" role="complementary">
     <TableOfContents
       @sortedGroupedResults={{this.sortedGroupedResults}}
       @isToc={{this.isToc}}
     />
   </div>
 
-  {{log this.isToc}}
-
   <div class="sidebar" role="complementary">
     {{table-of-contents sortedGroupedResults=sortedGroupedResults}}
     <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
   </div>
 
-  <div class="main ml-5 {{if this.isToc "desktop" "mobile"}}">
+  <div class="main ml-5 {{if this.isToc "mobile" "desktop"}}">
     <h1>Deprecations Added in {{project}} {{version}}</h1>
     <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
     cycle.</p>

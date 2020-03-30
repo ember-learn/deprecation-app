@@ -15,7 +15,7 @@ export default Component.extend({
 
     actions: {
       toggleToc() {
-        set(this, 'isToc', true);
+        this.toggleProperty('isToc');
 
         let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
         later(this, function() {
