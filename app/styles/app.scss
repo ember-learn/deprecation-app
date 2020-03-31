@@ -107,12 +107,13 @@ table {
     bottom: 10rem;
     right: 1rem;
     padding-top: 1rem;
+    z-index: 1;
   }
 }
 
 @media (min-width: 1007px) {
   .toc-toggle {
-    visibility: hidden;
+    display: none;
   }
   .mobile-sidebar {
     display: none;

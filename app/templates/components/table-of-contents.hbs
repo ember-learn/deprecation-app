@@ -4,7 +4,7 @@
       Jump to:
     </div>
     {{#each sortedGroupedResults as |result|}}
-      {{#panels.panel open=this.isToc as |panel|}}
+      {{#panels.panel open=this.displayMobileToc as |panel|}}
         {{#panel.toggle}}
           <li class="level-1 list-unstyled">
             <a class="slide-widget-head large" href="#toc toc_deprecations-added-in-ember-2-x">

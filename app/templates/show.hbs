@@ -1,37 +1,37 @@
+<EsButton
+  class="toc-toggle"
+  aria-label="expand table of contents"
+  title="expand table of contents"
+  aria-expanded={{this.displayMobileToc}}
+  @onClicked={{action "toggleToc"}}
+>
+  <img src="/images/expand.svg" alt="expand table of contents">
+</EsButton>
 <div class="layout-grid">
-  <div class="mobile-sidebar {{if this.isToc "mobile" "desktop"}}" role="complementary">
+  <nav class="mobile-sidebar {{if this.displayMobileToc "mobile" "desktop"}}" role="navigation" aria-label="Mobile Table of Contents">
     <TableOfContents
       @sortedGroupedResults={{this.sortedGroupedResults}}
-      @isToc={{this.isToc}}
+      @displayMobileToc={{this.displayMobileToc}}
     />
-  </div>
+  </nav>
 
-  <div class="sidebar" role="complementary">
-    {{table-of-contents sortedGroupedResults=sortedGroupedResults}}
+  <nav class="sidebar" role="navigation" aria-label="Desktop Table of Contents">
+    <TableOfContents @sortedGroupedResults={{this.sortedGroupedResults}} />
     <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
-  </div>
+  </nav>
 
-  <div class="main ml-5 {{if this.isToc "mobile" "desktop"}}">
+  <div class="main ml-5 {{if this.displayMobileToc "mobile" "desktop"}}">
     <h1>Deprecations Added in {{project}} {{version}}</h1>
     <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
     cycle.</p>
-    <p>For more information on deprecations in {{project}}, see the {{#link-to 'index'}}main deprecations page{{/link-to}}.</p>
+    <p>For more information on deprecations in {{project}}, see the <LinkTo @route="index">main deprecations page</LinkTo>.</p>
 
     {{#each sortedGroupedResults as |result|}}
       <h2 class="anchorable-toc rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
       {{renderId}}
       {{#each result.contents as |content|}}
-        {{deprecation-article model=content renderIdOrUntil=renderIdOrUntil}}
+        <DeprecationArticle @model={{content}} @renderIdOrUntil={{this.renderIdOrUntil}} />
       {{/each}}
     {{/each}}
   </div>
-
-  <EsButton
-    class="toc-toggle"
-    aria-label="expand table of contents"
-    title="expand table of contents"
-    @onClicked={{action "toggleToc"}}
-  >
-    <img src="/images/expand.svg" alt="expand table of contents">
-  </EsButton>
 </div>

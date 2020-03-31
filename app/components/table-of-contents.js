@@ -15,7 +15,7 @@ export default Component.extend({
 
     actions: {
       toggleToc() {
-        this.toggleProperty('isToc');
+        this.toggleProperty('displayMobileToc');
 
         let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
         later(this, function() {
