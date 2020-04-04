@@ -65,12 +65,20 @@ table {
 }
 
 @media (max-width: 1007px) {
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .layout-grid {
     display: grid;
     grid-template:
       "sidebar" auto
       "main" auto /
       1fr;
+    h1, h2 {
+      margin-left: 12px;
+    }
   }
 
   .main {
@@ -82,6 +90,21 @@ table {
 
   .main.mobile {
     display: none;
+  }
+
+  .card {
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  .intro {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .es-footer {
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
   .sidebar {
@@ -117,6 +140,10 @@ table {
     right: 1rem;
     padding-top: 1rem;
     z-index: 101;
+  }
+
+  .card {
+    border-radius: 0px;
   }
 }
 

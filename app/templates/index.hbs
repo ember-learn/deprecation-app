@@ -1,28 +1,30 @@
 <div id="content" class="main" role="main">
-  <h1 class="anchorable-toc" id="toc_deprecations">Deprecations</h1>
-  <p>Periodically, various APIs in Ember.js may be deprecated. During a minor
-  release, for instance when upgrading from version 1.9 to 1.10, you may see new
-  deprecations fire in your codebase. Until a major revision such as 2.0 lands,
-  code firing such deprecations for public API is still supported. After
-  the next major revision lands, the supporting public API code may be removed.
-  Private API may be removed at any time without warning in patch or minor releases,
-  regardless of whether it has a deprecation warning.
-  This style of change management is commonly referred to as
-  <a href="http://semver.org/">Semantic Versioning</a>.
-  </p>
+  <div class="intro">
+    <h1 class="anchorable-toc" id="toc_deprecations">Deprecations</h1>
+    <p>Periodically, various APIs in Ember.js may be deprecated. During a minor
+    release, for instance when upgrading from version 1.9 to 1.10, you may see new
+    deprecations fire in your codebase. Until a major revision such as 2.0 lands,
+    code firing such deprecations for public API is still supported. After
+    the next major revision lands, the supporting public API code may be removed.
+    Private API may be removed at any time without warning in patch or minor releases,
+    regardless of whether it has a deprecation warning.
+    This style of change management is commonly referred to as
+    <a href="http://semver.org/">Semantic Versioning</a>.
+    </p>
 
-  <p>
-    You can use newer versions of the CLI with older Ember apps. It's a good
-    idea to resolve deprecations as they arise so that when a major version is
-    available, it's easier to upgrade your app. For some significant changes,
-    codemods may be available, so check out
-    <a href="https://emberjs.com/blog/">
-      Release Blog Posts
-    </a>
-    before you dive in.
-  </p>
+    <p>
+      You can use newer versions of the CLI with older Ember apps. It's a good
+      idea to resolve deprecations as they arise so that when a major version is
+      available, it's easier to upgrade your app. For some significant changes,
+      codemods may be available, so check out
+      <a href="https://emberjs.com/blog/">
+        Release Blog Posts
+      </a>
+      before you dive in.
+    </p>
+    <h3 class="anchorable-toc" id="toc_ember">Versions</h3>
+  </div>
 
-  <h3 class="anchorable-toc" id="toc_ember">Versions</h3>
   <ul class="ember-version-graphics">
     <li class="item list-unstyled">
       {{ember-version-graphic mascot='tomster-deprecated' text='1.x'}}

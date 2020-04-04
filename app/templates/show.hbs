@@ -22,9 +22,11 @@
 
   <div class="main ml-5 {{if this.displayMobileToc "mobile" "desktop"}}">
     <h1>Deprecations Added in {{project}} {{version}}</h1>
-    <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
-    cycle.</p>
-    <p>For more information on deprecations in {{project}}, see the <LinkTo @route="index">main deprecations page</LinkTo>.</p>
+    <div class="intro">
+      <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
+      cycle.</p>
+      <p>For more information on deprecations in {{project}}, see the <LinkTo @route="index">main deprecations page</LinkTo>.</p>
+    </div>
 
     {{#each sortedGroupedResults as |result|}}
       <h2 class="anchorable-toc rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
