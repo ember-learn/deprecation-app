@@ -88,10 +88,6 @@ table {
     max-width: 100%;
   }
 
-  .main.mobile {
-    display: none;
-  }
-
   .card {
     border: 0px;
     border-radius: 0px;
@@ -119,6 +115,7 @@ table {
     width: 100vw;
     background-color: #ebeef2;
     overflow-y: scroll;
+    z-index: 999;
     ol {
       margin-left: 0;
       padding-left: 0;
@@ -139,7 +136,7 @@ table {
     bottom: 10rem;
     right: 1rem;
     padding-top: 1rem;
-    z-index: 101;
+    z-index: 1000;
   }
 
   .card {

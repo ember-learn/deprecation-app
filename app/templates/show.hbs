@@ -8,17 +8,24 @@
   <img src="/images/expand.svg" alt="expand table of contents">
 </EsButton>
 <div class="layout-grid fade-in">
-  <nav class="mobile-sidebar fade-in {{if this.displayMobileToc "mobile" "desktop"}}" role="navigation" aria-label="Mobile Table of Contents">
-    <TableOfContents
-      @sortedGroupedResults={{this.sortedGroupedResults}}
-      @displayMobileToc={{this.displayMobileToc}}
-    />
-  </nav>
-
-  <nav class="sidebar fade-in" role="navigation" aria-label="Desktop Table of Contents">
-    <TableOfContents @sortedGroupedResults={{this.sortedGroupedResults}} />
-    <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
-  </nav>
+  {{#if this.displayMobileToc}}
+    <nav
+      class="mobile-sidebar fade-in {{if this.displayMobileToc "mobile" "desktop"}}"
+      role="navigation"
+      aria-label="Mobile Table of Contents"
+      data-test-mobile-table-of-contents
+    >
+      <TableOfContents
+        @sortedGroupedResults={{this.sortedGroupedResults}}
+        @displayMobileToc={{this.displayMobileToc}}
+      />
+    </nav>
+  {{else}}
+    <nav class="sidebar fade-in" role="navigation" aria-label="Desktop Table of Contents">
+      <TableOfContents @sortedGroupedResults={{this.sortedGroupedResults}} />
+      <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+    </nav>
+  {{/if}}
 
   <div class="main ml-5 fade-in {{if this.displayMobileToc "mobile" "desktop"}}">
     <h1>Deprecations Added in {{project}} {{version}}</h1>
