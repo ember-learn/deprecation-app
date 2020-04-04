@@ -6,7 +6,6 @@ import algoliasearch from 'algoliasearch';
 import { task, timeout } from 'ember-concurrency';
 import { denodeify } from 'rsvp';
 
-
 const SEARCH_DEBOUNCE_PERIOD = 300;
 
 export default Component.extend({
