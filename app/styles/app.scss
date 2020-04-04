@@ -96,6 +96,14 @@ table {
     width: 100vw;
     background-color: #ebeef2;
     overflow-y: scroll;
+    ol {
+      margin-left: 0;
+      padding-left: 0;
+      padding-bottom: 1rem;
+    }
+  }
+  .mobile-sidebar.mobile > ol:last-of-type {
+    padding-bottom: 5rem;
   }
 
   #back-to-top {
