@@ -6,9 +6,7 @@ import semverCompare from 'semver-compare';
 export default Controller.extend({
   displayMobileToc: false,
   content: alias('model'),
-  init() {
-    this._super(...arguments);
-  },
+
   groupedResults: computed('content.[]', function() {
     let result = [];
     this.content.forEach(function(item) {
@@ -23,6 +21,7 @@ export default Controller.extend({
     });
     return result;
   }),
+
   sortedGroupedResults: computed('groupedResults', function() {
     let sorted = this.groupedResults.sort((a, b) => semverCompare(a.since, b.since));
     let match = sorted[0].since.match(/Upcoming Features/)
@@ -32,10 +31,12 @@ export default Controller.extend({
     }
     return sorted;
   }),
+
   version: computed('content', function() {
     let version = this.get('content.query.version');
     return version.match(/[0-9].*/)[0];
   }),
+
   project: computed('content', function() {
     let projects = {
       'ember': 'Ember',
@@ -45,6 +46,7 @@ export default Controller.extend({
     let project = this.get('content.query.path');
     return projects[project];
   }),
+
   renderIdOrUntil: computed('content', function() {
     let version = this.get('content.query.version');
     let versionsWithoutId = ['v1.x'];
@@ -59,6 +61,11 @@ export default Controller.extend({
     toggleToc() {
       this.toggleProperty('displayMobileToc');
 
+      if (typeof document !== 'undefined') {
+        if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
+        if (!this.displayMobileToc) document.querySelector('body').classList.remove('no-scroll');
+      }
+
       window.scrollTo({
         top: 0,
         left: 0,
@@ -66,4 +73,3 @@ export default Controller.extend({
     }
   }
 });
-
