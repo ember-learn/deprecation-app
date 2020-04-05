@@ -2,9 +2,18 @@ import { click, isSettled, visit, waitFor } from "@ember/test-helpers";
 import { percySnapshot } from "ember-percy";
 import { setupApplicationTest } from "ember-qunit";
 import { module, test } from "qunit";
+import lolex from 'lolex';
 
 module("Acceptance | visual regression", function(hooks) {
   setupApplicationTest(hooks);
+
+  hooks.beforeEach(function() {
+    this.clock = lolex.install();
+  });
+
+  hooks.afterEach(function() {
+    this.clock.uninstall();
+  });
 
   test('visit all the pages', async function(assert) {
     await visit('/');
@@ -16,6 +25,7 @@ module("Acceptance | visual regression", function(hooks) {
     await waitFor('[data-test-deprecations-added-in]');
     assert.dom('[data-test-deprecations-added-in]').includesText('Deprecations Added in Ember 1.x');
     await isSettled();
+    this.clock.tick(3000);
 
     await percySnapshot('ember-1.x');
 
@@ -26,6 +36,7 @@ module("Acceptance | visual regression", function(hooks) {
     await waitFor('[data-test-deprecations-added-in]');
     assert.dom('[data-test-deprecations-added-in]').includesText('Deprecations Added in Ember 2.x');
     await isSettled();
+    this.clock.tick(3000);
 
     await percySnapshot('ember-2.x');
 
@@ -36,6 +47,7 @@ module("Acceptance | visual regression", function(hooks) {
     await waitFor('[data-test-deprecations-added-in]');
     assert.dom('[data-test-deprecations-added-in]').includesText('Deprecations Added in Ember Data 2.x');
     await isSettled();
+    this.clock.tick(3000);
 
     await percySnapshot('ember-data-2.x');
 
@@ -46,6 +58,7 @@ module("Acceptance | visual regression", function(hooks) {
     await waitFor('[data-test-deprecations-added-in]');
     assert.dom('[data-test-deprecations-added-in]').includesText('Deprecations Added in Ember CLI 2.x');
     await isSettled();
+    this.clock.tick(3000);
 
     await percySnapshot('ember-cli-2.x');
 
@@ -56,6 +69,7 @@ module("Acceptance | visual regression", function(hooks) {
     await waitFor('[data-test-deprecations-added-in]');
     assert.dom('[data-test-deprecations-added-in]').includesText('Deprecations Added in Ember 3.x');
     await isSettled();
+    this.clock.tick(3000);
 
     await percySnapshot('ember-3.x');
 
@@ -66,6 +80,7 @@ module("Acceptance | visual regression", function(hooks) {
     await waitFor('[data-test-deprecations-added-in]');
     assert.dom('[data-test-deprecations-added-in]').includesText('Deprecations Added in Ember Data 3.x');
     await isSettled();
+    this.clock.tick(3000);
 
     await percySnapshot('ember-data-3.x');
   });
