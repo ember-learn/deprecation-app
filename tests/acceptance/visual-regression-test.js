@@ -1,4 +1,4 @@
-import { visit, waitFor, settled } from "@ember/test-helpers";
+import { visit, waitFor } from "@ember/test-helpers";
 import { percySnapshot } from "ember-percy";
 import { setupApplicationTest } from "ember-qunit";
 import { module, test } from "qunit";
