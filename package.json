@@ -62,6 +62,7 @@
     "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^7.10.1",
     "loader.js": "^4.7.0",
+    "lolex": "^6.0.0",
     "prember": "^1.0.3",
     "qunit-dom": "^1.1.0",
     "sass": "^1.26.3",
