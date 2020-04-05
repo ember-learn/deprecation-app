@@ -27,28 +27,37 @@ module("Acceptance | visual regression", function(hooks) {
       await visit(pagesToLookup[page]);
       await waitFor('[data-test-toc-list-item]', { timeout: 2000 });
 
-      await settled();
+      this.clock.setTimeout(async function () {
+        await percySnapshot(page);
+        assert.expect(0);
 
-      this.clock.tick(3000);
+      }, 2000);
+      this.clock.tick(2000);
 
-
-      await percySnapshot(page);
-      assert.expect(0);
     });
   });
 
   test('visit home page', async function(assert) {
     await visit('/');
-    await percySnapshot('home-page');
-    assert.expect(0);
+
+    this.clock.setTimeout(async function () {
+      await percySnapshot('home-page');
+      assert.expect(0);
+
+    }, 2000);
+    this.clock.tick(2000);
+
   });
 
   test('visit ember-2.x', async function(assert) {
     await visit('/v2.x');
-    await settled();
-    this.clock.tick(3000);
 
-    await percySnapshot('ember-2.x');
-    assert.expect(0);
+    this.clock.setTimeout(async function () {
+      await percySnapshot('ember-2.x');
+      assert.expect(0);
+
+    }, 2000);
+    this.clock.tick(2000);
+
   })
 });
