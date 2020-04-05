@@ -1,4 +1,4 @@
-import { visit } from "@ember/test-helpers";
+import { visit, waitFor } from "@ember/test-helpers";
 import { percySnapshot } from "ember-percy";
 import { setupApplicationTest } from "ember-qunit";
 import { module, test } from "qunit";
@@ -18,6 +18,7 @@ module("Acceptance | visual regression", function(hooks) {
   Object.keys(pagesToLookup).map(page => {
     test(`visiting ${page}`, async function(assert) {
       await visit(pagesToLookup[page]);
+      await waitFor('[data-test-toc-list-item]');
       await percySnapshot(page);
       assert.expect(0);
     });

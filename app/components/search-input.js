@@ -28,11 +28,13 @@ export default Component.extend({
     this.index = this.client.initIndex('ember-deprecations');
     this.searchFunction = denodeify(this.index.search.bind(this.index));
 
-    document.addEventListener('click', (event) => {
-      if (!event.target.closest('.ds-dropdown-results')) {
-        set(this, 'response', null);
-      }
-    }, false);
+    if (typeof document !== 'undefined') {
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.ds-dropdown-results')) {
+          set(this, 'response', null);
+        }
+      }, false);
+    }
   },
 
   pageIndex: computed('page.pages.[]', function() {

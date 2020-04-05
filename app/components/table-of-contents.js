@@ -5,7 +5,6 @@ import { later } from '@ember/runloop';
 
 export default Component.extend({
     router: service(),
-    // elementId: 'toc-list',
     tagName: 'ol',
     tocLevel: computed('level', function() {
       return `level-${this.level}`;
@@ -18,7 +17,9 @@ export default Component.extend({
 
         let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
         later(this, function() {
-          document.querySelector(`#${anchor}`).scrollIntoView();
+          if (typeof document !== 'undefined') {
+            document.querySelector(`#${anchor}`).scrollIntoView();
+          }
         }, 200);
       }
     }

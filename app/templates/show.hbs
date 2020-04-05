@@ -1,46 +1,33 @@
-<EsButton
-  class="toc-toggle"
-  aria-label="expand table of contents"
-  title="expand table of contents"
-  aria-expanded={{this.displayMobileToc}}
-  @onClicked={{action "toggleToc"}}
+<LayoutProvider
+  @content={{this.content}}
+  as |layout|
 >
-  <img src="/images/expand.svg" alt="expand table of contents">
-</EsButton>
-<div class="layout-grid fade-in">
-  {{#if this.displayMobileToc}}
-    <nav
-      class="mobile-sidebar fade-in fade-out {{if this.displayMobileToc "mobile" "desktop"}}"
-      role="navigation"
-      aria-label="Mobile Table of Contents"
-      data-test-mobile-table-of-contents
+
+  {{#if layout.processResults.isIdle}}
+    <EsButton
+      class="toc-toggle"
+      aria-label="expand table of contents"
+      title="expand table of contents"
+      aria-expanded={{this.displayMobileToc}}
+      @onClicked={{action "toggleToc"}}
     >
-      <TableOfContents
-        @sortedGroupedResults={{this.sortedGroupedResults}}
+      <img src="/images/expand.svg" alt="expand table of contents">
+    </EsButton>
+    <div class="layout-grid fade-in">
+      <LayoutProvider::SideBarLayout
+        @sortedGroupedResults={{layout.sortedGroupedResults}}
         @displayMobileToc={{this.displayMobileToc}}
+        @processingResults={{layout.processResults.isRunning}}
       />
-    </nav>
-  {{/if}}
 
-  <nav class="sidebar fade-in" role="navigation" aria-label="Desktop Table of Contents">
-    <TableOfContents @sortedGroupedResults={{this.sortedGroupedResults}} />
-    <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
-  </nav>
-
-  <div class="main ml-5 fade-in {{if this.displayMobileToc "mobile" "desktop"}}">
-    <h1>Deprecations Added in {{project}} {{version}}</h1>
-    <div class="intro">
-      <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
-      cycle.</p>
-      <p>For more information on deprecations in {{project}}, see the <LinkTo @route="index">main deprecations page</LinkTo>.</p>
+      <LayoutProvider::MainLayout
+        @version={{this.version}}
+        @project={{this.project}}
+        @renderIdOrUntil={{this.renderIdOrUntil}}
+        @displayMobileToc={{this.displayMobileToc}}
+        @sortedGroupedResults={{this.sortedGroupedResults}}
+      />
     </div>
+  {{/if}}
+</LayoutProvider>
 
-    {{#each sortedGroupedResults as |result|}}
-      <h2 class="anchorable-toc rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
-      {{renderId}}
-      {{#each result.contents as |content|}}
-        <DeprecationArticle @model={{content}} @renderIdOrUntil={{this.renderIdOrUntil}} />
-      {{/each}}
-    {{/each}}
-  </div>
-</div>
