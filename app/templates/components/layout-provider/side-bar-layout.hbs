@@ -1,23 +1,23 @@
-{{#if @displayMobileToc}}
-  <nav
-    class="mobile-sidebar fade-in fade-out {{if @displayMobileToc "mobile" "desktop"}}"
-    role="navigation"
-    aria-label="Mobile Table of Contents"
-    data-test-mobile-table-of-contents
-  >
+{{#if @sortedGroupedResults}}
+  {{#if @displayMobileToc}}
+    <nav
+      class="mobile-sidebar fade-in {{if @displayMobileToc "mobile" "desktop"}}"
+      role="navigation"
+      aria-label="Mobile Table of Contents"
+      data-test-mobile-table-of-contents
+    >
+      <TableOfContents
+        @sortedGroupedResults={{sortedGroupedResults}}
+        @displayMobileToc={{@displayMobileToc}}
+      />
+    </nav>
+  {{/if}}
+
+  <nav class="sidebar fade-in" role="navigation" aria-label="Desktop Table of Contents">
     <TableOfContents
-      @sortedGroupedResults={{sortedGroupedResults}}
-      @processingResults={{@processingResults}}
+      @sortedGroupedResults={{@sortedGroupedResults}}
       @displayMobileToc={{@displayMobileToc}}
     />
+    <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
   </nav>
 {{/if}}
-
-<nav class="sidebar fade-in" role="navigation" aria-label="Desktop Table of Contents">
-  <TableOfContents
-    @sortedGroupedResults={{@sortedGroupedResults}}
-    @processingResults={{@processingResults}}
-    @displayMobileToc={{@displayMobileToc}}
-  />
-  <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
-</nav>
