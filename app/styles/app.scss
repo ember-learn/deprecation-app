@@ -1,10 +1,6 @@
 @import "search-input";
 @import "_highlight";
 
-body.no-scroll {
-  overflow: hidden;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -69,6 +65,10 @@ table {
 }
 
 @media (max-width: 1007px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
+
   .container {
     padding-left: 0px;
     padding-right: 0px;
