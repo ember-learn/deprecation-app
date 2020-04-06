@@ -18,6 +18,12 @@ table {
   background-color: #ebeef2;
 }
 
+.padding-vertical-small {
+  border-radius: .625rem;
+  margin-top: 1.25rem;
+  padding: 2rem;
+}
+
 // override ember-styleguide. Needed to contain code blocks.
 .main {
   grid-area: main;
@@ -92,7 +98,7 @@ table {
     max-width: 100%;
   }
 
-  .card {
+  .padding-vertical-small {
     border: 0px;
     border-radius: 0px;
   }
