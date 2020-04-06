@@ -18,6 +18,7 @@ export default Component.extend({
         let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
         later(this, function() {
           if (typeof document !== 'undefined') {
+            window.location.hash = anchor;
             document.querySelector(`#${anchor}`).scrollIntoView();
           }
         }, 200);
