@@ -1,7 +1,6 @@
 import Controller from '@ember/controller';
-import EmberObject, { computed } from '@ember/object';
+import { computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
-import semverCompare from 'semver-compare';
 
 export default Controller.extend({
   displayMobileToc: false,
