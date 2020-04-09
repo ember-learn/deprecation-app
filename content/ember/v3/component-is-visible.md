@@ -11,6 +11,8 @@ One of them is `isVisible`, which controls if the component is hidden to the end
 
 You can update your component in one of two ways, you can wrap your component's template in an `{{if}}`, or you can use the [`hidden`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) HTML attribute.
 
+It's worth noting that not all visibility approaches are equal- we recommend reviewing use of `aria-hidden` as well as accessible ways to visibly hide content while still making it available to assistive technology. 
+
 Because classic components have a wrapper `div` element by default,
 it might be necessary that you do additional changes to your component so that no content is accidentally shown.
 
