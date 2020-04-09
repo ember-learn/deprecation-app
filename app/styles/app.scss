@@ -55,6 +55,10 @@ table {
   display: none;
 }
 
+.sidebar .padding-vertical-small {
+  margin-top: 0px;
+}
+
 #back-to-top {
   position: -webkit-sticky;
   position: sticky;
@@ -125,7 +129,7 @@ table {
     width: 100vw;
     background-color: #ebeef2;
     overflow-y: scroll;
-    z-index: 999;
+    z-index: 101;
     ol {
       margin-left: 0;
       padding-left: 0;
@@ -146,7 +150,7 @@ table {
     bottom: 10rem;
     right: 1rem;
     padding-top: 1rem;
-    z-index: 1000;
+    z-index: 102;
   }
 }
 
