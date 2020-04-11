@@ -26,6 +26,7 @@ export default Component.extend({
 
     if (filenameNodeList) {
       filenameNodeList.each((index, code) => {
+        code.tabIndex = 0;
         let filename = code.attributes['data-filename'] ? code.attributes['data-filename'].value : null;
         let match;
 
@@ -58,7 +59,7 @@ export default Component.extend({
     this.$(".anchorable-toc").each(function () {
       let currentToc = $(this);
 
-      currentToc.prepend(`<a class="toc-anchor" href="#${currentToc.attr('id')}"></a>`)
+      currentToc.wrap(`<a class="bg-none toc-anchor" href="#${currentToc.attr('id')}"></a>`)
     })
 
     this.prism.highlight();

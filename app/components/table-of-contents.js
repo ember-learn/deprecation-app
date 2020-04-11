@@ -5,17 +5,17 @@ import { later } from '@ember/runloop';
 
 export default Component.extend({
     router: service(),
-    tagName: 'ol',
     tocLevel: computed('level', function() {
       return `level-${this.level}`;
     }),
     level: '1',
 
     actions: {
-      navigateToLink() {
+      navigateToLink(event) {
         this.toggleProperty('displayMobileToc');
 
         let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
+
         later(this, function() {
           if (typeof document !== 'undefined') {
             if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');

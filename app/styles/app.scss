@@ -74,6 +74,17 @@ table {
   word-wrap: break-word;
 }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 @media (max-width: 1007px) {
   body.no-scroll {
     overflow: hidden;
@@ -528,6 +539,7 @@ p a:hover {
 .icon-link-ext:before {
   content: '\f08e';
 }
+
 @font-face {
   font-family: 'Maven Pro';
   src: url("/fonts/maven_pro_bold-webfont-6ffb7355.eot");
