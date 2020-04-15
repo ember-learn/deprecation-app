@@ -1,0 +1,23 @@
+{{#cp-panel open=this.open as |panel|}}
+  <button
+    class="cp-Panel-toggle level-1 list-unstyled"
+    onclick={{action (mut this.open) (not this.open)}}
+    aria-label="table of contents level 1"
+    aria-expanded={{this.open}}
+    title="table of contents level 1"
+    data-test-toc-list-item
+  >
+    {{@result.since}}
+  </button>
+  {{#panel.body}}
+    <div>
+      {{#each @result.contents as |content|}}
+        <div class="level-3 list-unstyled">
+          <a class="bg-none" href="#{{id-for-deprecation content.id}}" onclick={{action "navigateToLink"}}>
+            {{content.title}}
+          </a>
+        </div>
+      {{/each}}
+    </div>
+  {{/panel.body}}
+{{/cp-panel}}

@@ -1,29 +1,11 @@
 <div class="padding-vertical-small bg-light-muted rounded-sm">
-  {{#cp-panels accordion=true as |panels|}}
-    <div class="large padding-bottom-small">
-      Deprecations by Version:
-    </div>
-    {{#each @sortedGroupedResults as |result|}}
-      {{#panels.panel open=this.displayMobileToc as |panel|}}
-        {{#panel.toggle}}
-          <div class="level-1 list-unstyled" data-test-toc-list-item>
-            <a class="slide-widget-head large" href="#toc toc_deprecations-added-in-ember-2-x">
-              {{result.since}}
-            </a>
-          </div>
-        {{/panel.toggle}}
-        {{#panel.body}}
-          <div>
-            {{#each result.contents as |content|}}
-              <div class="level-3 list-unstyled">
-                <a class="bg-none" href="#{{id-for-deprecation content.id}}" onclick={{action "navigateToLink"}}>
-                  {{content.title}}
-                </a>
-              </div>
-            {{/each}}
-          </div>
-        {{/panel.body}}
-      {{/panels.panel}}
-    {{/each}}
-  {{/cp-panels}}
+  <div class="large padding-bottom-small">
+    Deprecations by Version:
+  </div>
+  {{#each @sortedGroupedResults as |result|}}
+    <TocSection
+      @result={{result}}
+      @displayMobileToc={{@displayMobileToc}}
+    />
+  {{/each}}
 </div>
