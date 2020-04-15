@@ -2,8 +2,12 @@ import Component from '@ember/component';
 import EmberObject, { set } from '@ember/object';
 import semverCompare from 'semver-compare';
 import { task } from 'ember-concurrency'
+import { inject as service } from '@ember/service';
+import { later } from '@ember/runloop';
 
 export default Component.extend({
+  router: service(),
+
   sortedGroupedResults: null,
 
   didInsertElement() {
@@ -33,5 +37,11 @@ export default Component.extend({
     }
 
     set(this, 'sortedGroupedResults', sorted);
+
+    later(this, function() {
+      if (typeof document !== 'undefined' && window.location.hash) {
+        document.querySelector(window.location.hash).scrollIntoView();
+      }
+    }, 200)
   }),
 });
