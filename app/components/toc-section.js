@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { computed, set } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { later } from '@ember/runloop';
 
@@ -10,6 +10,13 @@ export default Component.extend({
     return `level-${this.level}`;
   }),
   level: '1',
+
+  id: computed('result.since', function() {
+
+    let dasherizedSince = get(this, 'result.since').replace(/\./g,'-');
+
+    return `toggle-dep-menu-${dasherizedSince}`;
+  }),
 
   init() {
     this._super(...arguments);

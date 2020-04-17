@@ -1,23 +1,25 @@
-{{#cp-panel open=this.open as |panel|}}
-  <button
-    class="cp-Panel-toggle level-1 list-unstyled"
-    onclick={{action (mut this.open) (not this.open)}}
-    aria-label="table of contents level 1"
-    aria-expanded={{this.open}}
-    title="table of contents level 1"
-    data-test-toc-list-item
-  >
-    {{@result.since}}
-  </button>
-  {{#panel.body}}
-    <div>
+<button
+  id={{this.id}}
+  class="cp-Panel-toggle level-1 list-unstyled"
+  onclick={{action (mut this.open) (not this.open)}}
+  aria-label={{concat "deprecations for version " @result.since}}
+  aria-expanded={{this.open}}
+  title="table of contents level 1"
+  data-test-toc-list-item
+>
+  {{@result.since}}
+</button>
+
+{{#if this.open}}
+  <div>
+    <ul aria-labelledby={{this.id}} class="level-3 list-unstyled">
       {{#each @result.contents as |content|}}
-        <div class="level-3 list-unstyled">
+        <li>
           <a class="bg-none" href="#{{id-for-deprecation content.id}}" onclick={{action "navigateToLink"}}>
             {{content.title}}
           </a>
-        </div>
+        </li>
       {{/each}}
-    </div>
-  {{/panel.body}}
-{{/cp-panel}}
+    </ul>
+  </div>
+{{/if}}
