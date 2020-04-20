@@ -62,7 +62,7 @@
     "eslint-plugin-ember": "^7.10.1",
     "loader.js": "^4.7.0",
     "prember": "^1.0.3",
-    "qunit-dom": "^1.1.0",
+    "qunit-dom": "^1.2.0",
     "sass": "^1.26.3",
     "semver-compare": "^1.0.0"
   },
