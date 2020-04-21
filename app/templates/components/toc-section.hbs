@@ -3,8 +3,7 @@
   class="cp-Panel-toggle level-1 list-unstyled"
   onclick={{action (mut this.open) (not this.open)}}
   aria-label={{concat "deprecations for version " @result.since}}
-  aria-expanded={{this.open}}
-  title="table of contents level 1"
+  aria-expanded={{if this.open "true" "false"}}
   data-test-toc-list-item
 >
   {{@result.since}}
