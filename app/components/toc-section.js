@@ -21,7 +21,9 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    set(this, 'open', this.displayMobileToc);
+    if (this.displayMobileToc) {
+      set(this, 'open', this.displayMobileToc);
+    }
   },
 
   actions: {
