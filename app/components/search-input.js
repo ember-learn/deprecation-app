@@ -6,7 +6,6 @@ import algoliasearch from 'algoliasearch';
 import { task, timeout } from 'ember-concurrency';
 import { denodeify } from 'rsvp';
 
-
 const SEARCH_DEBOUNCE_PERIOD = 300;
 
 export default Component.extend({
@@ -28,6 +27,14 @@ export default Component.extend({
     this.client = algoliasearch(algoliaId, algoliaKey);
     this.index = this.client.initIndex('ember-deprecations');
     this.searchFunction = denodeify(this.index.search.bind(this.index));
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.ds-dropdown-results')) {
+          set(this, 'response', null);
+        }
+      }, false);
+    }
   },
 
   pageIndex: computed('page.pages.[]', function() {
@@ -79,6 +86,5 @@ export default Component.extend({
         set(this, '_focused', false);
       }, 200);
     }
-
   }
 });

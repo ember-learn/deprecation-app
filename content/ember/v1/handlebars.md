@@ -12,12 +12,12 @@ have been deprecated in favor of the
 function. The `makeViewHelper` method has been deprecated in favor of just using
 an `Ember.Component`.
 
-##### `makeViewHelper`
+#### `makeViewHelper`
 
 If you use `viewHelper` you should refactor the view class and template into
 a component with the same name as the view helper you registered.
 
-##### `makeBoundHelper`, `registerBoundHelper`, `helper`, `registerHelper`
+#### `makeBoundHelper`, `registerBoundHelper`, `helper`, `registerHelper`
 
 If you have for example:
 

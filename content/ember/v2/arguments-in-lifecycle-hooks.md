@@ -7,7 +7,7 @@ since: '2.12'
 
 Previously, it was possible for component lifecycle hooks `didInitAttrs`, `didReceiveAttrs`, and `didUpdateAttrs` to receive arguments. However, this functionality was part of private API. Using the arguments is harmful to component performance, so they will trigger a deprecation. Alternative approaches for all three hooks are below:
 
-##### `didInitAttrs` arguments
+#### `didInitAttrs` arguments
 
 Since this lifecycle hook is [already deprecated](http://emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs), we suggest taking this chance to address two deprecations at the same time.
 
@@ -34,7 +34,7 @@ Ember.Component.extend({
   }
 });
 ```
-##### `didReceiveAttrs` and `didUpdateAttrs` arguments
+#### `didReceiveAttrs` and `didUpdateAttrs` arguments
 
 This example for `didReceiveAttrs` below also applies to `didUpdateAttrs`, a similar hook that only runs on re-renders. Let's say you want to animate a thermometer widget showing the change between today's high and low temperatures.
 

@@ -4,7 +4,7 @@ title: BelongsToReference.push(DS.Model)
 until: '4.0.0'
 since: 'Upcoming Features'
 ---
-###### feature: ds-overhaul-references
+#### feature: ds-overhaul-references
 
 Passing an instance of
 [`DS.Model`](http://emberjs.com/api/data/classes/DS.Model.html) to

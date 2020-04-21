@@ -4,7 +4,7 @@ title: Default adapter usage
 until: '4.0.0'
 since: '3.12.0'
 ---
-## Deprecates both store.defaultAdapter (which defaults to -json-api) and the -json-api adapter fallback behavior
+#### Deprecates both store.defaultAdapter (which defaults to -json-api) and the -json-api adapter fallback behavior
 
 Previously, applications could define the store.adapter property which would be used by defaultAdapter and adapterFor as a fallback for when an adapter was not found by an exact name match.
 

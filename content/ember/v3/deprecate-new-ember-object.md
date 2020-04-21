@@ -20,7 +20,7 @@ classes that extend from `EmberObject`. If you are using native class syntax
 instead of `EmberObject.extend()` to define your classes, you can also refactor
 to _not_ extend from `EmberObject`, and continue to use `new` syntax.
 
-### Refactoring to use `create()` instead of `new`
+#### Refactoring to use `create()` instead of `new`
 
 Before this deprecation, `new EmberObject()` and `EmberObject.create()` were
 functionally the same, with one difference - `new EmberObject()` could only
@@ -48,7 +48,7 @@ const Foo = EmberObject.extend();
 let foo = Foo.create({ bar: 123 })
 ```
 
-### Refactoring native classes to not extend from EmberObject
+#### Refactoring native classes to not extend from EmberObject
 
 If you are using native `class` syntax to extend from `EmberObject`, you can
 instead define your classes _without_ a base class. This means that you will

@@ -31,7 +31,7 @@ They may also be fetched via a binding:
 In general, it is recommended that your Ember application avoid accessing
 globals from a template.
 
-##### New usage of Ember.Select
+#### New usage of Ember.Select
 Most of Ember's provided views are already accessed via helpers. For example,
 the [Ember.TextField](/api/classes/Ember.TextField.html) view is used via the
 [input helper](/api/classes/Ember.Handlebars.helpers.html#method_input).
@@ -55,7 +55,7 @@ See the updated [Ember.Select](/api/classes/Ember.Select.html) documentation
 and the [built-in views guide](/guides/views/built-in-views) for more details
 and examples.
 
-##### Ember.js libraries and plugins
+#### Ember.js libraries and plugins
 
 If the code triggering this deprecation is being fired from a library, that
 library may need to update its suggested usage.

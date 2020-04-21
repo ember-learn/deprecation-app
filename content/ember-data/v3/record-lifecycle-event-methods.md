@@ -4,7 +4,7 @@ title: Record Lifecycle Event Methods
 until: '4.0.0'
 since: '3.12.0'
 ---
-## Deprecating Record Lifecycle Event Methods
+#### Deprecating Record Lifecycle Event Methods
 As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 >...the following lifecycle methods on DS.Model will also be deprecated: becameError, becameInvalid, didCreate, didDelete, didLoad, didUpdate, ready, rolledBack.
 >
@@ -12,7 +12,7 @@ As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 
 The work of lifecycle events can be achieved with a computed property on a relevant property or kick off additional work when performing the operation.
 
-### Some Examples of CP Alternatives:
+#### Some Examples of CP Alternatives:
 * **becameError** - CP on [isError](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isError?anchor=isError)
 * **becameInvalid** - CP on [isValid](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isValid?anchor=isValid)
 * **didCreate** - CP on [isNew](https://api.emberjs.com/ember-data/3.10/classes/DS.Model/properties/isNew?anchor=isNew)

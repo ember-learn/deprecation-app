@@ -4,9 +4,9 @@ title: HasManyReference.push(array)
 until: '4.0.0'
 since: 'Upcoming Features'
 ---
-###### feature: ds-overhaul-references
+#### feature: ds-overhaul-references
 
-###### Deprecations Added in Pending Features
+#### Deprecations Added in Pending Features
 
 Passing an array to a `HasManyReference#push` has been deprecated. You should
 refactor your code to instead pass a [JSON API Relationship

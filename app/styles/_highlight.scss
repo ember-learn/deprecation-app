@@ -53,6 +53,14 @@ pre {
   background-image: url("../images/ribbon-hbs.svg");
 }
 
+@media (max-width: 1007px) {
+  .filename {
+    margin-right: -32px;
+    margin-left: -32px;
+    border-radius: 0px;
+  }
+}
+
 code:not([class*="language-"]) {
   background-color: #F8E7CF;
   border-radius: 3px;

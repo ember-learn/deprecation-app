@@ -21,7 +21,7 @@ Ember 1.11 made it possible to intuitively represent dynamic content in attribut
 
 This makes it possible to express a number of concepts directly in the template that previously were awkward to represent and required computer properties, and could even require `itemController`.
 
-##### Dasherized boolean values
+#### Dasherized boolean values
 
 Ember 1.11's attribute binding syntax no longer supports dasherizing for boolean values. For example:
 
@@ -43,7 +43,7 @@ Should be replaced with:
 </div>
 ```
 
-##### Legacy `bind-attr`
+#### Legacy `bind-attr`
 
 Ember 1.13 deprecated `bind-attr` in favor of the new syntax.
 

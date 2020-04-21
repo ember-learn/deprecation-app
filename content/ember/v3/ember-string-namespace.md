@@ -27,7 +27,7 @@ default in Ember applications.
 
 You should `ember install @ember/string`.
 
-##### `camelize`, `capitalize`, `classify`, `dasherize`, `decamelize`, `underscore`, `w`
+#### `camelize`, `capitalize`, `classify`, `dasherize`, `decamelize`, `underscore`, `w`
 
 Go from:
 
@@ -66,7 +66,7 @@ underscore("my string"); // my_string
 w("my string"); //
 ```
 
-##### `Ember.String.htmlSafe` and `Ember.String.isHTMLSafe`
+#### `Ember.String.htmlSafe` and `Ember.String.isHTMLSafe`
 
 Go from:
 
@@ -101,7 +101,7 @@ htmlSafe(myString);
 isHTMLSafe(myString);
 ```
 
-##### `Ember.String.loc` and `import { loc } from '@ember/string'`
+#### `Ember.String.loc` and `import { loc } from '@ember/string'`
 
 We recommend using a proper localization/internationalization solution.
 

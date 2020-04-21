@@ -138,10 +138,10 @@ $dropdown-min-width-large: 600px;
 
 .ds-dropdown-results {
   z-index: 10;
-
   a {
     color: #000000;
   }
+  margin-right: 24px;
 }
 // Main autocomplete wrapper
 .ds-dropdown-menu {
@@ -235,6 +235,8 @@ $dropdown-min-width-large: 600px;
   display: flex;
   flex-direction: row-reverse;
   padding: .5em;
+  margin-top: 8px;
+  margin-right: 7px;
 }
 
 // BREAKPOINT 1:

@@ -9,7 +9,7 @@ since: '1.13'
 
 Legacy support of `Ember.CollectionView` will be provided via the [ember-legacy-views](https://github.com/emberjs/ember-legacy-views) addon.
 
-##### Migrating away from `Ember.CollectionView`
+#### Migrating away from `Ember.CollectionView`
 
 In most cases collection view can be replaced using the `{{each}}` helper in combination with the `{{component}}` helper.
 

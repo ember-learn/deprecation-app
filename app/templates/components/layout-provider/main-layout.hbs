@@ -1,0 +1,18 @@
+<div class="main ml-5 fade-in {{if this.displayMobileToc "mobile" "desktop"}}">
+  {{#if @sortedGroupedResults}}
+    <h1 data-test-deprecations-added-in>Deprecations Added in {{project}} {{version}}</h1>
+    <div class="intro">
+      <p>What follows is a list of deprecations introduced to {{project}} during the {{version}}
+      cycle.</p>
+      <p>For more information on deprecations in {{project}}, see the <LinkTo @route="index" data-test-main-deprecations-link>main deprecations page</LinkTo>.</p>
+    </div>
+
+    {{#each @sortedGroupedResults as |result|}}
+      <h2 class="anchorable-toc rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
+      {{renderId}}
+      {{#each result.contents as |content|}}
+        <DeprecationArticle @model={{content}} @renderIdOrUntil={{this.renderIdOrUntil}} />
+      {{/each}}
+    {{/each}}
+  {{/if}}
+</div>
