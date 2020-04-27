@@ -61,7 +61,7 @@
     "ember-source": "~3.16.3",
     "ember-styleguide": "^4.0.0-14",
     "ember-test-selectors": "^4.0.0",
-    "ember-tether": "^1.0.0",
+    "ember-tether": "^2.0.0",
     "eslint-plugin-ember": "^7.10.1",
     "loader.js": "^4.7.0",
     "prember": "^1.0.3",
