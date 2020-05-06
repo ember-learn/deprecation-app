@@ -1,5 +1,5 @@
 ---
-id: record.toJSON
+id: ember-data:model.toJSON
 title: Record toJSON usage
 until: '4.0.0'
 since: '3.12.0'

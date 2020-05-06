@@ -1,5 +1,5 @@
 ---
-id: evented-api-usage
+id: ember-data:evented-api-usage
 title: Evented Api Usage
 until: '4.0.0'
 since: '3.12.0'

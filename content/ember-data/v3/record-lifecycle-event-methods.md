@@ -1,5 +1,5 @@
 ---
-id: record-lifecycle-event-methods
+id: ember-data:record-lifecycle-event-methods
 title: Record Lifecycle Event Methods
 until: '4.0.0'
 since: '3.12.0'
