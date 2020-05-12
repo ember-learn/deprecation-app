@@ -14,18 +14,18 @@ export default Component.extend({
   }),
 
   didRender() {
-    let nodeList = this.$('pre:not(.no-line-numbers) > code');
+    let nodeList = document.querySelectorAll('pre:not(.no-line-numbers) > code');
 
     if (nodeList) {
-      nodeList.each((index, code) => {
+      nodeList.forEach((code) => {
         code.parentNode.classList.add("line-numbers")
       });
     }
 
-    let filenameNodeList = this.$('pre > code');
+    let filenameNodeList = document.querySelectorAll('pre > code');
 
     if (filenameNodeList) {
-      filenameNodeList.each((index, code) => {
+      filenameNodeList.forEach((code) => {
         code.tabIndex = 0;
         let filename = code.attributes['data-filename'] ? code.attributes['data-filename'].value : null;
         let match;
@@ -47,12 +47,27 @@ export default Component.extend({
           }
         }
 
-        this.$(code.parentNode).wrap(`<div class="filename ${ext}" style="position: relative;"></div>`);
+        let wrapperDiv = document.createElement('div');
+        wrapperDiv.classList.add('filename');
+        if (ext) {
+          wrapperDiv.classList.add(ext);
+        }
+        wrapperDiv.style.position = 'relative';
+
+        // code.parentNode.classList.add(ext);
+        code.parentNode.parentNode.appendChild(wrapperDiv);
+        wrapperDiv.appendChild(code.parentNode);
+
+        // this.$(code.parentNode).wrap(`<div class="filename ${ext}" style="position: relative;"></div>`);
 
         if (filename) {
-          this.$(code.parentNode.parentNode).prepend(this.$(`<span>${filename}</span>`));
+          let span = document.createElement('span');
+          span.innerHTML = filename;
+          code.parentNode.parentNode.prepend(span);
         }
-        this.$(code.parentNode.parentNode).prepend('<div class="ribbon"></div>');
+        let ribbonDiv = document.createElement('div');
+        ribbonDiv.classList.add('ribbon');
+        code.parentNode.parentNode.prepend(ribbonDiv);
       });
     }
 
