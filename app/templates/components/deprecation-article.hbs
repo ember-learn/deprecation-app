@@ -1,5 +1,5 @@
-<div class="padding-vertical-small bg-light-muted rounded-sm">
-  <h3 class="anchorable-toc" id="{{id-for-deprecation model.id}}">{{model.title}}</h3>
+<div class="padding-vertical-small bg-light-muted rounded-sm" {{did-insert this.setupCodeSnippets}}>
+  <h3 class="anchorable-toc" id="{{id-for-deprecation this.args.model.id}}">{{this.args.model.title}}</h3>
   <p class="em">
     {{#if renderIdOrUntil}}
       <div><span class="bold">until: </span>{{model.until}}</div>
