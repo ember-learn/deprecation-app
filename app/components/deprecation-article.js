@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
-import { computed, get } from '@ember/object';
+import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 export default class DeprecationArticle extends Component {
@@ -8,18 +8,17 @@ export default class DeprecationArticle extends Component {
 
   @tracked renderIdOrUntil = true;
 
-  @computed('model.title')
   get idForTitle() {
-    return `toc_${get(this, 'model.title')}`;
+    return `toc_${this.args.model.title}`;
   }
 
-  @computed('model.until')
   get idForUntil() {
-    return `toc_until-${get(this, 'model.until')}`;
+    return `toc_until-${this.args.model.until}`;
   }
 
-  setupCodeSnippets() {
-    let nodeList = document.querySelectorAll('pre:not(.no-line-numbers) > code');
+  @action
+  setupCodeSnippets(element) {
+    let nodeList = element.querySelectorAll('pre:not(.no-line-numbers) > code');
 
     if (nodeList) {
       nodeList.forEach((code) => {
@@ -27,7 +26,7 @@ export default class DeprecationArticle extends Component {
       });
     }
 
-    let filenameNodeList = document.querySelectorAll('pre > code');
+    let filenameNodeList = element.querySelectorAll('pre > code');
 
     if (filenameNodeList) {
       filenameNodeList.forEach((code) => {
@@ -59,7 +58,7 @@ export default class DeprecationArticle extends Component {
         }
         wrapperDiv.style.position = 'relative';
 
-        code.parentNode.parentNode.appendChild(wrapperDiv);
+        code.parentNode.previousElementSibling.append(wrapperDiv);
         wrapperDiv.appendChild(code.parentNode);
 
         if (filename) {
@@ -73,13 +72,13 @@ export default class DeprecationArticle extends Component {
       });
     }
 
-    document.querySelectorAll(".anchorable-toc").forEach(function (anchorable) {
-      let currentToc = $(this);
-
+    element.querySelectorAll(".anchorable-toc").forEach(function (currentToc) {
       let link = document.createElement('a');
-      currentToc.wrap(`<a class="bg-none toc-anchor" href="#${currentToc.attr('id')}"></a>`)
-
-    })
+      link.classList.add('bg-none', 'toc-anchor');
+      link.setAttribute('href', `#${currentToc.getAttribute('id')}`);
+      link.appendChild(currentToc);
+      element.prepend(link);
+    });
 
     this.prism.highlight();
   }
