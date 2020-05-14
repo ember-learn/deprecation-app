@@ -1,31 +1,35 @@
-import Component from '@ember/component';
-import { computed } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-import $ from 'jquery';
 
-export default Component.extend({
-  prism: service(),
-  renderIdOrUntil: true,
-  idForTitle: computed('model.title', function() {
-    return `toc_${this.get('model.title')}`;
-  }),
-  idForUntil: computed('model.until', function() {
-    return `toc_until-${this.get('model.until')}`;
-  }),
+export default class DeprecationArticle extends Component {
+  @service prism;
 
-  didRender() {
-    let nodeList = this.$('pre:not(.no-line-numbers) > code');
+  @tracked renderIdOrUntil = true;
+
+  get idForTitle() {
+    return `toc_${this.args.model.title}`;
+  }
+
+  get idForUntil() {
+    return `toc_until-${this.args.model.until}`;
+  }
+
+  @action
+  setupCodeSnippets(element) {
+    let nodeList = element.querySelectorAll('pre:not(.no-line-numbers) > code');
 
     if (nodeList) {
-      nodeList.each((index, code) => {
+      nodeList.forEach((code) => {
         code.parentNode.classList.add("line-numbers")
       });
     }
 
-    let filenameNodeList = this.$('pre > code');
+    let filenameNodeList = element.querySelectorAll('pre > code');
 
     if (filenameNodeList) {
-      filenameNodeList.each((index, code) => {
+      filenameNodeList.forEach((code) => {
         code.tabIndex = 0;
         let filename = code.attributes['data-filename'] ? code.attributes['data-filename'].value : null;
         let match;
@@ -47,21 +51,35 @@ export default Component.extend({
           }
         }
 
-        this.$(code.parentNode).wrap(`<div class="filename ${ext}" style="position: relative;"></div>`);
+        let wrapperDiv = document.createElement('div');
+        wrapperDiv.classList.add('filename');
+        if (ext) {
+          wrapperDiv.classList.add(ext);
+        }
+        wrapperDiv.style.position = 'relative';
+
+        code.parentNode.previousElementSibling.append(wrapperDiv);
+        wrapperDiv.appendChild(code.parentNode);
 
         if (filename) {
-          this.$(code.parentNode.parentNode).prepend(this.$(`<span>${filename}</span>`));
+          let span = document.createElement('span');
+          span.innerHTML = filename;
+          code.parentNode.parentNode.prepend(span);
         }
-        this.$(code.parentNode.parentNode).prepend('<div class="ribbon"></div>');
+        let ribbonDiv = document.createElement('div');
+        ribbonDiv.classList.add('ribbon');
+        code.parentNode.parentNode.prepend(ribbonDiv);
       });
     }
 
-    this.$(".anchorable-toc").each(function () {
-      let currentToc = $(this);
-
-      currentToc.wrap(`<a class="bg-none toc-anchor" href="#${currentToc.attr('id')}"></a>`)
-    })
+    element.querySelectorAll(".anchorable-toc").forEach(function (currentToc) {
+      let link = document.createElement('a');
+      link.classList.add('bg-none', 'toc-anchor');
+      link.setAttribute('href', `#${currentToc.getAttribute('id')}`);
+      link.appendChild(currentToc);
+      element.prepend(link);
+    });
 
     this.prism.highlight();
   }
-});
+}
