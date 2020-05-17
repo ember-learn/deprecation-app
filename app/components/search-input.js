@@ -2,15 +2,12 @@ import { getOwner } from '@ember/application';
 import Component from '@ember/component';
 import { computed, set } from '@ember/object';
 import { later } from '@ember/runloop';
-import algoliasearch from 'algoliasearch';
 import { task, timeout } from 'ember-concurrency';
 import { denodeify } from 'rsvp';
 
 const SEARCH_DEBOUNCE_PERIOD = 300;
 
 export default Component.extend({
-  classNames: ['search-input'],
-
   _resultTetherConstraints: Object.freeze([
     {
       to: 'window',
@@ -18,23 +15,35 @@ export default Component.extend({
     }
   ]),
 
-  init() {
+  async init() {
     this._super(...arguments);
-    const config = getOwner(this).resolveRegistration('config:environment');
 
+    const config = getOwner(this).resolveRegistration('config:environment');
     const { algoliaId, algoliaKey } = config['algolia'];
 
-    this.client = algoliasearch(algoliaId, algoliaKey);
+    /**
+     * In order to prevent algoliasearch from crashing, we must define process on window.
+     * https://stackoverflow.com/questions/50313745/angular-6-process-is-not-defined-when-trying-to-serve-application
+     */
+    window.process = {
+      env: { DEBUG: undefined }
+    };
+
+    let algoliasearch = await import('algoliasearch');
+
+    this.client = algoliasearch.default(algoliaId, algoliaKey);
     this.index = this.client.initIndex('ember-deprecations');
     this.searchFunction = denodeify(this.index.search.bind(this.index));
 
-    if (typeof document !== 'undefined') {
-      document.addEventListener('click', (event) => {
-        if (!event.target.closest('.ds-dropdown-results')) {
-          set(this, 'response', null);
-        }
-      }, false);
-    }
+    later(this, function() {
+      if (typeof document !== 'undefined') {
+        document.addEventListener('click', (event) => {
+          if (!event.target.closest('.ds-dropdown-results')) {
+            set(this, 'response', null);
+          }
+        }, false);
+      }
+    }, 200)
   },
 
   pageIndex: computed('page.pages.[]', function() {

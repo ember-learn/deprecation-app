@@ -44,6 +44,14 @@ module.exports = function(defaults) {
         }
       }
     },
+
+    babel: {
+      plugins: [require.resolve('ember-auto-import/babel-plugin')],
+    },
+
+    fastboot: {
+      moduleWhitelist: ['algoliasearch']
+    }
   });
 
   app.import("node_modules/semver-compare/index.js", {

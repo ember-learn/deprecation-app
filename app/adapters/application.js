@@ -10,7 +10,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
    *  FastBoot shouldn't know the host since we use prember
    *  & it can't find the resources at the API host during build time.
    */
-  @computed('fastboot.isFastsBoot')
+  @computed('fastboot.isFastBoot')
   get host() {
     let isFastBoot = get(this, 'fastboot.isFastBoot');
     return isFastBoot ? '' : config.apiHost;
