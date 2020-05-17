@@ -1,17 +1,20 @@
 import Controller from '@ember/controller';
-import { computed } from '@ember/object';
+import { action, computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
 
-export default Controller.extend({
-  displayMobileToc: false,
-  content: alias('model'),
+export default class ShowController extends Controller {
+  displayMobileToc = false;
 
-  version: computed('content', function() {
+  @alias('model.query') content;
+
+  @computed('content')
+  get version() {
     let version = this.get('content.query.version');
     return version.match(/[0-9].*/)[0];
-  }),
+  }
 
-  project: computed('content', function() {
+  @computed('content')
+  get project() {
     let projects = {
       'ember': 'Ember',
       'ember-cli': 'Ember CLI',
@@ -19,9 +22,11 @@ export default Controller.extend({
     }
     let project = this.get('content.query.path');
     return projects[project];
-  }),
+  }
 
-  renderIdOrUntil: computed('content', function() {
+  @computed('content')
+  get renderIdOrUntil() {
+
     let version = this.get('content.query.version');
     let versionsWithoutId = ['v1.x'];
     if (versionsWithoutId.includes(version)) {
@@ -29,21 +34,20 @@ export default Controller.extend({
     } else {
       return true;
     }
-  }),
-
-  actions: {
-    toggleToc() {
-      this.toggleProperty('displayMobileToc');
-
-      if (typeof document !== 'undefined') {
-        if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
-        if (!this.displayMobileToc) document.querySelector('body').classList.remove('no-scroll');
-      }
-
-      window.scrollTo({
-        top: 0,
-        left: 0,
-      });
-    }
   }
-});
+
+  @action
+  toggleToc() {
+    this.toggleProperty('displayMobileToc');
+
+    if (typeof document !== 'undefined') {
+      if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
+      if (!this.displayMobileToc) document.querySelector('body').classList.remove('no-scroll');
+    }
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }
+}

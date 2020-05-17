@@ -48,6 +48,7 @@
     "ember-cli-uglify": "^3.0.0",
     "ember-collapsible-panel": "^4.0.0",
     "ember-concurrency": "^1.1.2",
+    "ember-concurrency-decorators": "^1.0.0",
     "ember-data": "~3.18.0",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.1",
@@ -69,6 +70,9 @@
     "qunit-dom": "^1.2.0",
     "sass": "^1.26.5",
     "semver-compare": "^1.0.0"
+  },
+  "ember": {
+    "edition": "octane"
   },
   "engines": {
     "node": "10.* || >=12.*",

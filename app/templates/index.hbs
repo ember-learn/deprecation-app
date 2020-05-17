@@ -1,4 +1,4 @@
-<div id="content" class="main fade-in" role="main">
+<div id="content" class="main " role="main">
   <div class="intro">
     <h1 class="anchorable-toc" id="toc_deprecations">Deprecations</h1>
     <p>Periodically, various APIs in Ember.js may be deprecated. During a minor
@@ -27,24 +27,24 @@
 
   <ul class="ember-version-graphics">
     <li class="item list-unstyled">
-      {{ember-version-graphic mascot='tomster-deprecated' text='1.x'}}
+      <EmberVersionGraphic @mascot='tomster-deprecated' @text='1.x' />
       <ul class="links">
-        <li class="list-unstyled" data-test-ember-1-link=true>{{#link-to 'ember' 'v1.x' }}Ember{{/link-to}}</li>
+        <li class="list-unstyled" data-test-ember-1-link=true><LinkTo @route='ember' @model='v1.x'>Ember</LinkTo></li>
       </ul>
     </li>
     <li class="item list-unstyled">
-      {{ember-version-graphic mascot='tomster-lts' text='2.x'}}
+      <EmberVersionGraphic @mascot='tomster-lts' @text='2.x' />
       <ul class="links">
-        <li class="list-unstyled" data-test-ember-2-link>{{#link-to 'ember' 'v2.x'}}Ember{{/link-to}}</li>
-        <li class="list-unstyled" data-test-ember-data-2-link>{{#link-to 'show' 'ember-data' 'v2.x'}}Ember Data{{/link-to}}</li>
-        <li class="list-unstyled" data-test-ember-cli-2-link>{{#link-to 'show' 'ember-cli' 'v2.x'}}Ember CLI{{/link-to}}</li>
+        <li class="list-unstyled" data-test-ember-2-link><LinkTo @route='ember' @model='v2.x'>Ember</LinkTo></li>
+        <li class="list-unstyled" data-test-ember-data-2-link><LinkTo @route='show' @models={{array 'ember-data' 'v2.x'}}>Ember Data</LinkTo></li>
+        <li class="list-unstyled" data-test-ember-cli-2-link><LinkTo @route='show' @models={{array 'ember-cli' 'v2.x'}}>Ember CLI</LinkTo></li>
       </ul>
     </li>
     <li class="item list-unstyled">
-      {{ember-version-graphic mascot='zoey' text='3.x'}}
+      <EmberVersionGraphic @mascot='zoey' @text='3.x' />
       <ul class="links">
-        <li class="list-unstyled" data-test-ember-3-link>{{#link-to 'ember' 'v3.x'}}Ember{{/link-to}}</li>
-        <li class="list-unstyled" data-test-ember-data-3-link>{{#link-to 'show' 'ember-data' 'v3.x'}}Ember Data{{/link-to}}</li>
+        <li class="list-unstyled" data-test-ember-3-link><LinkTo @route='ember' @model='v3.x'>Ember</LinkTo></li>
+        <li class="list-unstyled" data-test-ember-data-3-link><LinkTo @route='show' @models={{array 'ember-data' 'v3.x'}}>Ember Data</LinkTo></li>
       </ul>
     </li>
   </ul>

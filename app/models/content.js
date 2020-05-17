@@ -1,9 +1,9 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
-export default DS.Model.extend({
-  content: DS.attr('string'),
-  title: DS.attr('string'),
-  until: DS.attr('string'),
-  since: DS.attr('string'),
-  anchor: DS.attr('string')
-});
+export default class ContentModel extends Model {
+  @attr content;
+  @attr title;
+  @attr until;
+  @attr since;
+  @attr anchor;
+}

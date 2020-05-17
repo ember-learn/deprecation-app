@@ -36,11 +36,6 @@ module.exports = function(defaults) {
       plugins: ["line-numbers", "normalize-whitespace"]
     },
 
-    "ember-bootstrap": {
-      bootstrapVersion: 4,
-      importBootstrapFont: false,
-      importBootstrapCSS: false
-    },
     // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
     'ember-cli-uglify': {
       uglify: {
