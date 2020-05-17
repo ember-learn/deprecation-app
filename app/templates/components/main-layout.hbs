@@ -11,7 +11,7 @@
       <h2 class="anchorable-toc rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
       {{renderId}}
       {{#each result.contents as |content|}}
-        <DeprecationArticle @model={{content}} @renderIdOrUntil={{this.renderIdOrUntil}} />
+        <DeprecationArticle @model={{content}} @renderIdOrUntil={{@renderIdOrUntil}} />
       {{/each}}
     {{/each}}
   {{/if}}

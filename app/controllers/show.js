@@ -26,7 +26,6 @@ export default class ShowController extends Controller {
 
   @computed('content')
   get renderIdOrUntil() {
-
     let version = this.get('content.query.version');
     let versionsWithoutId = ['v1.x'];
     if (versionsWithoutId.includes(version)) {
