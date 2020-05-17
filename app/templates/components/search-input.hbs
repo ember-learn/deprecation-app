@@ -1,13 +1,15 @@
-<label class="visually-hidden" for="search-input">Search</label>
-<input
-  id="search-input"
-  type="search"
-  value={{value}}
-  oninput={{perform search value="target.value"}}
-  placeholder="Search deprecations"
-  autocomplete="off"
-  aria-label="Search"
->
+<div class="search-input">
+  <label class="visually-hidden" for="search-input">Search</label>
+  <input
+    id="search-input"
+    type="search"
+    value={{value}}
+    oninput={{perform search value="target.value"}}
+    placeholder="Search deprecations"
+    autocomplete="off"
+    aria-label="Search"
+  >
+</div>
 
 {{!-- Search results dropdown --}}
 {{#ember-tether

@@ -1,25 +1,31 @@
 import { getOwner } from '@ember/application';
 import Component from '@ember/component';
-import { computed, set } from '@ember/object';
+import { action, computed, set } from '@ember/object';
 import { later } from '@ember/runloop';
-import { task, timeout } from 'ember-concurrency';
+import { task } from 'ember-concurrency-decorators';
+import { timeout } from 'ember-concurrency';
 import { denodeify } from 'rsvp';
 
 const SEARCH_DEBOUNCE_PERIOD = 300;
 
-export default Component.extend({
-  _resultTetherConstraints: Object.freeze([
+export default class SearchInput extends Component {
+  _resultTetherConstraints = Object.freeze([
     {
       to: 'window',
       pin: ['left','right']
     }
-  ]),
+  ]);
 
-  async init() {
-    this._super(...arguments);
+  constructor() {
+    super(...arguments);
 
+    this.setupSearch();
+  }
+
+  async setupSearch() {
     const config = getOwner(this).resolveRegistration('config:environment');
     const { algoliaId, algoliaKey } = config['algolia'];
+    let algoliasearch;
 
     /**
      * In order to prevent algoliasearch from crashing, we must define process on window.
@@ -29,7 +35,11 @@ export default Component.extend({
       env: { DEBUG: undefined }
     };
 
-    let algoliasearch = await import('algoliasearch');
+    try {
+      algoliasearch = await import('algoliasearch');
+    } catch(e) {
+      return;
+    }
 
     this.client = algoliasearch.default(algoliaId, algoliaKey);
     this.index = this.client.initIndex('ember-deprecations');
@@ -43,10 +53,11 @@ export default Component.extend({
           }
         }, false);
       }
-    }, 200)
-  },
+    }, 200);
+  }
 
-  pageIndex: computed('page.pages.[]', function() {
+  @computed('page.pages.[]')
+  get pageIndex() {
     let pages = this.page.pages.map((section) => {
       return section.pages.map(page => {
           return {
@@ -59,9 +70,10 @@ export default Component.extend({
     });
 
     return pages.reduce((a, b) => a.concat(b), []);
-  }),
+  }
 
-  search: task(function * (query) {
+  @task({ restartable: true })
+  * search(query) {
     yield timeout(SEARCH_DEBOUNCE_PERIOD);
 
     if(!query) {
@@ -76,24 +88,25 @@ export default Component.extend({
     let res = yield this.searchFunction(searchObj);
 
     return set(this, 'response', res);
-  }).restartable(),
+  }
 
-  actions: {
-    oninput(value) {
-      set(this, 'value', value);
-      if(value) {
-        this.search.perform(value);
-      }
-    },
-
-    onfocus() {
-      set(this, '_focused', true);
-    },
-
-    onblur() {
-      later(this, function () {
-        set(this, '_focused', false);
-      }, 200);
+  @action
+  oninput(value) {
+    set(this, 'value', value);
+    if(value) {
+      this.search.perform(value);
     }
   }
-});
+
+  @action
+  onfocus() {
+    set(this, '_focused', true);
+  }
+
+  @action
+  onblur() {
+    later(this, function () {
+      set(this, '_focused', false);
+    }, 200);
+  }
+}
