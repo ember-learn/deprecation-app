@@ -1,24 +1,30 @@
-<EsButton
-  @type="button"
-  class="toc-toggle"
-  aria-label="expand table of contents"
-  title="expand table of contents"
-  aria-expanded={{this.displayMobileToc}}
-  @onClicked={{action "toggleToc"}}
+<LayoutProvider
+  @content={{this.content}}
+  {{did-insert (perform this.processResults)}}
+  as |layout|
 >
-  <img src="/images/expand.svg" alt="expand table of contents">
-</EsButton>
-<div class="layout-grid ">
-  <SideBarLayout
-    @sortedGroupedResults={{this.model.sorted}}
-    @displayMobileToc={{this.displayMobileToc}}
-  />
+  <EsButton
+    class="toc-toggle"
+    aria-label="expand table of contents"
+    title="expand table of contents"
+    aria-expanded={{this.displayMobileToc}}
+    @onClicked={{action "toggleToc"}}
+  >
+    <img src="/images/expand.svg" alt="expand table of contents">
+  </EsButton>
+  <div class="layout-grid fade-in">
+    <LayoutProvider::SideBarLayout
+      @sortedGroupedResults={{layout.sortedGroupedResults}}
+      @displayMobileToc={{this.displayMobileToc}}
+    />
 
-  <MainLayout
-    @sortedGroupedResults={{this.model.sorted}}
-    @version={{this.version}}
-    @project={{this.project}}
-    @renderIdOrUntil={{this.renderIdOrUntil}}
-    @displayMobileToc={{this.displayMobileToc}}
-  />
-</div>
+    <LayoutProvider::MainLayout
+      @sortedGroupedResults={{layout.sortedGroupedResults}}
+      @version={{this.version}}
+      @project={{this.project}}
+      @renderIdOrUntil={{this.renderIdOrUntil}}
+      @displayMobileToc={{this.displayMobileToc}}
+    />
+  </div>
+</LayoutProvider>
+

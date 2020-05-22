@@ -24,7 +24,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
     } else if(requestType === 'query') {
       url = [modelName, `${query.path}-${query.version}.json`];
     } else {
-      return;
+      return this.super;
     }
 
     let host = this.host;

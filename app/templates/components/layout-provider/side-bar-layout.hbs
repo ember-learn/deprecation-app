@@ -1,25 +1,25 @@
 {{#if @sortedGroupedResults}}
   {{#if @displayMobileToc}}
     <nav
-      class="mobile-sidebar  {{if @displayMobileToc "mobile" "desktop"}}"
+      class="mobile-sidebar fade-in {{if @displayMobileToc "mobile" "desktop"}}"
       aria-label="Mobile Table of Contents"
       data-test-mobile-table-of-contents
     >
       <TableOfContents
-        @sortedGroupedResults={{@sortedGroupedResults}}
+        @sortedGroupedResults={{sortedGroupedResults}}
         @displayMobileToc={{@displayMobileToc}}
       />
     </nav>
   {{/if}}
 
   <nav
-    class="sidebar"
+    class="sidebar fade-in"
     aria-label="Desktop Table of Contents"
   >
     <TableOfContents
       @sortedGroupedResults={{@sortedGroupedResults}}
       @displayMobileToc={{@displayMobileToc}}
     />
-    <div id="back-to-top"><a href="#">&#11014; Back to Top</a></div>
   </nav>
+  <div id="back-to-top"><a href="#">&#11014; Back to Top</a></div>
 {{/if}}

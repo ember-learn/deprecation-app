@@ -33,10 +33,14 @@ export default class TocSection extends Component {
   navigateToLink() {
     this.toggleProperty('displayMobileToc');
 
+    let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
+
     later(this, function() {
       if (typeof document !== 'undefined') {
         if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
         if (!this.displayMobileToc) document.querySelector('body').classList.remove('no-scroll');
+        window.location.hash = anchor;
+        document.querySelector(`#${anchor}`).scrollIntoView();
       }
     }, 200);
   }
