@@ -7,7 +7,7 @@ export function idForDeprecation([id, anchor]) {
 
   let idString = id;
   idString = idString.replace(/\s+/g, '');
-  let replacedIdString = idString.replace(/\.|,/g, '-');
+  let replacedIdString = idString.replace(/\.|,|:/g, '-');
   return `toc_${replacedIdString}`;
 }
 
