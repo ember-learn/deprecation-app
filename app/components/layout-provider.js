@@ -2,7 +2,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import EmberObject, { set } from '@ember/object';
 import semverCompare from 'semver-compare';
-import { task } from 'ember-concurrency'
+import { task } from 'ember-concurrency-decorators'
 import { inject as service } from '@ember/service';
 import { later } from '@ember/runloop';
 
@@ -11,10 +11,16 @@ export default class LayoutProviderComponent extends Component {
 
   @tracked sortedGroupedResults = null;
 
+  constructor() {
+    super(...arguments);
+
+    this.processResults.perform();
+  }
+
   @task
   processResults = function*() {
     let result = [];
-    for (const item of this.content.toArray()) {
+    for (const item of this.args.content.toArray()) {
       let since = result.findBy('since', item.get('since'));
       if(!since) {
          result.pushObject(EmberObject.create({
