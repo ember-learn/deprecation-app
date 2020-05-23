@@ -4,7 +4,7 @@
     id="search-input"
     type="search"
     value={{value}}
-    oninput={{perform search value="target.value"}}
+    oninput={{perform this.searchService.search value="target.value"}}
     placeholder="Search deprecations"
     autocomplete="off"
     aria-label="Search"
@@ -19,7 +19,7 @@
   constraints=_resultTetherConstraints
   class="ds-dropdown-results"
 }}
-  {{#if response.hits}}
+  {{#if this.searchService.searchResults.hits}}
     <span class="ds-suggestions ds-dropdown-menu">
       <div class="ds-suggestion">
         <div class="algolia-docsearch-suggestion algolia-docsearch-suggestion__main">
@@ -31,7 +31,7 @@
           <div class="algolia-docsearch-suggestion--wrapper"></div>
         </div>
       </div>
-      {{#each response.hits as |result|}}
+      {{#each this.searchService.searchResults.hits as |result|}}
         {{search-result result=result}}
       {{/each}}
       <div class="powered-by-algolia">
