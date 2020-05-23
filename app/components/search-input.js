@@ -29,7 +29,13 @@ export default Component.extend({
       env: { DEBUG: undefined }
     };
 
-    let algoliasearch = await import('algoliasearch');
+    let algoliasearch;
+
+    try {
+      algoliasearch = await import('algoliasearch');
+    } catch(e) {
+      return true;
+    }
 
     this.client = algoliasearch.default(algoliaId, algoliaKey);
     this.index = this.client.initIndex('ember-deprecations');
@@ -43,7 +49,7 @@ export default Component.extend({
           }
         }, false);
       }
-    }, 200)
+    }, 200);
   },
 
   pageIndex: computed('page.pages.[]', function() {
