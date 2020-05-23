@@ -4,10 +4,10 @@
     id="search-input"
     type="search"
     value={{value}}
-    oninput={{perform this.searchService.search value="target.value"}}
     placeholder="Search deprecations"
     autocomplete="off"
     aria-label="Search"
+    {{on "input" (perform this.searchService.search value="target.value")}}
   >
 </div>
 
