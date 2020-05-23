@@ -2,7 +2,7 @@ import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { getOwner } from '@ember/application';
 import { denodeify } from 'rsvp';
-import { task, lastValue } from 'ember-concurrency-decorators';
+import { task } from 'ember-concurrency-decorators';
 import { timeout } from 'ember-concurrency';
 
 const SEARCH_DEBOUNCE_PERIOD = 300;
