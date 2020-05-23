@@ -32,7 +32,7 @@
         </div>
       </div>
       {{#each this.searchService.searchResults.hits as |result|}}
-        {{search-result result=result}}
+        <SearchResult @result={{result}} />
       {{/each}}
       <div class="powered-by-algolia">
         <a href="https://www.algolia.com/" target="_blank">
