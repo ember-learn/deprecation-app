@@ -1,45 +1,47 @@
 import Component from '@ember/component';
-import { computed, get, set } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import { action, computed, get, set } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { later } from '@ember/runloop';
 
-export default Component.extend({
-  router: service(),
+export default class TocSection extends Component {
+  @service router;
 
-  tocLevel: computed('level', function() {
+  @tracked level = '1';
+
+  @computed('level')
+  get tocLevel() {
     return `level-${this.level}`;
-  }),
-  level: '1',
+  }
 
-  id: computed('result.since', function() {
-
+  @computed('result.since')
+  get id() {
     let dasherizedSince = get(this, 'result.since').replace(/\./g,'-');
 
     return `toggle-dep-menu-${dasherizedSince}`;
-  }),
+  }
 
-  init() {
-    this._super(...arguments);
+  constructor() {
+    super(...arguments);
 
     if (this.displayMobileToc) {
       set(this, 'open', this.displayMobileToc);
     }
-  },
-
-  actions: {
-    navigateToLink(event) {
-      this.toggleProperty('displayMobileToc');
-
-      let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
-
-      later(this, function() {
-        if (typeof document !== 'undefined') {
-          if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
-          if (!this.displayMobileToc) document.querySelector('body').classList.remove('no-scroll');
-          window.location.hash = anchor;
-          document.querySelector(`#${anchor}`).scrollIntoView();
-        }
-      }, 200);
-    }
   }
-});
+
+  @action
+  navigateToLink() {
+    this.toggleProperty('displayMobileToc');
+
+    let anchor = event.target.href.split('/').lastObject.split('#').lastObject;
+
+    later(this, function() {
+      if (typeof document !== 'undefined') {
+        if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
+        if (!this.displayMobileToc) document.querySelector('body').classList.remove('no-scroll');
+        window.location.hash = anchor;
+        document.querySelector(`#${anchor}`).scrollIntoView();
+      }
+    }, 200);
+  }
+}

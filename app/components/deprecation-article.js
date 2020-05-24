@@ -1,12 +1,9 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 export default class DeprecationArticle extends Component {
   @service prism;
-
-  @tracked renderIdOrUntil = true;
 
   get idForTitle() {
     return `toc_${this.args.model.title}`;

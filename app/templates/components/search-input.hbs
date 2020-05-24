@@ -1,13 +1,15 @@
-<label class="visually-hidden" for="search-input">Search</label>
-<input
-  id="search-input"
-  type="search"
-  value={{value}}
-  oninput={{perform search value="target.value"}}
-  placeholder="Search deprecations"
-  autocomplete="off"
-  aria-label="Search"
->
+<div class="search-input">
+  <label class="visually-hidden" for="search-input">Search</label>
+  <input
+    id="search-input"
+    type="search"
+    value={{value}}
+    placeholder="Search deprecations"
+    autocomplete="off"
+    aria-label="Search"
+    {{on "input" (perform this.searchService.search value="target.value")}}
+  >
+</div>
 
 {{!-- Search results dropdown --}}
 {{#ember-tether
@@ -17,7 +19,7 @@
   constraints=_resultTetherConstraints
   class="ds-dropdown-results"
 }}
-  {{#if response.hits}}
+  {{#if this.searchService.searchResults.hits}}
     <span class="ds-suggestions ds-dropdown-menu">
       <div class="ds-suggestion">
         <div class="algolia-docsearch-suggestion algolia-docsearch-suggestion__main">
@@ -29,8 +31,8 @@
           <div class="algolia-docsearch-suggestion--wrapper"></div>
         </div>
       </div>
-      {{#each response.hits as |result|}}
-        {{search-result result=result}}
+      {{#each this.searchService.searchResults.hits as |result|}}
+        <SearchResult @result={{result}} />
       {{/each}}
       <div class="powered-by-algolia">
         <a href="https://www.algolia.com/" target="_blank">
