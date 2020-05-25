@@ -27,19 +27,22 @@ application serializer to match.
 For example, if you use only JSONAPI adapters, creating the following application serializer
 will resolve the deprecation:
 
-```javascript {data-filename=app/serializers/application.js
+```javascript {data-filename=app/serializers/application.js}
+import DS from 'ember-data';
 
-export { default } from '@ember-data/serializer/json-api';
+export default DS.JSONAPISerializer.extend({
+  /*custom code*/
+});
 ```
 
-If your app uses different adapter types for different models, you should make one serializer for each model type. For example, if a certain model uses the `RESTAdapter`, create an `app/serializers/[model-type].js` file with the following:
+If your app uses different adapter types for different models, you should make one serializer for each model type. For example, if a certain model uses the `RESTAdapter`, create an `app/serializers/user.js` file with the following:
 
-```js
-    import RESTSerializer from '@ember-data/serializer/rest';
+```javascript {data-filename=app/serializers/user.js}
+import RESTSerializer from '@ember-data/serializer/rest';
 
-    export default class UserSerializer extends RESTSerializer {
-      /*custom code*/
-    }
+export default RESTSerializer.extend({
+  /*custom code*/
+});
 ```
 
-More information about custom serializers can be found in the [Serializer API Docs](https://api.emberjs.com/ember-data/release/modules/@ember-data%2Fserializer) or on the [ember.js/guides](https://guides.emberjs.com/release/models/customizing-serializers/#toc_customizing-serializers)
+More information about custom serializers can be found in the [Serializer API Docs](https://api.emberjs.com/ember-data/release/modules/@ember-data%2Fserializer) or in the [official guides](https://guides.emberjs.com/release/models/customizing-serializers/#toc_customizing-serializers).
