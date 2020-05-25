@@ -5,7 +5,7 @@ import { alias } from '@ember/object/computed';
 export default class ShowController extends Controller {
   displayMobileToc = false;
 
-  @alias('model') content;
+  @alias('model.query') content;
 
   @computed('content')
   get version() {

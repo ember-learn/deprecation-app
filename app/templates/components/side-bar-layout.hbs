@@ -1,7 +1,7 @@
 {{#if @sortedGroupedResults}}
   {{#if @displayMobileToc}}
     <nav
-      class="mobile-sidebar fade-in {{if @displayMobileToc "mobile" "desktop"}}"
+      class="mobile-sidebar {{if @displayMobileToc "mobile" "desktop"}}"
       aria-label="Mobile Table of Contents"
       data-test-mobile-table-of-contents
     >
@@ -13,7 +13,7 @@
   {{/if}}
 
   <nav
-    class="sidebar fade-in"
+    class="sidebar"
     aria-label="Desktop Table of Contents"
   >
     <TableOfContents
