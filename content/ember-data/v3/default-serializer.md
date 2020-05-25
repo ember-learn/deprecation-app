@@ -6,7 +6,7 @@ since: '3.12.0'
 ---
 #### Default serializer deprecations
 
-### Deprecate adapter.defaultSerializer fallback
+#### Deprecate adapter.defaultSerializer fallback
 
 Moving forward, every app or addon that uses Ember Data must have a serializer explicitly defined.
 
@@ -19,7 +19,7 @@ These classes specified the following `defaultSerializer`
 - `RESTAdapter`: `-rest` (`@ember-data/serializer/rest`)
 - `JSONAPIAdapter`: `-json-api` (`@ember-data/serializer/json-api`)
 
-### Clearing these deprecations
+#### Clearing these deprecations
 
 If all the adapters in your app are the same kind (such as JSONAPI, REST, or JSON), you should create an
 application serializer to match.
