@@ -14,7 +14,7 @@
     <ul aria-labelledby={{this.id}} class="level-3 list-unstyled">
       {{#each @result.contents as |content|}}
         <li>
-          <a class="bg-none" href="#{{id-for-deprecation content.id}}" onclick={{action "navigateToLink"}}>
+          <a class="bg-none" href="#{{id-for-deprecation content.id content.anchor}}" onclick={{action "navigateToLink"}}>
             {{content.title}}
           </a>
         </li>
