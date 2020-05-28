@@ -7,7 +7,7 @@ since: '3.20'
 
 Deprecate support for `getWithDefault` in Ember's Object module (@ember/object) – both the [function](https://api.emberjs.com/ember/release/functions/@ember%2Fobject/getWithDefault) and the [class method](https://api.emberjs.com/ember/release/classes/EmberObject/methods/getWithDefault?anchor=getWithDefault) – because its expected behaviour is confusing to Ember developers.
 
-- The API will only return the default value when the value of the property retrieved is `undefined`. This behaviour is often overlooked when using the function where a developer might expect that `null` or other _falsy_ values will also return the default value.
+- The API will only return the default value when the value of the property retrieved is `undefined`. This behaviour is often overlooked when using the function where a developer might expect that `null` or other _falsey_ values will also return the default value.
 - The native JavaScript [Nullish Coalescing Operator `??`](https://github.com/tc39/proposal-nullish-coalescing) could be used to handle this case if we also take `null` as a _falsey_ value to show the default value
 
 Before:
