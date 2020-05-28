@@ -31,7 +31,7 @@ if (result === undefined) {
 
 #### Using Nullish Coalescing Operator
 
-We cannot codemod directly into the nullish coalescing operator since the expected behaviour of `getWithDefault` is to only return the default value if it is strictly `undefined`. The nullish coalescing operator accepts either `null` or `undefined` to show the default value.
+We cannot codemod directly into the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) since the expected behaviour of `getWithDefault` is to only return the default value if it is strictly `undefined`. The nullish coalescing operator accepts either `null` or `undefined` to show the default value.
 
 The function `getWithDefault` **will not return** the default value if the provided value is `null`. The function will **only return** the default value for `undefined`:
 
