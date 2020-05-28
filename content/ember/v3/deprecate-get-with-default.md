@@ -71,7 +71,7 @@ let nullValue = get(obj, 'nullValue') ?? defaultValue;
 let falseValue = get(obj, 'falseValue') ?? defaultValue;
 ```
 
-This can be an option if we are aware that either `null` or `undefined` should return the default value.
+For any given usage of `getWithDefault`, using nullish coalescing might work very well, but keep in mind that either `null` or `undefined` will return the default value.
 
 Please review the deprecation RFC over at
 [emberjs/rfcs](https://emberjs.github.io/rfcs/0554-deprecate-getwithdefault.html)
