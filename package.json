@@ -68,7 +68,7 @@
     "loader.js": "^4.7.0",
     "prember": "^1.0.4",
     "qunit-dom": "^1.2.0",
-    "sass": "^1.26.5",
+    "sass": "^1.26.7",
     "semver-compare": "^1.0.0"
   },
   "ember": {
