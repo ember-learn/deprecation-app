@@ -7,26 +7,26 @@ export default class ShowController extends Controller {
 
   @alias('model.query') content;
 
-  @computed('content')
+  @computed('content.query.version')
   get version() {
-    let version = this.get('content.query.version');
+    let version = this.content.query.version;
     return version.match(/[0-9].*/)[0];
   }
 
-  @computed('content')
+  @computed('content.query.path')
   get project() {
     let projects = {
       'ember': 'Ember',
       'ember-cli': 'Ember CLI',
       'ember-data': 'Ember Data'
     }
-    let project = this.get('content.query.path');
+    let project = this.content.query.path;
     return projects[project];
   }
 
-  @computed('content')
+  @computed('content.query.version')
   get renderIdOrUntil() {
-    let version = this.get('content.query.version');
+    let version = this.content.query.version;
     let versionsWithoutId = ['v1.x'];
     if (versionsWithoutId.includes(version)) {
       return false;
