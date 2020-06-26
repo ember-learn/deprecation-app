@@ -1,5 +1,5 @@
 import JSONAPIAdapter from '@ember-data/adapter/json-api';
-import { get, computed } from '@ember/object';
+import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import config from '../config/environment';
 
@@ -12,7 +12,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
    */
   @computed('fastboot.isFastBoot')
   get host() {
-    let isFastBoot = get(this, 'fastboot.isFastBoot');
+    let isFastBoot = this.fastboot.isFastBoot;
     return isFastBoot ? '' : config.apiHost;
   }
 
