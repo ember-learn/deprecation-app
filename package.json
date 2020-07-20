@@ -59,7 +59,7 @@
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.0",
     "ember-set-body-class": "^0.4.2",
-    "ember-source": "~3.19",
+    "ember-source": "~3.20",
     "ember-styleguide": "^4.2.0",
     "ember-test-selectors": "^4.1.0",
     "ember-tether": "^2.0.0",
