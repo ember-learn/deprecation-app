@@ -63,7 +63,7 @@
     "ember-styleguide": "^4.2.1",
     "ember-test-selectors": "^5.0.0",
     "ember-tether": "^2.0.0",
-    "eslint-plugin-ember": "^8.13.0",
+    "eslint-plugin-ember": "^8.14.0",
     "loader.js": "^4.7.0",
     "prember": "^1.0.5",
     "qunit-dom": "^1.4.0",
