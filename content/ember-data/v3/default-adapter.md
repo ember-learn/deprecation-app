@@ -15,7 +15,7 @@ If you were not setting this value previously, the following should be sufficien
 create the file app/adapters/application.js with the following:
 
 ```js
-    export { default } from '@ember-data/adapters/json-api';
+    export { default } from '@ember-data/adapter/json-api';
 ```
 
 
