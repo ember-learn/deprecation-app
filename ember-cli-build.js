@@ -36,15 +36,6 @@ module.exports = function(defaults) {
       plugins: ["line-numbers", "normalize-whitespace"]
     },
 
-    // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
-    'ember-cli-uglify': {
-      uglify: {
-        compress: {
-          collapse_vars: false
-        }
-      }
-    },
-
     babel: {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
