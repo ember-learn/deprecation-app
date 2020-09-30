@@ -23,6 +23,6 @@ before_install:
   - npm config set spin false
 
 script:
-  - npm run lint:js
+  - npm run lint
   - npm test
   - npx ember build -e production

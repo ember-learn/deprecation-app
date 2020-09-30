@@ -13,6 +13,7 @@
   "scripts": {
     "build": "ember build",
     "build-production": "ember build -e production",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
@@ -65,6 +66,7 @@
     "ember-tether": "^2.0.0",
     "eslint-plugin-ember": "^8.14.0",
     "loader.js": "^4.7.0",
+    "npm-run-all": "^4.1.5",
     "prember": "^1.0.5",
     "qunit-dom": "^1.5.0",
     "sass": "^1.26.11",
