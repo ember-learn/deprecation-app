@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-get */
 import Service from '@ember/service';
 import EmberObject, { get } from '@ember/object';
 import semverCompare from 'semver-compare';
