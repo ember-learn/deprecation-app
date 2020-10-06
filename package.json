@@ -60,7 +60,7 @@
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.2",
     "ember-set-body-class": "^0.4.2",
-    "ember-source": "~3.21.1",
+    "ember-source": "~3.22.0",
     "ember-styleguide": "^4.2.1",
     "ember-template-lint": "^2.13.0",
     "ember-test-selectors": "^5.0.0",
