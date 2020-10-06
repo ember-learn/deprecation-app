@@ -61,7 +61,7 @@
     "ember-resolver": "^8.0.2",
     "ember-set-body-class": "^0.4.2",
     "ember-source": "~3.22.0",
-    "ember-styleguide": "^4.2.1",
+    "ember-styleguide": "^5.0.0",
     "ember-template-lint": "^2.13.0",
     "ember-test-selectors": "^5.0.0",
     "ember-tether": "^2.0.0",
