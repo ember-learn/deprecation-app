@@ -5,8 +5,10 @@ until: '4.0.0'
 since: 'Upcoming Features'
 ---
 
-Ember applications add methods to the `String` prototype by default, making you able to call `"Tomster".dasherize()`, for example.
-Calling [these methods](https://api.emberjs.com/ember/3.22/classes/String) on a string itself should be replaced with importing the function from `@ember/string`.
+Calling one of the [Ember `String` methods](https://api.emberjs.com/ember/3.22/classes/String) (camelize, capitalize, classify, dasherize, decamelize, underscore) directly on a string is deprecated.
+
+While Ember addons (`ember addon …`) have prototype extensions disabled by default, they are enabled for applications (`ember new …`) making you able to call `"Tomster".dasherize()`, for example.
+Instead of calling the method on the string, you should instead import the function from `@ember/string`.
 
 Before:
 
