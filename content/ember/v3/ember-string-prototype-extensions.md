@@ -15,7 +15,7 @@ Before:
 ```js
 let mascot = "Empress Zoey";
 
-mascot.camelize();   //=> empressZoey
+mascot.camelize();   //=> "empressZoey"
 mascot.capitalize(); //=> "Empress Zoey"
 mascot.classify();   //=> "EmpressZoey"
 mascot.decamelize(); //=> "empress zoey"
