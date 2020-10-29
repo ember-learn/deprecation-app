@@ -45,7 +45,7 @@ underscore(mascot); //=> "empress_zoey"
 w(mascot);          //=> [ "Empress", "Zoey" ]
 ```
 
-You might want to replace these methods with another library, like [lodash](https://lodash.com/).
+You may also instead rely on methods from another library like [lodash](https://lodash.com/).
 Keep in mind that different libraries will behave in slightly different ways, so make sure any critical `String` transformations are thoroughly tested.
 
 You can also [disable String prototype extensions](https://guides.emberjs.com/release/configuring-ember/disabling-prototype-extensions/) by editing your environment file:
