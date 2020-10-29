@@ -37,7 +37,7 @@ import  {
 
 let mascot = "Empress Zoey";
 
-camelize(mascot);   //=> empressZoey
+camelize(mascot);   //=> "empressZoey"
 capitalize(mascot); //=> "Empress Zoey"
 classify(mascot);   //=> "EmpressZoey"
 decamelize(mascot); //=> "empress zoey"
