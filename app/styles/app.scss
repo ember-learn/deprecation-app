@@ -95,6 +95,38 @@ table {
   width: 1px;
 }
 
+// h3 headings used in deprecation-article component
+.anchorable-toc {
+  position: relative;
+
+  &:hover .toc-anchor,
+  &:target .toc-anchor {
+    opacity: 1;
+  }
+}
+
+// anchor links used on h3 headings
+.toc-anchor {
+  align-items: center;
+  display: flex;
+  height: 1.5em;
+  opacity: 0;
+  padding-right: 0.25em;
+  position: absolute;
+  right: 100%;
+  top: 0;
+
+  main &,
+  main &:link,
+  main &:visited {
+    background: none;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
 @media (max-width: 1007px) {
   body.no-scroll {
     overflow: hidden;
