@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/ember-learn/deprecation-app.svg?branch=master)](https://travis-ci.org/ember-learn/deprecation-app)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Ember/deprecation-app)
 
 # deprecation-app
