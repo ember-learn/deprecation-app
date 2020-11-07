@@ -1,4 +1,5 @@
-[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Ember/deprecation-app)
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ember-learn/deprecation-app/workflows/CI/badge.svg)](https://github.com/ember-learn/deprecation-app/actions?query=workflow%3ACI)
+[![This project uses Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Ember/deprecation-app)
 
 # deprecation-app
 
