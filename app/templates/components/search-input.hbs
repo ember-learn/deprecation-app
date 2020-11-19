@@ -3,7 +3,6 @@
   <input
     id="search-input"
     type="search"
-    value={{value}}
     placeholder="Search deprecations"
     autocomplete="off"
     aria-label="Search"
@@ -16,7 +15,7 @@
   target="#search-input"
   targetAttachment="bottom left"
   attachment="top left"
-  constraints=_resultTetherConstraints
+  constraints=this._resultTetherConstraints
   class="ds-dropdown-results"
 }}
   {{#if this.searchService.searchResults.hits}}
