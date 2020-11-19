@@ -30,6 +30,10 @@ module.exports = function(defaults) {
       prepend
     },
 
+    'ember-cli-string-helpers': {
+      only: ['html-safe']
+    },
+
     "ember-prism": {
       theme: "okaidia",
       components: ["javascript", "handlebars", "markup-templating"],

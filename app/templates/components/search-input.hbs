@@ -3,7 +3,6 @@
   <input
     id="search-input"
     type="search"
-    value={{value}}
     placeholder="Search deprecations"
     autocomplete="off"
     aria-label="Search"
@@ -12,13 +11,13 @@
 </div>
 
 {{!-- Search results dropdown --}}
-{{#ember-tether
-  target="#search-input"
-  targetAttachment="bottom left"
-  attachment="top left"
-  constraints=_resultTetherConstraints
+<EmberTether
+  @target="#search-input"
+  @targetAttachment="bottom left"
+  @attachment="top left"
+  @constraints={{this._resultTetherConstraints}}
   class="ds-dropdown-results"
-}}
+>
   {{#if this.searchService.searchResults.hits}}
     <span class="ds-suggestions ds-dropdown-menu">
       <div class="ds-suggestion">
@@ -35,10 +34,10 @@
         <SearchResult @result={{result}} />
       {{/each}}
       <div class="powered-by-algolia">
-        <a href="https://www.algolia.com/" target="_blank">
+        <a href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
           <img src="/images/search-by-algolia.svg" alt="Search Powered by Algolia">
         </a>
       </div>
     </span>
   {{/if}}
-{{/ember-tether}}
+</EmberTether>
