@@ -13,8 +13,8 @@
 {{#if this.open}}
   <div>
     <ul aria-labelledby={{this.id}} class="level-3 list-unstyled">
-      {{#each @result.contents as |content|}}
-        <li>
+      {{#each @result.contents as |content index|}}
+        <li class={{if index "mt-2"}}>
           <a class="bg-none" href="#{{id-for-deprecation content.id content.anchor}}" onclick={{this.navigateToLink}}>
             {{content.title}}
           </a>
