@@ -11,13 +11,13 @@
 </div>
 
 {{!-- Search results dropdown --}}
-{{#ember-tether
-  target="#search-input"
-  targetAttachment="bottom left"
-  attachment="top left"
-  constraints=this._resultTetherConstraints
+<EmberTether
+  @target="#search-input"
+  @targetAttachment="bottom left"
+  @attachment="top left"
+  @constraints={{this._resultTetherConstraints}}
   class="ds-dropdown-results"
-}}
+>
   {{#if this.searchService.searchResults.hits}}
     <span class="ds-suggestions ds-dropdown-menu">
       <div class="ds-suggestion">
@@ -40,4 +40,4 @@
       </div>
     </span>
   {{/if}}
-{{/ember-tether}}
+</EmberTether>
