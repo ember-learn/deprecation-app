@@ -8,7 +8,6 @@ module.exports = {
     'link-rel-noopener': 'off',
     'no-curly-component-invocation': 'off',
     'no-implicit-this': 'off',
-    'no-quoteless-attributes': 'off',
     'no-triple-curlies': 'off',
   }
 };
