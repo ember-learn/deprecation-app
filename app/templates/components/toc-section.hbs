@@ -4,6 +4,7 @@
   onclick={{fn (mut this.open) (not this.open)}}
   aria-label={{concat "deprecations for version " @result.since}}
   aria-expanded={{if this.open "true" "false"}}
+  type="button"
   data-test-toc-list-item
 >
   {{@result.since}}

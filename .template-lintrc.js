@@ -10,6 +10,5 @@ module.exports = {
     'no-implicit-this': 'off',
     'no-quoteless-attributes': 'off',
     'no-triple-curlies': 'off',
-    'require-button-type': 'off',
   }
 };
