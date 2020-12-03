@@ -69,14 +69,6 @@ export default class DeprecationArticle extends Component {
       });
     }
 
-    element.querySelectorAll(".anchorable-toc").forEach(function (currentToc) {
-      let link = document.createElement('a');
-      link.classList.add('bg-none', 'toc-anchor');
-      link.setAttribute('href', `#${currentToc.getAttribute('id')}`);
-      link.appendChild(currentToc);
-      element.prepend(link);
-    });
-
     this.prism.highlight();
   }
 }

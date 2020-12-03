@@ -95,6 +95,24 @@ table {
   width: 1px;
 }
 
+// anchor links used on h3 headings
+.toc-anchor {
+  display: inline;
+  margin-right: var(--spacing-1);
+
+  &,
+  main &,
+  main &:link,
+  main &:visited {
+    background: none;
+    color: var(--color-gray-500);
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
 @media (max-width: 1007px) {
   body.no-scroll {
     overflow: hidden;
