@@ -1,10 +1,11 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 
-export default Component.extend({
+export default class EmberVersionGraphic extends Component {
+  get mascotName() {
+    return this.args.mascot || "tomster";
+  }
 
-  classNameBindings: ['mascot'],
-  classNames: ['ember-version-graphic'],
-  mascot: 'tomster',
-  text: '0.x',
-
-});
+  get textContent() {
+    return this.args.text || "0.x";
+  }
+}
