@@ -1,9 +1,10 @@
 import Controller from '@ember/controller';
 import { action, computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
+import { tracked } from '@glimmer/tracking';
 
 export default class ShowController extends Controller {
-  displayMobileToc = false;
+  @tracked displayMobileToc = false;
 
   @alias('model.query') content;
 
@@ -37,7 +38,7 @@ export default class ShowController extends Controller {
 
   @action
   toggleToc() {
-    this.toggleProperty('displayMobileToc');
+    this.displayMobileToc = !this.displayMobileToc;
 
     if (typeof document !== 'undefined') {
       if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
