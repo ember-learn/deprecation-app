@@ -29,7 +29,7 @@ export default class TocSection extends Component {
 
   @action
   navigateToLink() {
-    this.toggleProperty('displayMobileToc');
+    set(this, 'displayMobileToc', !this.displayMobileToc);
 
     later(this, function() {
       if (typeof document !== 'undefined') {
