@@ -1,5 +1,4 @@
 import JSONAPIAdapter from '@ember-data/adapter/json-api';
-import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import config from '../config/environment';
 
@@ -10,7 +9,6 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
    *  FastBoot shouldn't know the host since we use prember
    *  & it can't find the resources at the API host during build time.
    */
-  @computed('fastboot.isFastBoot')
   get host() {
     let isFastBoot = this.fastboot.isFastBoot;
     return isFastBoot ? '' : config.apiHost;
