@@ -1,20 +1,19 @@
 import Controller from '@ember/controller';
-import { action, computed } from '@ember/object';
-import { alias } from '@ember/object/computed';
+import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class ShowController extends Controller {
   @tracked displayMobileToc = false;
 
-  @alias('model.query') content;
+  get content() {
+    return this.model.query;
+  }
 
-  @computed('content.query.version')
   get version() {
     let version = this.content.query.version;
     return version.match(/[0-9].*/)[0];
   }
 
-  @computed('content.query.path')
   get project() {
     let projects = {
       'ember': 'Ember',
@@ -25,7 +24,6 @@ export default class ShowController extends Controller {
     return projects[project];
   }
 
-  @computed('content.query.version')
   get renderIdOrUntil() {
     let version = this.content.query.version;
     let versionsWithoutId = ['v1.x'];
