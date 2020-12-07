@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { tracked } from '@glimmer/tracking';
-import { action, computed, set } from '@ember/object';
+import { action, set } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { later } from '@ember/runloop';
 
@@ -9,12 +9,10 @@ export default class TocSection extends Component {
 
   @tracked level = '1';
 
-  @computed('level')
   get tocLevel() {
     return `level-${this.level}`;
   }
 
-  @computed('result.since')
   get id() {
     let dasherizedSince = this.result.since.replace(/\./g,'-');
 
