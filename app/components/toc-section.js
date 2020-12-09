@@ -1,6 +1,8 @@
+/* eslint-disable ember/no-classic-components */
+/* eslint-disable ember/require-tagless-components */
 import Component from '@ember/component';
 import { tracked } from '@glimmer/tracking';
-import { action, computed, set } from '@ember/object';
+import { action, set } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { later } from '@ember/runloop';
 
@@ -9,12 +11,10 @@ export default class TocSection extends Component {
 
   @tracked level = '1';
 
-  @computed('level')
   get tocLevel() {
     return `level-${this.level}`;
   }
 
-  @computed('result.since')
   get id() {
     let dasherizedSince = this.result.since.replace(/\./g,'-');
 
@@ -31,7 +31,7 @@ export default class TocSection extends Component {
 
   @action
   navigateToLink() {
-    this.toggleProperty('displayMobileToc');
+    set(this, 'displayMobileToc', !this.displayMobileToc);
 
     later(this, function() {
       if (typeof document !== 'undefined') {
@@ -41,3 +41,6 @@ export default class TocSection extends Component {
     }, 200);
   }
 }
+
+/* eslint-enable ember/no-classic-components */
+/* eslint-enable ember/require-tagless-components */
