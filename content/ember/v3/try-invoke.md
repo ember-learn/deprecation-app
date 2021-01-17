@@ -2,7 +2,7 @@
 id: ember-utils.try-invoke
 title: tryInvoke from @ember/utils
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.24'
 ---
 
 `tryInvoke` from the `@ember/utils` package is now deprecated.
