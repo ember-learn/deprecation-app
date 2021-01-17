@@ -2,7 +2,7 @@
 id: ember-string.loc
 title: Deprecate `@ember/string#loc` and `{{loc}}`
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.24'
 ---
 
 Ember provides a very basic localization method via the `@ember/string` package `loc` function, and the related `{{loc}}` template helper.

@@ -2,7 +2,7 @@
 id: ember-string.prototype-extensions
 title: Deprecate String prototype extensions
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.24'
 ---
 
 Calling one of the [Ember `String` methods](https://api.emberjs.com/ember/3.22/classes/String) (camelize, capitalize, classify, dasherize, decamelize, underscore) directly on a string is deprecated.
