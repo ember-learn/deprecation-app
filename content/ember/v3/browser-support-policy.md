@@ -2,7 +2,7 @@
 id: 3-0-browser-support-policy
 title: Browser Support Policy
 until: '4.0.0'
-since: '3.26'
+since: 'Upcoming'
 ---
 
 Ember's browser support policy is changing in v4.0. We will no longer support IE11, and instead will have a new support matrix including the following browsers:
