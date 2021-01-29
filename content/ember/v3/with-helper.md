@@ -2,7 +2,7 @@
 id: ember-glimmer.with-syntax
 title: Deprecate the with helper
 until: '4.0.0'
-since: 'Upcoming'
+since: 'Upcoming Features'
 ---
 
 The use of `{{with}}` has been deprecated, you should replace it with either `{{let}}` or a combination of `{{let}}`, `{{if}}` and `{{else}}`:
