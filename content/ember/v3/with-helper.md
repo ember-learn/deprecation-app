@@ -5,7 +5,7 @@ until: '4.0.0'
 since: 'Upcoming Features'
 ---
 
-The use of `{{with}}` has been deprecated, you should replace it with either `{{let}}` or a combination of `{{let}}`, `{{if}}` and `{{else}}`:
+The use of `{{with}}` has been deprecated. You should replace it with either `{{let}}` or a combination of `{{let}}`, `{{if}}` and `{{else}}`: 
 
 **If you always want the block to render, replace `{{with}}` with `{{let}}` directly:**
 
