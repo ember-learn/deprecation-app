@@ -2,7 +2,7 @@
 id: ember-glimmer.link-to.positional-arguments
 title: Deprecate `LinkTo` positional arguments
 until: '4.0.0'
-since: 'Upcoming'
+since: 'Upcoming Features'
 ---
 
 Invoking the `<LinkTo>` component with positional arguments is deprecated.
