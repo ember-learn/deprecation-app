@@ -7,53 +7,61 @@ since: 'Upcoming Features'
 
 Invoking the `<LinkTo>` component with positional arguments is deprecated.
 
-See below how to migrate different usages of the component:
+See below how to migrate different usages of the component.
 
-```hbs
-Deprecated:
+#### Inline form
 
+Before:
+```handlebars
 {{link-to "About Us" "about"}}
           ~~~~~~~~~~~~~~~~~~
 
 Invoking the `<LinkTo>` component with positional arguments is deprecated.
 Instead, please use the equivalent named arguments (`@route`) and pass a
 block for the link's content.
+```
 
+After:
+```handlebars
 <LinkTo @route="about">About Us</LinkTo>
 ```
 
-```hbs
-Deprecated:
+#### Block form
 
+Before:
+```handlebars
 {{#link-to "about"}}About Us{{/link-to}}
            ~~~~~~~
 
 Invoking the `<LinkTo>` component with positional arguments is deprecated.
 Instead, please use the equivalent named arguments (`@route`).
+```
 
-Replacement:
-
+After:
+```handlebars
 <LinkTo @route="about">About Us</LinkTo>
 ```
 
+#### Block form with single model
 
-```hbs
-Deprecated:
-
+Before:
+```handlebars
 {{#link-to "post" @post}}Read {{@post.title}}...{{/link-to}}
            ~~~~~~~~~~~~
 
 Invoking the `<LinkTo>` component with positional arguments is deprecated.
 Instead, please use the equivalent named arguments (`@route`, `@model`).
+```
 
-Replacement:
-
+After:
+```handlebars
 <LinkTo @route="post" @model={{@post}}>Read {{@post.title}}...</LinkTo>
 ```
 
-```hbs
-Deprecated:
+#### Block form with multiple models
 
+Before:
+```handlebars
 {{#link-to "post.comment" @comment.post @comment}}
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   Comment by {{@comment.author.name}} on {{@comment.date}}
@@ -61,17 +69,19 @@ Deprecated:
 
 Invoking the `<LinkTo>` component with positional arguments is deprecated.
 Instead, please use the equivalent named arguments (`@route`, `@models`).
+```
 
-Replacement:
-
+After:
+```handlebars
 <LinkTo @route="post.comment" @models={{array post comment}}>
   Comment by {{comment.author.name}} on {{comment.date}}
 </LinkTo>
 ```
 
-```hbs
-Deprecated:
+#### Query params
 
+Before:
+```handlebars
 {{#link-to "posts" (query-params direction="desc" showArchived=false)}}
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   Recent Posts
@@ -80,9 +90,10 @@ Deprecated:
 Invoking the `<LinkTo>` component with positional arguments is deprecated.
 Instead, please use the equivalent named arguments (`@route`, `@query`) and the
 `hash` helper.
+```
 
-Replacement:
-
+After:
+```handlebars
 <LinkTo @route="posts" @query={{hash direction="desc" showArchived=false}}>
   Recent Posts
 </LinkTo>
