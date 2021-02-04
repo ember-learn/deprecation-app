@@ -7,10 +7,10 @@ since: 'Upcoming Features'
 
 Array observers are a special type of observer that can be used to synchronously
 react to changes in an `EmberArray`. In general, to refactor away from them, these
-reactions need to be converted from _eager_, _synchronous_ reactions into _lazy_
+reactions need to be converted from _eager_, _synchronous_ reactions to _lazy_
 reactions that occur when the array in question is _used or accessed_.
 
-For example, let's say that we had a class which wrapped an `EmberArray` and
+For example, let's say that we had a class that wrapped an `EmberArray` and
 converted its contents into strings by calling `toString()` on them. This class
 could be implemented using array observers like so:
 
@@ -29,8 +29,6 @@ class ToStringArray {
 
   // no-op
   _innerWillChange() {}
-
-
   _innerDidChange(innerArray, changeStart, removeCount, addCount) {
     if (removeCount) {
       // if items were removed, remove them
@@ -52,7 +50,7 @@ class ToStringArray {
 }
 ```
 
-To convert this to no longer use array observers, we could instead convert the
+To move away from array observers, we could instead convert the
 wrapping to happen when the array is accessed in `objectAt`, using the `@cached`
 decorator from [tracked-toolbox](https://github.com/pzuraq/tracked-toolbox).
 
@@ -75,8 +73,8 @@ class ToStringArray {
 }
 ```
 
-This can also be accomplished with native [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy),
-allowing your users to interact with the array using standard array syntax
+This can also be accomplished with native [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy).
+Your users can interact with the array using standard array syntax
 instead of `objectAt`:
 
 ```js
@@ -104,7 +102,7 @@ This solution will work with autotracking in general, since users who access the
 array via `objectAt` will be accessing the tracked property. However, it will
 not integrate with computed property dependencies. If that is needed, then you
 can instead extend Ember's built-in `ArrayProxy` class, which handles forwarding
-events and dependencies itself.
+events and dependencies.
 
 ```js
 import ArrayProxy from '@ember/array/proxy';
@@ -126,7 +124,7 @@ class ToStringArray extends ArrayProxy {
 
 Array observers and change events can be used to watch arrays and react to
 changes in other ways as well. For instance, you may have a component like
-`ember-collection` which used array observers to trigger a rerender and
+`ember-collection` that used array observers to trigger a rerender and
 rearrange its own representation of the array. A simplified version of this
 logic looks like the following:
 
@@ -252,7 +250,7 @@ general. It allows you to do things like compare the previous state to the
 current state during the update, and cache portions of the computation so that
 you do not need to redo all of it.
 
-It is also possible that you have some code which must run whenever the array
+It is also possible that you have some code that must run whenever the array
 has changed, and must run eagerly. For instance, the array fragment from
 `ember-data-model-fragments` has some logic for signalling to the parent record
 that it has changed, which looks like this (simplified):
@@ -282,7 +280,7 @@ const StatefulArray = ArrayProxy.extend(Copyable, {
 ```
 
 Ideally the dirty state would be converted into derived state that could read
-the array it was dependent upon, but if that's not an option or would require
+the array it depended on. If that's not an option or would require
 major refactors, it is also possible to override the mutator method of the array
 and trigger the change when it is called. In EmberArray's, the primary mutator
 method is the `replace()` method.
@@ -312,16 +310,16 @@ const StatefulArray = ArrayProxy.extend(Copyable, {
 ```
 
 Note that this method will work for arrays and array proxies that are mutated
-directly, but will not work for array proxies which wrap other arrays and watch
+directly, but will not work for array proxies that wrap other arrays and watch
 changes on them. In those cases, the recommendation is to refactor such that:
 
 1. Changes are always intercepted by the proxy, and can call the code
    synchronously when they occur.
 2. The change logic is added by intercepting changes on the original array, so
-   it will occur whenever it changes.
+   it will occur whenever the array changes.
 3. The API that must be called synchronously is instead driven by derived state.
    For instance, in the example above, the record's dirty state could be driven
-   by the various child fragments it contains, and updated whenever the user
+   by the various child fragments it contains. The dirty state could be updated whenever the user
    accesses it, rather than by sending events such as `didDirty` and `didReset`.
 
 #### Converting code that uses the `willChange` functionality
