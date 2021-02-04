@@ -225,7 +225,7 @@ export default Component.extend({
     this.updateCells();
 
     return this._cells;
-  })
+  }),
 
   updateCells() {
     // ...
