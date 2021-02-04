@@ -37,7 +37,11 @@ class ToStringArray {
       // else, find the new items, convert them, and add them to the array
       let newItems = innerArray.slice(changeStart, addCount);
 
-      this._content.replace(changeStart, 0, newItems.map((value) => value.toString()));
+      this._content.replace(
+        changeStart,
+        0,
+        newItems.map((value) => value.toString())
+      );
     }
 
     // Let observers/computeds know that the value has changed
@@ -50,9 +54,11 @@ class ToStringArray {
 }
 ```
 
-To move away from array observers, we could instead convert the
-wrapping to happen when the array is accessed in `objectAt`, using the `@cached`
-decorator from [tracked-toolbox](https://github.com/pzuraq/tracked-toolbox).
+To move away from array observers, we could instead convert the behavior so that
+the objects are converted into strings when the array is _accessed_ using
+`objectAt`. We can call this behavior _lazy_ wrapping, as opposed to _eager_
+wrapping which happens when the item is added to the array. We can do this using
+the using the `@cached` decorator from [tracked-toolbox](https://github.com/pzuraq/tracked-toolbox).
 
 ```js
 import { cached } from 'tracked-toolbox';
@@ -136,8 +142,10 @@ export default Component.extend({
     this._cells = A();
   },
 
-  _needsRevalidate(){
-    if (this.isDestroyed || this.isDestroying) {return;}
+  _needsRevalidate() {
+    if (this.isDestroyed || this.isDestroying) {
+      return;
+    }
     this.rerender();
   },
 
@@ -147,14 +155,14 @@ export default Component.extend({
     this.updateItems();
   },
 
-  updateItems(){
+  updateItems() {
     var rawItems = this.get('items');
 
     if (this._rawItems !== rawItems) {
       if (this._items && this._items.removeArrayObserver) {
         this._items.removeArrayObserver(this, {
           willChange: noop,
-          didChange: '_needsRevalidate'
+          didChange: '_needsRevalidate',
         });
       }
       this._rawItems = rawItems;
@@ -164,7 +172,7 @@ export default Component.extend({
       if (items && items.addArrayObserver) {
         items.addArrayObserver(this, {
           willChange: noop,
-          didChange: '_needsRevalidate'
+          didChange: '_needsRevalidate',
         });
       }
     }
@@ -181,28 +189,29 @@ export default Component.extend({
   actions: {
     scrollChange(scrollLeft, scrollTop) {
       // ...
-      if (scrollLeft !== this._scrollLeft ||
-          scrollTop !== this._scrollTop) {
+      if (scrollLeft !== this._scrollLeft || scrollTop !== this._scrollTop) {
         set(this, '_scrollLeft', scrollLeft);
         set(this, '_scrollTop', scrollTop);
         this._needsRevalidate();
       }
     },
     clientSizeChange(clientWidth, clientHeight) {
-      if (this._clientWidth !== clientWidth ||
-          this._clientHeight !== clientHeight) {
+      if (
+        this._clientWidth !== clientWidth ||
+        this._clientHeight !== clientHeight
+      ) {
         set(this, '_clientWidth', clientWidth);
         set(this, '_clientHeight', clientHeight);
         this._needsRevalidate();
       }
-    }
-  }
+    },
+  },
 });
 ```
 
-We can refactor this to update the cells themselves when they are accessed, by
-accessing them into a computed property that depends on the items array, and
-which updates the cells when it is accessed:
+We can refactor this to update the cells when they are accessed. We'll do this
+by calling `updateCells` within a computed property that depends on the items
+array:
 
 ```js
 export default Component.extend({
@@ -244,11 +253,11 @@ export default Component.extend({
 });
 ```
 
-Mutating untracked local state like this is generally ok as long as the state is
-essentially a cached representation of computed or getter is deriving in
-general. It allows you to do things like compare the previous state to the
-current state during the update, and cache portions of the computation so that
-you do not need to redo all of it.
+Mutating untracked local state like this is generally ok as long as the local
+state is only a cached representation of the value that the computed or getter is
+deriving in general. It allows you to do things like compare the previous state
+to the current state during the update, and cache portions of the computation so
+that you do not need to redo all of it.
 
 It is also possible that you have some code that must run whenever the array
 has changed, and must run eagerly. For instance, the array fragment from
@@ -257,7 +266,7 @@ that it has changed, which looks like this (simplified):
 
 ```js
 const StatefulArray = ArrayProxy.extend(Copyable, {
-  content: computed(function() {
+  content: computed(function () {
     return A();
   }),
 
@@ -287,7 +296,7 @@ method is the `replace()` method.
 
 ```js
 const StatefulArray = ArrayProxy.extend(Copyable, {
-  content: computed(function() {
+  content: computed(function () {
     return A();
   }),
 
