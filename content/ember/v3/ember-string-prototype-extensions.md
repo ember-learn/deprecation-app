@@ -1,6 +1,6 @@
 ---
 id: ember-string.prototype-extensions
-title: Deprecate String prototype extensions
+title: String prototype extensions
 until: '4.0.0'
 since: '3.24'
 anchor: toc_ember-string-prototype_extensions

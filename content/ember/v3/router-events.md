@@ -1,6 +1,6 @@
 ---
 id: deprecate-router-events
-title: Deprecate Router Events
+title: Router Events
 until: '4.0.0'
 since: '3.6'
 ---

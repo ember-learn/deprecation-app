@@ -1,6 +1,6 @@
 ---
 id: ember-glimmer.with-syntax
-title: Deprecate the with helper
+title: '`{{with}}` helper'
 until: '4.0.0'
 since: 'Upcoming Features'
 ---

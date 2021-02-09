@@ -1,6 +1,6 @@
 ---
 id: object.alias-method
-title: Deprecate `@ember/object#aliasMethod`
+title: '`@ember/object#aliasMethod`'
 until: '4.0.0'
 since: '3.9'
 ---

@@ -1,6 +1,6 @@
 ---
 id: component.mouseenter-leave-move
-title: Deprecate mouseEnter/Leave/Move component methods
+title: mouseEnter/Leave/Move component methods
 until: '4.0.0'
 since: '3.13'
 ---
