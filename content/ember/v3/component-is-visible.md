@@ -1,6 +1,6 @@
 ---
 id: ember-component.is-visible
-title: Deprecate `Component#isVisible`
+title: '`Component#isVisible`'
 until: '4.0.0'
 since: '3.15'
 ---

@@ -1,6 +1,6 @@
 ---
 id: ember.partial
-title: Deprecate `{{partial}}`
+title: '`{{partial}}`'
 until: '4.0.0'
 since: '3.15'
 ---

@@ -1,6 +1,6 @@
 ---
 id: ember-data:najax-fallback
-title: Deprecate najax request
+title: '`najax` requests'
 until: '4.0.0'
 since: '3.22.0'
 ---

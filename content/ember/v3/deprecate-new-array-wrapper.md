@@ -1,6 +1,6 @@
 ---
 id: array.new-array-wrapper
-title: Deprecate calling `A` as a constructor
+title: Calling `A` as a constructor
 until: '3.9.0'
 since: '3.6'
 ---

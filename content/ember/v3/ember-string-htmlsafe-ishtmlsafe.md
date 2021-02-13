@@ -1,6 +1,6 @@
 ---
 id: ember-string.htmlsafe-ishtmlsafe
-title: Deprecate importing htmlSafe and isHTMLSafe from @ember/string
+title: Importing `htmlSafe` and `isHTMLSafe` from @ember/string
 until: '4.0.0'
 since: '3.25'
 ---

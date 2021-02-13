@@ -1,6 +1,6 @@
 ---
 id: ember-string.loc
-title: Deprecate `@ember/string#loc` and `{{loc}}`
+title: '`@ember/string#loc` and `{{loc}}`'
 until: '4.0.0'
 since: '3.24'
 ---

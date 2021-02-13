@@ -1,6 +1,6 @@
 ---
 id: routing.transition-methods
-title: Deprecate transition methods of routes and controllers
+title: Transition methods of routes and controllers
 until: '4.0.0'
 since: 'Upcoming Features'
 ---

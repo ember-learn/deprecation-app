@@ -1,6 +1,6 @@
 ---
 id: instance-initializers
-title:  Deprecate Access to Instances Initializers
+title: Access to Instance Initializers
 until: ''
 since: ''
 ---
