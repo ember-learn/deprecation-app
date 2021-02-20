@@ -3,7 +3,11 @@
     <a href="#{{id-for-deprecation @model.id @model.anchor}}" title={{@model.title}} class="toc-anchor">
       §
     </a>
-    {{@model.title}}
+    {{markdown-to-html
+      @model.title
+      extensions="no-wrapper"
+      tagName=""
+    }}
   </h3>
   <p class="em">
     {{#if @renderIdOrUntil}}

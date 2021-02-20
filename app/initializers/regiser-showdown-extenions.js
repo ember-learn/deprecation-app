@@ -102,6 +102,17 @@ export function initialize() {
       globals
     );
   });
+
+  // Based on: https://github.com/showdownjs/showdown/issues/573
+  showdown.extension('no-wrapper', function () {
+    return [{
+      type: 'output',
+      filter: function (text) {
+        // remove wrapping paragraph
+        return text.replace(/<\/?p[^>]*>/g, '');
+      }
+    }];
+  });
 }
 
 export default {
