@@ -27,11 +27,8 @@ export default class ShowController extends Controller {
   get renderIdOrUntil() {
     let version = this.content.query.version;
     let versionsWithoutId = ['v1.x'];
-    if (versionsWithoutId.includes(version)) {
-      return false;
-    } else {
-      return true;
-    }
+
+    return !versionsWithoutId.includes(version);
   }
 
   @action
@@ -39,10 +36,11 @@ export default class ShowController extends Controller {
     this.displayMobileToc = !this.displayMobileToc;
 
     if (typeof document !== 'undefined') {
-      if (this.displayMobileToc)
+      if (this.displayMobileToc) {
         document.querySelector('body').classList.add('no-scroll');
-      if (!this.displayMobileToc)
+      } else {
         document.querySelector('body').classList.remove('no-scroll');
+      }
     }
 
     window.scrollTo({
