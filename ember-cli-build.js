@@ -2,7 +2,7 @@
 
 const EmberApp = require("ember-cli/lib/broccoli/ember-app");
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let prepend = "";
 
   let fastlyDomain = process.env.FASTLY_DOMAIN;
