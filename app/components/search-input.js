@@ -9,8 +9,8 @@ export default class SearchInput extends Component {
   _resultTetherConstraints = Object.freeze([
     {
       to: 'window',
-      pin: ['left','right']
-    }
+      pin: ['left', 'right'],
+    },
   ]);
 
   constructor() {
@@ -23,15 +23,23 @@ export default class SearchInput extends Component {
   async setup() {
     await this.searchService.setupSearch();
 
-    later(this, function() {
-      if (typeof document !== 'undefined') {
-        document.addEventListener('click', (event) => {
-          if (!event.target.closest('.ds-dropdown-results')) {
-            this.searchService.searchResults = null;
-          }
-        }, false);
-      }
-    }, 200);
+    later(
+      this,
+      function () {
+        if (typeof document !== 'undefined') {
+          document.addEventListener(
+            'click',
+            (event) => {
+              if (!event.target.closest('.ds-dropdown-results')) {
+                this.searchService.searchResults = null;
+              }
+            },
+            false
+          );
+        }
+      },
+      200
+    );
   }
 
   @action
@@ -41,8 +49,12 @@ export default class SearchInput extends Component {
 
   @action
   onblur() {
-    later(this, function () {
-      set(this, '_focused', false);
-    }, 200);
+    later(
+      this,
+      function () {
+        set(this, '_focused', false);
+      },
+      200
+    );
   }
 }

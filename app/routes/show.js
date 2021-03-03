@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import RSVP from 'rsvp'
+import RSVP from 'rsvp';
 
 export default class ShowRoute extends Route {
   @service resultProcessor;
@@ -15,7 +15,7 @@ export default class ShowRoute extends Route {
 
     return RSVP.hash({
       query,
-      sorted
+      sorted,
     });
   }
 }

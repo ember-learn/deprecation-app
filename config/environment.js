@@ -2,9 +2,9 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: "deprecation-app",
+    modulePrefix: 'deprecation-app',
     environment,
-    apiHost: "",
+    apiHost: '',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -24,12 +24,12 @@ module.exports = function (environment) {
     },
 
     fastboot: {
-      hostWhitelist: [/localhost:\d+/]
+      hostWhitelist: [/localhost:\d+/],
     },
 
-    'algolia': {
+    algolia: {
       algoliaId: 'Y1OMR4C7MF',
-      algoliaKey: '5d01c83734dc36754d9e94cbf6f8964d'
+      algoliaKey: '5d01c83734dc36754d9e94cbf6f8964d',
     },
   };
 
