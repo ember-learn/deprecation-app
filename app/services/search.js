@@ -22,33 +22,30 @@ export default class SearchService extends Service {
      * https://stackoverflow.com/questions/50313745/angular-6-process-is-not-defined-when-trying-to-serve-application
      */
     window.process = {
-      env: { DEBUG: undefined }
+      env: { DEBUG: undefined },
     };
     let module = await import('algoliasearch');
-    this.algolia = module.default(
-      algoliaId,
-      algoliaKey
-    );
+    this.algolia = module.default(algoliaId, algoliaKey);
 
     this.index = this.algolia.initIndex('ember-deprecations');
     this.searchFunction = denodeify(this.index.search.bind(this.index));
   }
 
   @task()
-  search = function*(query) {
+  search = function* (query) {
     yield timeout(SEARCH_DEBOUNCE_PERIOD);
 
-    if(!query) {
+    if (!query) {
       return null;
     }
 
     const searchObj = {
       hitsPerPage: 15,
-      query
+      query,
     };
 
     let results = yield this.searchFunction(searchObj);
 
     this.searchResults = results;
-  }
+  };
 }

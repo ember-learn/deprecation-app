@@ -10,17 +10,18 @@ try {
   credentials = {};
 }
 
-module.exports = function(deployTarget) {
+module.exports = function (deployTarget) {
   let ENV = {
     build: {},
     'prember-algolia': {
       indexName: credentials.algoliaIndex || process.env.ALGOLIA_INDEX,
-      applicationId: credentials.algoliaApplication || process.env.ALGOLIA_APPLICATION,
+      applicationId:
+        credentials.algoliaApplication || process.env.ALGOLIA_APPLICATION,
       apiKey: credentials.algoliaKey || process.env.ALGOLIA_KEY,
       tagsToExclude: 'code,pre',
       cssSelector: 'section',
       pathPattern: /^(.*)\/index.html$/,
-    }
+    },
   };
 
   if (deployTarget === 'development') {

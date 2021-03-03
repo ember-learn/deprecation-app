@@ -19,7 +19,7 @@ export default class DeprecationArticle extends Component {
 
     if (nodeList) {
       nodeList.forEach((code) => {
-        code.parentNode.classList.add("line-numbers")
+        code.parentNode.classList.add('line-numbers');
       });
     }
 
@@ -28,7 +28,9 @@ export default class DeprecationArticle extends Component {
     if (filenameNodeList) {
       filenameNodeList.forEach((code) => {
         code.tabIndex = 0;
-        let filename = code.attributes['data-filename'] ? code.attributes['data-filename'].value : null;
+        let filename = code.attributes['data-filename']
+          ? code.attributes['data-filename'].value
+          : null;
         let match;
 
         if (filename) {
@@ -41,7 +43,7 @@ export default class DeprecationArticle extends Component {
           ext = match[1];
         } else {
           // pull file type from language
-          if(code.classList.contains('handlebars')) {
+          if (code.classList.contains('handlebars')) {
             ext = 'hbs';
           } else if (code.classList.contains('javascript')) {
             ext = 'js';

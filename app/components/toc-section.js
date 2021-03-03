@@ -16,7 +16,7 @@ export default class TocSection extends Component {
   }
 
   get id() {
-    let dasherizedSince = this.result.since.replace(/\./g,'-');
+    let dasherizedSince = this.result.since.replace(/\./g, '-');
 
     return `toggle-dep-menu-${dasherizedSince}`;
   }
@@ -33,12 +33,18 @@ export default class TocSection extends Component {
   navigateToLink() {
     set(this, 'displayMobileToc', !this.displayMobileToc);
 
-    later(this, function() {
-      if (typeof document !== 'undefined') {
-        if (this.displayMobileToc) document.querySelector('body').classList.add('no-scroll');
-        if (!this.displayMobileToc) document.querySelector('body').classList.remove('no-scroll');
-      }
-    }, 200);
+    later(
+      this,
+      function () {
+        if (typeof document !== 'undefined') {
+          if (this.displayMobileToc)
+            document.querySelector('body').classList.add('no-scroll');
+          if (!this.displayMobileToc)
+            document.querySelector('body').classList.remove('no-scroll');
+        }
+      },
+      200
+    );
   }
 }
 

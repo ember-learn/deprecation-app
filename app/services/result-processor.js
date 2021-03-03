@@ -6,23 +6,27 @@ import { task } from 'ember-concurrency-decorators';
 
 export default class ResultProcessorService extends Service {
   @task
-  * processResults(query) {
+  *processResults(query) {
     let result = [];
 
     for (const item of query.toArray()) {
       let since = result.findBy('since', get(item, 'since'));
-      if(!since) {
-         result.pushObject(EmberObject.create({
+      if (!since) {
+        result.pushObject(
+          EmberObject.create({
             since: get(item, 'since'),
-            contents: []
-         }));
+            contents: [],
+          })
+        );
       }
-      yield result.findBy('since', get(item, 'since')).contents.pushObject(item);
+      yield result
+        .findBy('since', get(item, 'since'))
+        .contents.pushObject(item);
     }
 
     let sorted = result.sort((a, b) => semverCompare(a.since, b.since));
-    let match = sorted[0].since.match(/Upcoming Features/)
-    if (match && match[0] == "Upcoming Features") {
+    let match = sorted[0].since.match(/Upcoming Features/);
+    if (match && match[0] == 'Upcoming Features') {
       let upComingFeatures = sorted.shift();
       sorted.push(upComingFeatures);
     }
