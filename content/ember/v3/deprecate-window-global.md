@@ -39,5 +39,8 @@ export default class MyComponent extends Component {
 If there is no modules API equivalent, consider refactoring away from using that
 API.
 
-For users that need dynamic runtime access where transpiling is not an option,
-`require('ember')` may be used.
+For addon authors that need dynamic runtime access where transpiling is not an option,
+this be used:
+```js
+const Ember = require.has('ember') ? require('ember') : window.Ember;
+```
