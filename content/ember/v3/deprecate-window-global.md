@@ -2,7 +2,7 @@
 id: ember-source.window-global
 title: Ember Global
 until: 4.0.0
-since: 3.26.0-beta.1
+since: 'Upcoming Features'
 ---
 
 Accessing Ember on the global context (e.g. `window.Ember`, `globalThis.Ember`,
