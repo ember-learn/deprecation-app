@@ -2,7 +2,7 @@
 id: optional-feature.application-template-wrapper
 title: "Optional Feature: application-template-wrapper"
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.26'
 ---
 
 Setting the `application-template-wrapper` optional feature to `true` has been

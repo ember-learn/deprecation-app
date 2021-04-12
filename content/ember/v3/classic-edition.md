@@ -2,7 +2,7 @@
 id: editions.classic
 title: "Edition: Classic"
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.26'
 ---
 
 The edition of Ember prior to Ember Octane is known as Ember Classic. This edition

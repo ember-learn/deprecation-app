@@ -2,7 +2,7 @@
 id: manager-capabilities.modifiers-3-13
 title: "3.13 Modifier Manager Capabilities"
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.26'
 ---
 
 Any modifier managers using the `3.13` capabilities should update to the most

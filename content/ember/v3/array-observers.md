@@ -2,7 +2,7 @@
 id: array-observers
 title: Array Observers
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.26'
 ---
 
 Array observers are a special type of observer that can be used to synchronously
