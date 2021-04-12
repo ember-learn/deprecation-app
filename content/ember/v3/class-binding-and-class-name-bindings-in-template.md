@@ -2,7 +2,7 @@
 id: class-binding-and-class-name-bindings-in-templates
 title: "classBinding and classNameBindings as args in templates"
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.26'
 ---
 
 `classBinding` and `classNameBindings` can currently be passed as arguments to

@@ -2,7 +2,7 @@
 id: implicit-injections
 title: "Implicit Injections"
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.26'
 ---
 
 Implicit injections are injections that are made by telling Ember to inject a

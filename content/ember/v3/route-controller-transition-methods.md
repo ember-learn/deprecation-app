@@ -2,7 +2,7 @@
 id: routing.transition-methods
 title: Transition methods of routes and controllers
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.26'
 ---
 
 The following methods are deprecated:
