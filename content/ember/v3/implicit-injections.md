@@ -41,7 +41,7 @@ explicit injection instead of an implicit one. You can do this by using the
 Before:
 
 ```js
-import { Route } from '@ember/routing/route';
+import Route from '@ember/routing/route';
 
 export default class ApplicationRoute extends Route {
   model() {
@@ -53,7 +53,7 @@ export default class ApplicationRoute extends Route {
 After:
 
 ```js
-import { Route } from '@ember/routing/route';
+import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
