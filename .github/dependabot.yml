@@ -1,0 +1,54 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "07:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: algoliasearch
+    versions:
+    - "> 3.35.1"
+  - dependency-name: "@percy/ember"
+    versions:
+    - 3.0.0
+  - dependency-name: eslint-plugin-ember
+    versions:
+    - 10.3.0
+  - dependency-name: ember-cli-babel
+    versions:
+    - 7.26.3
+  - dependency-name: ember-cli-htmlbars
+    versions:
+    - 5.3.2
+    - 5.6.2
+  - dependency-name: "@glimmer/component"
+    versions:
+    - 1.0.4
+  - dependency-name: "@glimmer/tracking"
+    versions:
+    - 1.0.4
+  - dependency-name: ember-template-lint
+    versions:
+    - 2.19.0
+    - 2.21.0
+  - dependency-name: eslint
+    versions:
+    - 7.20.0
+    - 7.21.0
+  - dependency-name: ember-concurrency
+    versions:
+    - 2.0.2
+  - dependency-name: ember-cli
+    versions:
+    - 3.25.0
+  - dependency-name: ember-data
+    versions:
+    - 3.25.0
+  - dependency-name: ember-source
+    versions:
+    - 3.25.1
+  - dependency-name: sass
+    versions:
+    - 1.32.7
