@@ -71,7 +71,7 @@
     "ember-template-lint": "^3.2.0",
     "ember-test-selectors": "^5.0.0",
     "ember-tether": "^2.0.0",
-    "eslint": "^7.24.0",
+    "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-ember": "^10.3.0",
     "eslint-plugin-node": "^11.1.0",
