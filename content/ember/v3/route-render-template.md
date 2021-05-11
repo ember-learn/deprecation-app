@@ -2,7 +2,7 @@
 id: route-render-template
 title: Deprecate `Route#renderTemplate`
 until: '4.0.0'
-since: 'Upcoming Features'
+since: '3.27'
 ---
 
 The `Route#render` and `Route#renderTemplate` APIs have been deprecated. These APIs are largely holdovers from a time where components where not as prominent in your typical Ember application and are no longer relevant. See [RFC #418](https://emberjs.github.io/rfcs/0418-deprecate-route-render-methods.html).
