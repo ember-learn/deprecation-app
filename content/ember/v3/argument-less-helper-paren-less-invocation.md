@@ -6,7 +6,7 @@ since: '3.27'
 ---
 
 With [contextual helpers](https://emberjs.github.io/rfcs/0432-contextual-helpers.html)
-arriving in Ember, helpers, modifiers and components can increasing be thought
+arriving in Ember, helpers, modifiers and components can increasingly be thought
 of as first-class variables that can be passed around.
 
 Invoking a helper without arguments or parentheses in named argument positions
@@ -17,10 +17,10 @@ can be ambigious and conflicts with this mental model:
 ```
 
 In this case, it's ambigious between passing `someHelper` as a value to the
-component to be invoked later, or invoking the helper with no arguments and
+component to be invoked later or invoking the helper with no arguments and
 passing the result into the component.
 
-The current behavior is to invoke the helper with no arguments and passing the
+The current behavior is to invoke the helper with no arguments and pass in the
 result, but this is counterintuitive in light of the broader "helper as a
 value" mental model. Therefore, this invocation style is deprecated in favor of
 explicitly invoking the helper with parentheses:

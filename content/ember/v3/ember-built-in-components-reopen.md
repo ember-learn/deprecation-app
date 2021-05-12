@@ -59,7 +59,7 @@ the same deprecation.
 
 Alternatively, you may also implement your own customized version of the
 component installing the `@ember/legacy-built-in-components` addon. This addon
-vendors the legacy classes and make them available for subclassing.ß
+vendors the legacy classes and make them available for subclassing.
 
 Before:
 
@@ -172,4 +172,4 @@ export default Component.extend({
 
 See [RFC #671](https://emberjs.github.io/rfcs/0671-modernize-built-in-components-1.html)
 and [RFC #707](https://emberjs.github.io/rfcs/0707-modernize-built-in-components-2.html)
-for more detials about this change.
+for more details about this change.

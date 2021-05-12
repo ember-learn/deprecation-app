@@ -163,7 +163,7 @@ instead of a deprecation warning.
 
 #### DOM Events
 
-The built-in components historically accepted a varierty of named arguments for
+The built-in components historically accepted a variety of named arguments for
 listening to certain DOM events on the component's HTML element. This includes
 the following (may not be a complete list):
 
@@ -302,7 +302,7 @@ considered a bug.
 
 This bug may be fixed at any time during the transition period – the supression
 behavior may stop without notice and should not be relied upon. An invocation
-with these named arguemnts now triggers a deprecation warning with this
+with these named arguments now triggers a deprecation warning with this
 additional caveat.
 
 Before:
@@ -334,4 +334,4 @@ See the section on [Other Legacy Arguments](#toc_ember-built-in-components-legac
 
 See [RFC #671](https://emberjs.github.io/rfcs/0671-modernize-built-in-components-1.html)
 and [RFC #707](https://emberjs.github.io/rfcs/0707-modernize-built-in-components-2.html)
-for more detials about this change.
+for more details about this change.

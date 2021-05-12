@@ -51,7 +51,7 @@ historically accepted a `@tagName` argument that allows customizing the tag
 name of the underlying HTML element.
 
 This was once popular with the `<LinkTo>` component for adding navigation
-behavior to buttons, table row and other UI elements. The current concensus is
+behavior to buttons, table row and other UI elements. The current consensus is
 that this is an anti-pattern and causes issues with assistive technologies.
 
 In most cases, the `<a>` anchor HTML element should be used for navigational UI
@@ -59,7 +59,7 @@ elements and styled with CSS to fit with the design requirements. Ocasionally,
 a button may be acceptable, in which case a custom event handler can be written
 using the router service and attached using the `{{on}}` modifier.
 
-Other edge cases exists, but generally those solutions can be adapted to fufill
+Other edge cases exist, but generally those solutions can be adapted to fulfill
 the requirements. For example, to make a table row clickable as a convenience,
 the primary column can be made into a link, while a click event handler is
 attached to the table row to redispatch the click to trigger the link.
@@ -78,7 +78,7 @@ or
 Passing the `@tagName` argument to <LinkTo> is deprecated. Using a <div>
 element for navigation is not recommended as it creates issues with assistive
 technologies. Remove this argument to use the default <a> element. In the rare
-cases that calls for using a different element, refactor to use the router
+cases that call for using a different element, refactor to use the router
 service inside a custom event handler instead.
 ```
 
@@ -91,12 +91,12 @@ the legacy patterns as soon as possible.
 
 Due to implementation differences, the legacy implementations may be less
 performant and have subtle differences in behavior, especially in edge cases
-around undocumented or deprecated functionailities. This temporary measure will
+around undocumented or deprecated functionalities. This temporary measure will
 stop working afer Ember 4.0.0.
 
 With the ability to modify `@tagName` deprecated, the previously private
 `@eventName` and `@preventDefault` arguments on `<LinkTo>` are deprecated as
-well. These arguments were ocationally useful when the element is something
+well. These arguments were occasionally useful when the element is something
 other than an `<a>` element, but in the case of an `<a>` element, the default
 browser action is to navigate to the `href` via a full-page refresh. If that is
 not prevented, it would defeat the purpose of using the `<LinkTo>` component.
@@ -122,7 +122,7 @@ Some examples include private properties like `@active` and `@loading` on
 hooks inherited from the classic component super class like `@didRender`,
 `@willDestroy` and so on.
 
-Clobbering these intenral properties and methods cause the components to behave
+Clobbering these internal properties and methods cause the components to behave
 in unexpected ways. This should be considered a bug and should not be relied
 upon. Any accidental difference in behavior caused by passing these unsupported
 named arguments may stop at any time without warning.
@@ -137,4 +137,4 @@ working afer Ember 4.0.0.
 
 See [RFC #671](https://emberjs.github.io/rfcs/0671-modernize-built-in-components-1.html)
 and [RFC #707](https://emberjs.github.io/rfcs/0707-modernize-built-in-components-2.html)
-for more detials about this change.
+for more details about this change.

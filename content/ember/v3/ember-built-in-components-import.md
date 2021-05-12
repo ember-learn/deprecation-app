@@ -7,7 +7,7 @@ since: '3.27'
 
 Historically, the implementation classes of the built-in components `<Input>`,
 `<Textarea>` and `<LinkTo>` were made available publicly. This is sometimes
-used to customize the apperances or behavior of these components by subclassing
+used to customize the appearance or behavior of these components by subclassing
 or reopening these classes.
 
 Since Ember 3.27, the built-in components are no longer based on these legacy
@@ -69,7 +69,7 @@ The legacy addon is intended as a stopgap solution to avoid introducing hard
 blockers on upgrading to the latest version. It is strongly recommended that
 apps migrate away from the legacy patterns as soon as possible.
 
-One alternative would be to create wrapper components that invokes the built-in
+One alternative would be to create wrapper components that invoke the built-in
 components, rather than subclassing them directly.
 
 Note that the `TextSupport` and `TargetActionSupport` mixins have also been
@@ -78,4 +78,4 @@ private APIs and are not available in the legacy addon.
 
 See [RFC #671](https://emberjs.github.io/rfcs/0671-modernize-built-in-components-1.html)
 and [RFC #707](https://emberjs.github.io/rfcs/0707-modernize-built-in-components-2.html)
-for more detials about this change.
+for more details about this change.
