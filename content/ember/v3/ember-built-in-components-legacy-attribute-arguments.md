@@ -295,15 +295,20 @@ complete list):
 * `@keyPress`
 * `@keyUp`
 
-Passing these named arguments historically supressed certain behavior of the
+Passing these named arguments historically suppressed certain behavior of the
 built-in components, in some cases preventing the components from functioning
 properly. This was never an intended part of the original design and should be
 considered a bug.
 
-This bug may be fixed at any time during the transition period – the supression
-behavior may stop without notice and should not be relied upon. An invocation
-with these named arguments now triggers a deprecation warning with this
-additional caveat.
+The new implementations are generally more robust against these issues, so that
+passing these deprecated arguments no longer clobbers internal methods or
+supresses built-in functionalities. This is generally desirable and should be
+the expected behavior going forward.
+
+However, apps that passes these arguments should take special care to confirm
+they were not inadvertently relying on the built-in functionalities being
+suppressed. An invocation with these named arguments now triggers a deprecation
+warning with this additional caveat.
 
 Before:
 

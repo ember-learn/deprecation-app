@@ -12,7 +12,7 @@ or reopening these classes.
 
 Since Ember 3.27, the built-in components are no longer based on these legacy
 classes and the implementation details are no longer public. Therefore, these
-legacy classes have been deprecated and will be removed in 4.0.0.
+legacy classes have been deprecated and will be removed after Ember 4.0.0.
 
 In order to ease migration for apps that have implemented custom components by
 subclassing these legacy classes, they will be moved to a legacy addon and
@@ -73,8 +73,10 @@ One alternative would be to create wrapper components that invoke the built-in
 components, rather than subclassing them directly.
 
 Note that the `TextSupport` and `TargetActionSupport` mixins have also been
-deprecated and will be removed from Ember 4.0.0. These were always considered
-private APIs and are not available in the legacy addon.
+deprecated. These mixins were used to share code among the built-in components.
+This was always considered a private implementation detail and the mixins were
+documented as private APIs. These private mixins are not available from the
+legacy addon and will be removed after Ember 4.0.0.
 
 See [RFC #671](https://emberjs.github.io/rfcs/0671-modernize-built-in-components-1.html)
 and [RFC #707](https://emberjs.github.io/rfcs/0707-modernize-built-in-components-2.html)

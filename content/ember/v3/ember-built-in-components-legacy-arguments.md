@@ -133,7 +133,7 @@ invocation to the legacy implementation while issuing an deprecation. This is
 intended as a stopgap measure to avoid introducing hard blockers on upgrading
 to the latest version. It is strongly recommended that apps migrate away from
 the legacy patterns as soon as possible. This temporary measure will stop
-working afer Ember 4.0.0.
+working after Ember 4.0.0.
 
 See [RFC #671](https://emberjs.github.io/rfcs/0671-modernize-built-in-components-1.html)
 and [RFC #707](https://emberjs.github.io/rfcs/0707-modernize-built-in-components-2.html)
