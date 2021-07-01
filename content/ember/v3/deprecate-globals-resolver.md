@@ -1,5 +1,5 @@
 ---
-id: ember.deprecate-globals-resolver
+id: ember.globals-resolver
 title: Use ember-cli resolver rather than legacy globals resolver
 until: '4.0.0'
 since: '3.16'
