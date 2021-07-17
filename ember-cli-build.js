@@ -14,9 +14,11 @@ module.exports = function (defaults) {
     prember: {
       urls: [
         '/',
+        '/v4.x',
         '/v3.x',
         '/v2.x',
         '/v1.x',
+        '/ember/v4.x',
         '/ember/v3.x',
         '/ember/v2.x',
         '/ember/v1.x',
