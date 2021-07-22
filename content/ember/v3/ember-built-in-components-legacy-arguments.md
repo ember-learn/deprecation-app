@@ -67,7 +67,7 @@ attached to the table row to redispatch the click to trigger the link.
 Since this feature is no longer recommended, invoking `<LinkTo>` with the
 `@tagName` argument is now deprecated:
 
-```hbs
+```handlebars
 <LinkTo @tagName="div" ...>...</LinkTo>
         ~~~~~~~~~~~~~~
 or

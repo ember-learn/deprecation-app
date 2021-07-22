@@ -38,7 +38,7 @@ After:
 
 do an ember install of the polyfill.
 
-```sh
+```bash
 ember install ember-getowner-polyfill
 ```
 

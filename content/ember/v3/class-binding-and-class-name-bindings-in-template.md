@@ -18,7 +18,7 @@ export default Component.extend({
 });
 ```
 
-```hbs
+```handlebars
 {{my-component classNameBindings="isValid:is-valid:is-invalid"}}
 ```
 
@@ -31,7 +31,7 @@ These bindings are additive - they add to the existing bindings that are on the
 class, rather than replacing them. Multiple bindings can also be passed in by
 separating them with a space:
 
-```hbs
+```handlebars
 {{my-component
   classBinding="foo:bar"
   classNameBindings="some.boundProperty isValid:is-valid:is-invalid"
@@ -46,7 +46,7 @@ angle-bracket invocation at the same time.
 
 Before:
 
-```hbs
+```handlebars
 {{my-component
   classBinding="foo:bar"
   classNameBindings="some.boundProperty isValid:is-valid:is-invalid"
@@ -55,7 +55,7 @@ Before:
 
 After:
 
-```hbs
+```handlebars
 <MyComponent
   class="
     {{if this.foo "bar"}}
@@ -73,7 +73,7 @@ the `class` argument inside of your component, however, you will need to pass
 If you do not want to convert to angle bracket syntax for some reason, the same
 thing can be accomplished with the `(concat)` helper in curly invocation.
 
-```hbs
+```handlebars
 {{my-component
   class=(concat
     (if this.foo "bar")

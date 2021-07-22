@@ -12,7 +12,7 @@ of as first-class variables that can be passed around.
 Invoking a helper without arguments or parentheses in named argument positions
 can be ambigious and conflicts with this mental model:
 
-```hbs
+```handlebars
 <SomeComponent @arg={{someHelper}} />
 ```
 
@@ -25,7 +25,7 @@ result, but this is counterintuitive in light of the broader "helper as a
 value" mental model. Therefore, this invocation style is deprecated in favor of
 explicitly invoking the helper with parentheses:
 
-```hbs
+```handlebars
 <SomeComponent @arg={{(someHelper)}} />
 ```
 

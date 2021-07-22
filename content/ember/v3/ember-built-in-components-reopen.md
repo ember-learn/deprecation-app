@@ -43,7 +43,7 @@ Checkbox.reopen({
 
 After:
 
-```hbs
+```handlebars
 {{!-- app/components/my-checkbox.hbs --}}
 
 <Input

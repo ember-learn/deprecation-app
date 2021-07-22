@@ -12,7 +12,7 @@ argument syntax.
 
 Before:
 
-```hbs
+```handlebars
 {{attrs.foo}}
 {{this.attrs.foo.bar}}
 {{deeply (nested attrs.foobar.baz)}}
@@ -20,7 +20,7 @@ Before:
 
 After:
 
-```hbs
+```handlebars
  {{@foo}}
  {{@foo.bar}}
  {{deeply (nested @foobar.baz)}}
