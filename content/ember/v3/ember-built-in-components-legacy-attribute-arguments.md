@@ -138,7 +138,7 @@ named arguments now triggers a deprecation warning.
 
 Before:
 
-```hbs
+```handlebars
 <Input @placeholder="Ember.js" />
        ~~~~~~~~~~~~~~~~~~~~~~~
 or
@@ -153,7 +153,7 @@ pass the attribute directly, i.e. `<Input placeholder={{...}} />` instead of
 
 After:
 
-```hbs
+```handlebars
 <Input placeholder="Ember.js" />
 ```
 
@@ -257,7 +257,7 @@ deprecation warning.
 
 Before:
 
-```hbs
+```handlebars
 <Input @click={{this.onClick}} />
        ~~~~~~~~~~~~~~~~~~~~~~~
 or
@@ -272,7 +272,7 @@ Passing the `@click` argument to <Input> is deprecated. Instead, please use the
 
 After:
 
-```hbs
+```handlebars
 <Input {{on "click" this.onClick}} />
 ```
 
@@ -312,7 +312,7 @@ warning with this additional caveat.
 
 Before:
 
-```hbs
+```handlebars
 <Input @change={{this.onChange}} />
        ~~~~~~~~~~~~~~~~~~~~~~~~~
 or
@@ -329,7 +329,7 @@ it from functioning properly. Instead, please use the {{on}} modifier, i.e.
 
 After:
 
-```hbs
+```handlebars
 <Input {{on "change" this.onChange}} />
 ```
 

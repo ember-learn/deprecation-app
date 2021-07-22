@@ -11,7 +11,7 @@ The `{{hasBlock}}` property is true if the component was given a default block,
 and false otherwise. To transition away from it, you can use the `(has-block)`
 helper instead.
 
-```hbs
+```handlebars
 {{hasBlock}}
 
 {{! becomes }}
@@ -21,7 +21,7 @@ helper instead.
 Unlike `{{hasBlock}}`, the `(has-block)` helper must be called, so in nested
 positions you will need to add parentheses around it:
 
-```hbs
+```handlebars
 {{#if hasBlock}}
 
 {{/if}}
@@ -44,7 +44,7 @@ The `{{hasBlockParams}}` property is true if the component was given a default b
 that accepts block params, and false otherwise. To transition away from it, you can
 use the `(has-block-params)` helper instead.
 
-```hbs
+```handlebars
 {{hasBlockParams}}
 
 {{! becomes }}
@@ -54,7 +54,7 @@ use the `(has-block-params)` helper instead.
 Unlike `{{hasBlockParams}}`, the `(has-block-params)` helper must be called, so in nested
 positions you will need to add parentheses around it:
 
-```hbs
+```handlebars
 {{#if hasBlockParams}}
 
 {{/if}}

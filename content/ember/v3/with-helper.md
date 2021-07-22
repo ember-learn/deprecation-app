@@ -11,7 +11,7 @@ The use of `{{with}}` has been deprecated. You should replace it with either `{{
 
 Before:
 
-```hbs
+```handlebars
 {{#with (hash name="Ben" age=4) as |person|}}
   Hi {{person.name}}, you are {{person.age}} years old.
 {{/with}}
@@ -19,7 +19,7 @@ Before:
 
 After:
 
-```hbs
+```handlebars
 {{#let (hash name="Ben" age=4) as |person|}}
   Hi {{person.name}}, you are {{person.age}} years old.
 {{/let}}
@@ -29,7 +29,7 @@ After:
 
 Before:
 
-```hbs
+```handlebars
 {{#with user.posts as |blogPosts|}}
   There are {{blogPosts.length}} blog posts
 {{/with}}
@@ -37,7 +37,7 @@ Before:
 
 After:
 
-```hbs
+```handlebars
 {{#let user.posts as |blogPosts|}}
   {{#if blogPosts}}
     There are {{blogPosts.length}} blog posts
@@ -49,7 +49,7 @@ After:
 
 Before:
 
-```hbs
+```handlebars
 {{#with user.posts as |blogPosts|}}
   There are {{blogPosts.length}} blog posts
 {{else}}
@@ -59,7 +59,7 @@ Before:
 
 After:
 
-```hbs
+```handlebars
 {{#let user.posts as |blogPosts|}}
   {{#if blogPosts}}
     There are {{blogPosts.length}} blog posts

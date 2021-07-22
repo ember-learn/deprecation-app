@@ -31,13 +31,13 @@ class CheckoutRoute extends Route {
 }
 ```
 
-```hbs
+```handlebars
 {{! app/templates/checkout.hbs}}
 <button {{on "click" this.showModal}}>Show Modal</button>
 <button {{on "click" this.closeModal}}>Close Modal</button>
 ```
 
-```hbs
+```handlebars
 {{! app/templates/application.hbs}}
 {{outlet "modal"}}
 
@@ -71,7 +71,7 @@ class CheckoutController extends Controller {
 }
 ```
 
-```hbs
+```handlebars
 {{! app/templates/checkout.hbs}}
 <button {{on "click" this.showModal}}>Show Modal</button>
 <button {{on "click" this.closeModal}}>Close Modal</button>
@@ -83,7 +83,7 @@ class CheckoutController extends Controller {
 {{/if}}
 ```
 
-```hbs
+```handlebars
 {{! app/templates/application.hbs}}
 <div id="modal"></div>
 

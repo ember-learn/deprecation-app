@@ -19,7 +19,7 @@ Ember.Object.extend({
 
 Command:
 
-```sh
+```bash
 ember watson:remove-ember-k --empty
 ```
 

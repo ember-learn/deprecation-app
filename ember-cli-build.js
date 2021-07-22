@@ -34,12 +34,6 @@ module.exports = function (defaults) {
       only: ['html-safe'],
     },
 
-    'ember-prism': {
-      theme: 'okaidia',
-      components: ['javascript', 'handlebars', 'markup-templating'],
-      plugins: ['line-numbers', 'normalize-whitespace'],
-    },
-
     babel: {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
