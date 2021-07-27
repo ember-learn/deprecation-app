@@ -50,7 +50,7 @@
     "ember-cli-sass": "^10.0.1",
     "ember-cli-showdown": "^4.5.0",
     "ember-cli-sri": "^2.1.1",
-    "ember-cli-string-helpers": "^5.0.0",
+    "ember-cli-string-helpers": "^6.1.0",
     "ember-cli-terser": "^4.0.1",
     "ember-collapsible-panel": "^4.0.0",
     "ember-concurrency": "^2.0.3",
