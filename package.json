@@ -25,7 +25,7 @@
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/render-modifiers": "^1.0.2",
-    "@ember/test-helpers": "^2.2.5",
+    "@ember/test-helpers": "^2.2.8",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "@percy/cli": "^v1.0.0-beta.60",
@@ -57,7 +57,7 @@
     "ember-concurrency-decorators": "^2.0.3",
     "ember-data": "^3.26.0",
     "ember-export-application-global": "^2.0.1",
-    "ember-fetch": "^8.0.4",
+    "ember-fetch": "^8.1.0",
     "ember-href-to": "^4.1.0",
     "ember-load-initializers": "^2.1.2",
     "ember-maybe-import-regenerator": "^0.1.6",
