@@ -14,9 +14,8 @@ export default class SearchResult extends Component {
   }
 
   get remainingHeadings() {
-    let returnedRemainingHeadings = this.args.result._highlightResult.headings.slice(
-      1
-    );
+    let returnedRemainingHeadings =
+      this.args.result._highlightResult.headings.slice(1);
     let lastHeading =
       returnedRemainingHeadings[returnedRemainingHeadings.length - 1].value;
     if (lastHeading.indexOf('id:') === 0) {
