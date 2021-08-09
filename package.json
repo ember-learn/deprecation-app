@@ -82,7 +82,7 @@
     "prettier": "^2.3.2",
     "qunit": "^2.15.0",
     "qunit-dom": "^1.6.0",
-    "sass": "^1.36.0",
+    "sass": "^1.37.5",
     "semver-compare": "^1.0.0"
   },
   "ember": {
