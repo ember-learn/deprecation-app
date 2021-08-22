@@ -42,4 +42,4 @@ export default class ApplicationRoute extends Route {
 }
 ```
 
-For a more detailed explanation with additional examples, see the old deprecation [guides](https://deprecations.emberjs.com/v3.x#toc_implicit-injections).
+For a more detailed explanation with additional examples, see the 3.x deprecation [guides](https://deprecations.emberjs.com/v3.x#toc_implicit-injections).
