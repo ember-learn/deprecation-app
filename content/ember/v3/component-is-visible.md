@@ -70,7 +70,7 @@ As mentioned this has the drawback of still rendering the wrapping `div`, so nex
 There is an HTML attribute that you can use whenever you want an element to now show to the end user, the `hidden` attribute.
 To update our `FlashMessage` component to use it, we need to use the `attributeBindings` API.
 
-To avoid confusing about the state of the component, we will use the `shouldHide` name for the property that holds the state,
+To avoid confusion about the state of the component, we will use the `shouldHide` name for the property that holds the state,
 and flip the values:
 
 ```js {data-filename=app/components/flash-message.js}
