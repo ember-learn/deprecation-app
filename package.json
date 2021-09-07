@@ -81,7 +81,7 @@
     "prember": "^1.0.5",
     "prettier": "^2.3.2",
     "qunit": "^2.17.0",
-    "qunit-dom": "^1.6.0",
+    "qunit-dom": "^2.0.0",
     "sass": "^1.39.0",
     "semver-compare": "^1.0.0"
   },
