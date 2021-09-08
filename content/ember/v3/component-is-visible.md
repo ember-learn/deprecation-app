@@ -45,7 +45,7 @@ I decided to call it `shouldShow`, as that name has no meaning to the classic co
 import Component from '@ember/component';
 
 export default Component.extend({
-  shouldHide: false,
+  shouldShow: true,
 
   dismissMessage() {
     this.set('shouldShow', false);
@@ -56,7 +56,7 @@ export default Component.extend({
 Now we wrap the template in a conditional:
 
 ```handlebars {data-filename=app/components/flash-message.hbs}
-{{#if}}
+{{#if this.shouldShow}}
   <p>You received a message: "{{@message}}"</p>
 
   <button type="button" {{action 'dismissMessage'}}>Dismiss</button>
