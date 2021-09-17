@@ -1,7 +1,7 @@
 ---
 id: deprecated-run-loop-and-computed-dot-access
 title: Run loop and computed dot access
-until: '5.0.0'
+until: '4.0.0'
 since: '3.27.0'
 ---
 
