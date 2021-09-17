@@ -1,7 +1,7 @@
 ---
 id: ember-env.old-extend-prototypes
 title: Old extend protptypes
-until: '5.0.0'
+until: '4.0.0'
 since: '3.3.0'
 ---
 
