@@ -1,6 +1,6 @@
 ---
 id: ember-env.old-extend-prototypes
-title: Old extend protptypes
+title: Old extend prototypes
 until: '4.0.0'
 since: '3.3.0'
 ---
