@@ -33,7 +33,7 @@
     "algoliasearch": "^3.35.1",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
-    "broccoli-static-site-json": "^4.3.0",
+    "broccoli-static-site-json": "^4.4.1",
     "ember-auto-import": "^1.11.3",
     "ember-cli": "~3.28.0",
     "ember-cli-app-version": "^5.0.0",
