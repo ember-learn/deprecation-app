@@ -19,7 +19,7 @@ RFC: https://emberjs.github.io/rfcs/0580-destroyables.html
 ```js
 import { destroy, isDestroying, isDestroyed } from '@ember/destroyable' ;
 
-let compnoent = EmberObject.create();
+let component = EmberObject.create();
 
 isDestroying(component); // => false
 isDestroyed(component); // => false
