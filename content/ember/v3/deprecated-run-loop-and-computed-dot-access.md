@@ -13,7 +13,57 @@ Instead, import the value directly from the module:
 import { filter } from '@ember/object/computed';
 ```
 
-(This deprecation guide needs more details.
-You can help out by editing 
-[this file](https://github.com/ember-learn/deprecation-app/blob/main/content/ember/v3/deprecated-run-loop-and-computed-dot-access.md)
-and making a PR!)
+---
+
+Here is the complete list of deprecated functions from `computed`:
+
+`computed.alias`,
+`computed.and`,
+`computed.bool`,
+`computed.collect`,
+`computed.deprecatingAlias`,
+`computed.empty`,
+`computed.equal`,
+`computed.filterBy`,
+`computed.filter`,
+`computed.gte`,
+`computed.gt`,
+`computed.intersect`,
+`computed.lte`,
+`computed.lt`,
+`computed.mapBy`,
+`computed.map`,
+`computed.match`,
+`computed.max`,
+`computed.min`,
+`computed.none`,
+`computed.notEmpty`,
+`computed.not`,
+`computed.oneWay`,
+`computed.oneWay`,
+`computed.or`,
+`computed.readOnly`,
+`computed.setDiff`,
+`computed.sort`,
+`computed.sum`,
+`computed.union`,
+`computed.uniqBy`,
+`computed.uniq`.
+
+And here is the complete list of deprecated funcitons from `run`:
+
+`run.backburner`,
+`run.begin`,
+`run.bind`,
+`run.cancel`,
+`run.debounce`,
+`run.end`,
+`run.hasScheduledTimers`,
+`run.join`,
+`run.later`,
+`run.next`,
+`run.once`,
+`run.schedule`,
+`run.scheduleOnce`,
+`run.throttle`,
+`run.cancelTimers`.
