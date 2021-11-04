@@ -2,7 +2,7 @@
 id: deprecated-run-loop-and-computed-dot-access
 title: Run loop and computed dot access
 until: '4.0.0'
-since: '3.27.0'
+since: '3.27'
 ---
 
 Using `.` to access computed or run loop functions has been deprecated, such
