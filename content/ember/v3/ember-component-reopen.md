@@ -2,7 +2,7 @@
 id: ember.component.reopen
 title: Reopening Classic Component Super Class
 until: '4.0.0'
-since: '3.27.0'
+since: '3.27'
 ---
 
 Reopening the `Ember.Component` super class has far-reaching consequences. For example, it may unexpectedly break addons that are not expecting the changes.
