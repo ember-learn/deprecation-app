@@ -1,7 +1,7 @@
 ---
 id: routing.transition-methods
 title: Transition methods of routes and controllers
-until: '4.0.0'
+until: '5.0.0'
 since: '3.26'
 ---
 
