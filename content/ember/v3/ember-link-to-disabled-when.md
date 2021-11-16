@@ -1,8 +1,8 @@
 ---
 id: ember.link-to.disabled-when
 title: LinkTo @disabled-when argument
-until: '5.0.0'
-since: '4.0.0'
+until: '4.0.0'
+since: '3.27.0'
 ---
 
 Passing `@disabled-when` argument to `<LinkTo>` component has been deprecated. You can use `@disabled` instead.
