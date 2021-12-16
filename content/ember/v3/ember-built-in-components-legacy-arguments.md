@@ -7,7 +7,7 @@ since: '3.27'
 
 As of Ember 3.27, these are the named arguments API of the built-in components:
 
-### `<LinkTo>`
+#### `<LinkTo>`
   
 * `@route`
 * `@model`
@@ -20,7 +20,7 @@ As of Ember 3.27, these are the named arguments API of the built-in components:
 * `@loadingClass`
 * `@disabledClass`
 
-### `<Input>`
+#### `<Input>`
 
 * `@type`
 * `@value`
@@ -29,7 +29,7 @@ As of Ember 3.27, these are the named arguments API of the built-in components:
 * `@enter`
 * `@escape-press`
 
-### `<Textarea>`
+#### `<Textarea>`
 
 * `@value`
 * `@insert-newline`
