@@ -7,29 +7,34 @@ since: '3.27'
 
 As of Ember 3.27, these are the named arguments API of the built-in components:
 
-* `<LinkTo>`
-  * `@route`
-  * `@model`
-  * `@models`
-  * `@query`
-  * `@replace`
-  * `@disabled`
-  * `@current-when`
-  * `@activeClass`
-  * `@loadingClass`
-  * `@disabledClass`
-* `<Input>`
-  * `@type`
-  * `@value`
-  * `@checked`
-  * `@insert-newline`
-  * `@enter`
-  * `@escape-press`
-* `<Textarea>`
-  * `@value`
-  * `@insert-newline`
-  * `@enter`
-  * `@escape-press`
+#### `<LinkTo>`
+  
+* `@route`
+* `@model`
+* `@models`
+* `@query`
+* `@replace`
+* `@disabled`
+* `@current-when`
+* `@activeClass`
+* `@loadingClass`
+* `@disabledClass`
+
+#### `<Input>`
+
+* `@type`
+* `@value`
+* `@checked`
+* `@insert-newline`
+* `@enter`
+* `@escape-press`
+
+#### `<Textarea>`
+
+* `@value`
+* `@insert-newline`
+* `@enter`
+* `@escape-press`
 
 In order to reduce their API surfaces, all other arguments on these components
 have been deprecated. The arguments not enumerated above are either no longer
