@@ -22,6 +22,20 @@ These days, virtually all browsers support the history API, so 'auto' will alway
 Set `locationType` in `config/environment.js` to `'history'`. This is it. 
 Your app should work just like it used to.
 
+~~~js
+// config/environment.js
+'use strict';
+
+module.exports = function (environment) {
+  let ENV = {
+    modulePrefix: 'my-app',
+    environment: environment,
+    rootURL: '/',
+    locationType: 'history', // add or edit this line
+    …
+};
+~~~
+
 #### Advanced Stuff
 
 1. Note that the 'hash' location type is still around, you just have to set it manually.
