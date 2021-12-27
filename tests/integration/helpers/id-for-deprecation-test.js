@@ -12,27 +12,21 @@ module('Integration | Helper | id-for-deprecation', function (hooks) {
 
       await render(hbs`{{id-for-deprecation inputValue}}`);
 
-      assert.equal(this.element.textContent.trim(), 'toc_toJSON');
+      assert.dom(this.element).hasText('toc_toJSON');
     });
     test('anchor id has periods, commas, and colons replaced with dashes', async function (assert) {
       this.set('inputValue', 'ember-data:object.init,constructor');
 
       await render(hbs`{{id-for-deprecation inputValue}}`);
 
-      assert.equal(
-        this.element.textContent.trim(),
-        'toc_ember-data-object-init-constructor'
-      );
+      assert.dom(this.element).hasText('toc_ember-data-object-init-constructor');
     });
     test('anchor id has whitespace stripped out', async function (assert) {
       this.set('inputValue', 'ember_object.some property');
 
       await render(hbs`{{id-for-deprecation inputValue}}`);
 
-      assert.equal(
-        this.element.textContent.trim(),
-        'toc_ember_object-someproperty'
-      );
+      assert.dom(this.element).hasText('toc_ember_object-someproperty');
     });
   });
 
@@ -43,6 +37,6 @@ module('Integration | Helper | id-for-deprecation', function (hooks) {
 
     await render(hbs`{{id-for-deprecation deprecationId optionalAnchorId}}`);
 
-    assert.equal(this.element.textContent.trim(), anchor);
+    assert.dom(this.element).hasText(anchor);
   });
 });

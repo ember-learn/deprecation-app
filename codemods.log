@@ -1,0 +1,8 @@
+2021-12-27T16:13:57.789Z [warn] WARNING: {{page-title}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/application.hbs
+2021-12-27T16:13:58.603Z [warn] WARNING: {{id-for-deprecation}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/deprecation-article.hbs
+2021-12-27T16:13:58.605Z [warn] WARNING: {{id-for-deprecation}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/deprecation-article.hbs
+2021-12-27T16:13:58.605Z [warn] WARNING: {{markdown-to-html}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/deprecation-article.hbs
+2021-12-27T16:13:58.605Z [warn] WARNING: {{markdown-to-html}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/deprecation-article.hbs
+2021-12-27T16:13:59.102Z [warn] WARNING: {{href-to}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/search-result.hbs
+2021-12-27T16:13:59.105Z [warn] WARNING: {{html-safe}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/search-result.hbs
+2021-12-27T16:13:59.224Z [warn] WARNING: {{id-for-deprecation}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/toc-section.hbs

@@ -16,7 +16,7 @@ $heading-line-height: 1.2;
 
 // Spacing
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: $base-spacing * 0.5;
 $large-spacing: $base-spacing * 2;
 $top-spacing: $base-spacing * 3.333; // 80px
 
