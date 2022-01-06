@@ -5,10 +5,10 @@ until: '4.0.0'
 since: '3.24'
 ---
 
-The `deprecate` function now requires passing the `for` option. Before:
+The `deprecate` function now requires passing the `for` option to provide a namespace for the deprecation. Before:
 
 ```js
-function somethingBad() {}
+import { deprecate } from '@ember/debug';
 
 deprecate(
   'Please update from the bad function `somethingBad` to a better one',
@@ -23,7 +23,7 @@ deprecate(
 After:
 
 ```js
-function somethingBad() {}
+import { deprecate } from '@ember/debug';
 
 deprecate(
   'Please update from the bad function `somethingBad` to a better one',
@@ -31,7 +31,7 @@ deprecate(
   {
     id: 'get-rid-of-somethingBad',
     until: 'v4.0.0',
-    for: 'my-namespace',
+    for: 'my-app',
   }
 );
 ```
