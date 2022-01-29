@@ -50,7 +50,7 @@ Here is the complete list of deprecated functions from `computed`:
 `computed.uniqBy`,
 `computed.uniq`.
 
-And here is the complete list of deprecated funcitons from `run`:
+And here is the complete list of deprecated functions from `run`:
 
 `run.backburner`,
 `run.begin`,
