@@ -5,7 +5,6 @@ const browsers = [
   'last 1 Edge versions',
   'last 1 Firefox versions',
   'last 1 Safari versions',
-  'ie 11',
 ];
 
 module.exports = {
