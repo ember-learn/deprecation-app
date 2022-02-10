@@ -40,7 +40,6 @@ Here is the complete list of deprecated functions from `computed`:
 `computed.notEmpty`,
 `computed.not`,
 `computed.oneWay`,
-`computed.oneWay`,
 `computed.or`,
 `computed.readOnly`,
 `computed.setDiff`,
