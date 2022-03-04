@@ -12,8 +12,7 @@ recommended that you take the following actions:
 2. Refactor `oneWay` bindings to `readOnly` computed properties
 3. Refactor all other bindings to `alias` computed properties
 
-The [guide on services]
-(https://guides.emberjs.com/v2.5.0/applications/services/) is a good place
+The [guide on services](https://guides.emberjs.com/v2.5.0/applications/services/) is a good place
 to start for creating and consuming services to replace your global bindings.
 In general though, you will replace your global with a service and consume it
 like this:
@@ -56,6 +55,5 @@ export default Ember.Component.extend({
 });
 ```
 
-See the [guide on computed properties]
-(https://guides.emberjs.com/v2.5.0/object-model/computed-properties/) for
+See the [guide on computed properties](https://guides.emberjs.com/v2.5.0/object-model/computed-properties/) for
 further reading.
