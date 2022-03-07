@@ -68,7 +68,7 @@
     "ember-showdown-prism": "^3.0.0",
     "ember-source": "~3.28.6",
     "ember-styleguide": "^6.1.2",
-    "ember-template-lint": "^4.1.0",
+    "ember-template-lint": "^4.2.0",
     "ember-test-selectors": "^6.0.0",
     "ember-tether": "^2.0.1",
     "eslint": "^7.32.0",
