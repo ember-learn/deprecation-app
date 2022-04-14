@@ -69,5 +69,25 @@ module('Acceptance | visual regression', function (hooks) {
       .hasText('Deprecations Added in Ember Data 3.x');
 
     await percySnapshot('ember-data-3.x');
+
+    // v4.x Ember
+    await click('[data-test-main-deprecations-link]');
+    await click('[data-test-ember-4-link] > a');
+
+    assert
+      .dom('[data-test-deprecations-added-in]')
+      .hasText('Deprecations Added in Ember 4.x');
+
+    await percySnapshot('ember-4.x');
+
+    // v4.x Ember CLI
+    await click('[data-test-main-deprecations-link]');
+    await click('[data-test-ember-cli-4-link] > a');
+
+    assert
+      .dom('[data-test-deprecations-added-in]')
+      .hasText('Deprecations Added in Ember CLI 4.x');
+
+    await percySnapshot('ember-cli-4.x');
   });
 });
