@@ -10,9 +10,9 @@ Ember historically extended the prototypes of native Javascript arrays to implem
 For convenient functions like `filterBy`, `compact`, you can directly convert to use native array methods.
 
 For mutation functions (like `pushObject`, `replace`) or observable properties (`firstObject`, `lastObject`), in order to keep the reactivity, you should take following steps:
-* 1. convert the array either to a new `@tracked` property, or use `TrackedArray` from `tracked-built-ins`;
-* 2. use array native methods;
-* 3. fully test to make sure the reactivity is maintained.
+1. convert the array either to a new `@tracked` property, or use `TrackedArray` from `tracked-built-ins`;
+2. use array native methods;
+3. fully test to make sure the reactivity is maintained.
 
 ### Convenient Functions
 For convenient functions like `filterBy`, `compact`, you can directly convert to use native array methods. This includes following (a list from [`EmberArray` methods](https://api.emberjs.com/ember/release/classes/EmberArray)):
@@ -137,24 +137,24 @@ class People {
 ```
 
 #### Some special cases
-* `without`
-before
+##### `without`
+Before
 ```js
 const simpleArray = ['a', 'b', 'c'];
 
 simpleArray.without('a'); // ['b', 'c']
 ```
 
-after
+After
 ```js
 const simpleArray = ['a', 'b', 'c'];
 
 simpleArray.filter(el => el !== 'a'); // ['b', 'c']
 ```
 
-Please make sure `without` reactivity is fully tested if needed.
+Please make sure `without` reactivity is fully tested.
 
-* `setEach`
+##### `setEach`
 `setEach` method internally implements `set` which responds to reactivity. You can either also use `set` or convert to `@tracked` properties.
 
 Before
@@ -176,7 +176,7 @@ items.forEach(item => {
 }); // items = [{ name: 'Joe', zipCode: '10011' }, { name: 'Matt', zipCode: '10011' }]
 ```
 
-Or
+or
 ```js
 // use `@tracked`
 import { tracked } from '@glimmer/tracking';
@@ -229,12 +229,12 @@ export default class SampleComponent extends Component {
 
   // lastObj will change when `someAction` is executed
   get lastObj() {
-    return abc.lastObject;
+    return this.abc.lastObject;
   }
 
   @action
   someAction(value) {
-    abc.pushObject(value);
+    this.abc.pushObject(value);
   }
 }
 ```
@@ -250,16 +250,17 @@ export default class SampleComponent extends Component {
   abc = new TrackedArray();
 
   get lastObj() {
-    return abc.at(-1);
+    return this.abc.at(-1);
   }
 
   @action
   someAction(value) {
-    abc.push(value);
+    this.abc.push(value);
   }
 }
 ```
-Or
+or
+
 ```js
 // @tracked
 import Component from '@glimmer/component';
@@ -270,12 +271,12 @@ export default class SampleComponent extends Component {
   @tracked abc = [];
 
   get lastObj() {
-    return abc.at(-1);
+    return this.abc.at(-1);
   }
 
   @action
   someAction(value) {
-    abc = [...abc, value];
+    this.abc = [...this.abc, value];
   }
 }
 ```
@@ -347,6 +348,7 @@ export default class SampleComponent extends Component {
   }
 }
 ```
+or
 
 ```js
 // @tracked
