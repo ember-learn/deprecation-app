@@ -59,7 +59,7 @@ complexArray.sortBy('food', 'isFruit'); // [{ food: 'apple', isFruit: true }, { 
 complexArray.uniqBy('food'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 
 // invoke
-class People {
+class Person {
   name;
 
   constructor(name) {
@@ -71,7 +71,7 @@ class People {
   }
 }
 
-[new People('Tom'), new People('Joe')].invoke('greet', 'Hi'); // ['Hi Tom', 'Hi Joe']
+[new Person('Tom'), new Person('Joe')].invoke('greet', 'Hi'); // ['Hi Tom', 'Hi Joe']
 ```
 
 After:
@@ -121,7 +121,7 @@ sortBy(complexArray, ['food', 'isFruit']); // [{ food: 'apple', isFruit: true },
 uniqBy(complexArray, 'food'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 
 // invoke
-class People {
+class Person {
   name;
 
   constructor(name) {
@@ -133,7 +133,7 @@ class People {
   }
 }
 
-[new People('Tom'), new People('Joe')].map(person => person['greet']?.('Hi')); // ['Hi Tom', 'Hi Joe']
+[new Person('Tom'), new Person('Joe')].map(person => person['greet']?.('Hi')); // ['Hi Tom', 'Hi Joe']
 ```
 
 #### Some special cases
