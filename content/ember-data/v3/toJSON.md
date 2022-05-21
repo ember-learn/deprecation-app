@@ -25,7 +25,7 @@ An example of the simple refactor is below:
 
   //other app code
   const record = store.peekRecord('post');
-  // users the default serializer, will have a deprecation warning
+  // uses the default serializer, will have a deprecation warning
   const output = record.toJSON();
 ```
 
@@ -46,6 +46,6 @@ An example of the simple refactor is below:
 
   //other app code
   const record = store.peekRecord('post');
-  // users the default serializer
+  // uses the default serializer
   const output = record.toJSON();
 ```
