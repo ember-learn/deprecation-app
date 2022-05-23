@@ -25,7 +25,7 @@
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/render-modifiers": "^1.0.2",
-    "@ember/test-helpers": "^2.6.0",
+    "@ember/test-helpers": "^2.8.1",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.1.1",
     "@percy/cli": "^v1.2.1",
