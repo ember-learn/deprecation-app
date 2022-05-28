@@ -5,10 +5,62 @@ until: '4.0.0'
 since: '3.27'
 ---
 
-Using class based template compilation plugins is deprecated.
+Using class-based template compilation plugins is deprecated.
 Please update to the functional style.
 
-(This deprecation guide needs more details.
-You can help out by editing 
-[this file](https://github.com/ember-learn/deprecation-app/blob/main/content/ember/v3/template-compiler-registerPlugin.md)
-and making a PR!)
+If you see this deprecation when building an app, most likely it's coming from
+one of the addons you have installed. You can use the class name of the plugin
+included in the deprecation message to figure out which addon is triggering this
+deprecation, like `MyTemplateCompilationPlugin` in the example below.
+
+Before:
+
+```js
+'use strict';
+
+module.exports = class MyTemplateCompilationPlugin {
+  transform(ast) {
+    let visitor = {
+      BlockStatement(node) {
+        // ...
+      },
+
+      ElementNode(node) {
+        // ...
+      },
+
+      MustacheStatement(node) {
+        // ...
+      },
+    };
+
+    this.syntax.traverse(ast, visitor);
+
+    return ast;
+  }
+};
+```
+
+After:
+
+```js
+'use strict';
+
+module.exports = function myTemplateCompilationPlugin() {
+  return {
+    visitor: {
+      BlockStatement(node) {
+        // ...
+      },
+
+      ElementNode(node) {
+        // ...
+      },
+
+      MustacheStatement(node) {
+        // ...
+      },
+    },
+  };
+};
+```
