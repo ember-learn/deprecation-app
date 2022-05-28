@@ -5,5 +5,5 @@ until: '4.0.0'
 since: '3.0'
 ---
 
-Importing `deprecate` from `@ember/application/deprecations'` 
+Importing `deprecate` from `@ember/application/deprecations` 
 has been deprecated. Please update to `import { deprecate } from '@ember/debug'`.
