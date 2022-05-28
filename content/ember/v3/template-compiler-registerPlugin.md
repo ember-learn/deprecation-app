@@ -8,6 +8,11 @@ since: '3.27'
 Using class-based template compilation plugins is deprecated.
 Please update to the functional style.
 
+If you see this deprecation when building an app, most likely it's coming from
+one of the addons you have installed. You can use the class name of the plugin
+included in the deprecation message to figure out which addon is triggering this
+deprecation, like `MyTemplateCompilationPlugin` in the example below.
+
 Before:
 
 ```js
@@ -59,10 +64,3 @@ module.exports = function myTemplateCompilationPlugin() {
   };
 };
 ```
-
-Note:
-
-If you see this deprecation when building an app, most likely it's coming from
-one of the addons you have installed. You can use the class name of the plugin
-included in the deprecation message to figure out which addon is triggering this
-deprecation (`MyTemplateCompilationPlugin` in the before example above).
