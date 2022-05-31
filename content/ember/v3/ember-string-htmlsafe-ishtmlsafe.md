@@ -12,13 +12,11 @@ You should instead import these functions from `@ember/template`.
 Before:
 
 ```js
-import { htmlSafe, isHTMLSafe } from '@ember/string';
-
 let htmlString = "<h1>Hamsters are the best!</h1>";
-isHTMLSafe(htmlString); //=> false
+htmlString.isHTMLSafe(); //=> false
 
-let htmlSafeString = htmlSafe(htmlString);
-isHTMLSafe(htmlSafeString); //=> true
+let htmlSafeString = htmlString.htmlSafe();
+htmlSafeString.isHTMLSafe(); //=> true
 ```
 
 After:
