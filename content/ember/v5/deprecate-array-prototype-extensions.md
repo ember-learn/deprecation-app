@@ -49,12 +49,12 @@ complexArray.getEach('food'); // ['apple', 'beans']
 complexArray.isAny('isFruit'); // true
 complexArray.isEvery('isFruit'); // false
 complexArray.mapBy('food'); // ['apple', 'beans']
-simpleArray.objectAt(1) // 2
-simpleArray.objectsAt([1, 2]) // [2, 3]
-complexArray.reject(el => el.isFruit) // [{ food: 'apple', isFruit: true }]
-complexArray.rejectBy('isFruit') // [{ food: 'apple', isFruit: true }]
+simpleArray.objectAt(1); // 2
+simpleArray.objectsAt([1, 2]); // [2, 3]
+complexArray.reject(el => el.isFruit); // [{ food: 'apple', isFruit: true }]
+complexArray.rejectBy('isFruit'); // [{ food: 'apple', isFruit: true }]
 complexArray.toArray(); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-simpleArray.uniq() // [1, 2, 3, undefined]
+simpleArray.uniq(); // [1, 2, 3, undefined]
 complexArray.sortBy('food', 'isFruit'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 complexArray.uniqBy('food'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 
@@ -86,7 +86,7 @@ const complexArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit
 // any
 simpleArray.some(value => value === 1);  // true
 // compact
-simpleArray.filter(value => value !== null && value !== undefined);; // [1, 2, 3]
+simpleArray.filter(value => value !== null && value !== undefined); // [1, 2, 3]
 // filterBy
 complexArray.filter(el => get(el, 'food') === 'beans'); // [{ food: 'beans', isFruit: false }]
 // findBy
@@ -104,21 +104,37 @@ simpleArray[1] // 2
 // objectsAt
 [1, 3].map(index => simpleArray[index]); //[2, 3]
 // reject
-complexArray.filter(el => !el.isFruit) // [{ food: 'apple', isFruit: true }]
+complexArray.filter(el => !el.isFruit); // [{ food: 'apple', isFruit: true }]
 // rejectBy
-complexArray.filter(el => !el.isFruit) // [{ food: 'apple', isFruit: true }]
+complexArray.filter(el => !el.isFruit); // [{ food: 'apple', isFruit: true }]
 // toArray
 [...complexArray] // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 // uniq
 [...new Set(simpleArray)] // [1, 2, 3, undefined]
+// uniqBy
+complexArray.reduce(
+  (unique, item) => {
+    if (!unique.find(i => item[prop] === i[prop])) {
+      unique.push(item);
+    }
+    return unique;
+  },
+  []
+); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
+// sortBy
+[...complexArray].sort((a, b) => {
+  return a.food?.localCompare(b.food)
+    ? a.food?.localCompare(b.food)
+    : a.isFruit - b.isFruit;
+}); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 
 // You may also instead rely on methods from another library like [lodash](https://lodash.com/).
 // Keep in mind that different libraries will behave in slightly different ways, so make sure any critical transformations are thoroughly tested.
 
-// sortBy
-sortBy(complexArray, ['food', 'isFruit']); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 // uniqBy
 uniqBy(complexArray, 'food'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
+// sortBy
+sortBy(complexArray, ['food', 'isFruit']); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 
 // invoke
 class Person {
@@ -284,7 +300,6 @@ export default class SampleComponent extends Component {
 ### Mutation methods
 Mutation methods are observable-based, which means you should always convert the accessors to `@tracked` or `TrackedArray` in order to maintain the reactivity. This includes following (a list from [`MutableArray` methods](https://api.emberjs.com/ember/4.3/classes/MutableArray)):
 
-* `without`
 * `addObject`
 * `addObjects`
 * `clear`
@@ -309,13 +324,83 @@ export default class SampleComponent extends Component {
   abc = ['x', 'y', 'z', 'x'];
 
   @action
+  addObject(value) {
+    this.abc.addObject(value);
+  }
+
+  @action
+  addObjects(values) {
+    this.abc.addObjects(values);
+  }
+
+  @action
+  clear() {
+    this.abc.clear();
+  }
+
+  @action
+  insertAt(idx, value) {
+    this.abc.insertAt(idx, value);
+  }
+
+  @action
+  popObject() {
+    this.abc.popObject();
+  }
+
+  @action
   pushAction(value) {
     this.abc.pushObject(value);
   }
 
   @action
+  pushObjects(values) {
+    this.abc.pushObjects(values);
+  }
+
+  @action
+  removeAt(start, len) {
+    this.abc.removeAt(start, len);
+  }
+
+  @action
   removeAction(value) {
     this.abc.removeObject(value);
+  }
+
+  @action
+  removeObjects(values) {
+    this.abc.removeObjects(values);
+  }
+
+  @action
+  replace(idx, len, values) {
+    this.abc.replace(idx, len, values);
+  }
+
+  @action
+  reverseObjects() {
+    this.abc.reverseObjects();
+  }
+
+  @action
+  setObjects(values) {
+    this.abc.setObjects(values);
+  }
+
+  @action
+  shiftObject() {
+    this.abc.shiftObject();
+  }
+
+  @action
+  unshiftObject(obj) {
+    this.abc.unshiftObject(obj);
+  }
+
+  @action
+  unshiftObjects(objs) {
+    this.abc.unshiftObjects(objs);
   }
 }
 ```
@@ -331,12 +416,49 @@ export default class SampleComponent extends Component {
   abc = new TrackedArray();
 
   @action
+  addObject(value) {
+    if (!this.abc.includes(value)) {
+      this.abc.push(value);
+    }
+  }
+
+  @action
+  addObjects(values) {
+    values.forEach(v => this.addObject(v))
+  }
+
+  @action
+  clear() {
+    this.abc.splice(0, this.abc.length);
+  }
+
+  @action
+  insertAt(idx, value) {
+    this.abc.splice(idx, 0, value);
+  }
+
+  @action
+  popObject() {
+    this.abc.pop();
+  }
+
+  @action
   pushAction(value) {
     this.abc.push(value);
   }
 
   @action
-  removeAction(value) {
+  pushObjects(values) {
+    this.abc.splice(this.abc.length, 0, ...values);
+  }
+
+  @action
+  removeAt(start, len) {
+    this.abc.splice(start, len);
+  }
+
+  @action
+  removeObject(value) {
     let loc = this.abc.length || 0;
     while (--loc >= 0) {
       let curValue = this.abc.at(loc);
@@ -345,6 +467,43 @@ export default class SampleComponent extends Component {
         this.abc.splice(loc, 1);
       }
     }
+  }
+
+  @action
+  removeObjects(values) {
+    values.forEach(v => {
+      this.removeObject(v);
+    })
+  }
+
+  @action
+  replace(idx, len, values) {
+    this.abc.splice(idx, len, ...values);
+  }
+
+  @action
+  reverseObjects() {
+    this.abc.reverse();
+  }
+
+  @action
+  setObjects(values) {
+    this.abc.splice(0, this.abc.length, ...values);
+  }
+
+  @action
+  shiftObject() {
+    this.abc.shift();
+  }
+
+  @action
+  unshiftObject(obj) {
+    this.abc.unshift(obj);
+  }
+
+  @action
+  unshiftObjects(objs) {
+    this.abc.unshift(...objs);
   }
 }
 ```
@@ -360,12 +519,51 @@ export default class SampleComponent extends Component {
   @tracked abc = [];
 
   @action
+  addObject(value) {
+    if (!this.abc.includes(value)) {
+      [...this.abc, value];
+    }
+  }
+
+  @action
+  addObjects(values) {
+    values.forEach(v => this.addObject(v))
+  }
+
+  @action
+  clear() {
+    this.abc = [];
+  }
+
+  @action
+  insertAt(idx, value) {
+    this.abc = [...this.abc.slice(0, idx), value, this.abc.slice(this.abc.length - idx)]
+  }
+
+  @action
+  popObject() {
+    this.abc.pop();
+    this.abc = [...this.abc];
+  }
+
+  @action
   pushAction(value) {
     this.abc = [...this.abc, value];
   }
 
   @action
-  removeAction(value) {
+  pushObjects(values) {
+    this.abc = [...this.abc, ...values];
+  }
+
+  @action
+  removeAt(start, len) {
+    this.abc.splice(start, len);
+    this.abc = [...this.abc];
+  }
+
+  @action
+  removeObject(value) {
     let loc = this.abc.length || 0;
     while (--loc >= 0) {
       let curValue = this.abc.at(loc);
@@ -375,6 +573,45 @@ export default class SampleComponent extends Component {
       }
     }
     this.abc = [...this.abc];
+  }
+
+  @action
+  removeObjects(values) {
+    values.forEach(v => {
+      this.removeObject(v);
+    })
+    this.abc = [...this.abc];
+  }
+
+  @action
+  replace(idx, len, values) {
+    this.abc.splice(idx, len, ...values);
+    this.abc = [...this.abc];
+  }
+
+  @action
+  reverseObjects() {
+    this.abc = [...this.abc.reverse()];
+  }
+
+  @action
+  setObjects(values) {
+    this.abc = [...values];
+  }
+
+    @action
+  shiftObject() {
+    this.abc = [...this.abc.shift()];
+  }
+
+  @action
+  unshiftObject(obj) {
+    this.abc = [...this.abc.unshift(obj)];
+  }
+
+  @action
+  unshiftObjects(objs) {
+    this.abc = [...this.abc.unshift(...objs)];
   }
 }
 ```
