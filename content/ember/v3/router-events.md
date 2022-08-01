@@ -41,10 +41,10 @@ export default Router.extend({
 To:
 
 ```js
-import Route from '@ember/routing/route';
+import Router from '@ember/routing/router';
 import { inject as service } from '@ember/service';
 
-export default Route.extend({
+export default Router.extend({
   currentUser: service('current-user'),
 
   init() {
