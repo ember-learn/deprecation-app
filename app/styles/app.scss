@@ -552,7 +552,6 @@ p a:hover {
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: center;
 
   .item {
     margin: $spacing;
@@ -575,6 +574,7 @@ p a:hover {
   @media screen and (min-width: 0) and (max-width: 710px) {
     & {
       flex-wrap: wrap;
+      justify-content: center;
 
       .item {
         display: flex;
