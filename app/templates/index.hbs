@@ -32,14 +32,25 @@
         <li class="list-unstyled" data-test-ember-1-link>
           <LinkTo @route="ember" @model="v1.x">v1.x</LinkTo>
         </li>
-        <li class="list-unstyled" data-test-ember-1-link>
+        <li class="list-unstyled" data-test-ember-2-link>
           <LinkTo @route="ember" @model="v2.x">v2.x</LinkTo>
         </li>
-        <li class="list-unstyled" data-test-ember-1-link>
+        <li class="list-unstyled" data-test-ember-3-link>
           <LinkTo @route="ember" @model="v3.x">v3.x</LinkTo>
         </li>
-        <li class="list-unstyled" data-test-ember-1-link>
+        <li class="list-unstyled" data-test-ember-4-link>
           <LinkTo @route="ember" @model="v4.x">v4.x</LinkTo>
+        </li>
+      </ul>
+    </li>
+    <li class="item list-unstyled">
+      <EmberVersionGraphic @mascot="ember-cli" />
+      <ul class="links">
+        <li class="list-unstyled" data-test-ember-cli-2-link>
+          <LinkTo @route="show" @models={{array "ember-cli" "v2.x" }}>v2.x</LinkTo>
+        </li>
+        <li class="list-unstyled" data-test-ember-cli-4-link>
+          <LinkTo @route="show" @models={{array "ember-cli" "v4.x" }}>v4.x</LinkTo>
         </li>
       </ul>
     </li>
@@ -49,19 +60,8 @@
         <li class="list-unstyled" data-test-ember-data-2-link>
           <LinkTo @route="show" @models={{array "ember-data" "v2.x" }}>v2.x</LinkTo>
         </li>
-        <li class="list-unstyled" data-test-ember-data-2-link>
+        <li class="list-unstyled" data-test-ember-data-3-link>
           <LinkTo @route="show" @models={{array "ember-data" "v3.x" }}>v3.x</LinkTo>
-        </li>
-      </ul>
-    </li>
-    <li class="item list-unstyled">
-      <EmberVersionGraphic @mascot="ember-cli" />
-      <ul class="links">
-        <li class="list-unstyled" data-test-ember-cli-3-link>
-          <LinkTo @route="show" @models={{array "ember-cli" "v2.x" }}>v2.x</LinkTo>
-        </li>
-        <li class="list-unstyled" data-test-ember-cli-3-link>
-          <LinkTo @route="show" @models={{array "ember-cli" "v4.x" }}>v4.x</LinkTo>
         </li>
       </ul>
     </li>
