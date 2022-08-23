@@ -17,48 +17,72 @@ For mutation functions (like `pushObject`, `replace`) or observable properties (
 ### Convenient Functions
 For convenient functions like `filterBy`, `compact`, you can directly convert to use native array methods. This includes following (a list from [`EmberArray` methods](https://api.emberjs.com/ember/release/classes/EmberArray)):
 
-* `any`
-* `compact`
-* `filterBy`
-* `findBy`
-* `getEach`
-* `invoke`
-* `isAny`
-* `isEvery`
-* `mapBy`
-* `objectAt`
-* `objectsAt`
-* `reject`
-* `rejectBy`
-* `sortBy`
-* `toArray`
-* `uniq`
-* `uniqBy`
+##### `any`
 
 Before:
-
 ```js
-const simpleArray = [1, 2, 3, undefined, 3];
-const complexArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.any(callbackFn);
+```
 
-simpleArray.any(value => value === 1);  // true
-simpleArray.compact(); // [1, 2, 3, 3]
-complexArray.filterBy('food', 'beans'); // [{ food: 'beans', isFruit: false }]
-complexArray.findBy('isFruit'); // { food: 'apple', isFruit: true }
-complexArray.getEach('food'); // ['apple', 'beans']
-complexArray.isAny('isFruit'); // true
-complexArray.isEvery('isFruit'); // false
-complexArray.mapBy('food'); // ['apple', 'beans']
-simpleArray.objectAt(1); // 2
-simpleArray.objectsAt([1, 2]); // [2, 3]
-complexArray.reject(el => el.isFruit); // [{ food: 'apple', isFruit: true }]
-complexArray.rejectBy('isFruit'); // [{ food: 'apple', isFruit: true }]
-complexArray.toArray(); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-simpleArray.uniq(); // [1, 2, 3, undefined]
-complexArray.sortBy('food', 'isFruit'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-complexArray.uniqBy('food'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
+After:
+```js
+someArray.some(callbackFn);
+```
+##### `compact`
 
-// invoke
+Before:
+```js
+someArray.compact();
+```
+
+After:
+```js
+someArray.filter(val => val !=== undefined && val !== null);
+```
+##### `filterBy`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.filterBy('food', 'beans'); // [{ food: 'beans', isFruit: false }]
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.filter(el => el.food === 'beans'); // [{ food: 'beans', isFruit: false }]
+```
+##### `findBy`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.findBy('isFruit'); // { food: 'apple', isFruit: true }
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.find(el => e.isFruit); // { food: 'apple', isFruit: true }
+```
+##### `getEach`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.getEach('food'); // ['apple', 'beans']
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.map(el => el.food); // ['apple', 'beans']
+```
+
+##### `invoke`
+
+Before:
+```js
 class Person {
   name;
 
@@ -75,68 +99,7 @@ class Person {
 ```
 
 After:
-
 ```js
-import { get } from '@ember/object';
-import { sortBy, uniqBy } from 'lodash-es';
-
-const simpleArray = [1, 2, 3, undefined];
-const complexArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
-
-// any
-simpleArray.some(value => value === 1);  // true
-// compact
-simpleArray.filter(value => value !== null && value !== undefined); // [1, 2, 3]
-// filterBy
-complexArray.filter(el => get(el, 'food') === 'beans'); // [{ food: 'beans', isFruit: false }]
-// findBy
-complexArray.find(el => get(el, 'isFruit')); // { food: 'apple', isFruit: true }
-// getEach
-complexArray.map(el => get(el, 'food')); // ['apple', 'beans']
-// isAny
-complexArray.any(el => el.isFruit); // true
-// isEvery
-complexArray.every(el => el.isFruit); // false
-// mapBy
-complexArray.map(el => el.food); // ['apple', 'beans']
-// objectAt
-simpleArray[1] // 2
-// objectsAt
-[1, 3].map(index => simpleArray[index]); //[2, 3]
-// reject
-complexArray.filter(el => !el.isFruit); // [{ food: 'apple', isFruit: true }]
-// rejectBy
-complexArray.filter(el => !el.isFruit); // [{ food: 'apple', isFruit: true }]
-// toArray
-[...complexArray] // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-// uniq
-[...new Set(simpleArray)] // [1, 2, 3, undefined]
-// uniqBy
-complexArray.reduce(
-  (unique, item) => {
-    if (!unique.find(i => item[prop] === i[prop])) {
-      unique.push(item);
-    }
-    return unique;
-  },
-  []
-); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-// sortBy
-[...complexArray].sort((a, b) => {
-  return a.food?.localCompare(b.food)
-    ? a.food?.localCompare(b.food)
-    : a.isFruit - b.isFruit;
-}); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-
-// You may also instead rely on methods from another library like [lodash](https://lodash.com/).
-// Keep in mind that different libraries will behave in slightly different ways, so make sure any critical transformations are thoroughly tested.
-
-// uniqBy
-uniqBy(complexArray, 'food'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-// sortBy
-sortBy(complexArray, ['food', 'isFruit']); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
-
-// invoke
 class Person {
   name;
 
@@ -151,21 +114,184 @@ class Person {
 
 [new Person('Tom'), new Person('Joe')].map(person => person['greet']?.('Hi')); // ['Hi Tom', 'Hi Joe']
 ```
+##### `isAny`
+
+Before
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.isAny('isFruit'); // true
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.any(el => el.isFruit); // true
+```
+
+##### `isEvery`
+Before:
+
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.isEvery('isFruit'); // false
+```
+
+After:
+
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.every(el => el.isFruit); // false
+```
+##### `mapBy`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.mapBy('food'); // ['apple', 'beans']
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.map(el => el.food); // ['apple', 'beans']
+```
+
+##### `objectAt`
+
+Before
+```js
+const someArray = [1, 2, 3, undefined];
+someArray.objectAt(1); // 2
+```
+
+After:
+```js
+const someArray = [1, 2, 3, undefined];
+someArray[1] // 2
+```
+
+##### `objectsAt`
+
+Before:
+```js
+const someArray = [1, 2, 3, undefined];
+someArray.objectsAt([1, 2]); // [2, 3]
+```
+
+After:
+```js
+const someArray = [1, 2, 3, undefined];
+[1, 2].map(index => someArray[index]); //[2, 3]
+```
+
+##### `reject`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.reject(el => el.isFruit); // [{ food: 'beans', isFruit: false }]
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
+```
+##### `rejectBy`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.rejectBy('isFruit'); // [{ food: 'beans', isFruit: false }]
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
+```
+##### `sortBy`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.sortBy('food', 'isFruit'); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+[...someArray].sort((a, b) => {
+  return a.food?.localCompare(b.food)
+    ? a.food?.localCompare(b.food)
+    : a.isFruit - b.isFruit;
+}); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
+```
+##### `toArray`
+
+Before:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray.toArray(); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
+```
+
+After:
+```js
+const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+[...someArray] // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
+```
+
+##### `uniq`
+
+Before:
+```js
+const someArray = [1, 2, 3, undefined, 3];
+someArray.uniq(); // [1, 2, 3, undefined]
+```
+
+After:
+```js
+const someArray = [1, 2, 3, undefined, 3];
+[...new Set(someArray)] // [1, 2, 3, undefined]
+```
+
+##### `uniqBy`
+
+Before:
+```js
+const someArray = [{ food: 'apple' }, { food: 'beans' }, { food: 'apple' }];
+someArray.uniqBy('food'); // [{ food: 'apple' }, { food: 'beans' }]
+```
+
+After:
+```js
+const someArray = [{ food: 'apple' }, { food: 'beans' }, { food: 'apple' }];
+someArray.reduce(
+  (unique, item) => {
+    if (!unique.find(i => item.food === i.food)) {
+      unique.push(item);
+    }
+    return unique;
+  },
+  []
+); // [{ food: 'apple' }, { food: 'beans' }]
+```
+
+You may also instead rely on methods from another library like [lodash](https://lodash.com/).
+Keep in mind that different libraries will behave in slightly different ways, so make sure any critical transformations are thoroughly tested.
 
 #### Some special cases
 ##### `without`
 Before
 ```js
-const simpleArray = ['a', 'b', 'c'];
-
-simpleArray.without('a'); // ['b', 'c']
+const someArray = ['a', 'b', 'c'];
+someArray.without('a'); // ['b', 'c']
 ```
 
 After
 ```js
-const simpleArray = ['a', 'b', 'c'];
-
-simpleArray.filter(el => el !== 'a'); // ['b', 'c']
+const someArray = ['a', 'b', 'c'];
+someArray.filter(el => el !== 'a'); // ['b', 'c']
 ```
 
 Please make sure `without` reactivity is fully tested.
