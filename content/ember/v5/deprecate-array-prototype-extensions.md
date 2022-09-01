@@ -14,10 +14,10 @@ For mutation functions (like `pushObject`, `replace`) or observable properties (
 2. use array native methods;
 3. fully test to make sure the reactivity is maintained.
 
-### Convenient Functions
+## Convenient Functions
 For convenient functions like `filterBy`, `compact`, you can directly convert to use native array methods. This includes following (a list from [`EmberArray` methods](https://api.emberjs.com/ember/release/classes/EmberArray)):
 
-##### `any`
+#### `any`
 
 Before:
 ```js
@@ -28,7 +28,7 @@ After:
 ```js
 someArray.some(callbackFn);
 ```
-##### `compact`
+#### `compact`
 
 Before:
 ```js
@@ -39,7 +39,7 @@ After:
 ```js
 someArray.filter(val => val !=== undefined && val !== null);
 ```
-##### `filterBy`
+#### `filterBy`
 
 Before:
 ```js
@@ -52,7 +52,7 @@ After:
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
 someArray.filter(el => el.food === 'beans'); // [{ food: 'beans', isFruit: false }]
 ```
-##### `findBy`
+#### `findBy`
 
 Before:
 ```js
@@ -65,7 +65,7 @@ After:
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
 someArray.find(el => e.isFruit); // { food: 'apple', isFruit: true }
 ```
-##### `getEach`
+#### `getEach`
 
 Before:
 ```js
@@ -79,7 +79,7 @@ const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: f
 someArray.map(el => el.food); // ['apple', 'beans']
 ```
 
-##### `invoke`
+#### `invoke`
 
 Before:
 ```js
@@ -114,7 +114,7 @@ class Person {
 
 [new Person('Tom'), new Person('Joe')].map(person => person['greet']?.('Hi')); // ['Hi Tom', 'Hi Joe']
 ```
-##### `isAny`
+#### `isAny`
 
 Before
 ```js
@@ -128,7 +128,7 @@ const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: f
 someArray.any(el => el.isFruit); // true
 ```
 
-##### `isEvery`
+#### `isEvery`
 Before:
 
 ```js
@@ -142,7 +142,7 @@ After:
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
 someArray.every(el => el.isFruit); // false
 ```
-##### `mapBy`
+#### `mapBy`
 
 Before:
 ```js
@@ -156,7 +156,7 @@ const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: f
 someArray.map(el => el.food); // ['apple', 'beans']
 ```
 
-##### `objectAt`
+#### `objectAt`
 
 Before
 ```js
@@ -170,7 +170,7 @@ const someArray = [1, 2, 3, undefined];
 someArray[1] // 2
 ```
 
-##### `objectsAt`
+#### `objectsAt`
 
 Before:
 ```js
@@ -184,7 +184,7 @@ const someArray = [1, 2, 3, undefined];
 [1, 2].map(index => someArray[index]); //[2, 3]
 ```
 
-##### `reject`
+#### `reject`
 
 Before:
 ```js
@@ -197,7 +197,7 @@ After:
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
 someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
 ```
-##### `rejectBy`
+#### `rejectBy`
 
 Before:
 ```js
@@ -210,7 +210,7 @@ After:
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
 someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
 ```
-##### `sortBy`
+#### `sortBy`
 
 Before:
 ```js
@@ -227,7 +227,7 @@ const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: f
     : a.isFruit - b.isFruit;
 }); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 ```
-##### `toArray`
+#### `toArray`
 
 Before:
 ```js
@@ -241,7 +241,7 @@ const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: f
 [...someArray] // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 ```
 
-##### `uniq`
+#### `uniq`
 
 Before:
 ```js
@@ -255,7 +255,7 @@ const someArray = [1, 2, 3, undefined, 3];
 [...new Set(someArray)] // [1, 2, 3, undefined]
 ```
 
-##### `uniqBy`
+#### `uniqBy`
 
 Before:
 ```js
@@ -280,8 +280,8 @@ someArray.reduce(
 You may also instead rely on methods from another library like [lodash](https://lodash.com/).
 Keep in mind that different libraries will behave in slightly different ways, so make sure any critical transformations are thoroughly tested.
 
-#### Some special cases
-##### `without`
+### Some special cases
+#### `without`
 Before
 ```js
 const someArray = ['a', 'b', 'c'];
@@ -296,7 +296,7 @@ someArray.filter(el => el !== 'a'); // ['b', 'c']
 
 Please make sure `without` reactivity is fully tested.
 
-##### `setEach`
+#### `setEach`
 `setEach` method internally implements `set` which responds to reactivity. You can either also use `set` or convert to `@tracked` properties.
 
 Before
@@ -342,10 +342,10 @@ items.forEach(item => {
 }); // items = [{ name: 'Joe', zipCode: '10011' }, { name: 'Matt', zipCode: '10011' }]
 ```
 
-### Observable Properties
+## Observable Properties
 `firstObject`, `lastObject` are observable properties. Changing directly from `firstObject` to `at(0)` or `[0]` might cause issues that the properties are no longer reactive.
 
-#### Used in template
+### Used in template
 If the `firstObject` and `lastObject` are used in a template, you can convert to use `get` helper safely as `get` helper handles the reactivity already.
 
 Before
@@ -360,7 +360,7 @@ After
 
 You can also leverage fixers provided by [`ember-template-lint/no-array-prototype-extensions`](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-array-prototype-extensions.md).
 
-#### Used in js
+### Used in js
 If the `firstObject` and `lastObject` are used in js files and you used them in an observable way, you will need to convert the accessors to `@tracked` array or `TrackedArray`.
 
 Before
@@ -423,25 +423,10 @@ export default class SampleComponent extends Component {
 }
 ```
 
-### Mutation methods
+## Mutation methods
 Mutation methods are observable-based, which means you should always convert the accessors to `@tracked` or `TrackedArray` in order to maintain the reactivity. This includes following (a list from [`MutableArray` methods](https://api.emberjs.com/ember/4.3/classes/MutableArray)):
 
-* `addObject`
-* `addObjects`
-* `clear`
-* `insertAt`
-* `popObject`
-* `pushObject`
-* `pushObjects`
-* `removeAt`
-* `removeObject`
-* `removeObjects`
-* `replace`
-* `reverseObjects`
-* `setObjects`
-* `shiftObject`
-* `unshiftObject`
-* `unshiftObjects`
+#### `addObject`
 
 Before
 ```js
@@ -452,81 +437,6 @@ export default class SampleComponent extends Component {
   @action
   addObject(value) {
     this.abc.addObject(value);
-  }
-
-  @action
-  addObjects(values) {
-    this.abc.addObjects(values);
-  }
-
-  @action
-  clear() {
-    this.abc.clear();
-  }
-
-  @action
-  insertAt(idx, value) {
-    this.abc.insertAt(idx, value);
-  }
-
-  @action
-  popObject() {
-    this.abc.popObject();
-  }
-
-  @action
-  pushAction(value) {
-    this.abc.pushObject(value);
-  }
-
-  @action
-  pushObjects(values) {
-    this.abc.pushObjects(values);
-  }
-
-  @action
-  removeAt(start, len) {
-    this.abc.removeAt(start, len);
-  }
-
-  @action
-  removeAction(value) {
-    this.abc.removeObject(value);
-  }
-
-  @action
-  removeObjects(values) {
-    this.abc.removeObjects(values);
-  }
-
-  @action
-  replace(idx, len, values) {
-    this.abc.replace(idx, len, values);
-  }
-
-  @action
-  reverseObjects() {
-    this.abc.reverseObjects();
-  }
-
-  @action
-  setObjects(values) {
-    this.abc.setObjects(values);
-  }
-
-  @action
-  shiftObject() {
-    this.abc.shiftObject();
-  }
-
-  @action
-  unshiftObject(obj) {
-    this.abc.unshiftObject(obj);
-  }
-
-  @action
-  unshiftObjects(objs) {
-    this.abc.unshiftObjects(objs);
   }
 }
 ```
@@ -539,7 +449,7 @@ import { action } from '@ember/object';
 import { TrackedArray } from 'tracked-built-ins';
 
 export default class SampleComponent extends Component {
-  abc = new TrackedArray();
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   addObject(value) {
@@ -547,44 +457,466 @@ export default class SampleComponent extends Component {
       this.abc.push(value);
     }
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  addObject(value) {
+    if (!this.abc.includes(value)) {
+      this.abc = [...this.abc, value];
+    }
+  }
+}
+```
+#### `addObjects`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  addObjects(value) {
+    this.abc.addObjects(value);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
+
+  _addObject(value) {
+    if (!this.abc.includes(value)) {
+      this.abc.push(value);
+    }
+  }
 
   @action
   addObjects(values) {
-    values.forEach(v => this.addObject(v))
+    values.forEach(v => this._addObject(v))
+  }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  _addObject(value) {
+    if (!this.abc.includes(value)) {
+      this.abc = [...this.abc, value];
+    }
   }
 
   @action
-  clear() {
+  addObjects(values) {
+    values.forEach(v => this._addObject(v))
+  }
+}
+```
+
+#### `clear`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  clear(value) {
+    this.abc.clear();
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
+
+  @action
+  clear(value) {
     this.abc.splice(0, this.abc.length);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  clear() {
+    this.abc = [];
+  }
+}
+```
+
+#### `insertAt`
+
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  insertAt(idx, value) {
+    this.abc.insertAt(idx, value);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   insertAt(idx, value) {
     this.abc.splice(idx, 0, value);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  insertAt(idx, value) {
+    this.abc = [...this.abc.slice(0, idx), value, this.abc.slice(this.abc.length - idx)]
+  }
+}
+```
+
+#### `popObject`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  popObject() {
+    this.abc.popObject();
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   popObject() {
     this.abc.pop();
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
 
   @action
-  pushAction(value) {
+  popObject() {
+    this.abc.pop();
+    this.abc = [...this.abc];
+  }
+}
+```
+
+#### `pushObject`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  pushObject(value) {
+    this.abc.pushObject(value);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
+
+  @action
+  pushObject(value) {
     this.abc.push(value);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  pushObject(value) {
+    this.abc = [...this.abc, value];
+  }
+}
+```
+
+#### `pushObjects`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  pushObjects(values) {
+    this.abc.pushObjects(values);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   pushObjects(values) {
     this.abc.splice(this.abc.length, 0, ...values);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  pushObjects(values) {
+    this.abc = [...this.abc, ...values];
+  }
+}
+```
+
+#### `removeAt`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  removeAt(start, len) {
+    this.abc.removeAt(start, len);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   removeAt(start, len) {
     this.abc.splice(start, len);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  removeAt(start, len) {
+    this.abc.splice(start, len);
+    this.abc = [...this.abc];
+  }
+}
+```
+
+#### `removeObject`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
 
   @action
   removeObject(value) {
+    this.abc.removeObject(value);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
+
+  @action
+  removeObject(value) {
+    let loc = this.abc.length || 0;
+    while (--loc >= 0) {
+      let curValue = this.abc.at(loc);
+
+      if (curValue === value) {
+        this.abc.splice(loc, 1);
+      }
+    }
+  }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  removeObject(value) {
+    let loc = this.abc.length || 0;
+    while (--loc >= 0) {
+      let curValue = this.abc.at(loc);
+
+      if (curValue === value) {
+        this.abc.splice(loc, 1);
+      }
+    }
+    this.abc = [...this.abc];
+  }
+}
+```
+
+#### `removeObjects`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  removeObjects(values) {
+    this.abc.removeObjects(values);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
+
+  _removeObject(value) {
     let loc = this.abc.length || 0;
     while (--loc >= 0) {
       let curValue = this.abc.at(loc);
@@ -598,34 +930,308 @@ export default class SampleComponent extends Component {
   @action
   removeObjects(values) {
     values.forEach(v => {
-      this.removeObject(v);
+      this._removeObject(v);
+    });
+  }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  _removeObject(value) {
+    let loc = this.abc.length || 0;
+    while (--loc >= 0) {
+      let curValue = this.abc.at(loc);
+
+      if (curValue === value) {
+        this.abc.splice(loc, 1);
+      }
+    }
+    this.abc = [...this.abc];
+  }
+
+  @action
+  removeObjects(values) {
+    values.forEach(v => {
+      this._removeObject(v);
     })
   }
+}
+```
+
+#### `replace`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  replace(idx, len, values) {
+    this.abc.replace(idx, len, values);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   replace(idx, len, values) {
     this.abc.splice(idx, len, ...values);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  replace(idx, len, values) {
+    this.abc.splice(idx, len, ...values);
+    this.abc = [...this.abc];
+  }
+}
+```
+
+#### `reverseObjects`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  reverseObjects() {
+    this.abc.reverseObjects();
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   reverseObjects() {
     this.abc.reverse();
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  reverseObjects() {
+    this.abc = [...this.abc.reverse()];
+  }
+}
+```
+
+#### `setObjects`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  setObjects(values) {
+    this.abc.setObjects(values);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   setObjects(values) {
     this.abc.splice(0, this.abc.length, ...values);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  setObjects(values) {
+    this.abc = [...values];
+  }
+}
+```
+
+#### `shiftObject`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  shiftObject() {
+    this.abc.shiftObject();
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   shiftObject() {
     this.abc.shift();
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  shiftObject() {
+    this.abc.shift();
+    this.abc = [...this.abc]
+  }
+}
+```
+
+#### `unshiftObject`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  unshiftObject(obj) {
+    this.abc.unshiftObject(obj);
+  }
+}
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   unshiftObject(obj) {
     this.abc.unshift(obj);
   }
+}
+```
+or
+
+```js
+// @tracked
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+export default class SampleComponent extends Component {
+  @tracked abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  unshiftObject(obj) {
+    this.abc.unshift(obj);
+    this.abc = [...this.abc];
+  }
+}
+```
+
+#### `unshiftObjects`
+Before
+```js
+import Component from '@glimmer/component';
+export default class SampleComponent extends Component {
+  abc = ['x', 'y', 'z', 'x'];
+
+  @action
+  unshiftObjects(objs) {
+    this.abc.unshiftObjects(objs);
+  }
+```
+
+After
+```js
+// TrackedArray
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { TrackedArray } from 'tracked-built-ins';
+
+export default class SampleComponent extends Component {
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   @action
   unshiftObjects(objs) {
@@ -642,105 +1248,16 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class SampleComponent extends Component {
-  @tracked abc = [];
-
-  @action
-  addObject(value) {
-    if (!this.abc.includes(value)) {
-      [...this.abc, value];
-    }
-  }
-
-  @action
-  addObjects(values) {
-    values.forEach(v => this.addObject(v))
-  }
-
-  @action
-  clear() {
-    this.abc = [];
-  }
-
-  @action
-  insertAt(idx, value) {
-    this.abc = [...this.abc.slice(0, idx), value, this.abc.slice(this.abc.length - idx)]
-  }
-
-  @action
-  popObject() {
-    this.abc.pop();
-    this.abc = [...this.abc];
-  }
-
-  @action
-  pushAction(value) {
-    this.abc = [...this.abc, value];
-  }
-
-  @action
-  pushObjects(values) {
-    this.abc = [...this.abc, ...values];
-  }
-
-  @action
-  removeAt(start, len) {
-    this.abc.splice(start, len);
-    this.abc = [...this.abc];
-  }
-
-  @action
-  removeObject(value) {
-    let loc = this.abc.length || 0;
-    while (--loc >= 0) {
-      let curValue = this.abc.at(loc);
-
-      if (curValue === value) {
-        this.abc.splice(loc, 1);
-      }
-    }
-    this.abc = [...this.abc];
-  }
-
-  @action
-  removeObjects(values) {
-    values.forEach(v => {
-      this.removeObject(v);
-    })
-    this.abc = [...this.abc];
-  }
-
-  @action
-  replace(idx, len, values) {
-    this.abc.splice(idx, len, ...values);
-    this.abc = [...this.abc];
-  }
-
-  @action
-  reverseObjects() {
-    this.abc = [...this.abc.reverse()];
-  }
-
-  @action
-  setObjects(values) {
-    this.abc = [...values];
-  }
-
-    @action
-  shiftObject() {
-    this.abc = [...this.abc.shift()];
-  }
-
-  @action
-  unshiftObject(obj) {
-    this.abc = [...this.abc.unshift(obj)];
-  }
+  @tracked abc = ['x', 'y', 'z', 'x'];
 
   @action
   unshiftObjects(objs) {
-    this.abc = [...this.abc.unshift(...objs)];
+    this.abc.unshift(...objs)
+    this.abc = [...this.abc];
   }
 }
 ```
+
 
 It's always recommended to reference the existing implementation of the method you are trying to convert. This can make sure functionalities are kept as it was. Implementation details can be found in [`MutableArray`](https://api.emberjs.com/ember/release/classes/MutableArray), for example [`removeObject`](https://github.com/emberjs/ember.js/blob/v4.3.0/packages/%40ember/-internals/runtime/lib/mixins/array.js#L1619).
 
