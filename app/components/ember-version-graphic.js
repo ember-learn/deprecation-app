@@ -6,6 +6,6 @@ export default class EmberVersionGraphic extends Component {
   }
 
   get textContent() {
-    return this.args.text || '0.x';
+    return this.args.text || '';
   }
 }
