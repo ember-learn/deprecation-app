@@ -1,6 +1,7 @@
 import semverCompare from 'semver-compare';
 
 const UPCOMING = 'Upcoming Features';
+const GLIMMER = 'Glimmer Internals';
 
 export default function processResults(query) {
   let results = query.toArray().reduce((results, item) => {
@@ -14,6 +15,9 @@ export default function processResults(query) {
   }, []);
 
   results.sort((a, b) => semverCompare(a.since, b.since));
+  let glimmer = results.find(({ since }) => since === GLIMMER);
+  if (glimmer) results.push(results.shift());
+
   let upcoming = results.find(({ since }) => since === UPCOMING);
   if (upcoming) results.push(results.shift());
 
