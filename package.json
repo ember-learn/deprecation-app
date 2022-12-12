@@ -19,6 +19,7 @@
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
+    "lint:md": "remark . --frail --quiet",
     "start": "ember serve",
     "test": "ember test"
   },
@@ -82,6 +83,8 @@
     "prettier": "^2.6.2",
     "qunit": "^2.19.1",
     "qunit-dom": "^2.0.0",
+    "remark-cli": "^11.0.0",
+    "remark-lint": "^9.1.1",
     "sass": "^1.53.0",
     "semver-compare": "^1.0.0"
   },
