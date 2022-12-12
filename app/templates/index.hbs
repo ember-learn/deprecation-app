@@ -36,18 +36,24 @@
     <li class="item list-unstyled">
       <EmberVersionGraphic @mascot="ember" />
       <ul class="links">
-        <li class="list-unstyled" data-test-ember-1-link>
+        <div class="row">
+          <div class="column">
+            <li class="list-unstyled" data-test-ember-1-link>
           <LinkTo @route="ember" @model="v1.x">v1.x</LinkTo>
-        </li>
-        <li class="list-unstyled" data-test-ember-2-link>
+            </li>
+            <li class="list-unstyled" data-test-ember-2-link>
           <LinkTo @route="ember" @model="v2.x">v2.x</LinkTo>
-        </li>
-        <li class="list-unstyled" data-test-ember-3-link>
+            </li>
+            <li class="list-unstyled" data-test-ember-3-link>
           <LinkTo @route="ember" @model="v3.x">v3.x</LinkTo>
-        </li>
-        <li class="list-unstyled" data-test-ember-4-link>
+            </li>
+          </div>
+          <div class="column">
+            <li class="list-unstyled" data-test-ember-4-link>
           <LinkTo @route="ember" @model="v4.x">v4.x</LinkTo>
-        </li>
+            </li>
+          </div>
+        </div>
       </ul>
     </li>
     <li class="item list-unstyled">
