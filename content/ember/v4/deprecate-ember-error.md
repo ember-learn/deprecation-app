@@ -18,3 +18,9 @@ After:
 ``` javascript
 throw new Error("My Error");
 ```
+
+The `ember-error-codemod` may be used to resolve this issue:
+
+``` shell
+npx ember-error-codemod remove path/of/files/ or/some**/*glob.js
+```
