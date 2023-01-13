@@ -1,0 +1,10 @@
+{{page-title @model.title}}
+
+{{!-- TODO
+  Add links to go back to other deprecation guides/home page 
+  Remove the link anchor
+  use an h1 for the deprecation heading
+--}}
+<DeprecationArticle @model={{@model}} @renderIdOrUntil={{false}} />
+
+{{outlet}}
