@@ -14,29 +14,35 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
     return isFastBoot ? '' : config.apiHost;
   }
 
-  buildURL(modelName, id, snapshot, requestType, query) {
-    let url;
+  // TODO put this back, maybe as urlForQuery
+  //
+  // buildURL(modelName, id, snapshot, requestType, query) {
+  //   let url;
 
-    if (requestType === 'queryRecord') {
-      url = [modelName, `${query.path}.json`];
-    } else if (requestType === 'query') {
-      url = [modelName, `${query.path}-${query.version}.json`];
-    } else {
-      return this.super;
-    }
+  //   if (requestType === 'queryRecord') {
+  //     url = [modelName, `${query.path}.json`];
+  //   } else if (requestType === 'query') {
+  //     url = [modelName, `${query.path}-${query.version}.json`];
+  //   } else {
+  //     return this.super;
+  //   }
 
-    let host = this.host;
-    let prefix = this.urlPrefix();
+  //   let host = this.host;
+  //   let prefix = this.urlPrefix();
 
-    if (prefix) {
-      url.unshift(prefix);
-    }
+  //   if (prefix) {
+  //     url.unshift(prefix);
+  //   }
 
-    url = url.join('/');
-    if (!host && url && url.charAt(0) !== '/') {
-      url = '/' + url;
-    }
+  //   url = url.join('/');
+  //   if (!host && url && url.charAt(0) !== '/') {
+  //     url = '/' + url;
+  //   }
 
-    return url;
+  //   return url;
+  // }
+
+  urlForFindRecord(id, modelName) {
+    return `/${modelName}/${id}.json`;
   }
 }
