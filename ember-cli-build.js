@@ -3,8 +3,6 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
-  let prepend = '';
-
   let app = new EmberApp(defaults, {
     prember: {
       urls: [
