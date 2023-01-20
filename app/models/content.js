@@ -6,4 +6,9 @@ export default class ContentModel extends Model {
   @attr until;
   @attr since;
   @attr anchor;
+
+  // v1 has different meta, so conditionally render it
+  get renderUntil() {
+    return !this.since.startsWith('1.');
+  }
 }
