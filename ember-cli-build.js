@@ -5,11 +5,6 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function (defaults) {
   let prepend = '';
 
-  let fastlyDomain = process.env.FASTLY_DOMAIN;
-  if ('FASTLY_DOMAIN' in process.env) {
-    prepend = `https://${fastlyDomain}/`;
-  }
-
   let app = new EmberApp(defaults, {
     prember: {
       urls: [
@@ -27,10 +22,6 @@ module.exports = function (defaults) {
         '/ember-cli/v2.x',
         '/ember-cli/v4.x',
       ],
-    },
-
-    fingerprint: {
-      prepend,
     },
 
     'ember-cli-string-helpers': {
