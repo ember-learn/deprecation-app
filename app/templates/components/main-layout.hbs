@@ -10,7 +10,7 @@
     {{#each @sortedGroupedResults as |result|}}
       <h2 class="anchorable-toc rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
       {{#each result.contents as |content|}}
-        <DeprecationArticle @model={{content}} @renderIdOrUntil={{@renderIdOrUntil}} />
+        <DeprecationArticle @model={{content}} />
       {{/each}}
     {{/each}}
   {{/if}}

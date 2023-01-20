@@ -10,10 +10,8 @@
     }}
   </h3>
   <div class="my-2">
-    {{#if @renderIdOrUntil}}
+    {{#if @model.renderUntil}}
       <div><span class="bold">until: </span>{{@model.until}}</div>
-    {{/if}}
-    {{#if @renderIdOrUntil}}
       <div><span class="bold">id: </span>{{@model.id}}</div>
     {{/if}}
   </div>
