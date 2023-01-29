@@ -1,14 +1,5 @@
 <div class="padding-vertical-small bg-light-muted rounded-sm">
-  <h3 id="{{id-for-deprecation @model.id @model.anchor}}">
-    <a href="#{{id-for-deprecation @model.id @model.anchor}}" title={{@model.title}} class="toc-anchor">
-      §
-    </a>
-    {{markdown-to-html
-      @model.title
-      extensions="no-wrapper"
-      tagName=""
-    }}
-  </h3>
+  {{yield}}
   <div class="my-2">
     {{#if @model.renderUntil}}
       <div><span class="bold">until: </span>{{@model.until}}</div>
