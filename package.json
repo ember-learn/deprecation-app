@@ -28,7 +28,7 @@
     "@ember/test-helpers": "^2.6.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.1.1",
-    "@percy/cli": "^v1.2.1",
+    "@percy/cli": "^v1.17.0",
     "@percy/ember": "^3.0.0",
     "algoliasearch": "^3.35.1",
     "babel-eslint": "^10.1.0",
