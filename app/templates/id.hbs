@@ -1,10 +1,13 @@
 {{page-title @model.title}}
-
-{{!-- TODO
-  Add links to go back to other deprecation guides/home page 
-  Remove the link anchor
-  use an h1 for the deprecation heading
---}}
+<LinkTo @route="index">&laquo; All deprecation guides</LinkTo>
+<h1 id="{{id-for-deprecation @model.id @model.anchor}}">
+  Deprecation Guide for
+  {{markdown-to-html
+    @model.title
+    extensions="no-wrapper"
+    tagName=""
+  }}
+</h1>
 <DeprecationArticle @model={{@model}} />
 
 {{outlet}}

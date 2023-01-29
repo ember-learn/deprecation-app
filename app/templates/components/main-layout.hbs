@@ -10,7 +10,18 @@
     {{#each @sortedGroupedResults as |result|}}
       <h2 class="anchorable-toc rounded-lg padding-small">Deprecations Added in {{result.since}} </h2>
       {{#each result.contents as |content|}}
-        <DeprecationArticle @model={{content}} />
+        <DeprecationArticle @model={{content}}>
+          <h3 id="{{id-for-deprecation content.id content.anchor}}">
+            <a href="#{{id-for-deprecation content.id content.anchor}}" title={{content.title}} class="toc-anchor">
+              §
+            </a>
+            {{markdown-to-html
+              content.title
+              extensions="no-wrapper"
+              tagName=""
+            }}
+          </h3>
+        </DeprecationArticle>
       {{/each}}
     {{/each}}
   {{/if}}
