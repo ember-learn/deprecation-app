@@ -84,7 +84,7 @@
     "qunit-dom": "^2.0.0",
     "remark-cli": "^11.0.0",
     "remark-lint": "^9.1.1",
-    "sass": "^1.53.0",
+    "sass": "^1.57.1",
     "semver-compare": "^1.0.0"
   },
   "ember": {
