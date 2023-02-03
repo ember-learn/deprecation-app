@@ -99,5 +99,8 @@
     "paths": [
       "lib/content-docs-generator"
     ]
-  }
+  },
+  "fastbootDependencies": [
+    "crypto"
+  ]
 }
