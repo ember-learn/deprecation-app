@@ -86,7 +86,8 @@
     "remark-lint": "^9.1.1",
     "sass": "^1.58.0",
     "semver-compare": "^1.0.0",
-    "webpack": "^5.76.2"
+    "webpack": "^5.76.2",
+    "walk-sync": "^3.0.0"
   },
   "ember": {
     "edition": "octane"
