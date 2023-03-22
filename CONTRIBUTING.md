@@ -15,7 +15,7 @@ For guidance on the structure of a deprecation file, please see `deprecation-tem
 First-time contributors are encouraged to choose issues that are labeled
 "help wanted" or "good for new contributors." If you have questions, want a
 suggestion of what to work on, or would like a buddy to pair with, you can
-join the #-team-learning channel in the
+join the #dev-ember-learning channel in the
 [Ember Community Discord](https://discordapp.com/invite/zT3asNS).
 
 Fork this repository (click "fork" on the repository's home page in GitHub)
@@ -27,7 +27,7 @@ As you make commits, reference the issue number in your commit message, such as
 `git commit -m "add glasses to nearsighted hamster (#6217)"`
 
 Once you're at the point that you'd like feedback, submit a Pull Request (new
-Pull Request button). Choose `master` for the base and your branch name for `compare`,
+Pull Request button). Choose `main` for the base and your branch name for `compare`,
 then submit it!
 
 Your PR will be reviewed by another contributor, and then either merged or have
@@ -36,12 +36,12 @@ changes requested.
 ## Keeping your fork updated
 
 As you tackle new Issues, you'll want to be sure that you always start by working
-on the most recent code. To sync up your fork's  `master` with a parent repository's
-master, set an upstream and pull from it. For this to work, you should make sure
-you're always committing to a branch, not master.
+on the most recent code. To sync up your fork's  `main` with a parent repository's
+main, set an upstream and pull from it. For this to work, you should make sure
+you're always committing to a branch, not main.
 
 ```
 git remote add upstream https://github.com/ember-learn/guides-source.git
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 ```
