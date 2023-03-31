@@ -37,7 +37,7 @@ someArray.compact();
 
 After:
 ```js
-someArray.filter(val => val !=== undefined && val !== null);
+someArray.filter(val => val !== undefined && val !== null);
 ```
 #### `filterBy`
 
