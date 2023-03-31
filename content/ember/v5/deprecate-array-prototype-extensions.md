@@ -222,8 +222,8 @@ After:
 ```js
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
 [...someArray].sort((a, b) => {
-  return a.food?.localCompare(b.food)
-    ? a.food?.localCompare(b.food)
+  return a.food?.localeCompare(b.food)
+    ? a.food?.localeCompare(b.food)
     : a.isFruit - b.isFruit;
 }); // [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }]
 ```
