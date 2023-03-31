@@ -63,7 +63,7 @@ someArray.findBy('isFruit'); // { food: 'apple', isFruit: true }
 After:
 ```js
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
-someArray.find(el => e.isFruit); // { food: 'apple', isFruit: true }
+someArray.find(el => el.isFruit); // { food: 'apple', isFruit: true }
 ```
 #### `getEach`
 
