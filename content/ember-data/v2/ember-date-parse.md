@@ -1,9 +1,9 @@
 ---
-id: ember-date-parse
 title: Ember.Date.parse
-until: '3.0.0'
-since: '2.7'
+until: 3.0.0
+since: "2.7"
 ---
+
 
 `Ember.Date.parse` was created as a [progressive enhancement for ISO
 8601](https://github.com/csnover/js-iso8601) support in browsers that do not

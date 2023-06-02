@@ -1,9 +1,9 @@
 ---
-id: handlebars-htmlbars-helpers
 title: Handlebars / HTMLBars helpers
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 All the various ways to create helpers on the Handlebars and HTMLBars namespace
 have been deprecated in favor of the

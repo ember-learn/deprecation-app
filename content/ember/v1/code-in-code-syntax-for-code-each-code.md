@@ -1,9 +1,9 @@
 ---
-id: code-in-code-syntax-for-code-each-code
 title: in syntax for {{each}}
-until: ''
-since: '1.12'
+until: ""
+since: "1.12"
 ---
+
 
 The `in` syntax is used to name an iterated value with `{{each}}`. Block
 params, introduced Ember 1.10, obsoletes the `in` syntax.

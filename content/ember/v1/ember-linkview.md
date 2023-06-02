@@ -1,9 +1,9 @@
 ---
-id: ember-linkview
 title: Ember.LinkView
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 As a consequence of the deprecation of `Ember.View`, many internal views have
 been ported to component. `Ember.LinkView`, the class that backs the

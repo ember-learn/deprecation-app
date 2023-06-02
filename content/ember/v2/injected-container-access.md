@@ -1,9 +1,9 @@
 ---
-id: injected-container-access
 title: Injected container access
-until: '3.0.0'
-since: '2.3'
+until: 3.0.0
+since: "2.3"
 ---
+
 
 `this.container` has been private API since at least Ember 1.0.0. Unfortunately, there was not a public API available
 to use as an alternative.  In the Ember 2.1 cycle a number of public API's were added to instance initializers

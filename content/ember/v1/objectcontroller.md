@@ -1,9 +1,9 @@
 ---
-id: objectcontroller
 title: ObjectController
-until: ''
-since: '1.11'
+until: ""
+since: "1.11"
 ---
+
 
 Experienced Ember users have enjoyed the use of proxying behavior in
 the `Ember.ObjectController` class since 1.0. However, this behavior

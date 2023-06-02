@@ -1,9 +1,10 @@
 ---
-id: ember-component.is-visible
-title: '`Component#isVisible`'
-until: '4.0.0'
-since: '3.15'
+title: "`Component#isVisible`"
+until: 4.0.0
+since: "3.15"
+displayId: ember-component.is-visible
 ---
+
 
 Classic components have a number of APIs to handle the wrapper `div` that they create by default.
 One of them is `isVisible`, which controls if the component is hidden to the end user or not.

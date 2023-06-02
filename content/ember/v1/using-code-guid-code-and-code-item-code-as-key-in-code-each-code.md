@@ -1,9 +1,9 @@
 ---
-id: using-code-guid-code-and-code-item-code-as-key-in-code-each-code
 title: Using @guid and @item as key in {{each}}
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 As of 1.13.2 you should not use `key='@guid'` or `key='@item'` in the `{{each}}` helper. It is
 [documented in 1.13](http://guides.emberjs.com/v1.13.0/templates/displaying-a-list-of-items/#toc_specifying-keys)

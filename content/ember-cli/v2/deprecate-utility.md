@@ -1,9 +1,9 @@
 ---
-id: deprecate-utility
 title: Deprecate Utility
-until: '3.0.0'
-since: '2.2.0'
+until: 3.0.0
+since: 2.2.0
 ---
+
 
 Using the `ember-cli/lib/utlities/deprecate` module to issue deprecations has been deprecated
 in favor of using `.writeDeprecateLine` method on the `ui` object (which is available on both

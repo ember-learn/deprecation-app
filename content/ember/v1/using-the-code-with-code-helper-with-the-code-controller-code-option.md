@@ -1,9 +1,9 @@
 ---
-id: using-the-code-with-code-helper-with-the-code-controller-code-option
 title: Using the `{{with}}` Helper with the `controller` option
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Another option deprecated due to the de-emphasis of controllers is the controller
 option used with the `{{with}}` helper.  In prior versions it was possible to

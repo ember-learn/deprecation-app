@@ -1,9 +1,10 @@
 ---
-id: ember-metal.get-with-default
 title: Use Ember getter and explicitly check for undefined
-until: '4.0.0'
-since: '3.21'
+until: 4.0.0
+since: "3.21"
+displayId: ember-metal.get-with-default
 ---
+
 
 Deprecate support for `getWithDefault` in Ember's Object module (@ember/object) – both the [function](https://api.emberjs.com/ember/release/functions/@ember%2Fobject/getWithDefault) and the [class method](https://api.emberjs.com/ember/release/classes/EmberObject/methods/getWithDefault?anchor=getWithDefault) – because its expected behaviour is confusing to Ember developers.
 

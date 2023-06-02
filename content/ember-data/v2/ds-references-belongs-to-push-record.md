@@ -1,9 +1,10 @@
 ---
-id: ds.references.belongs-to.push-record
 title: BelongsToReference.push(DS.Model)
-until: '4.0.0'
-since: 'Upcoming Features'
+until: 4.0.0
+since: Upcoming Features
+displayId: ds.references.belongs-to.push-record
 ---
+
 #### feature: ds-overhaul-references
 
 Passing an instance of

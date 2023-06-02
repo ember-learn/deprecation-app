@@ -1,9 +1,9 @@
 ---
-id: overriding-code-render-code-when-extending-a-component-or-view
 title: Overriding `render` When Extending a Component or View
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 The `render` method on components and views should not be overridden and will
 go away in Ember 2.x.  Modifications to Ember rendering should be made by

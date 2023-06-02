@@ -1,9 +1,10 @@
 ---
-id: ember-cli.ember-cli-jshint-support
 title: ember-cli-jshint support
-until: '5.0.0'
-since: '4.6.0'
+until: 5.0.0
+since: 4.6.0
+displayId: ember-cli.ember-cli-jshint-support
 ---
+
 
 Support for [ember-cli-jshint](https://github.com/ember-cli/ember-cli-jshint) has been deprecated. 
 Please use [ESLint](https://eslint.org/) directly instead. Please refer to the 

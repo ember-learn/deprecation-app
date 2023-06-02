@@ -1,9 +1,9 @@
 ---
-id: code-ember-k-code
-title: 'Ember.K'
-until: '3.0.0'
-since: '2.12'
+title: Ember.K
+until: 3.0.0
+since: "2.12"
 ---
+
 
 Using `Ember.K` is deprecated in favor of defining a function inline. See [RFC #178](https://github.com/emberjs/rfcs/blob/master/text/0178-deprecate-ember-k.md).
 

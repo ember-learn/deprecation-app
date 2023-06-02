@@ -1,9 +1,9 @@
 ---
-id: initializer-arity
 title: Initializer Arity
-until: '3.0.0'
-since: '2.1'
+until: 3.0.0
+since: "2.1"
 ---
+
 
 In prior versions of Ember initializers have taken two arguments (generally labeled as
 `container` and `application`). Starting with Ember 2.1 providing two arguments to an

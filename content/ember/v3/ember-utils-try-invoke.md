@@ -1,9 +1,10 @@
 ---
-id: ember-utils.try-invoke
 title: tryInvoke from @ember/utils
-until: '4.0.0'
-since: '3.24'
+until: 4.0.0
+since: "3.24"
+displayId: ember-utils.try-invoke
 ---
+
 
 `tryInvoke` from the `@ember/utils` package is now deprecated.
 

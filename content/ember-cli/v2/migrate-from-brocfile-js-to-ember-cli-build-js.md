@@ -1,9 +1,9 @@
 ---
-id: migrate-from-brocfile-js-to-ember-cli-build-js
 title: Migrate from Brocfile.js to ember-cli-build.js
-until: '3.0.0'
-since: '2.0.0'
+until: 3.0.0
+since: 2.0.0
 ---
+
 
 Early versions of Ember CLI utilized the default build file of Broccoli: `Brocfile.js`. Over time
 we began realizing that this was not a tenable solution (we could not pass high fidelity objects

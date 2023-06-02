@@ -1,9 +1,9 @@
 ---
-id: ember-keys
 title: Ember.keys
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `Ember.keys` is deprecated in favor for `Object.keys`. For more information
 regarding `Object.keys`, please

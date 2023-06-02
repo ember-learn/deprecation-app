@@ -1,9 +1,10 @@
 ---
-id: computed-property.property
 title: Computed Property `.property()` Modifier
-until: '4.0.0'
-since: '3.9'
+until: 4.0.0
+since: "3.9"
+displayId: computed-property.property
 ---
+
 
 `.property()` is a modifier that adds additional property dependencies to an
 existing computed property:

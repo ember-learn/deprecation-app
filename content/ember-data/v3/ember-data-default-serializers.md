@@ -1,9 +1,10 @@
 ---
-id: ember-data:default-serializers
 title: Default serializers usage
-until: '4.0.0'
-since: '3.12.0'
+until: 4.0.0
+since: 3.12.0
+displayId: ember-data:default-serializers
 ---
+
 #### Default serializer deprecations
 
 #### Deprecate adapter.defaultSerializer fallback

@@ -1,9 +1,9 @@
 ---
-id: array-observers
 title: Array Observers
-until: '4.0.0'
-since: '3.26'
+until: 4.0.0
+since: "3.26"
 ---
+
 
 Array observers are a special type of observer that can be used to synchronously
 react to changes in an `EmberArray`. In general, to refactor away from them, these

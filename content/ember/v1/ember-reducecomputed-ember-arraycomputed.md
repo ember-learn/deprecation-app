@@ -1,9 +1,9 @@
 ---
-id: ember-reducecomputed-ember-arraycomputed
 title: Ember.ReduceComputedProperty / Ember.ArrayComputedProperty
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 In addition to `Ember.ReduceComputed` and `Ember.ArrayComputed` you were able to add a property function call, making use of
 the ReduceComputedProperty and ArrayComputedProperty classes.

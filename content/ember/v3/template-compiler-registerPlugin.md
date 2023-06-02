@@ -1,9 +1,10 @@
 ---
-id: template-compiler.registerPlugin
 title: Class-based template compilation plugins
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
+displayId: template-compiler.registerPlugin
 ---
+
 
 Using class-based template compilation plugins is deprecated.
 Please update to the functional style.

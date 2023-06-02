@@ -1,9 +1,9 @@
 ---
-id: using-code-trackedarray-code-or-code-subarray-code
 title: Using `TrackedArray` or `SubArray`
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `TrackedArray` and `SubArray` were internal classes used as implementation
 details of `ArrayComputed`.  `ArrayComputed` is deprecated to be removed

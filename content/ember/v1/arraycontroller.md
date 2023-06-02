@@ -1,9 +1,9 @@
 ---
-id: arraycontroller
 title: ArrayController
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Just like `Ember.ObjectController`, `Ember.ArrayController` will be removed in
 Ember 2.0 for the same reasons mentioned in [1.11's ObjectController

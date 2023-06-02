@@ -1,10 +1,11 @@
 ---
-id: ember-data:model.toJSON
 title: Record toJSON usage
-until: '4.0.0'
+until: 4.0.0
 anchor: toc_record-toJSON
-since: '3.12.0'
+since: 3.12.0
+displayId: ember-data:model.toJSON
 ---
+
 #### Deprecates the built in `record.toJSON`
 Previously users could use [`record.toJSON`](https://github.com/emberjs/data/blob/1be481a4924b2b4316c1cc151a58328c88903dcd/packages/store/addon/-private/system/model/model.js#L620) to get a simple JSON serialization of a record instance by either calling the method directly or using `JSON.stringify(record)`.
 

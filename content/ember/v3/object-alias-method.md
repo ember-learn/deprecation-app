@@ -1,9 +1,10 @@
 ---
-id: object.alias-method
-title: '`@ember/object#aliasMethod`'
-until: '4.0.0'
-since: '3.9'
+title: "`@ember/object#aliasMethod`"
+until: 4.0.0
+since: "3.9"
+displayId: object.alias-method
 ---
+
 
 `@ember/object#aliasMethod` is a little known and rarely used method that allows
 user's to add aliases to objects defined with `EmberObject`:

@@ -1,9 +1,9 @@
 ---
-id: link-to-s-code-currentwhen-code
 title: Link-to's `currentWhen`
-until: '3.0.0'
-since: '2.0'
+until: 3.0.0
+since: "2.0"
 ---
+
 
 When developers wanted to customize in what route a `{{link-to}}` should be considered "active" they
 could pass it using `currentWhen`.

@@ -1,9 +1,10 @@
 ---
-id: editions.classic
 title: "Edition: Classic"
-until: '4.0.0'
-since: '3.26'
+until: 4.0.0
+since: "3.26"
+displayId: editions.classic
 ---
+
 
 The edition of Ember prior to Ember Octane is known as Ember Classic. This edition
 has been deprecated, which means that users must update to Ember Octane. To do this,

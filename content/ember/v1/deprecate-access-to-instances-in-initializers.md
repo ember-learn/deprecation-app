@@ -1,9 +1,9 @@
 ---
-id: deprecate-access-to-instances-in-initializers
-title:  Access to Instances in Initializers
-until: ''
-since: '1.11'
+title: Access to Instances in Initializers
+until: ""
+since: "1.11"
 ---
+
 
 Previously, initializers had access to an object that allowed them to
 both register new classes and get instances of those classes.

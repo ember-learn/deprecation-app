@@ -1,9 +1,10 @@
 ---
-id: ember.built-in-components.legacy-arguments
 title: Built-in Components Legacy Arguments
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
+displayId: ember.built-in-components.legacy-arguments
 ---
+
 
 As of Ember 3.27, these are the named arguments API of the built-in components:
 

@@ -1,9 +1,9 @@
 ---
-id: view-and-controller-options-on-the-code-each-code-helper
 title: View and Controller options on the `{{each}}` helper
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 The options `itemView`, `itemViewClass`, `tagName`, `emptyView`,
 `emptyViewClass` and `itemController` on the `{{each}}` helper have been deprecated.

@@ -1,9 +1,9 @@
 ---
-id: deprecate-auto-location
 title: AutoLocation Class
-until: '5.0.0'
-since: '4.1.0'
+until: 5.0.0
+since: 4.1.0
 ---
+
 
 #### Background
 

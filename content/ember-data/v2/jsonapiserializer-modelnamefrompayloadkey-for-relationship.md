@@ -1,9 +1,9 @@
 ---
-id: jsonapiserializer-modelnamefrompayloadkey-for-relationship
 title: JSONAPISerializer.modelNameFromPayloadKey for Relationship
-until: '4.0.0'
-since: 'Upcoming Features'
+until: 4.0.0
+since: Upcoming Features
 ---
+
 #### feature: ds-payload-type-hooks
 
 Using `JSONAPISerializer.modelNameFromPayloadKey` to normalize the type of a

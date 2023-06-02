@@ -1,9 +1,9 @@
 ---
-id: using-code-each-code-as-a-leaf-node-in-a-dependent-key
 title: Using `@each` as a leaf node in a dependent key
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Using `@each` at the end of a computed key is deprecated and will not work in
 Ember 2.0

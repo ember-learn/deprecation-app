@@ -1,9 +1,9 @@
 ---
-id: ember-global
 title: Deprecate the Ember Global
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
 ---
+
 
 Accessing Ember on the global context (e.g. `window.Ember`, `globalThis.Ember`, or just `Ember` without importing it) is no longer supported. Migrate to importing Ember explicitly instead. See [RFC 706](https://github.com/emberjs/rfcs/pull/706) for more details.
 

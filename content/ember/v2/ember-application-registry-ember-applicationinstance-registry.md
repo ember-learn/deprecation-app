@@ -1,9 +1,9 @@
 ---
-id: ember-application-registry-ember-applicationinstance-registry
 title: Ember.Application#registry / Ember.ApplicationInstance#registry
-until: '3.0.0'
-since: '2.1'
+until: 3.0.0
+since: "2.1"
 ---
+
 
 When the container and registry were split, the registry was added to `Ember.Application` instances (provided to
 initializers as the first argument in 2.1) and `Ember.ApplicationInstance` instances (provided to instance initializers

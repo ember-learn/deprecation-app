@@ -1,9 +1,10 @@
 ---
-id: ember-string.from-ember-module
 title: Using Ember.String instead of @ember/string
-until: '5.0.0'
-since: '4.10.0'
+until: 5.0.0
+since: 4.10.0
+displayId: ember-string.from-ember-module
 ---
+
 
 Using `Ember.String` instead of importing from `@ember/string` is deprecated.
 

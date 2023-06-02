@@ -1,9 +1,10 @@
 ---
-id: ember.partial
-title: '`{{partial}}`'
-until: '4.0.0'
-since: '3.15'
+title: "`{{partial}}`"
+until: 4.0.0
+since: "3.15"
+displayId: ember.partial
 ---
+
 
 We are deprecating usage of `{{partial}}` in accordance with [RFC #449](https://github.com/emberjs/rfcs/blob/master/text/0449-deprecate-partials.md).
 

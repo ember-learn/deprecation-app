@@ -1,9 +1,9 @@
 ---
-id: render-helper-with-block
 title: render helper with block
-until: '2.4.0'
-since: '2.4'
+until: 2.4.0
+since: "2.4"
 ---
+
 
 The `{{render}}` helper was never intended to support a block form, but unfortunately (mostly
 due to various refactorings in 1.10 and 1.13) it started working in block form. Since this was

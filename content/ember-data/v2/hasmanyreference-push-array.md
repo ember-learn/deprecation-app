@@ -1,9 +1,9 @@
 ---
-id: hasmanyreference-push-array
 title: HasManyReference.push(array)
-until: '4.0.0'
-since: 'Upcoming Features'
+until: 4.0.0
+since: Upcoming Features
 ---
+
 #### feature: ds-overhaul-references
 
 #### Deprecations Added in Pending Features

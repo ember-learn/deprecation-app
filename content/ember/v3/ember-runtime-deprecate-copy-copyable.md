@@ -1,9 +1,10 @@
 ---
-id: ember-runtime.deprecate-copy-copyable
 title: Use ember-copy addon instead of copy method and Copyable mixin.
-until: '4.0.0'
-since: '3.3'
+until: 4.0.0
+since: "3.3"
+displayId: ember-runtime.deprecate-copy-copyable
 ---
+
 
 Since Ember's earliest days, the `copy` function and `Copyable` mixin from `@ember/object/internals` were intended to be treated as an Ember internal mechanism. The `Copyable` mixin, in particular, has always been marked private, and it is required in order to use `copy` with any Ember `Object`-derived class without receiving an assertion. 
 

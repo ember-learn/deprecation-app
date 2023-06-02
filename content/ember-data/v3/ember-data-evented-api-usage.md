@@ -1,10 +1,11 @@
 ---
-id: ember-data:evented-api-usage
 title: Evented Api Usage
-until: '4.0.0'
-since: '3.12.0'
+until: 4.0.0
+since: 3.12.0
 anchor: toc_evented-api-usage
+displayId: ember-data:evented-api-usage
 ---
+
 As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 > Ember.Evented functionality on DS.Model, DS.ManyArray, DS.Errors, DS.RecordArray, and DS.PromiseManyArray will be deprecated and eventually removed in a future release. This includes the following methods from the Ember.Evented class: has, off, on, one, and trigger.
 

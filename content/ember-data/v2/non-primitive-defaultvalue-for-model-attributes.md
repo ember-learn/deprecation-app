@@ -1,9 +1,9 @@
 ---
-id: non-primitive-defaultvalue-for-model-attributes
 title: Non-primitive defaultValue for Model Attributes
-until: '3.0.0'
-since: '2.3'
+until: 3.0.0
+since: "2.3"
 ---
+
 
 Providing a non-primitive value as a `defaultValue` has been deprecated because
 the provided value is shared between all instances of the model. Using a

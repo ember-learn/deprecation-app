@@ -1,9 +1,10 @@
 ---
-id: ember.built-in-components.import
 title: Importing Legacy Built-in Components
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
+displayId: ember.built-in-components.import
 ---
+
 
 Historically, the implementation classes of the built-in components `<Input>`,
 `<Textarea>` and `<LinkTo>` were made available publicly. This is sometimes

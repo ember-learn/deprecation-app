@@ -1,9 +1,10 @@
 ---
-id: function-prototype-extensions.on
 title: Function.prototype.on
-until: '4.0.0'
-since: '3.11'
+until: 4.0.0
+since: "3.11"
+displayId: function-prototype-extensions.on
 ---
+
 
 Historically, Ember has extended the `Function.prototype` with a few functions
 (`on`, `observes`, `property`), over time we have moved away from using these

@@ -1,9 +1,10 @@
 ---
-id: ember-meta.descriptor-on-object
 title: Use defineProperty to define computed properties
-until: '3.5.0'
-since: '3.2'
+until: 3.5.0
+since: "3.2"
+displayId: ember-meta.descriptor-on-object
 ---
+
 
 Although uncommon, it is possible to assign computed properties directly to
 objects and have them be implicitly computed from eg `Ember.get`.  As part of

@@ -1,9 +1,10 @@
 ---
-id: ember-glimmer.with-syntax
-title: '`{{with}}` helper'
-until: '4.0.0'
-since: '3.26'
+title: "`{{with}}` helper"
+until: 4.0.0
+since: "3.26"
+displayId: ember-glimmer.with-syntax
 ---
+
 
 The use of `{{with}}` has been deprecated. You should replace it with either `{{let}}` or a combination of `{{let}}`, `{{if}}` and `{{else}}`: 
 

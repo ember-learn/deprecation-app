@@ -1,9 +1,9 @@
 ---
-id: global-lookup-of-views
 title: Global lookup of views
-until: ''
-since: '1.8'
+until: ""
+since: "1.8"
 ---
+
 
 Previous to Ember 1.8, views would commonly be fetched from the global
 scope:

@@ -1,9 +1,9 @@
 ---
-id: arguments-in-component-lifecycle-hooks
 title: Arguments in Component Lifecycle Hooks
-until: '2.13.0'
-since: '2.12'
+until: 2.13.0
+since: "2.12"
 ---
+
 
 Previously, it was possible for component lifecycle hooks `didInitAttrs`, `didReceiveAttrs`, and `didUpdateAttrs` to receive arguments. However, this functionality was part of private API. Using the arguments is harmful to component performance, so they will trigger a deprecation. Alternative approaches for all three hooks are below:
 

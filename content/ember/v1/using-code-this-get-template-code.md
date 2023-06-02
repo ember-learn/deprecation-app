@@ -1,9 +1,9 @@
 ---
-id: using-code-this-get-template-code
 title: Using `this.get('template')`
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Prior to 1.13, developers had to check for the existance of the internal `template` property to determine the existance of a yielded block.
 This is being deprecated in favor of using the new [hasBlock](http://emberjs.com/api/classes/Ember.Component.html#property_hasBlock)

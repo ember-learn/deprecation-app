@@ -1,9 +1,9 @@
 ---
-id: hasmanyreference-push-invalid-data
 title: HasManyReference.push Invalid Data
-until: '4.0.0'
-since: 'Upcoming Features'
+until: 4.0.0
+since: Upcoming Features
 ---
+
 #### feature: ds-overhaul-references
 
 In previous versions of Ember Data, `HasManyReference#push` supported pushing
