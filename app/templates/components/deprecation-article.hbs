@@ -3,7 +3,7 @@
   <div class="my-2">
     {{#if @model.renderUntil}}
       <div><span class="bold">until: </span>{{@model.until}}</div>
-      <div><span class="bold">id: </span>{{@model.id}}</div>
+      <div><span class="bold">id: </span>{{or @model.displayId @model.id}}</div>
     {{/if}}
   </div>
   <section>
