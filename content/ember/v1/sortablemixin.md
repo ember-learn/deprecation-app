@@ -1,9 +1,9 @@
 ---
-id: sortablemixin
 title: SortableMixin
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Along with `Ember.ArrayController`, `Ember.SortableMixin` will be removed in Ember 2.0.
 

@@ -1,9 +1,9 @@
 ---
-id: non-standard-ways-of-calling-code-ember-set-code-and-code-ember-get-code
 title: Non-Standard Ways of Calling `Ember.set` and `Ember.get`
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Ember is deprecating calls to `get` and `set` made in non-standard ways.  Below are examples
 of the calls that are now deprecated:

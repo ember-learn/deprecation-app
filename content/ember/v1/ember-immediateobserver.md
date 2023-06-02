@@ -1,9 +1,9 @@
 ---
-id: ember-immediateobserver
 title: Ember.immediateObserver
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `Ember.immediateObserver` is deprecated in favor of `Ember.observer`. Please change all instances of `Ember.immediateObserver` from:
 

@@ -1,9 +1,9 @@
 ---
-id: migrating-from-_lookupfactory-to-factoryfor
 title: Migrating from _lookupFactory to factoryFor
-until: '2.13.0'
-since: '2.12'
+until: 2.13.0
+since: "2.12"
 ---
+
 
 The private API method `_lookupFactory` is deprecated and replaced by `factoryFor` in public API. This API will return the original base class registered into or resolved by the container and a `create` function to generate a dependency-injected instance.
 

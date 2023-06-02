@@ -1,9 +1,9 @@
 ---
-id: copyable-frozencopy
 title: Copyable.frozenCopy
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Just as the `Freezable` mixin is deprecated in favor of functionality in
 core JavaScript, the `frozenCopy` method of the Copyable mixin is also

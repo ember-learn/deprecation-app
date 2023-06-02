@@ -1,9 +1,9 @@
 ---
-id: hash-location-paths-without-leading-slashes
 title: Hash Location Paths Without Leading Slashes
-until: ''
-since: '1.8'
+until: ""
+since: "1.8"
 ---
+
 
 Prior to this release, if you were using `location: 'hash'` (which is the default), you were able to link to a route with a `location.hash` that didn't contain the expected leading forward slash. e.g. `#foo` instead of the correct `#/foo`. Very few, if any, should be impacted by this since the router always produces the correct form.
 

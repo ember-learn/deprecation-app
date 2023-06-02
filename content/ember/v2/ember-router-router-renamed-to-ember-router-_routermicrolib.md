@@ -1,9 +1,9 @@
 ---
-id: ember-router-router-renamed-to-ember-router-_routermicrolib
 title: Ember.Router.router renamed to Ember.Router._routerMicrolib
-until: '2.16.0'
-since: '2.13'
+until: 2.16.0
+since: "2.13"
 ---
+
 
 The private `router` property of the `Ember.Router` instance (commonly found as `this.router` in `Ember.Route` instances or via router:main in the container)
 has been renamed to `_routerMicrolib` to identify it as `router.js`, the microlib used within `Ember.Router`.

@@ -1,9 +1,9 @@
 ---
-id: store-queryrecord-array-response-with-restserializer
 title: Store.queryRecord Array Response with RESTSerializer
-until: '3.0.0'
-since: '2.7'
+until: 3.0.0
+since: "2.7"
 ---
+
 
 When using
 [`DS.RESTSerializer`](http://emberjs.com/api/data/classes/DS.RESTSerializer.html)

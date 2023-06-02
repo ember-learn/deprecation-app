@@ -1,9 +1,10 @@
 ---
-id: events.inherited-function-listeners
 title: Prototype Function Listeners
-until: '3.9.0'
-since: 'Upcoming Features'
+until: 3.9.0
+since: Upcoming Features
+displayId: events.inherited-function-listeners
 ---
+
 
 Currently, function listeners and string listeners behave identically to each
 other. Their inheritance and removal structure is the same, and they can be used

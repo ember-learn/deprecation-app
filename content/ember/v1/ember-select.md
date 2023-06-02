@@ -1,9 +1,9 @@
 ---
-id: ember-select
 title: Ember.Select
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Using the `Ember.Select` global and its view helper form (`{{view 'select'}}`)
 is deprecated. `Ember.Select` in Ember 1.x is implemented in a legacy coding

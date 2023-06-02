@@ -1,9 +1,9 @@
 ---
-id: ember-model_factory_injections-removed
-title: 'Ember.MODEL_FACTORY_INJECTIONS removed'
-until: '2.17.0'
-since: '2.14'
+title: Ember.MODEL_FACTORY_INJECTIONS removed
+until: 2.17.0
+since: "2.14"
 ---
+
 
 The flag `Ember.MODEL_FACTORY_INJECTIONS` is no longer required, and can be
 safely removed from your ember >= 2.13 application.

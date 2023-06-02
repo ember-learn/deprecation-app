@@ -1,9 +1,9 @@
 ---
-id: block-and-multi-argument-unbound-helper
 title: Block and multi-argument unbound helper
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 The unbound helper is mostly a legacy API in Ember, although it is not being
 removed in 2.0. It was almost exclusively used to manage performance issues

@@ -1,10 +1,11 @@
 ---
-id: ember-string.prototype-extensions
 title: String prototype extensions
-until: '4.0.0'
-since: '3.24'
+until: 4.0.0
+since: "3.24"
 anchor: toc_ember-string-prototype_extensions
+displayId: ember-string.prototype-extensions
 ---
+
 
 Calling one of the [Ember `String` methods](https://api.emberjs.com/ember/3.22/classes/String) (camelize, capitalize, classify, dasherize, decamelize, htmlSafe, underscore) directly on a string is deprecated.
 

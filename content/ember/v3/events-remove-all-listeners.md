@@ -1,9 +1,10 @@
 ---
-id: events.remove-all-listeners
 title: Remove All Listeners/Observers
-until: '3.9.0'
-since: '3.6'
+until: 3.9.0
+since: "3.6"
+displayId: events.remove-all-listeners
 ---
+
 
 When using both the `removeListener` and `removeObserver` methods, users can
 omit the final string or method argument to trigger an undocumented codepath

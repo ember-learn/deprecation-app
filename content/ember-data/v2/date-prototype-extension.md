@@ -1,9 +1,9 @@
 ---
-id: date-prototype-extension
 title: Date Prototype Extension
-until: '3.0.0'
-since: '2.7'
+until: 3.0.0
+since: "2.7"
 ---
+
 
 In previous versions of Ember Data, the native `Date.parse` function was
 replaced with `Ember.Date.parse`, a [progressive enhancement for ISO

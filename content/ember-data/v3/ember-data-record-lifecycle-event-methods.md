@@ -1,10 +1,11 @@
 ---
-id: ember-data:record-lifecycle-event-methods
 title: Record Lifecycle Event Methods
-until: '4.0.0'
-since: '3.12.0'
+until: 4.0.0
+since: 3.12.0
 anchor: toc_record-lifecycle-event-methods
+displayId: ember-data:record-lifecycle-event-methods
 ---
+
 #### Deprecating Record Lifecycle Event Methods
 As described in ['RFC 0329'](https://github.com/emberjs/rfcs/pull/329) -
 >...the following lifecycle methods on DS.Model will also be deprecated: becameError, becameInvalid, didCreate, didDelete, didLoad, didUpdate, ready, rolledBack.

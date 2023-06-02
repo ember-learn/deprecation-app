@@ -1,9 +1,9 @@
 ---
-id: recordisloaded
 title: recordIsLoaded
-until: '3.0.0'
-since: '2.11'
+until: 3.0.0
+since: "2.11"
 ---
+
 
 `recordIsLoaded` has been deprecated and is an alias for `hasRecordForId`, which should be used instead.
 

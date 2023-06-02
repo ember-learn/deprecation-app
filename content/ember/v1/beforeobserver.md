@@ -1,9 +1,9 @@
 ---
-id: beforeobserver
 title: beforeObserver
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Before observers are deprecated due to the negative performance implications they have for Ember internals and applications.
 

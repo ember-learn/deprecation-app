@@ -1,9 +1,9 @@
 ---
-id: use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange
 title: Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
-until: '3.5.0'
-since: '3.1'
+until: 3.5.0
+since: "3.1"
 ---
+
 
 Ember.Application#registry / Ember.ApplicationInstance#registry
 

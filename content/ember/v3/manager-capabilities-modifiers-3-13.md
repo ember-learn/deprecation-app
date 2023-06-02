@@ -1,9 +1,10 @@
 ---
-id: manager-capabilities.modifiers-3-13
-title: "3.13 Modifier Manager Capabilities"
-until: '4.0.0'
-since: '3.26'
+title: 3.13 Modifier Manager Capabilities
+until: 4.0.0
+since: "3.26"
+displayId: manager-capabilities.modifiers-3-13
 ---
+
 
 Any modifier managers using the `3.13` capabilities should update to the most
 recent modifier capabilities, currently `3.22`. In `3.22`, the major changes

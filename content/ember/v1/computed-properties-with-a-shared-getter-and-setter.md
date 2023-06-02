@@ -1,9 +1,9 @@
 ---
-id: computed-properties-with-a-shared-getter-and-setter
 title: Computed Properties With a Shared Getter And Setter
-until: ''
-since: '1.12'
+until: ""
+since: "1.12"
 ---
+
 Ember.js 1.12 introduces an improved syntax for computed properties with
 a setter. Previously, computed properties with a setter implemented that
 setter by inspecting the number of arguments passed to the computed

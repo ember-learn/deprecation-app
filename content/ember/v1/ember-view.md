@@ -1,9 +1,9 @@
 ---
-id: ember-view
 title: Ember.View
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Ember 1.x encouraged a Model-View-Controller-Route architecture. Since then,
 the web has consolidated around a Model-Component-Route pattern for web

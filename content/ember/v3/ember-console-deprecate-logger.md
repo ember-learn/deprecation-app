@@ -1,9 +1,10 @@
 ---
-id: ember-console.deprecate-logger
 title: Use console rather than Ember.Logger
-until: '4.0.0'
-since: '3.2'
+until: 4.0.0
+since: "3.2"
+displayId: ember-console.deprecate-logger
 ---
+
 
 Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`.
 

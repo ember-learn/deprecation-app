@@ -1,9 +1,9 @@
 ---
-id: code-as-code-syntax-for-code-with-code
 title: as syntax for {{with}}
-until: ''
-since: '1.12'
+until: ""
+since: "1.12"
 ---
+
 
 Renaming a value using `{{with}}` has been possible using the `as` syntax. Block params,
 introduces in Ember 1.10, obsolete the `as` syntax.

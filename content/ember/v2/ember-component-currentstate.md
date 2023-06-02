@@ -1,9 +1,9 @@
 ---
-id: ember-component-currentstate
 title: Ember.Component#currentState
-until: '2.3.0'
-since: '2.1'
+until: 2.3.0
+since: "2.1"
 ---
+
 
 The `currentState` property on `Ember.Component` instances is a private property that Ember uses
 internally to deal with the various states a component can be in (in DOM, pre-render, destroying, etc). Unfortunately,

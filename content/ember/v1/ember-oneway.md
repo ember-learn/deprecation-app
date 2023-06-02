@@ -1,9 +1,9 @@
 ---
-id: ember-oneway
 title: Ember.oneWay
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `Ember.oneWay` is deprecated in favor for `Ember.computed.oneWay`. Please
 change all instances of `Ember.oneWay` from:

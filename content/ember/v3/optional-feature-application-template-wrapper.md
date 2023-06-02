@@ -1,9 +1,10 @@
 ---
-id: optional-feature.application-template-wrapper
 title: "Optional Feature: application-template-wrapper"
-until: '4.0.0'
-since: '3.26'
+until: 4.0.0
+since: "3.26"
+displayId: optional-feature.application-template-wrapper
 ---
+
 
 Setting the `application-template-wrapper` optional feature to `true` has been
 deprecated. You must set this feature to `false`, disabling the application

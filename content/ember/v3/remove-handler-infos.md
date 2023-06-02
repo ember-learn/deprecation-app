@@ -1,9 +1,9 @@
 ---
-id: remove-handler-infos
 title: HandlerInfos Removal
-until: '3.9.0'
-since: '3.6'
+until: 3.9.0
+since: "3.6"
 ---
+
 
 `HandlerInfo` was a private API that has been renamed to `RouteInfo` to align with the [router service RFC](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md). If you need access to information about the routes, you are probably better served injecting the router service as it exposes a publically supported version of the `RouteInfo`s. You can access them in the following ways:
 

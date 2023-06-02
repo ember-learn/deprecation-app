@@ -1,8 +1,8 @@
 ---
-id: clobbering-addon-options
 title: Clobbering Addon#options
-since: '2.12.0'
+since: 2.12.0
 ---
+
 
 Clobbering `this.options` within an addon has been deprecated. If you would like to use `this.options`
 for internal options within your addon, you must preserve the intitial options object that is present.

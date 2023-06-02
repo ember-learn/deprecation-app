@@ -1,9 +1,9 @@
 ---
-id: ember-component-defaultlayout
 title: Ember.Component#defaultLayout
-until: '3.0.0'
-since: '2.1'
+until: 3.0.0
+since: "2.1"
 ---
+
 
 Specifying a `defaultLayout` to a component is deprecated in favor of specifying `layout` directly. `defaultLayout` was
 often used in order to allow inheriting components to fallback to their parents `defaultLayout` if a custom `layout` was

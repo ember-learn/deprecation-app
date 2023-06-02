@@ -1,9 +1,9 @@
 ---
-id: ember-containerview
 title: Ember.ContainerView
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `Ember.ContainerView` is deprecated as a consequence of the deprecation of `Ember.View`.
 

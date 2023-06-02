@@ -1,9 +1,10 @@
 ---
-id: routing.transition-methods
 title: Transition methods of routes and controllers
-until: '5.0.0'
-since: '3.26'
+until: 5.0.0
+since: "3.26"
+displayId: routing.transition-methods
 ---
+
 
 The following methods are deprecated:
 - `transitionTo` on `Route`

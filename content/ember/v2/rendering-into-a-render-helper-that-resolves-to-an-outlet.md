@@ -1,9 +1,9 @@
 ---
-id: rendering-into-a-render-helper-that-resolves-to-an-outlet
-title: 'Rendering into a {{render}} helper that resolves to an {{outlet}}'
-until: '3.0.0'
-since: '2.11'
+title: Rendering into a {{render}} helper that resolves to an {{outlet}}
+until: 3.0.0
+since: "2.11"
 ---
+
 
 Before named outlets were introduced to Ember the render helper was used to declare slots for `this.render` in routes. This usage is not common in modern, idiomatic applications and is deprecated. In general, the pattern of named outlets or named render helpers is discouraged. Instead use of [ember-elsewhere](https://github.com/ef4/ember-elsewhere) or another DOM-redirection library should better serve these use cases.
 

@@ -1,9 +1,10 @@
 ---
-id: computed-property.override
 title: Computed Property Overridability
-until: '4.0.0'
-since: '3.9'
+until: 4.0.0
+since: "3.9"
+displayId: computed-property.override
 ---
+
 
 Ember's computed properties are overridable by default if no setter is defined:
 

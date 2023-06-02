@@ -1,9 +1,10 @@
 ---
-id: ember-string.loc
-title: '`@ember/string#loc` and `{{loc}}`'
-until: '4.0.0'
-since: '3.24'
+title: "`@ember/string#loc` and `{{loc}}`"
+until: 4.0.0
+since: "3.24"
+displayId: ember-string.loc
 ---
+
 
 Ember provides a very basic localization method via the `@ember/string` package `loc` function, and the related `{{loc}}` template helper.
 

@@ -1,9 +1,9 @@
 ---
-id: using-code-code-for-namespace-in-the-code-render-code-helper
-title:  Using `/` for namespace in the `{{render}}` helper
-until: ''
-since: '1.13'
+title: Using `/` for namespace in the `{{render}}` helper
+until: ""
+since: "1.13"
 ---
+
 
 When using the render helper, its possible to specify a context within a nested directory structure.  Prior to 1.13, it
 was acceptable to separate nested directories using slashes `/`, but this is now deprecated, as Ember has

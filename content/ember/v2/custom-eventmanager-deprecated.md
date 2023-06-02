@@ -1,9 +1,9 @@
 ---
-id: custom-eventmanager-deprecated
 title: Custom eventManager deprecated
-until: '2.17.0'
-since: '2.14'
+until: 2.17.0
+since: "2.14"
 ---
+
 
 `EventDispatcher` has long supported custom `eventManager`s containing their own
 event dispatching rules to be defined on components. This feature was initially

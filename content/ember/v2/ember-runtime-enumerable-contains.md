@@ -1,9 +1,10 @@
 ---
-id: ember-runtime.enumerable-contains
 title: Enumerable#contains
-until: '3.0.0'
-since: '2.8'
+until: 3.0.0
+since: "2.8"
+displayId: ember-runtime.enumerable-contains
 ---
+
 The `Enumerable#contains` and `Array#contains` methods were deprecated in favor of `Enumerable#includes` and `Array#includes`
 to stay in line with ES standards. See [RFC](https://github.com/emberjs/rfcs/blob/master/text/0136-contains-to-includes.md) for details.
 

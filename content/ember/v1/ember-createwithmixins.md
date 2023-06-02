@@ -1,9 +1,9 @@
 ---
-id: ember-createwithmixins
 title: Ember CreateWithMixins
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `Ember.Object.createWithMixins` method has been deprecated. Instead call `Ember.Object.create` or `Ember.Object.extend`.
 

@@ -1,9 +1,10 @@
 ---
-id: object.new-constructor
 title: new EmberObject
-until: '3.9.0'
-since: '3.6'
+until: 3.9.0
+since: "3.6"
+displayId: object.new-constructor
 ---
+
 
 We are deprecating usage of `new EmberObject()` to construct instances of
 `EmberObject` and it's subclasses. This affects all classes that extend from

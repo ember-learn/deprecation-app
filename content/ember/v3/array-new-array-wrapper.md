@@ -1,9 +1,10 @@
 ---
-id: array.new-array-wrapper
 title: Calling `A` as a constructor
-until: '3.9.0'
-since: '3.6'
+until: 3.9.0
+since: "3.6"
+displayId: array.new-array-wrapper
 ---
+
 
 The `A` function imported from `@ember/array` is a function that can be used
 to apply array mixins to an existing object (generally a native array):

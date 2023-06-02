@@ -1,9 +1,10 @@
 ---
-id: ember-polyfills.deprecate-merge
 title: Ember.merge
-until: '4.0.0'
-since: '3.6'
+until: 4.0.0
+since: "3.6"
+displayId: ember-polyfills.deprecate-merge
 ---
+
 
 `Ember.merge` predates `Ember.assign`, but since `Ember.assign` has been released, `Ember.merge` has been mostly unnecessary.
 To cut down on duplication, we are now recommending using `Ember.assign` instead of `Ember.merge`. If you need to support

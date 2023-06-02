@@ -1,9 +1,10 @@
 ---
-id: ember-string.add-package
 title: Importing from @ember/string without @ember/string as a dependency
-until: '5.0.0'
-since: '4.10.0'
+until: 5.0.0
+since: 4.10.0
+displayId: ember-string.add-package
 ---
+
 
 Importing from `@ember/string` without the `@ember/string` package as a
 dependency is deprecated.

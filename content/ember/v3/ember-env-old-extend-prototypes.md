@@ -1,9 +1,10 @@
 ---
-id: ember-env.old-extend-prototypes
 title: Old extend prototypes
-until: '4.0.0'
-since: '3.3'
+until: 4.0.0
+since: "3.3"
+displayId: ember-env.old-extend-prototypes
 ---
+
 
 Accessing `Ember.EXTEND_PROTOTYPES` is deprecated.
 

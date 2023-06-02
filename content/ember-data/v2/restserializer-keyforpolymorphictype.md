@@ -1,9 +1,9 @@
 ---
-id: restserializer-keyforpolymorphictype
 title: RESTSerializer.keyForPolymorphicType
-until: '3.0.0'
-since: '2.3'
+until: 3.0.0
+since: "2.3"
 ---
+
 
 Previous versions of the
 [`RESTSerializer`](http://emberjs.com/api/data/classes/DS.RESTSerializer.html)

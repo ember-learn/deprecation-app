@@ -1,9 +1,10 @@
 ---
-id: ember-routing.route-router
 title: Private property `Route.router` has been renamed to `Route._router`
-until: '3.5.0'
-since: '3.2'
+until: 3.5.0
+since: "3.2"
+displayId: ember-routing.route-router
 ---
+
 
 The `Route#router` private API has been renamed to `Route#_router` to avoid collisions with user-defined
 properties or methods.

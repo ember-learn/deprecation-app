@@ -1,9 +1,9 @@
 ---
-id: jsonapiserializer-payloadkeyfrommodelname-for-hasmany-relationship
 title: JSONAPISerializer.payloadKeyFromModelName for hasMany Relationship
-until: '4.0.0'
-since: 'Upcoming Features'
+until: 4.0.0
+since: Upcoming Features
 ---
+
 #### feature: ds-payload-type-hooks
 
 Using `JSONAPISerializer.payloadKeyFromModelName` to serialize the type of a

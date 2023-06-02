@@ -1,9 +1,9 @@
 ---
-id: deprecate-router-events
 title: Router Events
-until: '4.0.0'
-since: '3.6'
+until: 4.0.0
+since: "3.6"
 ---
+
 
 Application-wide transition monitoring events belong on the Router service, not spread throughout the Route classes. That is the reason for the existing `willTransition` and `didTransition` hooks/events on the Router. But they are not sufficient to capture all the detail people need.
 

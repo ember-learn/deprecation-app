@@ -1,9 +1,10 @@
 ---
-id: ember-data:najax-fallback
-title: '`najax` requests'
-until: '4.0.0'
-since: '3.22.0'
+title: "`najax` requests"
+until: 4.0.0
+since: 3.22.0
+displayId: ember-data:najax-fallback
 ---
+
 #### Deprecates `najax` requests in ember-data
 Previously if users had [`najax`](https://github.com/najaxjs/najax) installed, `ember-data` would try and make a request in FastBoot with najax. This was a dependency of FastBoot; however, was [removed](https://github.com/ember-fastboot/fastboot/pull/247) in v3.0.0.
 

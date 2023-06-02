@@ -1,9 +1,9 @@
 ---
-id: ember-collectionview
 title: Ember.CollectionView
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `Ember.CollectionView` is deprecated as a consequence of the deprecation of `Ember.View`.
 

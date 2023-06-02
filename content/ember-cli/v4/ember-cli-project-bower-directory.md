@@ -1,9 +1,10 @@
 ---
-id: ember-cli.project.bower-directory
 title: Project::bowerDirectory
-until: '5.0.0'
-since: '4.3.0'
+until: 5.0.0
+since: 4.3.0
+displayId: ember-cli.project.bower-directory
 ---
+
 
 `bowerDirectory` has been deprecated. If you still need access to the
 project's Bower directory, you will have to manually resolve the project's

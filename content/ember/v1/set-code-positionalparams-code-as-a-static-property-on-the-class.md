@@ -1,9 +1,9 @@
 ---
-id: set-code-positionalparams-code-as-a-static-property-on-the-class
 title: Set positionalParams as a static property on the class
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Setting `positionalParams` within `.extend` is deprecated. It has to be set as a static property on the class itself (`.reopenClass`).
 

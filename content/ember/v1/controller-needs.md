@@ -1,9 +1,9 @@
 ---
-id: controller-needs
 title: Controller.needs
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `needs` for controllers will be removed in Ember 2.0. You can migrate away from this using `Ember.inject.controller`.
 

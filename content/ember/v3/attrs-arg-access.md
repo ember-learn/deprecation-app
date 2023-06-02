@@ -1,9 +1,9 @@
 ---
-id: attrs-arg-access
-title: "Accessing named args via {{attrs}}"
-until: '4.0.0'
-since: '3.26'
+title: Accessing named args via {{attrs}}
+until: 4.0.0
+since: "3.26"
 ---
+
 
 The `{{attrs}}` object was an alternative way to reference named arguments in
 templates that was introduced prior to named arguments syntax being finalized.

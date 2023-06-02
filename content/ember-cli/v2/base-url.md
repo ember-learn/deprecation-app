@@ -1,9 +1,9 @@
 ---
-id: base-url
 title: Base URL
-until: '3.0.0'
-since: '2.7.0'
+until: 3.0.0
+since: 2.7.0
 ---
+
 
 The usage of `baseURL` setting in `config/environments.js` has been deprecated in favor of using
 an explicit `rootURL`. A detailed explanation of the problem and the migration path can be found in

@@ -1,9 +1,9 @@
 ---
-id: modifying-a-property-within-code-didinsertelement-code
 title: Modifying a Property within didInsertElement
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Because of changes in the way Ember renders components in 1.13, setting properties within an overridden `didInsertElement` method
 will result in a deprecation warning.

@@ -1,9 +1,10 @@
 ---
-id: ember-cli.building-bower-packages
 title: Building Bower Packages
-until: '5.0.0'
-since: '4.3.0'
+until: 5.0.0
+since: 4.3.0
+displayId: ember-cli.building-bower-packages
 ---
+
 
 Building Bower packages has been deprecated.
 

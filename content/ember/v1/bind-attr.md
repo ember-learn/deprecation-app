@@ -1,9 +1,9 @@
 ---
-id: bind-attr
 title: bind-attr
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 Ember 1.11 introduced new syntax for using dynamic content in attributes.
 

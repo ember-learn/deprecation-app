@@ -1,9 +1,9 @@
 ---
-id: meta-destruction-apis
 title: Meta Destruction APIs
-until: "3.25.0"
+until: 3.25.0
 since: "3.21"
 ---
+
 
 We are deprecated usage of `Ember.meta`  destruction apis.
 

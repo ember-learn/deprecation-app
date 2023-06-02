@@ -1,9 +1,9 @@
 ---
-id: has-block-and-has-block-params
 title: "{{hasBlock}} and {{hasBlockParams}}"
-until: '4.0.0'
-since: '3.26'
+until: 4.0.0
+since: "3.26"
 ---
+
 
 #### `{{hasBlock}}`
 

@@ -1,9 +1,10 @@
 ---
-id: 'autotracking.mutation-after-consumption'
 title: Mutation After Consumption
-until: '4.0.0'
-since: 'Glimmer Internals'
+until: 4.0.0
+since: Glimmer Internals
+displayId: autotracking.mutation-after-consumption
 ---
+
 
 Older versions of Ember failed to detect errors in certain cases where an autotracked property was both read from and written to during rendering. This was buggy and could cause infinite loops, as with all such combined read-write operations during rendering. A common case was reading from and writing to a `@tracked` property in a `constructor`, usually for making a local copy of a value from `args`:
 

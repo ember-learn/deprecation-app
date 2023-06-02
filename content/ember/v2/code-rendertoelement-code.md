@@ -1,9 +1,9 @@
 ---
-id: code-rendertoelement-code
 title: renderToElement
-until: '2.12.0'
-since: '2.11'
+until: 2.12.0
+since: "2.11"
 ---
+
 
 Using the `renderToElement` is deprecated in favor of `appendTo`.
 Please refactor to use `appendTo`:

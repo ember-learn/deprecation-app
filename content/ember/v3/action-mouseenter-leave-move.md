@@ -1,9 +1,10 @@
 ---
-id: action.mouseenter-leave-move
 title: mouseEnter/Leave/Move events in `{{action}}` modifier
-until: '4.0.0'
-since: '3.13'
+until: 4.0.0
+since: "3.13"
+displayId: action.mouseenter-leave-move
 ---
+
 
 As `mouseenter`, `mouseleave` and `mousemove` events fire very frequently, are rarely used and have a higher
 implementation cost, support for them in Ember's `EventDispatcher` has been deprecated. As such these events should

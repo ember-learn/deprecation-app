@@ -1,9 +1,10 @@
 ---
-id: ember-polyfills.deprecate-assign
 title: Ember.assign
-until: '5.0.0'
-since: '4.0.0'
+until: 5.0.0
+since: 4.0.0
+displayId: ember-polyfills.deprecate-assign
 ---
+
 
 Use of `Ember.assign` is deprecated. You should replace any calls to `Ember.assign` with `Object.assign` or use the object spread operator.
 

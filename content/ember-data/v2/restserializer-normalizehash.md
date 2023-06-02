@@ -1,9 +1,9 @@
 ---
-id: restserializer-normalizehash
 title: RESTSerializer.normalizeHash
-until: '3.0.0'
-since: '2.6'
+until: 3.0.0
+since: "2.6"
 ---
+
 
 `RESTSerializer.normalizeHash` has been deprecated in favor of using `normalize`.
 
