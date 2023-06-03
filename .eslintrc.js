@@ -54,5 +54,19 @@ module.exports = {
       files: ['tests/**/*-test.{js,ts}'],
       extends: ['plugin:qunit/recommended'],
     },
+    {
+      // mocha tests
+      files: ['node-tests/**/*.mjs'],
+      env: {
+        browser: false,
+        node: true,
+        mocha: true,
+      },
+      plugins: ['node'],
+      extends: ['plugin:node/recommended'],
+      rules: {
+        'node/no-unpublished-import': 'off',
+      },
+    },
   ],
 };
