@@ -1,9 +1,9 @@
 ---
-id: controller-content-alias
 title: Controller#content alias
-until: '2.17.0'
-since: '2.16'
+until: 2.17.0
+since: "2.16"
 ---
+
 
 For historical reasons, `Controller`s have a private property named `content` that
 aliases the `model` property.

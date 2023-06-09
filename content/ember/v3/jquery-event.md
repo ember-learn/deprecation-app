@@ -1,9 +1,9 @@
 ---
-id: jquery-event
 title: Use native events instead of jQuery.Event
-until: '4.0.0'
-since: '3.3'
+until: 4.0.0
+since: "3.3"
 ---
+
 
 As part of the effort to decouple Ember from jQuery, using event object APIs that are specific to `jQuery.Event` such as
 `originalEvent` are deprecated. Especially addons are urged to not use any jQuery specific APIs, so they are able to

@@ -1,9 +1,9 @@
 ---
-id: ember-2-legacy
 title: Ember 2 Legacy
-until: '3.4'
-since: '2.16'
+until: "3.4"
+since: "2.16"
 ---
+
 
 Ember provides [ember-2-legacy](https://github.com/emberjs/ember-2-legacy) which is an addon to help
 app with deprecations during the transition from the 2.x series to 3.x. This addon provides app owners more

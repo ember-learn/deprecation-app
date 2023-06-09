@@ -1,9 +1,9 @@
 ---
-id: implicit-injections
-title: "Implicit Injections"
-until: '4.0.0'
-since: '3.26'
+title: Implicit Injections
+until: 4.0.0
+since: "3.26"
 ---
+
 
 Implicit injections are injections that are made by telling Ember to inject a
 service (or another type of value) into every instance of a specific type of

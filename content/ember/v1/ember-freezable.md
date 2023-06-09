@@ -1,9 +1,9 @@
 ---
-id: ember-freezable
 title: Ember Freezable
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 The Freezable Mixin has been deprecated because the spec has been added to
 the javascript core.
 

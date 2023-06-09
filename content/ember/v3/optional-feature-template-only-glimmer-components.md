@@ -1,9 +1,10 @@
 ---
-id: optional-feature.template-only-glimmer-components
 title: "Optional Feature: template-only-glimmer-components"
-until: '4.0.0'
-since: '3.26'
+until: 4.0.0
+since: "3.26"
+displayId: optional-feature.template-only-glimmer-components
 ---
+
 
 Setting the `template-only-glimmer-components` optional feature to `false` has been
 deprecated. You must set this feature to `true`, enabling the template-only

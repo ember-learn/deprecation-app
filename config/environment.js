@@ -55,11 +55,6 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
-
-    let fastlyDomain = process.env.FASTLY_DOMAIN;
-    if (fastlyDomain) {
-      ENV.apiHost = `https://${fastlyDomain}`;
-    }
   }
 
   return ENV;

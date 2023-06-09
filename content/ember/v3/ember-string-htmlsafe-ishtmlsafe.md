@@ -1,9 +1,10 @@
 ---
-id: ember-string.htmlsafe-ishtmlsafe
 title: Importing `htmlSafe` and `isHTMLSafe` from @ember/string
-until: '4.0.0'
-since: '3.25'
+until: 4.0.0
+since: "3.25"
+displayId: ember-string.htmlsafe-ishtmlsafe
 ---
+
 
 Importing `htmlSafe` and `isHTMLSafe` from `@ember/string` is deprecated.
 

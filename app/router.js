@@ -14,4 +14,6 @@ Router.map(function () {
   this.route('show', {
     path: ':project/:version',
   });
+
+  this.route('id', { path: 'id/:id' });
 });

@@ -1,9 +1,9 @@
 ---
-id: route-disconnect-outlet
 title: Deprecate `Route#disconnectOutlet`
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
 ---
+
 
 `Route#disconnectOutlet` is intended to be used in conjunction with `Route#render`. As `render` is deprecated and `disconnectOutlet` is primarily used to teardown named outlets setup by `render`, it is also deprecated. See [RFC #491](https://emberjs.github.io/rfcs/0491-deprecate-disconnect-outlet.html).
 

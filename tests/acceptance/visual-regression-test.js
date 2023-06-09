@@ -89,5 +89,9 @@ module('Acceptance | visual regression', function (hooks) {
       .hasText('Deprecations Added in Ember CLI 4.x');
 
     await percySnapshot('ember-cli-4.x');
+
+    await visit('/id/ember-polyfills-deprecate-assign');
+    assert.dom('h1').hasText('Deprecation Guide for Ember.assign');
+    await percySnapshot('individual-deprecation-page');
   });
 });

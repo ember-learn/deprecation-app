@@ -23,13 +23,6 @@ export default class ShowController extends Controller {
     return PROJECTS[this.content.query.path];
   }
 
-  get renderIdOrUntil() {
-    let version = this.content.query.version;
-    let versionsWithoutId = ['v1.x'];
-
-    return !versionsWithoutId.includes(version);
-  }
-
   @action
   toggleToc() {
     this.displayMobileToc = !this.displayMobileToc;

@@ -1,9 +1,9 @@
 ---
-id: ember-binding
 title: Ember.Binding
-until: '3.0.0'
-since: '2.7'
+until: 3.0.0
+since: "2.7"
 ---
+
 `Ember.Binding` has not been needed for some time and is deprecated in favor of
 computed properties and services (depending on what you were binding to). It is
 recommended that you take the following actions:

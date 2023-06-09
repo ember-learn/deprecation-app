@@ -1,9 +1,10 @@
 ---
-id: ember-template-compiler.deprecate-render
 title: "{{render helper"
-until: '3.0.0'
-since: '2.11'
+until: 3.0.0
+since: "2.11"
+displayId: ember-template-compiler.deprecate-render
 ---
+
 
 Using the `{{render` helper is deprecated in favor of using components.
 Please refactor uses of this helper to components:

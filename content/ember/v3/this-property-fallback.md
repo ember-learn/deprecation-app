@@ -1,9 +1,9 @@
 ---
-id: this-property-fallback
 title: Property Fallback Lookup
-until: '4.0.0'
-since: '3.26'
+until: 4.0.0
+since: "3.26"
 ---
+
 
 It is currently possible to reference properties on a component without a preceding `this`. For instance, this component:
 
