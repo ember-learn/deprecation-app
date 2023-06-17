@@ -1,5 +1,5 @@
 ---
-id: ember-data:rsvp-unresolved-async
+displayId: ember-data:rsvp-unresolved-async
 title: Rsvp Unresolved Async
 until: '5.0'
 since: '4.5'

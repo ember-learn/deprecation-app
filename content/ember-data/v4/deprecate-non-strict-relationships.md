@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-non-strict-relationships
+displayId: ember-data:deprecate-non-strict-relationships
 title: Deprecate Non Strict Relationships
 until: '5.0'
 since: '4.7'

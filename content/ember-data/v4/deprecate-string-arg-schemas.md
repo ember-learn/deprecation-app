@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-string-arg-schemas
+displayId: ember-data:deprecate-string-arg-schemas
 title: Deprecate String Arg Schemas
 until: '5.0'
 since: '4.5'

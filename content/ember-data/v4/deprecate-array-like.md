@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-array-like
+displayId: ember-data:deprecate-array-like
 title: Deprecate Array Like
 until: '5.0'
 since: '4.7'

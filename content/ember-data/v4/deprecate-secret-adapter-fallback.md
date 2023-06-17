@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-secret-adapter-fallback
+displayId: ember-data:deprecate-secret-adapter-fallback
 title: Deprecate Secret Adapter Fallback
 until: '5.0'
 since: '4.5'

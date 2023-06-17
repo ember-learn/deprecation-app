@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-instantiate-record-args
+displayId: ember-data:deprecate-instantiate-record-args
 title: Deprecate Instantiate Record Args
 until: '5.0'
 since: '4.12'

@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-snapshot-model-class-access
+displayId: ember-data:deprecate-snapshot-model-class-access
 title: Deprecate Snapshot Model Class Access
 until: '5.0'
 since: '4.5'

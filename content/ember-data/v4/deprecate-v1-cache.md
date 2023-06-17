@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-v1-cache
+displayId: ember-data:deprecate-v1-cache
 title: Deprecate V1 Cache
 until: '5.0'
 since: '4.7'

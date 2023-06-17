@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-model-reopenclass
+displayId: ember-data:deprecate-model-reopenclass
 title: Deprecate Model Reopenclass
 until: '5.0'
 since: '4.7'

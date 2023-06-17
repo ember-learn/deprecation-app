@@ -1,5 +1,5 @@
 ---
-id: ember-data:model-save-promise
+displayId: ember-data:model-save-promise
 title: Model Save Promise
 until: '5.0'
 since: '4.4'

@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-promise-proxies
+displayId: ember-data:deprecate-promise-proxies
 title: Deprecate Promise Proxies
 until: '5.0'
 since: '4.7'

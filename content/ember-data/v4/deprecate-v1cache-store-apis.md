@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-v1cache-store-apis
+displayId: ember-data:deprecate-v1cache-store-apis
 title: Deprecate V1 cache Store Apis
 until: '5.0'
 since: '4.7'

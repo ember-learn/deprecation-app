@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-early-static
+displayId: ember-data:deprecate-early-static
 title: Deprecate Early Static
 until: '5.0'
 since: '4.7'

@@ -1,5 +1,5 @@
 ---
-id: ember-data:deprecate-has-record-for-id
+displayId: ember-data:deprecate-has-record-for-id
 title: Deprecate Has Record For Id
 until: '5.0'
 since: '4.5'

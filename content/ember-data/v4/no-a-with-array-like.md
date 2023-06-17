@@ -1,5 +1,5 @@
 ---
-id: ember-data:no-a-with-array-like
+displayId: ember-data:no-a-with-array-like
 title: No A With Array Like
 until: '5.0'
 since: '4.7'

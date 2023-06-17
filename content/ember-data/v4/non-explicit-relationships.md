@@ -1,5 +1,5 @@
 ---
-id: ember-data:non-explicit-relationships
+displayId: ember-data:non-explicit-relationships
 title: Non Explicit Relationships
 until: '5.0'
 since: '4.7'
