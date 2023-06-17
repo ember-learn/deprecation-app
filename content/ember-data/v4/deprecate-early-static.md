@@ -10,7 +10,7 @@ This deprecation triggers if static computed properties or methods are triggered
 - using ember-cli-mirage (to fix, refactor to not use its auto-discovery of ember-data models)
 - importing a model class and accessing its static information via the import
 
-Instead of
+Instead of:
 
 ```js
 import User from 'my-app/models/user';
@@ -18,13 +18,13 @@ import User from 'my-app/models/user';
 const relationships = User.relationshipsByName;
 ```
 
-Do _at least_ this
+Do _at least_ this:
 
 ```js
 const relationships = store.modelFor('user').relationshipsByName;
 ```
 
-However, the much more future proof refactor is to not use `modelFor` at all but instead to utilize the schema service for this static information.
+However, the much more future proof refactor is to not use `modelFor` at all, but instead to utilize the schema service for this static information:
 
 ```js
 const relationships = store

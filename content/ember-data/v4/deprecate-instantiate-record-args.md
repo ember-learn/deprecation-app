@@ -5,8 +5,24 @@ until: '5.0'
 since: '4.12'
 ---
 
-#### TODO
+Deprecates using the former 3rd and 4th arguments to `Store.instantiateRecord` which are now available as properties on the store.
 
-Expected store.instantiateRecord to have an arity of 2. recordDataFor and notificationManager args have been deprecated.
+Before:
 
-[RFC TODO](TODO)
+```ts
+{
+  instantiateRecord(identifier, createArgs, recordDataFor, notifications) {
+    const cache = recordDataFor(identifier);
+  }
+}
+```
+
+After:
+
+```ts
+{
+  instantiateRecord(identifier, createArgs) {
+     const { cache, notifications } = this;
+  }
+}
+```
