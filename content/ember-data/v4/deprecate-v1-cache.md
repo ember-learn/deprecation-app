@@ -5,8 +5,8 @@ until: '5.0'
 since: '4.7'
 ---
 
-#### TODO
+Deprecates instantiating a non-singleton cache via `store.createRecordDataFor` in favor of a singleton-cache via `store.createCache`.
 
-This RecordData uses the deprecated V1 RecordData Spec. Upgrade to V2 to maintain compatibility.
+Most applications should not encounter this deprecation, but if you do it means that an addon you are using is likely using an unsupported cache implementation.
 
-[RFC TODO](TODO)
+The implementation will need to update to the V2 Cache API and be integrated via the `createCache` hook.
