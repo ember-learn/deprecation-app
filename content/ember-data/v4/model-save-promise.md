@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:model-save-promise
 title: Model Save Promise
-until: '5.0'
-since: '4.4'
+until: 5.0
+since: 4.4
 ---
 
 Affects:

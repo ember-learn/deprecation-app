@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-promise-many-array-behaviors
 title: Deprecate Promise Many Array Behaviors
-until: '5.0'
-since: '4.7'
+until: 5.0
+since: 4.7
 ---
 
 Deprecates `errorsHashToArray` `errorsArrayToHash` and `normalizeModelName`.

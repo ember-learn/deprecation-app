@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-promise-proxies
 title: Deprecate Promise Proxies
-until: '5.0'
-since: '4.7'
+until: 5.0
+since: 4.7
 ---
 
 Additional Reading: [RFC#846 Deprecate Proxies](https://rfcs.emberjs.com/id/0846-ember-data-deprecate-proxies)

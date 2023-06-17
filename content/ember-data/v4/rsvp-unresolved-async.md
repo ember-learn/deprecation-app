@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:rsvp-unresolved-async
 title: Rsvp Unresolved Async
-until: '5.0'
-since: '4.5'
+until: 5.0
+since: 4.5
 ---
 
 Deprecates when a request promise did not resolve prior to the store tearing down.

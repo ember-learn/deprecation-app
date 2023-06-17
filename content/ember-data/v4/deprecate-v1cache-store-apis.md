@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-v1cache-store-apis
 title: Deprecate V1 cache Store Apis
-until: '5.0'
-since: '4.7'
+until: 5.0
+since: 4.7
 ---
 
 Deprecates various methods on the store and store-cache-wrapper that were specific to the v1 cache.

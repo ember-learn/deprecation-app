@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-non-strict-relationships
 title: Deprecate Non Strict Relationships
-until: '5.0'
-since: '4.7'
+until: 5.0
+since: 4.7
 ---
 
 Deprecates when belongsTo and hasMany relationships are defined without specifying whether the relationship is asynchronous.
