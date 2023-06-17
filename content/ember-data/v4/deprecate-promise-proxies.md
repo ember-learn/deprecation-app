@@ -5,8 +5,18 @@ until: '5.0'
 since: '4.7'
 ---
 
-#### TODO
+Additional Reading: [RFC#846 Deprecate Proxies](https://rfcs.emberjs.com/id/0846-ember-data-deprecate-proxies)
 
-You passed in a PromiseProxy to a Relationship API that now expects a resolved value. await the value before setting it.
+Deprecates using the proxy object/proxy array capabilities of values returned from:
 
-[RFC 846](https://rfcs.emberjs.com/id/0846-ember-data-deprecate-proxies)
+- `store.findRecord`
+- `store.findAll`
+- `store.query`
+- `store.queryRecord`
+- `record.save`
+- `recordArray.save`
+- `recordArray.update`
+
+These methods will now return a native Promise that resolves with the value.
+
+Note that this does not deprecate the proxy behaviors of `PromiseBelongsTo`. See RFC for reasoning. The opportunity should still be taken if available to stop using these proxy behaviors; however, this class will remain until `import Model from '@ember-data/model';` is deprecated more broadly.
