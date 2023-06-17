@@ -5,8 +5,8 @@ until: '5.0'
 since: '4.7'
 ---
 
-#### TODO
+Deprecates `errorsHashToArray` `errorsArrayToHash` and `normalizeModelName`.
 
-errorsArrayToHash helper has been deprecated
+Users making use of these (already private) utilities can trivially copy them into their own codebase to continue using them, though we recommend refactoring to a more direct conversion into the expected errors format for the errors helpers.
 
-[RFC TODO](TODO)
+For refactoring normalizeModelName we also recommend following the guidance in [RFC#740 Deprecate Non-Strict Types](https://github.com/emberjs/rfcs/pull/740).
