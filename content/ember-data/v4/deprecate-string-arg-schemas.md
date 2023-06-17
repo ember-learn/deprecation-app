@@ -5,8 +5,11 @@ until: '5.0'
 since: '4.5'
 ---
 
-#### TODO
+Deprecates `schema.attributesDefinitionFor(type)` and `schema.relationshipsDefinitionFor(type)` in favor of a consistent object signature (`identifier | { type }`).
 
-attributesDefinitionFor expects either a record identifier or an argument of shape { type: string }, received a string.
+To resolve change:
 
-[RFC TODO](TODO)
+```diff
+- store.getSchemaDefinitionService().attributesDefinitionFor('user')
++ store.getSchemaDefinitionService().attributesDefinitionFor({ type: 'user' })
+```
