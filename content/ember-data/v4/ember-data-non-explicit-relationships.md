@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:non-explicit-relationships
 title: Non Explicit Relationships
-until: 5.0
-since: 4.7
+until: '5.0'
+since: '4.7'
 ---
 
 Deprecates when polymorphic relationships are detected via inheritance or mixins and no polymorphic relationship configuration has been setup.

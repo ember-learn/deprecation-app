@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-model-reopen
 title: Deprecate Model Reopen
-until: 5.0
-since: 4.7
+until: '5.0'
+since: '4.7'
 ---
 
 For properties known ahead of time, instead of:
