@@ -5,8 +5,24 @@ until: '5.0'
 since: '4.7'
 ---
 
-#### TODO
+Instead of reopenClass, define `static` properties with native class syntax or add them to the final object.
 
-Model.reopenClass is deprecated. Use Foo extends Model to add static methods and properties to your class instead.
+Instead of:
 
-[RFC TODO](TODO)
+```js
+User.reopenClass({ aStaticMethod() {} });
+```
+
+Do this:
+
+```js
+class User {
+  static aStaticMethod() {}
+}
+```
+
+Or, do this:
+
+```js
+User.aStaticMethod = function () {};
+```
