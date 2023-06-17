@@ -5,8 +5,8 @@ until: '5.0'
 since: '4.5'
 ---
 
-#### TODO
+Deprecates when a request promise did not resolve prior to the store tearing down.
 
-A Promise for fetching ${relationship.type} did not resolve by the time your model was destroyed. This will error in a future release.
+Note: in most cases even with the promise guard that is now being deprecated a test crash would still be encountered.
 
-[RFC 846](https://rfcs.emberjs.com/id/0846-ember-data-deprecate-proxies)
+To resolve: Tests or Fastboot instances which crash need to find triggers requests and properly await them before tearing down.
