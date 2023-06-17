@@ -4,7 +4,7 @@ const path = require('path');
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-/* 
+/*
 Map over filenames in order to help generate the prembered
 URLs for the individual deprecation article pages.
 Their URL is something like `/id/project.bower-dependencies`
@@ -30,6 +30,7 @@ module.exports = function (defaults) {
         '/ember/v1.x',
         '/ember-data/v2.x',
         '/ember-data/v3.x',
+        '/ember-data/v4.x',
         '/ember-cli/v2.x',
         '/ember-cli/v4.x',
         ...getDeprecationFilenames(),
