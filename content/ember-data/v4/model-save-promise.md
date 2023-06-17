@@ -5,9 +5,13 @@ until: '5.0'
 since: '4.4'
 ---
 
-#### TODO
+Affects:
 
-Accessing ${prop} is deprecated. The return type is being changed from PromiseObjectProxy to a Promise.
-The only available methods to access on this promise are .then, .catch and .finally`.
+- `model.save` / `store.saveRecord`
+- `model.reload`
 
-[RFC 795](https://rfcs.emberjs.com/id/0795-ember-data-return-promise-save)
+Deprecates the promise-proxy returned by these methods in favor of a Promise return value.
+
+To resolve this deprecation, `await` or `.then` the return value before doing work with the result instead of accessing values via the proxy.
+
+To continue utilizing flags such as `isPending` in your templates consider using [ember-promise-helpers](https://github.com/fivetanley/ember-promise-helpers)
