@@ -5,8 +5,30 @@ until: '5.0'
 since: '4.7'
 ---
 
-#### TODO
+Deprecates when belongsTo and hasMany relationships are defined without specifying whether the relationship is asynchronous.
 
-hasMany(<type>, <options>) must specify options.inverse as either `null` or string type of the related resource.
+The current behavior is that relationships which do not define this setting are aschronous (`{ async: true }`).
 
-[RFC 739](https://rfcs.emberjs.com/id/0739-ember-data-deprecate-non-strict-relationships)
+Instead of:
+
+```js
+class Company extends Model {
+  @hasMany('employee') employees;
+}
+
+class Employee extends Model {
+  @belongsTo('company') company;
+}
+```
+
+Use:
+
+```js
+class Company extends Model {
+  @hasMany('employee', { async: true, inverse: 'company' }) employees;
+}
+
+class Employee extends Model {
+  @belongsTo('company', { async: true, inverse: 'employees' }) company;
+}
+```
