@@ -5,9 +5,34 @@ until: '5.0'
 since: '4.7'
 ---
 
-#### TODO
+This deprecation triggers if static computed properties
+or methods are triggered without looking up the record
+via the store service's `modelFor` hook. Accessing this
+static information without looking up the model via the
+store most commonly occurs when
 
-Accessing schema information on Models without looking up the model via the store is deprecated.
-Use store.modelFor (or better Snapshots or the store.getSchemaDefinitionService() apis) instead.
+- using ember-cli-mirage (to fix, refactor to not use its auto-discovery of ember-data models)
+- importing a model class and accessing its static information via the import
 
-[RFC 741](https://rfcs.emberjs.com/id/0741-ember-data-deprecate-model-static-field-access-without-lookup)
+Instead of
+
+```js
+import User from 'my-app/models/user';
+
+const relationships = User.relationshipsByName;
+```
+
+Do _at least_ this
+
+```js
+const relationships = store.modelFor('user').relationshipsByName;
+```
+
+However, the much more future proof refactor is to not use `modelFor` at all but instead
+to utilize the schema service for this static information.
+
+```js
+const relationships = store
+  .getSchemaDefinitionService()
+  .relationshipsDefinitionFor({ type: 'user' });
+```
