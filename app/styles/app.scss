@@ -584,7 +584,7 @@ p a:hover {
         width: 100%;
 
         .ember-version-graphic {
-          $height: 132px;
+          $height: 161px;
           width: $height;
           height: $height;
 
@@ -595,6 +595,14 @@ p a:hover {
 
         .links {
           border-top: 0;
+       }
+        .row{
+          display: flex;
+          flex-direction: row;
+        }
+        .column{
+          display: flex;
+          flex-direction: column;
         }
       }
     }
