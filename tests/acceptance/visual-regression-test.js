@@ -74,6 +74,10 @@ module('Acceptance | visual regression', function (hooks) {
     await click('[data-test-main-deprecations-link]');
     await click('[data-test-ember-4-link] > a');
 
+    // v5.x Ember
+    await click('[data-test-main-deprecations-link]');
+    await click('[data-test-ember-5-link] > a');
+
     assert
       .dom('[data-test-deprecations-added-in]')
       .hasText('Deprecations Added in Ember 4.x');
