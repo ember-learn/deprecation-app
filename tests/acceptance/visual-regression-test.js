@@ -74,10 +74,6 @@ module('Acceptance | visual regression', function (hooks) {
     await click('[data-test-main-deprecations-link]');
     await click('[data-test-ember-4-link] > a');
 
-    // v5.x Ember
-    await click('[data-test-main-deprecations-link]');
-    await click('[data-test-ember-5-link] > a');
-
     assert
       .dom('[data-test-deprecations-added-in]')
       .hasText('Deprecations Added in Ember 4.x');
@@ -94,6 +90,17 @@ module('Acceptance | visual regression', function (hooks) {
 
     await percySnapshot('ember-cli-4.x');
 
+    // v5.x Ember
+    await click('[data-test-main-deprecations-link]');
+    await click('[data-test-ember-5-link] > a');
+
+    assert
+      .dom('[data-test-deprecations-added-in]')
+      .hasText('Deprecations Added in Ember 5.x');
+
+    await percySnapshot('ember-5.x');
+
+    // Individual page
     await visit('/id/ember-polyfills-deprecate-assign');
     assert.dom('h1').hasText('Deprecation Guide for Ember.assign');
     await percySnapshot('individual-deprecation-page');
