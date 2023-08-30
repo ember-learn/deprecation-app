@@ -1,7 +1,7 @@
 ---
 title: Deprecate Non Strict Types
 until: '6.0'
-since: '5.2'
+since: '5.3'
 displayId: ember-data:deprecate-non-strict-types
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Deprecate Legacy Imports
 until: '6.0'
-since: '5.2'
+since: '5.3'
 displayId: ember-data:deprecate-legacy-imports
 ---
 
