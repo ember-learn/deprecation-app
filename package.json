@@ -90,7 +90,7 @@
     "sass": "^1.58.0",
     "semver-compare": "^1.0.0",
     "walk-sync": "^3.0.0",
-    "webpack": "^5.76.2",
+    "webpack": "^5.88.2",
     "yaml-front-matter": "^4.1.1"
   },
   "ember": {
