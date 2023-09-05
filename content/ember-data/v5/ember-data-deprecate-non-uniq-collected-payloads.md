@@ -1,5 +1,5 @@
 ---
-title: Deprecate Non Uniq Payloads
+title: Non Uniq Collection Payloads
 until: '6.0'
 since: '5.3'
 displayId: ember-data:deprecate-non-unique-collection-payloads

@@ -1,5 +1,5 @@
 ---
-title: Deprecate Non Uniq Payloads
+title: Relationship Remote update clearing Local state
 until: '6.0'
 since: '5.3'
 displayId: ember-data:deprecate-relationship-remote-update-clearing-local-state
