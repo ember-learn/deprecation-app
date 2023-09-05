@@ -1,5 +1,5 @@
 ---
-title: Deprecate Non Strict Types
+title: Deprecate Computed Chains
 until: '6.0'
 since: '5.0'
 displayId: <none yet assigned>
