@@ -1,5 +1,5 @@
 ---
-title: 'outputPaths' build option
+title: outputPaths build option
 until: 6.0.0
 since: 5.3.0
 displayId: ember-cli.outputPaths-build-option
