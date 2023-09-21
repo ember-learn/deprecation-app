@@ -35,6 +35,7 @@ module.exports = function (defaults) {
         '/ember-data/v4.x',
         '/ember-cli/v2.x',
         '/ember-cli/v4.x',
+        '/ember-cli/v5.x',
         ...getDeprecationFilenames(),
       ],
     },

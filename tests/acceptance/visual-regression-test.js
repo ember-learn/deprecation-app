@@ -90,6 +90,16 @@ module('Acceptance | visual regression', function (hooks) {
 
     await percySnapshot('ember-cli-4.x');
 
+    // v5.x Ember CLI
+    await click('[data-test-main-deprecations-link]');
+    await click('[data-test-ember-cli-5-link] > a');
+
+    assert
+      .dom('[data-test-deprecations-added-in]')
+      .hasText('Deprecations Added in Ember CLI 5.x');
+
+    await percySnapshot('ember-cli-5.x');
+
     // v5.x Ember
     await click('[data-test-main-deprecations-link]');
     await click('[data-test-ember-5-link] > a');
