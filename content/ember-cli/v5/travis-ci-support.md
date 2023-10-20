@@ -9,3 +9,5 @@ Travis CI is no longer recommended. Since Travis CI announced the end of its unl
 The Ember CLI option for Travis CI when generating projects has been deprecated, including the `--ci-provider=travis ` command-line flag.
 
 Travis CI may continue to be used, but the config will no longer be maintained or updated by the Ember CLI blueprint.
+
+This deprecation is the result of [RFC #918](https://rfcs.emberjs.com/id/0918-deprecate-travis-ci-support).
