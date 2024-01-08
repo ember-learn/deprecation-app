@@ -21,4 +21,4 @@ export default class MyModelRoute extends Route {
 }
 ```
 
-For more background, read the [RFC](https://github.com/snewcomer/rfcs/blob/master/text/0774-implicit-record-route-loading.md).
+For more background, read the [RFC](https://github.com/emberjs/rfcs/blob/master/text/0774-implicit-record-route-loading.md).
