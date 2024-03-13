@@ -41,7 +41,22 @@ export default class Demo extends Component {
     }
 }
 ```
+After:
+```javascript
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+
+export default class Demo extends Component {
+    @action
+    plusOne() {
+       /* ... */ 
+    }
+}
+```
+
 or
+
+Before:
 ```javascript
 import Component from '@ember/component';
 
@@ -53,7 +68,22 @@ export default class Demo extends Component {
     }
 }
 ```
+
+After:
+```javascript
+import Component from '@ember/component';
+import { action } from '@ember/object';
+
+export default class Demo extends Component {
+    @action
+    plusOne() {
+       /* ... */ 
+    }
+}
+```
 or
+
+Before:
 ```javascript
 import Component from '@ember/component';
 
@@ -68,20 +98,22 @@ export default Component.extend({
 
 After:
 ```javascript
-import Component from '@glimmer/component';
+import Component from '@ember/component';
 import { action } from '@ember/object';
 
-export default class Demo extends Component {
-    @action
-    plusOne() {
-       /* ... */ 
-    }
-}
+export default Component.extend({
+  plusOne: action(function() {
+      /* ... */ 
+  }),
+})
 ```
+
+If `(action)` or `{{action}}` is passed a string, it's _possible_ that the referenced method is declared on the caller, and _not_ the immediate component -- that is, `(action)` and `{{action}}` bubble up the render tree.
 
 Note that `@action` is completely different from `(action)` or `{{action}}` (and is partly a motivator for deprecating `(action)` and `{{action}}`, to reduce ambiguity).
 
 `@action` is binds the `this` on the method to the instance of the class. 
+
 
 ### Scenario: `action` is passed a function reference
 
