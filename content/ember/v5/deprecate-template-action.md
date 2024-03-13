@@ -7,7 +7,7 @@ since: 5.10.0
 ### Scenario: `action` is passed a string
 
 Before:
-```hbs
+```handlebars
 <button type="button" {{action "plusOne"}}>
   Click Me
 </button>
@@ -15,13 +15,13 @@ Before:
 
 After
 
-```hbs
+```handlebars
 <button type="button" {{on 'click' this.plusOne}}>
   Click Me
 </button>
 ```
 or, if `plusOne` is passed in as an argument 
-```hbs
+```handlebars
 <button type="button" {{on 'click' @plusOne}}>
   Click Me
 </button>
@@ -30,7 +30,7 @@ or, if `plusOne` is passed in as an argument
 If the `plusOne` action is in an actions object, it needs to move out:
 
 Before:
-```js
+```javascript
 import Component from '@glimmer/component';
 
 export default class Demo extends Component {
@@ -42,7 +42,7 @@ export default class Demo extends Component {
 }
 ```
 or
-```js
+```javascript
 import Component from '@ember/component';
 
 export default class Demo extends Component {
@@ -54,7 +54,7 @@ export default class Demo extends Component {
 }
 ```
 or
-```js
+```javascript
 import Component from '@ember/component';
 
 export default Component.extend({
@@ -67,7 +67,7 @@ export default Component.extend({
 ```
 
 After:
-```js
+```javascript
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 
@@ -86,36 +86,36 @@ Note that `@action` is completely different from `(action)` or `{{action}}` (and
 ### Scenario: `action` is passed a function reference
 
 Before:
-```hbs
+```handlebars
 <SomeComponent @update={{action this.plusOne}} />
 ```
 
 After
 
-```hbs
+```handlebars
 <SomeComponent @update={{this.plusOne}} />
 ```
 
 ### Scenario: `action` is passed parameters
 
 Before:
-```hbs
+```handlebars
 <SomeComponent @update={{action this.plus 1}} />
 ```
 
 After:
-```hbs
+```handlebars
 <SomeComponent @update={{fn this.plus 1}} />
 ```
 
 ### Scenario: `action` is used with `mut` 
 
 Before:
-```hbs
+```handlebars
 <SomeComponent @update={{action (mut @value.property}} />
 ```
 After:
-```js
+```javascript
 // parent.js
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
@@ -127,7 +127,7 @@ export default class SomeComponent extends Component {
     }
 }
 ```
-```hbs
+```handlebars
 {{! parent.hbs }}
 <SomeComponent @update={{this.handleUpdate}} />
 ```
