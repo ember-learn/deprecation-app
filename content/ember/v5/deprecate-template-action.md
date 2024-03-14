@@ -1,7 +1,7 @@
 ---
 title: Action helper and modifier 
 until: 6.0.0
-since: 5.10.0
+since: 5.9.0
 ---
 
 ### Scenario: `action` is passed a string
