@@ -66,7 +66,7 @@
     "ember-qunit": "^5.1.5",
     "ember-resolver": "^8.0.3",
     "ember-set-body-class": "^1.0.2",
-    "ember-showdown-shiki": "^1.0.6",
+    "ember-showdown-shiki": "^1.1.0",
     "ember-source": "~4.4.0",
     "ember-styleguide": "^7.1.0",
     "ember-template-lint": "^5.7.1",
