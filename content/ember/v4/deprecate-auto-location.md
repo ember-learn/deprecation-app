@@ -47,8 +47,7 @@ this one is now deprecated.
 3. If you need feature detection you can run your detection code in app/router.js, 
 before setting the location type.
 
-```js
-// app/router.js
+```js {data-filename=app/router.js}
 export default class Router extends EmberRouter {
   location = (historyFeatureDetection() ? 'history' : 'hash');
   // …

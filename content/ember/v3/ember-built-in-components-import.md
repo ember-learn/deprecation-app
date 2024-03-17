@@ -26,9 +26,7 @@ remain "frozen" in there:
 
 Before:
 
-```js
-// app/components/my-checkbox.js
-
+```js {data-filename=app/components/my-checkbox.js}
 import Checkbox from '@ember/component/checkbox';
 //                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Using Ember.Checkbox or importing from '@ember/component/checkbox' has been
@@ -42,9 +40,7 @@ export class MyCheckbox extends Checkbox {
 
 After:
 
-```js
-// app/components/my-checkbox.js
-
+```js {data-filename=app/components/my-checkbox.js}
 import { Checkbox } from '@ember/legacy-built-in-components';
 
 export class MyCheckbox extends Checkbox {
