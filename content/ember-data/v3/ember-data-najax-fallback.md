@@ -40,8 +40,7 @@ export default ApplicationAdapter extends JSONAPIAdapter {
 
 b. You can also opt-in and and configure your ember-data compatibility version to `3.22` or higher. See documentation [here](https://api.emberjs.com/ember-data/release/modules/@ember-data%2Fdeprecations).
 
-```js
-// ember-cli-build.js
+```js {data-filename=ember-cli-build.js}
 let app = new EmberApp(defaults, {
     emberData: {
       compatWith: '3.22',
