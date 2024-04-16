@@ -72,8 +72,7 @@ injection to use services instead.
 
 Before:
 
-```js
-// app/initializers/logger.js
+```js {data-filename=app/initializers/logger.js}
 import EmberObject from '@ember/object';
 
 export function initialize(application) {
@@ -92,8 +91,7 @@ export default {
   initialize: initialize
 };
 ```
-```js
-// app/routes/application.js
+```js {data-filename=app/routes/application.js}
 export default class ApplicationRoute extends Route {
   model() {
     this.logger.log('fetching application model...');
@@ -104,8 +102,7 @@ export default class ApplicationRoute extends Route {
 
 After:
 
-```js
-// app/services/logger.js
+```js {data-filename=app/services/logger.js}
 import Service from '@ember/service';
 
 export class Logger extends Service {
@@ -114,8 +111,7 @@ export class Logger extends Service {
   }
 }
 ```
-```js
-// app/routes/application.js
+```js {data-filename=app/routes/application.js}
 import { inject as service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
@@ -133,8 +129,7 @@ service, the value can be accessed by looking it up directly on the container
 instead using the [lookup](https://api.emberjs.com/ember/3.22/classes/ApplicationInstance/methods/lookup?anchor=lookup)
 method:
 
-```js
-// app/routes/application.js
+```js {data-filename=app/routes/application.js}
 import { getOwner } from '@ember/application';
 import { inject as service } from '@ember/service';
 

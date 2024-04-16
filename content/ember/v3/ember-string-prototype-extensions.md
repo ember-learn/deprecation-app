@@ -55,8 +55,7 @@ Keep in mind that different libraries will behave in slightly different ways, so
 
 You can also [disable String prototype extensions](https://guides.emberjs.com/release/configuring-ember/disabling-prototype-extensions/) by editing your environment file:
 
-```js
-// config/environment.js
+```js {data-filename=config/environment.js}
 ENV = {
   EmberENV: {
     EXTEND_PROTOTYPES: {

@@ -13,8 +13,7 @@ __Migrating Named Outlets__
 
 Given:
 
-```js
-// app/routes/checkout.js
+```js {data-filename=app/routes/checkout.js}
 class CheckoutRoute extends Route {
   // ...
   renderTemplate() {
@@ -53,8 +52,7 @@ We can migrate this entirely to use components.
 
 __Migrating Hiearchy Escaping__
 
-```js
-// app/routes/checkout.js
+```js {data-filename=app/routes/checkout.js}
 class CheckoutRoute extends Route {
   // ...
 
@@ -90,8 +88,7 @@ class CheckoutRoute extends Route {
 
 This can transitioned to:
 
-```js
-// app/controller/checkout.js
+```js {data-filename=app/controller/checkout.js}
 class CheckoutController extends Controller {
   // ...
   @tracked isModalOpen = false;
