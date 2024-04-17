@@ -13,14 +13,14 @@ Before:
 </button>
 ```
 
-After
-
+After:
 ```handlebars
 <button type="button" {{on 'click' this.plusOne}}>
   Click Me
 </button>
 ```
-or, if `plusOne` is passed in as an argument 
+
+or, if `plusOne` is passed in as an argument:
 ```handlebars
 <button type="button" {{on 'click' @plusOne}}>
   Click Me
@@ -29,6 +29,8 @@ or, if `plusOne` is passed in as an argument
 
 If the `plusOne` action is in an actions object, it needs to move out:
 
+#### For Glimmer components
+
 Before:
 ```javascript
 import Component from '@glimmer/component';
@@ -41,6 +43,7 @@ export default class Demo extends Component {
     }
 }
 ```
+
 After:
 ```javascript
 import Component from '@glimmer/component';
@@ -56,11 +59,17 @@ export default class Demo extends Component {
 
 or
 
+#### For Classic Components with native classes
+
 Before:
 ```javascript
 import Component from '@ember/component';
 
 export default class Demo extends Component {
+    doMath() {
+      this.send('plusOne');
+    }
+
     actions = {
         plusOne() {
            /* ... */ 
@@ -75,13 +84,20 @@ import Component from '@ember/component';
 import { action } from '@ember/object';
 
 export default class Demo extends Component {
+    doMath() {
+      this.plusOne();
+    }
+
     @action
     plusOne() {
        /* ... */ 
     }
 }
 ```
+
 or
+
+#### For Classic Components with EmberObject.extend
 
 Before:
 ```javascript
@@ -108,7 +124,7 @@ export default Component.extend({
 })
 ```
 
-If `(action)` or `{{action}}` is passed a string, it's _possible_ that the referenced method is declared on the caller, and _not_ the immediate component -- that is, `(action)` and `{{action}}` bubble up the render tree.
+If `(action)` or `{{action}}` is passed a string, it's _possible_ that the referenced method is declared on the caller, and _not_ the immediate component -- that is, `(action)` and `{{action}}` bubble up the render tree from route templates -> controllers -> routes.
 
 Note that `@action` is completely different from `(action)` or `{{action}}` (and is partly a motivator for deprecating `(action)` and `{{action}}`, to reduce ambiguity).
 
