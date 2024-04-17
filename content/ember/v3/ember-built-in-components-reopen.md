@@ -78,9 +78,7 @@ Checkbox.reopen({
 
 After:
 
-```js
-// app/components/my-checkbox.js
-
+```js {data-filename=app/components/my-checkbox.js}
 import { Checkbox } from '@ember/legacy-built-in-components';
 
 export default class MyCheckbox extends Checkbox {
@@ -159,9 +157,7 @@ Component.reopen({
 
 After:
 
-```js
-// app/components/base.js
-
+```js {data-filename=app/components/base.js}
 import Component from '@ember/component';
 
 // Subclass from this in your app, instead of subclassing from Ember.Component
