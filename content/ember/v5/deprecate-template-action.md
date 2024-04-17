@@ -128,7 +128,7 @@ If `(action)` or `{{action}}` is passed a string, it's _possible_ that the refer
 
 Note that `@action` is completely different from `(action)` or `{{action}}` (and is partly a motivator for deprecating `(action)` and `{{action}}`, to reduce ambiguity).
 
-`@action` is binds the `this` on the method to the instance of the class. 
+`@action` binds the `this` on the method to the instance of the class.
 
 
 ### Scenario: `action` is passed a function reference
