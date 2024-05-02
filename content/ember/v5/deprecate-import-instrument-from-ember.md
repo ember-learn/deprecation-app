@@ -1,5 +1,5 @@
 ---
-title: Ember._captureRenderTree 
+title: Ember.instrument 
 until: 6.0.0
 since: 5.10.0
 ---

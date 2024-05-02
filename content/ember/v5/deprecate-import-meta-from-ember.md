@@ -7,7 +7,7 @@ since: 5.10.0
 ```js
 import Ember from 'ember';
 
-Ember.isNamespace;
+Ember.meta;
 ```
 
 is deprecated and is private, but can be imported:
