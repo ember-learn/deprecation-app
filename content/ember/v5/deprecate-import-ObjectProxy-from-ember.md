@@ -10,9 +10,9 @@ Previously, ObjectProxy could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.ObjectProxy
-
 ```
 
  If needed, ObjectProxy can be imported:
 ```js
-import ObjectProxy from '@ember/object/proxy';```
+import ObjectProxy from '@ember/object/proxy';
+```

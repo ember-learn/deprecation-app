@@ -10,9 +10,9 @@ Previously, warn could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.warn
-
 ```
 
  If needed, warn can be imported:
 ```js
-import { warn } from '@ember/debug';```
+import { warn } from '@ember/debug';
+```

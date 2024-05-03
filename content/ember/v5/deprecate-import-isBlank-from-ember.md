@@ -10,9 +10,9 @@ Previously, isBlank could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.isBlank
-
 ```
 
  If needed, isBlank can be imported:
 ```js
-import { isBlank } from '@ember/utils';```
+import { isBlank } from '@ember/utils';
+```

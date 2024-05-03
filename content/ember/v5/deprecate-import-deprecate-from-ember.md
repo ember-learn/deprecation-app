@@ -10,9 +10,9 @@ Previously, deprecate could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.deprecate
-
 ```
 
  If needed, deprecate can be imported:
 ```js
-import { deprecate } from '@ember/debug';```
+import { deprecate } from '@ember/debug';
+```

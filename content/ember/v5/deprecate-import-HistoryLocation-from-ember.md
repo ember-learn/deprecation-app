@@ -10,9 +10,9 @@ Previously, HistoryLocation could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.HistoryLocation
-
 ```
 
  If needed, HistoryLocation can be imported:
 ```js
-import HistoryLocation from '@ember/routing/history-location';```
+import HistoryLocation from '@ember/routing/history-location';
+```

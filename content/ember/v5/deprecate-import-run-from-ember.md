@@ -10,9 +10,9 @@ Previously, run could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.run
-
 ```
 
  If needed, run can be imported:
 ```js
-import { run } from '@ember/runloop';```
+import { run } from '@ember/runloop';
+```

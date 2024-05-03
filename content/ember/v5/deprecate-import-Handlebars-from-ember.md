@@ -10,7 +10,6 @@ Previously, Handlebars could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Handlebars
-
 ```
 
 There is no replacement for this API.

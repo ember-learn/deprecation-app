@@ -10,7 +10,6 @@ Previously, toString could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.toString
-
 ```
 
 There is no replacement for this API.

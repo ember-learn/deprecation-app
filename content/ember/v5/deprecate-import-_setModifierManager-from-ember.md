@@ -10,9 +10,9 @@ Previously, _setModifierManager could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._setModifierManager
-
 ```
 
  If needed, _setModifierManager can be imported:
 ```js
-import { setModifierManager } from '@ember/modifier';```
+import { setModifierManager } from '@ember/modifier';
+```

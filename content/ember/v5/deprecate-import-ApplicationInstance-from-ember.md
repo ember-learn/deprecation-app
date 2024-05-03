@@ -10,9 +10,9 @@ Previously, ApplicationInstance could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.ApplicationInstance
-
 ```
 
  If needed, ApplicationInstance can be imported:
 ```js
-import ApplicationInstance from '@ember/application/instance';```
+import ApplicationInstance from '@ember/application/instance';
+```

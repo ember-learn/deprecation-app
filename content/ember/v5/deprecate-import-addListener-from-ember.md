@@ -10,9 +10,9 @@ Previously, addListener could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.addListener
-
 ```
 
  If needed, addListener can be imported:
 ```js
-import { addListener } from '@ember/object/events';```
+import { addListener } from '@ember/object/events';
+```

@@ -10,9 +10,9 @@ Previously, getProperties could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.getProperties
-
 ```
 
  If needed, getProperties can be imported:
 ```js
-import { getProperties } from '@ember/object';```
+import { getProperties } from '@ember/object';
+```

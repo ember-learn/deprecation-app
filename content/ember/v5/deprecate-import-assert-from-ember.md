@@ -10,9 +10,9 @@ Previously, assert could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.assert
-
 ```
 
  If needed, assert can be imported:
 ```js
-import { assert } from '@ember/debug';```
+import { assert } from '@ember/debug';
+```

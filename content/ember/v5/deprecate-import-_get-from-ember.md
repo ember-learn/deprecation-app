@@ -10,9 +10,9 @@ Previously, _get could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._get
-
 ```
 
  If needed, _get can be imported:
 ```js
-import { get } from '@ember/helper';```
+import { get } from '@ember/helper';
+```

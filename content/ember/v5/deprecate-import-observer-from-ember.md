@@ -10,9 +10,9 @@ Previously, observer could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.observer
-
 ```
 
  If needed, observer can be imported:
 ```js
-import { observer } from '@ember/object';```
+import { observer } from '@ember/object';
+```

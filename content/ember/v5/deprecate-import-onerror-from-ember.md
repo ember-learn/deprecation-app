@@ -10,7 +10,6 @@ Previously, onerror could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.onerror
-
 ```
 
 There is no replacement for this API.

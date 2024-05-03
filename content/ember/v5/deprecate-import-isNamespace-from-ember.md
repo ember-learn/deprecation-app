@@ -10,7 +10,6 @@ Previously, isNamespace could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.isNamespace
-
 ```
 
 There is no replacement for this API.

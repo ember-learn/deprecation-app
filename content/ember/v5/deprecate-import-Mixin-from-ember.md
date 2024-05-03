@@ -10,9 +10,9 @@ Previously, Mixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Mixin
-
 ```
 
  If needed, Mixin can be imported:
 ```js
-import Mixin from '@ember/object/mixin';```
+import Mixin from '@ember/object/mixin';
+```

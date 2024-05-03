@@ -10,7 +10,6 @@ Previously, ActionHandler could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.ActionHandler
-
 ```
 ActionHandler is also private.
 

@@ -10,7 +10,6 @@ Previously, libraries could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.libraries
-
 ```
 
 There is no replacement for this API.

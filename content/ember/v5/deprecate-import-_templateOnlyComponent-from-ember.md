@@ -10,9 +10,9 @@ Previously, _templateOnlyComponent could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._templateOnlyComponent
-
 ```
 
  If needed, _templateOnlyComponent can be imported:
 ```js
-import templateOnly from '@ember/component/template-only';```
+import templateOnly from '@ember/component/template-only';
+```

@@ -10,9 +10,9 @@ Previously, _isDestroying could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._isDestroying
-
 ```
 
  If needed, _isDestroying can be imported:
 ```js
-import { isDestroying } from '@ember/destroyable';```
+import { isDestroying } from '@ember/destroyable';
+```

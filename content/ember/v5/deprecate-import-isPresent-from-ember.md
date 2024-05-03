@@ -10,9 +10,9 @@ Previously, isPresent could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.isPresent
-
 ```
 
  If needed, isPresent can be imported:
 ```js
-import { isPresent } from '@ember/utils';```
+import { isPresent } from '@ember/utils';
+```

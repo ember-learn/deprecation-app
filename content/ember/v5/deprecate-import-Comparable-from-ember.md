@@ -10,7 +10,6 @@ Previously, Comparable could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Comparable
-
 ```
 Comparable is also private.
 

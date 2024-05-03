@@ -10,9 +10,9 @@ Previously, _assertDestroyablesDestroyed could be accessed via the `Ember` impor
 import Ember from 'ember';
 
 Ember._assertDestroyablesDestroyed
-
 ```
 
  If needed, _assertDestroyablesDestroyed can be imported:
 ```js
-import { assertDestroyablesDestroyed } from '@ember/destroyable';```
+import { assertDestroyablesDestroyed } from '@ember/destroyable';
+```

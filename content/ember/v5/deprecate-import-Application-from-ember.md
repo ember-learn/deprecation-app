@@ -10,9 +10,9 @@ Previously, Application could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Application
-
 ```
 
  If needed, Application can be imported:
 ```js
-import Application from '@ember/application';```
+import Application from '@ember/application';
+```

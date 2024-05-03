@@ -10,9 +10,9 @@ Previously, NativeArray could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.NativeArray
-
 ```
 
  If needed, NativeArray can be imported:
 ```js
-import { NativeArray }  from '@ember/array';```
+import { NativeArray }  from '@ember/array';
+```

@@ -10,9 +10,9 @@ Previously, deprecateFunc could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.deprecateFunc
-
 ```
 
  If needed, deprecateFunc can be imported:
 ```js
-import { deprecateFunc } from '@ember/debug';```
+import { deprecateFunc } from '@ember/debug';
+```

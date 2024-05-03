@@ -10,7 +10,6 @@ Previously, _Backburner could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._Backburner
-
 ```
 _Backburner is also private.
 

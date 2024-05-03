@@ -10,12 +10,12 @@ Previously, subscribe could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.subscribe
-
 ```
 subscribe is also private.
 
  If needed, subscribe can be imported:
 ```js
-import { subscribe } from '@ember/instrumentation';```
+import { subscribe } from '@ember/instrumentation';
+```
 
 However, due to subscribe being private, it is not recommended, nor supported.

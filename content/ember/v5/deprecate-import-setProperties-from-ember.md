@@ -10,9 +10,9 @@ Previously, setProperties could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.setProperties
-
 ```
 
  If needed, setProperties can be imported:
 ```js
-import { setProperties } from '@ember/object';```
+import { setProperties } from '@ember/object';
+```

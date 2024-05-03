@@ -10,7 +10,6 @@ Previously, TEMPLATES could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.TEMPLATES
-
 ```
 TEMPLATES is also private.
 

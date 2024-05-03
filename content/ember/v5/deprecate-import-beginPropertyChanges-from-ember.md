@@ -10,7 +10,6 @@ Previously, beginPropertyChanges could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.beginPropertyChanges
-
 ```
 beginPropertyChanges is also private.
 

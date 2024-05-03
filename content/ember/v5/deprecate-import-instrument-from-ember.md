@@ -10,12 +10,12 @@ Previously, instrument could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.instrument
-
 ```
 instrument is also private.
 
  If needed, instrument can be imported:
 ```js
-import { instrument } from '@ember/instrumentation';```
+import { instrument } from '@ember/instrumentation';
+```
 
 However, due to instrument being private, it is not recommended, nor supported.

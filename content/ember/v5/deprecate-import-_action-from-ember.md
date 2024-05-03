@@ -10,9 +10,9 @@ Previously, _action could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._action
-
 ```
 
  If needed, _action can be imported:
 ```js
-import { action } from '@ember/object';```
+import { action } from '@ember/object';
+```

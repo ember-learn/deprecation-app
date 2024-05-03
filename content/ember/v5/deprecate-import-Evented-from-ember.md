@@ -10,9 +10,9 @@ Previously, Evented could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Evented
-
 ```
 
  If needed, Evented can be imported:
 ```js
-import Evented from '@ember/object/evented';```
+import Evented from '@ember/object/evented';
+```

@@ -10,9 +10,9 @@ Previously, _dependentKeyCompat could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._dependentKeyCompat
-
 ```
 
  If needed, _dependentKeyCompat can be imported:
 ```js
-import { dependentKeyCompat } from '@ember/object/compat';```
+import { dependentKeyCompat } from '@ember/object/compat';
+```

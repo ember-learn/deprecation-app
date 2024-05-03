@@ -10,9 +10,9 @@ Previously, EngineInstance could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.EngineInstance
-
 ```
 
  If needed, EngineInstance can be imported:
 ```js
-import Engine from '@ember/engine/instance';```
+import Engine from '@ember/engine/instance';
+```

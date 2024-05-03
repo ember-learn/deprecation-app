@@ -10,9 +10,9 @@ Previously, Controller could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Controller
-
 ```
 
  If needed, Controller can be imported:
 ```js
-import Controller  from '@ember/controller';```
+import Controller  from '@ember/controller';
+```

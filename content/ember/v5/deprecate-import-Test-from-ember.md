@@ -10,7 +10,6 @@ Previously, Test could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Test
-
 ```
 
 There is no replacement for this API.

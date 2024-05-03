@@ -10,9 +10,9 @@ Previously, getOwner could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.getOwner
-
 ```
 
  If needed, getOwner can be imported:
 ```js
-import { getOwner } from '@ember/owner';```
+import { getOwner } from '@ember/owner';
+```

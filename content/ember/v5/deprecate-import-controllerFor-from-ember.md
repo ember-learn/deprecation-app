@@ -10,7 +10,6 @@ Previously, controllerFor could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.controllerFor
-
 ```
 controllerFor is also private.
 

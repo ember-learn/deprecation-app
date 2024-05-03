@@ -10,9 +10,9 @@ Previously, _registerDestructor could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._registerDestructor
-
 ```
 
  If needed, _registerDestructor can be imported:
 ```js
-import { registerDestructor } from '@ember/destroyable';```
+import { registerDestructor } from '@ember/destroyable';
+```

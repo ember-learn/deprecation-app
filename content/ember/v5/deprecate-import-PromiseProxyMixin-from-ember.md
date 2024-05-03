@@ -10,9 +10,9 @@ Previously, PromiseProxyMixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.PromiseProxyMixin
-
 ```
 
  If needed, PromiseProxyMixin can be imported:
 ```js
-import EmberPromiseProxyMixin from '@ember/object/promise-proxy-mixin';```
+import EmberPromiseProxyMixin from '@ember/object/promise-proxy-mixin';
+```

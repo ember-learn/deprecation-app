@@ -10,9 +10,9 @@ Previously, VERSION could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.VERSION
-
 ```
 
  If needed, VERSION can be imported:
 ```js
-import { VERSION } from '@ember/version';```
+import { VERSION } from '@ember/version';
+```

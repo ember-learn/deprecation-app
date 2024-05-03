@@ -10,9 +10,9 @@ Previously, onLoad could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.onLoad
-
 ```
 
  If needed, onLoad can be imported:
 ```js
-import { onLoad } from '@ember/application';```
+import { onLoad } from '@ember/application';
+```

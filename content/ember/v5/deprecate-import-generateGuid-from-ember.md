@@ -10,7 +10,6 @@ Previously, generateGuid could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.generateGuid
-
 ```
 generateGuid is also private.
 

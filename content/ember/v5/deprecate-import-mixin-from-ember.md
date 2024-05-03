@@ -10,12 +10,12 @@ Previously, mixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.mixin
-
 ```
 mixin is also private.
 
  If needed, mixin can be imported:
 ```js
-import { mixin } from '@ember/object/mixin';```
+import { mixin } from '@ember/object/mixin';
+```
 
 However, due to mixin being private, it is not recommended, nor supported.

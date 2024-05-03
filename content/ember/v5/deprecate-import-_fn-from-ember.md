@@ -10,9 +10,9 @@ Previously, _fn could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._fn
-
 ```
 
  If needed, _fn can be imported:
 ```js
-import { fn } from '@ember/helper';```
+import { fn } from '@ember/helper';
+```

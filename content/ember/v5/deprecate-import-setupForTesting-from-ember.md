@@ -10,7 +10,6 @@ Previously, setupForTesting could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.setupForTesting
-
 ```
 
 There is no replacement for this API.

@@ -10,7 +10,6 @@ Previously, uuid could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.uuid
-
 ```
 
 There is no replacement for this API.

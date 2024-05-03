@@ -10,9 +10,9 @@ Previously, ContainerDebugAdapter could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.ContainerDebugAdapter
-
 ```
 
  If needed, ContainerDebugAdapter can be imported:
 ```js
-import ContainerDebugAdapter from '@ember/debug/container-debug-adapter';```
+import ContainerDebugAdapter from '@ember/debug/container-debug-adapter';
+```

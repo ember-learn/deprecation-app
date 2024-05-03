@@ -10,9 +10,9 @@ Previously, MutableArray could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.MutableArray
-
 ```
 
  If needed, MutableArray can be imported:
 ```js
-import MutableArray  from '@ember/array/mutable';```
+import MutableArray  from '@ember/array/mutable';
+```

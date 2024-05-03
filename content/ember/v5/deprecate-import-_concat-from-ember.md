@@ -10,9 +10,9 @@ Previously, _concat could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._concat
-
 ```
 
  If needed, _concat can be imported:
 ```js
-import { concat } from '@ember/helper';```
+import { concat } from '@ember/helper';
+```

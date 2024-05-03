@@ -10,9 +10,9 @@ Previously, trySet could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.trySet
-
 ```
 
  If needed, trySet can be imported:
 ```js
-import { trySet } from '@ember/object';```
+import { trySet } from '@ember/object';
+```

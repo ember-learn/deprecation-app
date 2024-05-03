@@ -10,7 +10,6 @@ Previously, generateControllerFactory could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.generateControllerFactory
-
 ```
 generateControllerFactory is also private.
 

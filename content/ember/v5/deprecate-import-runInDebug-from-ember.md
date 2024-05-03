@@ -10,9 +10,9 @@ Previously, runInDebug could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.runInDebug
-
 ```
 
  If needed, runInDebug can be imported:
 ```js
-import { runInDebug } from '@ember/debug';```
+import { runInDebug } from '@ember/debug';
+```

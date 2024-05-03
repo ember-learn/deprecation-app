@@ -10,9 +10,9 @@ Previously, isEqual could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.isEqual
-
 ```
 
  If needed, isEqual can be imported:
 ```js
-import { isEqual } from '@ember/utils';```
+import { isEqual } from '@ember/utils';
+```

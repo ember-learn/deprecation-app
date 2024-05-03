@@ -10,7 +10,6 @@ Previously, _ProxyMixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._ProxyMixin
-
 ```
 _ProxyMixin is also private.
 

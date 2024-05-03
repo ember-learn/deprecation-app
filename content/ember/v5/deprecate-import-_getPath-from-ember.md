@@ -10,7 +10,6 @@ Previously, _getPath could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._getPath
-
 ```
 
 There is no replacement for this API.

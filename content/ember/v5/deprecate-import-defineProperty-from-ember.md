@@ -10,9 +10,9 @@ Previously, defineProperty could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.defineProperty
-
 ```
 
  If needed, defineProperty can be imported:
 ```js
-import { defineProperty } from '@ember/object';```
+import { defineProperty } from '@ember/object';
+```

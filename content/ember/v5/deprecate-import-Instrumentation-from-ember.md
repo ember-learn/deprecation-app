@@ -10,12 +10,12 @@ Previously, Instrumentation could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Instrumentation
-
 ```
 Instrumentation is also private.
 
  If needed, Instrumentation can be imported:
 ```js
-import { * } from '@ember/instrumentation';```
+import { * } from '@ember/instrumentation';
+```
 
 However, due to Instrumentation being private, it is not recommended, nor supported.

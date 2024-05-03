@@ -10,9 +10,9 @@ Previously, removeListener could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.removeListener
-
 ```
 
  If needed, removeListener can be imported:
 ```js
-import { removeListener } from '@ember/object/events';```
+import { removeListener } from '@ember/object/events';
+```

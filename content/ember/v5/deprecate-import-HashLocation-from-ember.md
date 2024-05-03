@@ -10,9 +10,9 @@ Previously, HashLocation could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.HashLocation
-
 ```
 
  If needed, HashLocation can be imported:
 ```js
-import HashLocation from '@ember/routing/hash-location';```
+import HashLocation from '@ember/routing/hash-location';
+```

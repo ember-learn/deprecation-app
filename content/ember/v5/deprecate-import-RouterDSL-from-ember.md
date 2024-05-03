@@ -10,7 +10,6 @@ Previously, RouterDSL could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.RouterDSL
-
 ```
 
 There is no replacement for this API.

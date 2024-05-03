@@ -10,7 +10,6 @@ Previously, endPropertyChanges could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.endPropertyChanges
-
 ```
 endPropertyChanges is also private.
 
