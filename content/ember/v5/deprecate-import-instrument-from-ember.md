@@ -13,7 +13,8 @@ Ember.instrument
 ```
 instrument is also private.
 
- If needed, instrument can be imported:```js
+ If needed, instrument can be imported:
+```js
 import { instrument } from '@ember/instrumentation';```
 
 However, due to instrument being private, it is not recommended, nor supported.

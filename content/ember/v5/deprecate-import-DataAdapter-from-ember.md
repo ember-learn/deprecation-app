@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.DataAdapter
 ```
 
- If needed, DataAdapter can be imported:```js
+ If needed, DataAdapter can be imported:
+```js
 import DataAdapter from '@ember/debug/data-adapter';```

@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.onLoad
 ```
 
- If needed, onLoad can be imported:```js
+ If needed, onLoad can be imported:
+```js
 import { onLoad } from '@ember/application';```

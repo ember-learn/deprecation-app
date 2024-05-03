@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.Mixin
 ```
 
- If needed, Mixin can be imported:```js
+ If needed, Mixin can be imported:
+```js
 import Mixin from '@ember/object/mixin';```

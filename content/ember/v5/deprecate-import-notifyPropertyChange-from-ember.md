@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.notifyPropertyChange
 ```
 
- If needed, notifyPropertyChange can be imported:```js
+ If needed, notifyPropertyChange can be imported:
+```js
 import { notifyPropertyChange } from '@ember/object';```

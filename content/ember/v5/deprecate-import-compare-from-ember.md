@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.compare
 ```
 
- If needed, compare can be imported:```js
+ If needed, compare can be imported:
+```js
 import { compare } from '@ember/utils';```

@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.trySet
 ```
 
- If needed, trySet can be imported:```js
+ If needed, trySet can be imported:
+```js
 import { trySet } from '@ember/object';```

@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.Observable
 ```
 
- If needed, Observable can be imported:```js
+ If needed, Observable can be imported:
+```js
 import Observable from '@ember/object/observable';```

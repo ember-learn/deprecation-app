@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.FEATURES
 ```
 
- If needed, FEATURES can be imported:```js
+ If needed, FEATURES can be imported:
+```js
 import { isEnabled, FEATURES } from '@ember/canary-features';```

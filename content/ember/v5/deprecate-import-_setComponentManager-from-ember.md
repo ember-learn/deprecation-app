@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._setComponentManager
 ```
 
- If needed, _setComponentManager can be imported:```js
+ If needed, _setComponentManager can be imported:
+```js
 import { setComponentManager } from '@ember/component';```

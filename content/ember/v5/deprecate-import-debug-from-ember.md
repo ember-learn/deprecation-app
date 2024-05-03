@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.debug
 ```
 
- If needed, debug can be imported:```js
+ If needed, debug can be imported:
+```js
 import { debug } from '@ember/debug';```

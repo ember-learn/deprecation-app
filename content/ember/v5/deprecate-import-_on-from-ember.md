@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._on
 ```
 
- If needed, _on can be imported:```js
+ If needed, _on can be imported:
+```js
 import { on } from '@ember/modifier';```

@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.ApplicationInstance
 ```
 
- If needed, ApplicationInstance can be imported:```js
+ If needed, ApplicationInstance can be imported:
+```js
 import ApplicationInstance from '@ember/application/instance';```

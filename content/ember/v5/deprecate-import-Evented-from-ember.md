@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.Evented
 ```
 
- If needed, Evented can be imported:```js
+ If needed, Evented can be imported:
+```js
 import Evented from '@ember/object/evented';```

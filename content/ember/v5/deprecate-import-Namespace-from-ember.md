@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.Namespace
 ```
 
- If needed, Namespace can be imported:```js
+ If needed, Namespace can be imported:
+```js
 import Namespace from '@ember/application/namespace';```

@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.expandProperties
 ```
 
- If needed, expandProperties can be imported:```js
+ If needed, expandProperties can be imported:
+```js
 import { expandProperties } from '@ember/object/computed';```

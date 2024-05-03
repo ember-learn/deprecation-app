@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.isEmpty
 ```
 
- If needed, isEmpty can be imported:```js
+ If needed, isEmpty can be imported:
+```js
 import { isEmpty } from '@ember/utils';```

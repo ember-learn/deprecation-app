@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.assert
 ```
 
- If needed, assert can be imported:```js
+ If needed, assert can be imported:
+```js
 import { assert } from '@ember/debug';```

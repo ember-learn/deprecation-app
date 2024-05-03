@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.addListener
 ```
 
- If needed, addListener can be imported:```js
+ If needed, addListener can be imported:
+```js
 import { addListener } from '@ember/object/events';```

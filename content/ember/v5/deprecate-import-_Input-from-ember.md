@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._Input
 ```
 
- If needed, _Input can be imported:```js
+ If needed, _Input can be imported:
+```js
 import { Input }  from '@ember/component';```

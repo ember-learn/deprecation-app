@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.get
 ```
 
- If needed, get can be imported:```js
+ If needed, get can be imported:
+```js
 import { get } from '@ember/object';```

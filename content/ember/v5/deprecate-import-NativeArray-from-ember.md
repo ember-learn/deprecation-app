@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.NativeArray
 ```
 
- If needed, NativeArray can be imported:```js
+ If needed, NativeArray can be imported:
+```js
 import { NativeArray }  from '@ember/array';```

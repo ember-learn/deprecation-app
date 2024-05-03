@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.getProperties
 ```
 
- If needed, getProperties can be imported:```js
+ If needed, getProperties can be imported:
+```js
 import { getProperties } from '@ember/object';```

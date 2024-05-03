@@ -13,7 +13,8 @@ Ember.Enumerable
 ```
 Enumerable is also private.
 
- If needed, Enumerable can be imported:```js
+ If needed, Enumerable can be imported:
+```js
 import Enumerable from '@ember/enumerable';```
 
 However, due to Enumerable being private, it is not recommended, nor supported.

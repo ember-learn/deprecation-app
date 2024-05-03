@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.Helper
 ```
 
- If needed, Helper can be imported:```js
+ If needed, Helper can be imported:
+```js
 import Helper  from '@ember/component/helper';```

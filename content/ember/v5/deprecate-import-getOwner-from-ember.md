@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.getOwner
 ```
 
- If needed, getOwner can be imported:```js
+ If needed, getOwner can be imported:
+```js
 import { getOwner } from '@ember/owner';```

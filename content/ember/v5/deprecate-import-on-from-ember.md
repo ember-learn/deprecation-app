@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.on
 ```
 
- If needed, on can be imported:```js
+ If needed, on can be imported:
+```js
 import { on } from '@ember/object/evented';```

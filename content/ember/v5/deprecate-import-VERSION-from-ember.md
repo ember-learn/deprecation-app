@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.VERSION
 ```
 
- If needed, VERSION can be imported:```js
+ If needed, VERSION can be imported:
+```js
 import { VERSION } from '@ember/version';```

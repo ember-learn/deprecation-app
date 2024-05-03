@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.deprecateFunc
 ```
 
- If needed, deprecateFunc can be imported:```js
+ If needed, deprecateFunc can be imported:
+```js
 import { deprecateFunc } from '@ember/debug';```

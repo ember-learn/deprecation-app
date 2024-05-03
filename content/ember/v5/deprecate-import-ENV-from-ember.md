@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.ENV
 ```
 
- If needed, ENV can be imported:```js
+ If needed, ENV can be imported:
+```js
 import MyEnv from '<my-app>/config/environment';```

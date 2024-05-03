@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._invokeHelper
 ```
 
- If needed, _invokeHelper can be imported:```js
+ If needed, _invokeHelper can be imported:
+```js
 import { invokeHelper } from '@ember/helper';```

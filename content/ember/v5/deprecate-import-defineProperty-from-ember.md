@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.defineProperty
 ```
 
- If needed, defineProperty can be imported:```js
+ If needed, defineProperty can be imported:
+```js
 import { defineProperty } from '@ember/object';```

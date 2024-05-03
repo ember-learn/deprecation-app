@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._modifierManagerCapabilities
 ```
 
- If needed, _modifierManagerCapabilities can be imported:```js
+ If needed, _modifierManagerCapabilities can be imported:
+```js
 import { capabilities } from '@ember/modifier';```

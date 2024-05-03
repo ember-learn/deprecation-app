@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.isPresent
 ```
 
- If needed, isPresent can be imported:```js
+ If needed, isPresent can be imported:
+```js
 import { isPresent } from '@ember/utils';```

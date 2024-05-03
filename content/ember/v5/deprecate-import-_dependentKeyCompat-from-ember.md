@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._dependentKeyCompat
 ```
 
- If needed, _dependentKeyCompat can be imported:```js
+ If needed, _dependentKeyCompat can be imported:
+```js
 import { dependentKeyCompat } from '@ember/object/compat';```

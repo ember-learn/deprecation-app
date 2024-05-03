@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.runLoadHooks
 ```
 
- If needed, runLoadHooks can be imported:```js
+ If needed, runLoadHooks can be imported:
+```js
 import { runLoadHooks } from '@ember/application';```

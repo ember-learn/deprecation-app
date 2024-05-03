@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.RSVP
 ```
 
- If needed, RSVP can be imported:```js
+ If needed, RSVP can be imported:
+```js
 import RSVP from 'rsvp';```

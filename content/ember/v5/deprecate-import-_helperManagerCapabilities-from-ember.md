@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._helperManagerCapabilities
 ```
 
- If needed, _helperManagerCapabilities can be imported:```js
+ If needed, _helperManagerCapabilities can be imported:
+```js
 import { capabilities } from '@ember/helper';```

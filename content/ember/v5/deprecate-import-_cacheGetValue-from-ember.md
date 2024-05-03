@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._cacheGetValue
 ```
 
- If needed, _cacheGetValue can be imported:```js
+ If needed, _cacheGetValue can be imported:
+```js
 import { getValue } from '@glimmer/tracking/primitives/cache';```

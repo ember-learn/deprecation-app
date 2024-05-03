@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.Component
 ```
 
- If needed, Component can be imported:```js
+ If needed, Component can be imported:
+```js
 import Component  from '@ember/component';```

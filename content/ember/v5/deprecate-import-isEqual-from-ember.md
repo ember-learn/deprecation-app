@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.isEqual
 ```
 
- If needed, isEqual can be imported:```js
+ If needed, isEqual can be imported:
+```js
 import { isEqual } from '@ember/utils';```

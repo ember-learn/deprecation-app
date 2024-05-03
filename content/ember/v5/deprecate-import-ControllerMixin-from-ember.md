@@ -13,7 +13,8 @@ Ember.ControllerMixin
 ```
 ControllerMixin is also private.
 
- If needed, ControllerMixin can be imported:```js
+ If needed, ControllerMixin can be imported:
+```js
 import { ControllerMixin } from '@ember/controller';```
 
 However, due to ControllerMixin being private, it is not recommended, nor supported.

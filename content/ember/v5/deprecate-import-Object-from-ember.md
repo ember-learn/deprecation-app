@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.Object
 ```
 
- If needed, Object can be imported:```js
+ If needed, Object can be imported:
+```js
 import Object from '@ember/object';```

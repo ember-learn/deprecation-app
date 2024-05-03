@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._templateOnlyComponent
 ```
 
- If needed, _templateOnlyComponent can be imported:```js
+ If needed, _templateOnlyComponent can be imported:
+```js
 import templateOnly from '@ember/component/template-only';```

@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._cacheIsConst
 ```
 
- If needed, _cacheIsConst can be imported:```js
+ If needed, _cacheIsConst can be imported:
+```js
 import { isConst } from '@glimmer/tracking/primitives/cache';```

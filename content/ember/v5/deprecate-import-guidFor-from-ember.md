@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.guidFor
 ```
 
- If needed, guidFor can be imported:```js
+ If needed, guidFor can be imported:
+```js
 import { guidFor } from '@ember/object/internals';```

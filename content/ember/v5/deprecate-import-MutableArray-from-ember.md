@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.MutableArray
 ```
 
- If needed, MutableArray can be imported:```js
+ If needed, MutableArray can be imported:
+```js
 import MutableArray  from '@ember/array/mutable';```

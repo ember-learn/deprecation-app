@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._setComponentTemplate
 ```
 
- If needed, _setComponentTemplate can be imported:```js
+ If needed, _setComponentTemplate can be imported:
+```js
 import { setComponentTemplate } from '@ember/component';```

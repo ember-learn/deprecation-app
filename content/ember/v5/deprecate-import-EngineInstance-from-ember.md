@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.EngineInstance
 ```
 
- If needed, EngineInstance can be imported:```js
+ If needed, EngineInstance can be imported:
+```js
 import Engine from '@ember/engine/instance';```

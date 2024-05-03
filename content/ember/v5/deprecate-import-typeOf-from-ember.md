@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.typeOf
 ```
 
- If needed, typeOf can be imported:```js
+ If needed, typeOf can be imported:
+```js
 import { typeOf } from '@ember/utils';```

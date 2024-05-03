@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.sendEvent
 ```
 
- If needed, sendEvent can be imported:```js
+ If needed, sendEvent can be imported:
+```js
 import { sendEvent } from '@ember/object/events';```

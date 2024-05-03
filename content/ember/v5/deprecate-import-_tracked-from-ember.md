@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._tracked
 ```
 
- If needed, _tracked can be imported:```js
+ If needed, _tracked can be imported:
+```js
 import { tracked } from '@glimmer/tracking';```

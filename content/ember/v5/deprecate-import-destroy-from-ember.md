@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember.destroy
 ```
 
- If needed, destroy can be imported:```js
+ If needed, destroy can be imported:
+```js
 import { destroy } from '@ember/destroyable';```

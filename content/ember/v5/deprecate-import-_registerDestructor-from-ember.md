@@ -12,5 +12,6 @@ import Ember from 'ember';
 Ember._registerDestructor
 ```
 
- If needed, _registerDestructor can be imported:```js
+ If needed, _registerDestructor can be imported:
+```js
 import { registerDestructor } from '@ember/destroyable';```
