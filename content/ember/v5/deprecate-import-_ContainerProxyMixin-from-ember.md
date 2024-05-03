@@ -10,6 +10,7 @@ Previously, _ContainerProxyMixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._ContainerProxyMixin
+
 ```
 _ContainerProxyMixin is also private.
 

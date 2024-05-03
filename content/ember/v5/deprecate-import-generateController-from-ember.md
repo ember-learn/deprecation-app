@@ -10,6 +10,7 @@ Previously, generateController could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.generateController
+
 ```
 generateController is also private.
 

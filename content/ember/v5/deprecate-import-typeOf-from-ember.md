@@ -10,6 +10,7 @@ Previously, typeOf could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.typeOf
+
 ```
 
  If needed, typeOf can be imported:

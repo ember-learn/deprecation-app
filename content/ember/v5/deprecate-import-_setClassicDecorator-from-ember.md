@@ -10,6 +10,7 @@ Previously, _setClassicDecorator could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._setClassicDecorator
+
 ```
 _setClassicDecorator is also private.
 

@@ -10,6 +10,7 @@ Previously, Namespace could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Namespace
+
 ```
 
  If needed, Namespace can be imported:

@@ -10,6 +10,7 @@ Previously, HistoryLocation could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.HistoryLocation
+
 ```
 
  If needed, HistoryLocation can be imported:

@@ -10,6 +10,7 @@ Previously, wrap could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.wrap
+
 ```
 wrap is also private.
 

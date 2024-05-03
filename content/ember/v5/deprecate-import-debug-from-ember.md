@@ -10,6 +10,7 @@ Previously, debug could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.debug
+
 ```
 
  If needed, debug can be imported:

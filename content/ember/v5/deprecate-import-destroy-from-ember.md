@@ -10,6 +10,7 @@ Previously, destroy could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.destroy
+
 ```
 
  If needed, destroy can be imported:

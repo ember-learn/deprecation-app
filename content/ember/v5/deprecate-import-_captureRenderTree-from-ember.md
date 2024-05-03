@@ -10,6 +10,7 @@ Previously, _captureRenderTree could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._captureRenderTree
+
 ```
 _captureRenderTree is also private.
 

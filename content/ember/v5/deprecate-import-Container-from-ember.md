@@ -10,6 +10,7 @@ Previously, Container could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Container
+
 ```
 Container is also private.
 

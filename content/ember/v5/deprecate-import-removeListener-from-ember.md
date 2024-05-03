@@ -10,6 +10,7 @@ Previously, removeListener could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.removeListener
+
 ```
 
  If needed, removeListener can be imported:

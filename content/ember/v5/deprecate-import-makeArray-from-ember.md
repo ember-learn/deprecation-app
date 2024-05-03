@@ -10,6 +10,7 @@ Previously, makeArray could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.makeArray
+
 ```
 makeArray is also private.
 

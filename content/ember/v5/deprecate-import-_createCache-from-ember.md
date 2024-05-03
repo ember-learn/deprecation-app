@@ -10,6 +10,7 @@ Previously, _createCache could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._createCache
+
 ```
 
  If needed, _createCache can be imported:

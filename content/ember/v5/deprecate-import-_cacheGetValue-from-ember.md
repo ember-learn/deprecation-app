@@ -10,6 +10,7 @@ Previously, _cacheGetValue could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._cacheGetValue
+
 ```
 
  If needed, _cacheGetValue can be imported:

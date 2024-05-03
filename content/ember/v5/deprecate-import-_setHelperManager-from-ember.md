@@ -10,6 +10,7 @@ Previously, _setHelperManager could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._setHelperManager
+
 ```
 
  If needed, _setHelperManager can be imported:

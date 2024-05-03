@@ -10,6 +10,7 @@ Previously, ArrayProxy could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.ArrayProxy
+
 ```
 
  If needed, ArrayProxy can be imported:

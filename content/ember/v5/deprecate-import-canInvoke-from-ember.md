@@ -10,6 +10,7 @@ Previously, canInvoke could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.canInvoke
+
 ```
 canInvoke is also private.
 

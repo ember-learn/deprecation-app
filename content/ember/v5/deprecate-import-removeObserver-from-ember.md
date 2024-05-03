@@ -10,6 +10,7 @@ Previously, removeObserver could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.removeObserver
+
 ```
 
  If needed, removeObserver can be imported:

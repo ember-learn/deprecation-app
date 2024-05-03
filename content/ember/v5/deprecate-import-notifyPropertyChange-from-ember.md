@@ -10,6 +10,7 @@ Previously, notifyPropertyChange could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.notifyPropertyChange
+
 ```
 
  If needed, notifyPropertyChange can be imported:

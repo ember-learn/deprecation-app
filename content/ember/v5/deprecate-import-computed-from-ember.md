@@ -10,6 +10,7 @@ Previously, computed could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.computed
+
 ```
 
  If needed, computed can be imported:

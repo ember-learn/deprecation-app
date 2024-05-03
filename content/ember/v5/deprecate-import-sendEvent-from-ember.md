@@ -10,6 +10,7 @@ Previously, sendEvent could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.sendEvent
+
 ```
 
  If needed, sendEvent can be imported:

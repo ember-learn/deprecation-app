@@ -10,6 +10,7 @@ Previously, Helper could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Helper
+
 ```
 
  If needed, Helper can be imported:

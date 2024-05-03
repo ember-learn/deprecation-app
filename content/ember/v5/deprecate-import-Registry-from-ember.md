@@ -10,6 +10,7 @@ Previously, Registry could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Registry
+
 ```
 Registry is also private.
 

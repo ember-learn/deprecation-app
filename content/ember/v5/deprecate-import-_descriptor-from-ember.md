@@ -10,6 +10,7 @@ Previously, _descriptor could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._descriptor
+
 ```
 
 There is no replacement for this API.

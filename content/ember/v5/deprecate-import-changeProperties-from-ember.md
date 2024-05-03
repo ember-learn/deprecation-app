@@ -10,6 +10,7 @@ Previously, changeProperties could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.changeProperties
+
 ```
 changeProperties is also private.
 

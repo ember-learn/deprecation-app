@@ -10,6 +10,7 @@ Previously, _Input could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._Input
+
 ```
 
  If needed, _Input can be imported:

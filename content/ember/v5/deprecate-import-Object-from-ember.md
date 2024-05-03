@@ -10,6 +10,7 @@ Previously, Object could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Object
+
 ```
 
  If needed, Object can be imported:

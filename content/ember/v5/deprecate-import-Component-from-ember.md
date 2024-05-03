@@ -10,6 +10,7 @@ Previously, Component could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Component
+
 ```
 
  If needed, Component can be imported:

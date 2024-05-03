@@ -10,6 +10,7 @@ Previously, MutableEnumerable could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.MutableEnumerable
+
 ```
 MutableEnumerable is also private.
 

@@ -10,6 +10,7 @@ Previously, setOwner could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.setOwner
+
 ```
 
  If needed, setOwner can be imported:

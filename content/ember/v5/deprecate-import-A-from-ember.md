@@ -10,6 +10,7 @@ Previously, A could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.A
+
 ```
 
  If needed, A can be imported:

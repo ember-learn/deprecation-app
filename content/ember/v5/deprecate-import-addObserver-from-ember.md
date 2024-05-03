@@ -10,6 +10,7 @@ Previously, addObserver could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.addObserver
+
 ```
 
  If needed, addObserver can be imported:

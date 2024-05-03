@@ -10,6 +10,7 @@ Previously, _isDestroyed could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._isDestroyed
+
 ```
 
  If needed, _isDestroyed can be imported:

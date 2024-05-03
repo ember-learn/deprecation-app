@@ -10,6 +10,7 @@ Previously, compare could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.compare
+
 ```
 
  If needed, compare can be imported:

@@ -10,6 +10,7 @@ Previously, Enumerable could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Enumerable
+
 ```
 Enumerable is also private.
 

@@ -10,6 +10,7 @@ Previously, subscribe could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.subscribe
+
 ```
 subscribe is also private.
 

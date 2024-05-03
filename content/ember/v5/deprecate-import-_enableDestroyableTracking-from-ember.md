@@ -10,6 +10,7 @@ Previously, _enableDestroyableTracking could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._enableDestroyableTracking
+
 ```
 
  If needed, _enableDestroyableTracking can be imported:

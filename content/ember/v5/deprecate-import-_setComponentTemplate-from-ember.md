@@ -10,6 +10,7 @@ Previously, _setComponentTemplate could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._setComponentTemplate
+
 ```
 
  If needed, _setComponentTemplate can be imported:

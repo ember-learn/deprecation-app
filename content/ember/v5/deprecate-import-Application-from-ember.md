@@ -10,6 +10,7 @@ Previously, Application could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Application
+
 ```
 
  If needed, Application can be imported:

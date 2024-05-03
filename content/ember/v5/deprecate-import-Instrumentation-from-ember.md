@@ -10,6 +10,7 @@ Previously, Instrumentation could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Instrumentation
+
 ```
 Instrumentation is also private.
 

@@ -10,6 +10,7 @@ Previously, ControllerMixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.ControllerMixin
+
 ```
 ControllerMixin is also private.
 

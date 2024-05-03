@@ -10,6 +10,7 @@ Previously, _RegistryProxyMixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._RegistryProxyMixin
+
 ```
 _RegistryProxyMixin is also private.
 

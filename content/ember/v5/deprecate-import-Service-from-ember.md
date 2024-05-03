@@ -10,6 +10,7 @@ Previously, Service could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Service
+
 ```
 
  If needed, Service can be imported:

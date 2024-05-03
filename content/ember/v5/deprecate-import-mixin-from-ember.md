@@ -10,6 +10,7 @@ Previously, mixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.mixin
+
 ```
 mixin is also private.
 

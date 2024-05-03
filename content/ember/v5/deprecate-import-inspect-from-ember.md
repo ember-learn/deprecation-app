@@ -10,6 +10,7 @@ Previously, inspect could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.inspect
+
 ```
 inspect is also private.
 

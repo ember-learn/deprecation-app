@@ -10,6 +10,7 @@ Previously, isEqual could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.isEqual
+
 ```
 
  If needed, isEqual can be imported:

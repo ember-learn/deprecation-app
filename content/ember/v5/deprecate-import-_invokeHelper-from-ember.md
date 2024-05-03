@@ -10,6 +10,7 @@ Previously, _invokeHelper could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._invokeHelper
+
 ```
 
  If needed, _invokeHelper can be imported:

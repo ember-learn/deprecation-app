@@ -10,6 +10,7 @@ Previously, _Cache could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._Cache
+
 ```
 
 There is no replacement for this API.

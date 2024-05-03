@@ -10,6 +10,7 @@ Previously, isArray could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.isArray
+
 ```
 
  If needed, isArray can be imported:

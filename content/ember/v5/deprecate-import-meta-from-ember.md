@@ -10,6 +10,7 @@ Previously, meta could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.meta
+
 ```
 meta is also private.
 

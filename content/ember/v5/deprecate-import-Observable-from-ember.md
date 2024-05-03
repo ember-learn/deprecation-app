@@ -10,6 +10,7 @@ Previously, Observable could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Observable
+
 ```
 
  If needed, Observable can be imported:

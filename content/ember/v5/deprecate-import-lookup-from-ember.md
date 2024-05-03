@@ -10,6 +10,7 @@ Previously, lookup could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.lookup
+
 ```
 
 There is no replacement for this API.

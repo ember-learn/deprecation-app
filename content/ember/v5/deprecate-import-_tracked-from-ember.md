@@ -10,6 +10,7 @@ Previously, _tracked could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._tracked
+
 ```
 
  If needed, _tracked can be imported:

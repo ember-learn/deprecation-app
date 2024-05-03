@@ -10,6 +10,7 @@ Previously, _cacheIsConst could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._cacheIsConst
+
 ```
 
  If needed, _cacheIsConst can be imported:

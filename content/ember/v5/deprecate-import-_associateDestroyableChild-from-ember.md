@@ -10,6 +10,7 @@ Previously, _associateDestroyableChild could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._associateDestroyableChild
+
 ```
 
  If needed, _associateDestroyableChild can be imported:

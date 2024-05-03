@@ -10,6 +10,7 @@ Previously, _helperManagerCapabilities could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._helperManagerCapabilities
+
 ```
 
  If needed, _helperManagerCapabilities can be imported:

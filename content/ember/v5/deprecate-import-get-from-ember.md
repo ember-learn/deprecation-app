@@ -10,6 +10,7 @@ Previously, get could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.get
+
 ```
 
  If needed, get can be imported:

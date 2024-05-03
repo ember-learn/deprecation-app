@@ -10,6 +10,7 @@ Previously, _getComponentTemplate could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._getComponentTemplate
+
 ```
 
  If needed, _getComponentTemplate can be imported:

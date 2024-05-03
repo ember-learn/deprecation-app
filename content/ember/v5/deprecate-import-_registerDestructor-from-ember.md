@@ -10,6 +10,7 @@ Previously, _registerDestructor could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember._registerDestructor
+
 ```
 
  If needed, _registerDestructor can be imported:

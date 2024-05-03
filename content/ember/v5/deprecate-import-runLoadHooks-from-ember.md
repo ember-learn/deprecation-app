@@ -10,6 +10,7 @@ Previously, runLoadHooks could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.runLoadHooks
+
 ```
 
  If needed, runLoadHooks can be imported:

@@ -10,6 +10,7 @@ Previously, instrument could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.instrument
+
 ```
 instrument is also private.
 

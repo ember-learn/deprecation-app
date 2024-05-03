@@ -10,6 +10,7 @@ Previously, on could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.on
+
 ```
 
  If needed, on can be imported:

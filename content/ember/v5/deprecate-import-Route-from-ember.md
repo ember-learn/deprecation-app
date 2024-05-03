@@ -10,6 +10,7 @@ Previously, Route could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Route
+
 ```
 
  If needed, Route can be imported:

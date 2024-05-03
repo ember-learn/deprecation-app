@@ -10,6 +10,7 @@ Previously, isEmpty could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.isEmpty
+
 ```
 
  If needed, isEmpty can be imported:

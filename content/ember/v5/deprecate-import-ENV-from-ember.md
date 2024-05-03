@@ -10,6 +10,7 @@ Previously, ENV could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.ENV
+
 ```
 
  If needed, ENV can be imported:

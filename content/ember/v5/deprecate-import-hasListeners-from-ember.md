@@ -10,6 +10,7 @@ Previously, hasListeners could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.hasListeners
+
 ```
 
 There is no replacement for this API.

@@ -10,6 +10,7 @@ Previously, RSVP could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.RSVP
+
 ```
 
  If needed, RSVP can be imported:

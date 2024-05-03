@@ -10,6 +10,7 @@ Previously, set could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.set
+
 ```
 
  If needed, set can be imported:

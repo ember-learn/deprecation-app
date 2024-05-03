@@ -10,6 +10,7 @@ Previously, guidFor could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.guidFor
+
 ```
 
  If needed, guidFor can be imported:

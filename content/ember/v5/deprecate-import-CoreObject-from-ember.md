@@ -10,6 +10,7 @@ Previously, CoreObject could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.CoreObject
+
 ```
 
  If needed, CoreObject can be imported:

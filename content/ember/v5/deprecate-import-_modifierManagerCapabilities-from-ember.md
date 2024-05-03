@@ -10,6 +10,7 @@ Previously, _modifierManagerCapabilities could be accessed via the `Ember` impor
 import Ember from 'ember';
 
 Ember._modifierManagerCapabilities
+
 ```
 
  If needed, _modifierManagerCapabilities can be imported:

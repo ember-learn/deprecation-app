@@ -10,6 +10,7 @@ Previously, deprecate could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.deprecate
+
 ```
 
  If needed, deprecate can be imported:

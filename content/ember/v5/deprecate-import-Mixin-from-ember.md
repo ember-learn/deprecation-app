@@ -10,6 +10,7 @@ Previously, Mixin could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.Mixin
+
 ```
 
  If needed, Mixin can be imported:

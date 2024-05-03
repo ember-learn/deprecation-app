@@ -10,6 +10,7 @@ Previously, GUID_KEY could be accessed via the `Ember` import:
 import Ember from 'ember';
 
 Ember.GUID_KEY
+
 ```
 GUID_KEY is also private.
 
