@@ -1,13 +1,15 @@
 ---
-title: Ember.isNamespace 
+title: Ember.isNamespace
 until: 6.0.0
 since: 5.10.0
 ---
 
+
+Previously, isNamespace could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
-Ember.isNamespace;
+Ember.isNamespace
 ```
 
-is deprecated with no replacement.
+There is no replacement for this API.

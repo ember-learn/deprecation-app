@@ -1,16 +1,19 @@
 ---
-title: Ember.meta 
+title: Ember.meta
 until: 6.0.0
 since: 5.10.0
 ---
 
+
+Previously, meta could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
-Ember.meta;
+Ember.meta
 ```
+meta is also private.
 
-is deprecated and is private, but can be imported:
-```js
-import { meta } from '@ember/-internals/meta';
-```
+ If needed, meta can be imported:```js
+import { meta } from '@ember/-internals/meta';```
+
+However, due to meta being private, it is not recommended, nor supported.

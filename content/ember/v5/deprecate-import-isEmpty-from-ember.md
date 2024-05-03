@@ -1,0 +1,16 @@
+---
+title: Ember.isEmpty
+until: 6.0.0
+since: 5.10.0
+---
+
+
+Previously, isEmpty could be accessed via the `Ember` import:
+```js
+import Ember from 'ember';
+
+Ember.isEmpty
+```
+
+ If needed, isEmpty can be imported:```js
+import { isEmpty } from '@ember/utils';```

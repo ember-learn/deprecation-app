@@ -1,15 +1,15 @@
 ---
-title: Ember.toString
+title: Ember._Cache
 until: 6.0.0
 since: 5.10.0
 ---
 
 
-Previously, toString could be accessed via the `Ember` import:
+Previously, _Cache could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
-Ember.toString
+Ember._Cache
 ```
 
 There is no replacement for this API.

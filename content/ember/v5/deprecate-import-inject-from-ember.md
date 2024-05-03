@@ -1,15 +1,15 @@
 ---
-title: Ember.toString
+title: Ember.inject
 until: 6.0.0
 since: 5.10.0
 ---
 
 
-Previously, toString could be accessed via the `Ember` import:
+Previously, inject could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
-Ember.toString
+Ember.inject
 ```
 
 There is no replacement for this API.

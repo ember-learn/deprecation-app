@@ -1,0 +1,16 @@
+---
+title: Ember.endPropertyChanges
+until: 6.0.0
+since: 5.10.0
+---
+
+
+Previously, endPropertyChanges could be accessed via the `Ember` import:
+```js
+import Ember from 'ember';
+
+Ember.endPropertyChanges
+```
+endPropertyChanges is also private.
+
+There is no replacement for this API.
