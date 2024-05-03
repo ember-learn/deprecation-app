@@ -5,7 +5,7 @@ since: 5.10.0
 ---
 
 
-Previously, RouterDSL could be accessed via the `Ember` import:
+Previously, `RouterDSL` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 

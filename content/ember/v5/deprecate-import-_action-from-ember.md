@@ -5,14 +5,14 @@ since: 5.10.0
 ---
 
 
-Previously, _action could be accessed via the `Ember` import:
+Previously, `_action` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember._action
 ```
 
-If needed, _action can be imported:
+If needed, `_action` can be imported:
 ```js
 import { action } from '@ember/object';
 ```

@@ -5,14 +5,14 @@ since: 5.10.0
 ---
 
 
-Previously, _getComponentTemplate could be accessed via the `Ember` import:
+Previously, `_getComponentTemplate` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember._getComponentTemplate
 ```
 
-If needed, _getComponentTemplate can be imported:
+If needed, `_getComponentTemplate` can be imported:
 ```js
 import { getComponentTemplate } from '@ember/component';
 ```

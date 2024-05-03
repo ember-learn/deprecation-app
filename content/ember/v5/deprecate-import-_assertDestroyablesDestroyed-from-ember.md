@@ -5,14 +5,14 @@ since: 5.10.0
 ---
 
 
-Previously, _assertDestroyablesDestroyed could be accessed via the `Ember` import:
+Previously, `_assertDestroyablesDestroyed` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember._assertDestroyablesDestroyed
 ```
 
-If needed, _assertDestroyablesDestroyed can be imported:
+If needed, `_assertDestroyablesDestroyed` can be imported:
 ```js
 import { assertDestroyablesDestroyed } from '@ember/destroyable';
 ```

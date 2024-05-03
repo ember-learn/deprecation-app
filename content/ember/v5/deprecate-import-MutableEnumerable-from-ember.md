@@ -5,17 +5,17 @@ since: 5.10.0
 ---
 
 
-Previously, MutableEnumerable could be accessed via the `Ember` import:
+Previously, `MutableEnumerable` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.MutableEnumerable
 ```
-MutableEnumerable is also private.
+`MutableEnumerable` is also private.
 
-If needed, MutableEnumerable can be imported:
+If needed, `MutableEnumerable` can be imported:
 ```js
 import MutableEnumerable from '@ember/enumerable/mutable';
 ```
 
-However, due to MutableEnumerable being private, it is not recommended, nor supported.
+However, due to `MutableEnumerable` being private, it is not recommended, nor supported.

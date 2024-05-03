@@ -5,14 +5,14 @@ since: 5.10.0
 ---
 
 
-Previously, compare could be accessed via the `Ember` import:
+Previously, `compare` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.compare
 ```
 
-If needed, compare can be imported:
+If needed, `compare` can be imported:
 ```js
 import { compare } from '@ember/utils';
 ```

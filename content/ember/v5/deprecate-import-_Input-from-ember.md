@@ -5,14 +5,14 @@ since: 5.10.0
 ---
 
 
-Previously, _Input could be accessed via the `Ember` import:
+Previously, `_Input` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember._Input
 ```
 
-If needed, _Input can be imported:
+If needed, `_Input` can be imported:
 ```js
 import { Input }  from '@ember/component';
 ```

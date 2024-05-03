@@ -5,14 +5,14 @@ since: 5.10.0
 ---
 
 
-Previously, get could be accessed via the `Ember` import:
+Previously, `get` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.get
 ```
 
-If needed, get can be imported:
+If needed, `get` can be imported:
 ```js
 import { get } from '@ember/object';
 ```

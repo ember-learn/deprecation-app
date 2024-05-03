@@ -5,12 +5,12 @@ since: 5.10.0
 ---
 
 
-Previously, GUID_KEY could be accessed via the `Ember` import:
+Previously, `GUID_KEY` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.GUID_KEY
 ```
-GUID_KEY is also private.
+`GUID_KEY` is also private.
 
 There is no replacement for this API.

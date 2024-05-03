@@ -5,7 +5,7 @@ since: 5.10.0
 ---
 
 
-Previously, Handlebars could be accessed via the `Ember` import:
+Previously, `Handlebars` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 

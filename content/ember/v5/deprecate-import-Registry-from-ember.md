@@ -5,12 +5,12 @@ since: 5.10.0
 ---
 
 
-Previously, Registry could be accessed via the `Ember` import:
+Previously, `Registry` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.Registry
 ```
-Registry is also private.
+`Registry` is also private.
 
 There is no replacement for this API.

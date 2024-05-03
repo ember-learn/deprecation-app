@@ -5,12 +5,12 @@ since: 5.10.0
 ---
 
 
-Previously, generateController could be accessed via the `Ember` import:
+Previously, `generateController` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.generateController
 ```
-generateController is also private.
+`generateController` is also private.
 
 There is no replacement for this API.

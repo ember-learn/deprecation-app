@@ -5,17 +5,17 @@ since: 5.10.0
 ---
 
 
-Previously, instrument could be accessed via the `Ember` import:
+Previously, `instrument` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.instrument
 ```
-instrument is also private.
+`instrument` is also private.
 
-If needed, instrument can be imported:
+If needed, `instrument` can be imported:
 ```js
 import { instrument } from '@ember/instrumentation';
 ```
 
-However, due to instrument being private, it is not recommended, nor supported.
+However, due to `instrument` being private, it is not recommended, nor supported.

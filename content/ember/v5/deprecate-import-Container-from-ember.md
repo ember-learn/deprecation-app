@@ -5,12 +5,12 @@ since: 5.10.0
 ---
 
 
-Previously, Container could be accessed via the `Ember` import:
+Previously, `Container` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.Container
 ```
-Container is also private.
+`Container` is also private.
 
 There is no replacement for this API.

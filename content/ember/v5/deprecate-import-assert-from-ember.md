@@ -5,14 +5,14 @@ since: 5.10.0
 ---
 
 
-Previously, assert could be accessed via the `Ember` import:
+Previously, `assert` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
 Ember.assert
 ```
 
-If needed, assert can be imported:
+If needed, `assert` can be imported:
 ```js
 import { assert } from '@ember/debug';
 ```

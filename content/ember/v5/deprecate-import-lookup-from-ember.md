@@ -5,7 +5,7 @@ since: 5.10.0
 ---
 
 
-Previously, lookup could be accessed via the `Ember` import:
+Previously, `lookup` could be accessed via the `Ember` import:
 ```js
 import Ember from 'ember';
 
