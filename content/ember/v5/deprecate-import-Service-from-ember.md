@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.Service
 ```
 
- If needed, Service can be imported:
+If needed, Service can be imported:
 ```js
 import Service from '@ember/service';
 ```

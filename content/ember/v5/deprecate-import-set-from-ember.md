@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.set
 ```
 
- If needed, set can be imported:
+If needed, set can be imported:
 ```js
 import { set } from '@ember/object';
 ```

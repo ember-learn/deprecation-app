@@ -13,7 +13,7 @@ Ember.meta
 ```
 meta is also private.
 
- If needed, meta can be imported:
+If needed, meta can be imported:
 ```js
 import { meta } from '@ember/-internals/meta';
 ```

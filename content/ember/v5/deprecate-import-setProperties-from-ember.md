@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.setProperties
 ```
 
- If needed, setProperties can be imported:
+If needed, setProperties can be imported:
 ```js
 import { setProperties } from '@ember/object';
 ```

@@ -13,7 +13,7 @@ Ember.MutableEnumerable
 ```
 MutableEnumerable is also private.
 
- If needed, MutableEnumerable can be imported:
+If needed, MutableEnumerable can be imported:
 ```js
 import MutableEnumerable from '@ember/enumerable/mutable';
 ```

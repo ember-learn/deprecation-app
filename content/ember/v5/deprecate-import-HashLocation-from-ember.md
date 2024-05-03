@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.HashLocation
 ```
 
- If needed, HashLocation can be imported:
+If needed, HashLocation can be imported:
 ```js
 import HashLocation from '@ember/routing/hash-location';
 ```

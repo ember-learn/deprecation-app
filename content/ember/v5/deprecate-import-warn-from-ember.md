@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.warn
 ```
 
- If needed, warn can be imported:
+If needed, warn can be imported:
 ```js
 import { warn } from '@ember/debug';
 ```

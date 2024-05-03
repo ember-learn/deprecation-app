@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.ContainerDebugAdapter
 ```
 
- If needed, ContainerDebugAdapter can be imported:
+If needed, ContainerDebugAdapter can be imported:
 ```js
 import ContainerDebugAdapter from '@ember/debug/container-debug-adapter';
 ```

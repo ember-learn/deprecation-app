@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.Debug
 ```
 
- If needed, Debug can be imported:
+If needed, Debug can be imported:
 ```js
 import { registerDeprecationHandler } from '@ember/debug';
 ```

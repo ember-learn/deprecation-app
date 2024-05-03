@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.ArrayProxy
 ```
 
- If needed, ArrayProxy can be imported:
+If needed, ArrayProxy can be imported:
 ```js
 import ArrayProxy  from '@ember/array/proxy';
 ```

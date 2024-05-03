@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.run
 ```
 
- If needed, run can be imported:
+If needed, run can be imported:
 ```js
 import { run } from '@ember/runloop';
 ```

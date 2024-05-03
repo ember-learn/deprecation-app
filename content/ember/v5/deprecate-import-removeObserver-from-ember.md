@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.removeObserver
 ```
 
- If needed, removeObserver can be imported:
+If needed, removeObserver can be imported:
 ```js
 import { removeObserver } from '@ember/object/observers';
 ```

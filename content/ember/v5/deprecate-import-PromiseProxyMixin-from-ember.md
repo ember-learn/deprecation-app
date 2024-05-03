@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.PromiseProxyMixin
 ```
 
- If needed, PromiseProxyMixin can be imported:
+If needed, PromiseProxyMixin can be imported:
 ```js
 import EmberPromiseProxyMixin from '@ember/object/promise-proxy-mixin';
 ```

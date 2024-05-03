@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.CoreObject
 ```
 
- If needed, CoreObject can be imported:
+If needed, CoreObject can be imported:
 ```js
 import EmberObject from '@ember/object';
 ```

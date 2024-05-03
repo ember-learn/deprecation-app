@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._assertDestroyablesDestroyed
 ```
 
- If needed, _assertDestroyablesDestroyed can be imported:
+If needed, _assertDestroyablesDestroyed can be imported:
 ```js
 import { assertDestroyablesDestroyed } from '@ember/destroyable';
 ```

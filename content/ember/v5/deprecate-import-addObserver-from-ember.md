@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.addObserver
 ```
 
- If needed, addObserver can be imported:
+If needed, addObserver can be imported:
 ```js
 import { addObserver } from '@ember/object/observers';
 ```

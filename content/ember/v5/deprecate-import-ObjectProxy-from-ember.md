@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.ObjectProxy
 ```
 
- If needed, ObjectProxy can be imported:
+If needed, ObjectProxy can be imported:
 ```js
 import ObjectProxy from '@ember/object/proxy';
 ```

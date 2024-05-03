@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.computed
 ```
 
- If needed, computed can be imported:
+If needed, computed can be imported:
 ```js
 import { computed } from '@ember/object';
 ```

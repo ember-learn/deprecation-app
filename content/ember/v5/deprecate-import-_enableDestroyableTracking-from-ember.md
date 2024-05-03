@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._enableDestroyableTracking
 ```
 
- If needed, _enableDestroyableTracking can be imported:
+If needed, _enableDestroyableTracking can be imported:
 ```js
 import { enableDestroyableTracking } from '@ember/destroyable';
 ```

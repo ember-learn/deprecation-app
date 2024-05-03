@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._setHelperManager
 ```
 
- If needed, _setHelperManager can be imported:
+If needed, _setHelperManager can be imported:
 ```js
 import { setHelperManager } from '@ember/helper';
 ```

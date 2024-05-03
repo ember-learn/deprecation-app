@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.destroy
 ```
 
- If needed, destroy can be imported:
+If needed, destroy can be imported:
 ```js
 import { destroy } from '@ember/destroyable';
 ```

@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.Route
 ```
 
- If needed, Route can be imported:
+If needed, Route can be imported:
 ```js
 import Route from '@ember/routing/route';
 ```

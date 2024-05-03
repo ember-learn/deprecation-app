@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.A
 ```
 
- If needed, A can be imported:
+If needed, A can be imported:
 ```js
 import { A }  from '@ember/array';
 ```

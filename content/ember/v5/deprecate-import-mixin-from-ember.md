@@ -13,7 +13,7 @@ Ember.mixin
 ```
 mixin is also private.
 
- If needed, mixin can be imported:
+If needed, mixin can be imported:
 ```js
 import { mixin } from '@ember/object/mixin';
 ```

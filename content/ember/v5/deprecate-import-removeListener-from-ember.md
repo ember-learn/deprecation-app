@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.removeListener
 ```
 
- If needed, removeListener can be imported:
+If needed, removeListener can be imported:
 ```js
 import { removeListener } from '@ember/object/events';
 ```

@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._associateDestroyableChild
 ```
 
- If needed, _associateDestroyableChild can be imported:
+If needed, _associateDestroyableChild can be imported:
 ```js
 import { associateDestroyableChild } from '@ember/destroyable';
 ```

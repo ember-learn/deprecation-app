@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.runInDebug
 ```
 
- If needed, runInDebug can be imported:
+If needed, runInDebug can be imported:
 ```js
 import { runInDebug } from '@ember/debug';
 ```

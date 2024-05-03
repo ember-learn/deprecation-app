@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.HistoryLocation
 ```
 
- If needed, HistoryLocation can be imported:
+If needed, HistoryLocation can be imported:
 ```js
 import HistoryLocation from '@ember/routing/history-location';
 ```

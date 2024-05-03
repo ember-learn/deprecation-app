@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._fn
 ```
 
- If needed, _fn can be imported:
+If needed, _fn can be imported:
 ```js
 import { fn } from '@ember/helper';
 ```

@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.isBlank
 ```
 
- If needed, isBlank can be imported:
+If needed, isBlank can be imported:
 ```js
 import { isBlank } from '@ember/utils';
 ```

@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.Application
 ```
 
- If needed, Application can be imported:
+If needed, Application can be imported:
 ```js
 import Application from '@ember/application';
 ```

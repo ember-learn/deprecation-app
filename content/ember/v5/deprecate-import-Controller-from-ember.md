@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.Controller
 ```
 
- If needed, Controller can be imported:
+If needed, Controller can be imported:
 ```js
 import Controller  from '@ember/controller';
 ```

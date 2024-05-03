@@ -13,7 +13,7 @@ Ember._captureRenderTree
 ```
 _captureRenderTree is also private.
 
- If needed, _captureRenderTree can be imported:
+If needed, _captureRenderTree can be imported:
 ```js
 import { captureRenderTree } from '@ember/debug';
 ```

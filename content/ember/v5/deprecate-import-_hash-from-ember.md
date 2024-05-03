@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._hash
 ```
 
- If needed, _hash can be imported:
+If needed, _hash can be imported:
 ```js
 import { hash } from '@ember/helper';
 ```

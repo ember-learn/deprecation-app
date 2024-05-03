@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.isArray
 ```
 
- If needed, isArray can be imported:
+If needed, isArray can be imported:
 ```js
 import { isArray }  from '@ember/array';
 ```

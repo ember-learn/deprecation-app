@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember.NoneLocation
 ```
 
- If needed, NoneLocation can be imported:
+If needed, NoneLocation can be imported:
 ```js
 import NoneLocation from '@ember/routing/none-location';
 ```

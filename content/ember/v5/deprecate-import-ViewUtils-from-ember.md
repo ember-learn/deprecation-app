@@ -13,7 +13,7 @@ Ember.ViewUtils
 ```
 ViewUtils is also private.
 
- If needed, ViewUtils can be imported:
+If needed, ViewUtils can be imported:
 ```js
 import { isSerializationFirstNode } from '@ember/-internals/glimmer';
 ```

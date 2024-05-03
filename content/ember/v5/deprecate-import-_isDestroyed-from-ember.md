@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._isDestroyed
 ```
 
- If needed, _isDestroyed can be imported:
+If needed, _isDestroyed can be imported:
 ```js
 import { isDestroyed } from '@ember/destroyable';
 ```

@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._action
 ```
 
- If needed, _action can be imported:
+If needed, _action can be imported:
 ```js
 import { action } from '@ember/object';
 ```

@@ -12,7 +12,7 @@ import Ember from 'ember';
 Ember._createCache
 ```
 
- If needed, _createCache can be imported:
+If needed, _createCache can be imported:
 ```js
 import { createCache } from '@glimmer/tracking/primitives/cache';
 ```

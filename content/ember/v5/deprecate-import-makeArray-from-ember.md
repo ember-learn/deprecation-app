@@ -13,7 +13,7 @@ Ember.makeArray
 ```
 makeArray is also private.
 
- If needed, makeArray can be imported:
+If needed, makeArray can be imported:
 ```js
 import { makeArray }  from '@ember/array';
 ```

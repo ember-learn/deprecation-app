@@ -13,7 +13,7 @@ Ember.subscribe
 ```
 subscribe is also private.
 
- If needed, subscribe can be imported:
+If needed, subscribe can be imported:
 ```js
 import { subscribe } from '@ember/instrumentation';
 ```
