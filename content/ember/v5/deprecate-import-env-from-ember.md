@@ -16,3 +16,13 @@ If needed, `ENV` can be imported:
 ```js
 import MyEnv from '<my-app>/config/environment';
 ```
+
+
+For addons, getting access to the environment requires having access to the `owner`:
+```js
+import { getOwner } from '@ember/owner';
+
+// ...
+
+let env = getOwner(this).resolveRegistration('config:environment');
+```
