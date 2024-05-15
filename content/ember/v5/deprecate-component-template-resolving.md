@@ -12,7 +12,6 @@ There are some tools to help with this:
 - [Classic to Colocation](https://github.com/ember-codemods/ember-component-template-colocation-migrator)
 - [Convert pods to Colocation](https://github.com/ijlee2/ember-codemod-pod-to-octane)
 
-
 Specifically, these layouts are no longer supported:
 
 <table style="width:100%"><thead><tr><th>Classic</th><th>Pods</th></thead>
