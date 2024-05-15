@@ -11,7 +11,6 @@ There are two types of paths to migrate off the old layouts
 There are some tools to help with this:
 - [Classic to Colocation](https://github.com/ember-codemods/ember-component-template-colocation-migrator)
 - [Convert pods to Colocation](https://github.com/ijlee2/ember-codemod-pod-to-octane)
-- [Convert to `<template>`](https://github.com/IgnaceMaes/ember-codemod-template-tag)
 
 
 Specifically, these layouts are no longer supported:
