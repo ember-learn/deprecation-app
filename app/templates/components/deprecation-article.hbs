@@ -3,9 +3,29 @@
   <div class="my-2">
     {{#if @model.renderUntil}}
       <div><span class="bold">until: </span>{{@model.until}}</div>
-      <div><span class="bold">id: </span>{{or @model.displayId @model.id}}</div>
+      <div><span class="bold">since: </span>{{@model.since}}</div>
+      <div><span class="bold">id: </span><LinkTo @route="id" @model={{@model.id}}>{{or @model.displayId @model.id}}</LinkTo></div>
+    {{/if}}
+    {{#if @model.parent}}
+      <div><span class="bold">included in: </span><LinkTo @route="id" @model={{@model.parent.id}}>{{or @model.parent.displayId @model.parent.id}}</LinkTo> </div>
+    {{/if}}
+    {{#if @model.children.length}}
+      <div><span class="bold">includes: </span> {{@model.children.length}} deprecations <button type="button" {{on "click" this.toggleChildDeprecations}}>{{(if this.showChildDeprecations 'Collapse all' 'Expand all')}}</button></div>
     {{/if}}
   </div>
+  {{#if this.showChildDeprecations}}
+    {{#each @model.children as |child|}}
+      <DeprecationArticle @model={{child}}>
+        <h3>
+          {{markdown-to-html
+            child.title
+            extensions="no-wrapper"
+            tagName=""
+          }}
+        </h3>
+      </DeprecationArticle>
+    {{/each}}
+  {{/if}}
   <section>
     {{markdown-to-html @model.content}}
   </section>

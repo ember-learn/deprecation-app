@@ -5,9 +5,26 @@
 
 This is the app that serves https://deprecations.emberjs.com/
 
+## Linking to deprecations
+
+You can link to a specific deprecation by using the ID of the deprecation. For example, to link to the deprecation with the ID `my-old-api`, you can use the following URL:
+`https://deprecations.emberjs.com/id/my-old-api`. These URLs can be generated in advance of adding the deprecation guide, when the deprecation lands in the code.
+When adding a deprecation the filename should match the ID of the deprecation, or the `displayId` should be specified in the frontmatter.
+
 ## Adding new deprecations
 
 The [content](https://github.com/ember-learn/deprecation-app/tree/main/content/) folder contains all the deprecations that are listed by the website. To add a new deprecation, add it to the appropriate folder by creating a new file. The content of the file needs to follow a specific format for the app to work. You can see [this sample](https://raw.githubusercontent.com/ember-learn/deprecation-app/main/content/ember/v3/getting-the-each-property.md) for reference.
+
+### Frontmatter
+
+#### Grouping deprecations
+
+```markdown
+  parent: deprecation-id
+```
+
+Can be used to nest deprecations under a parent grouping for the purpose of the UI. The deprecations will still be available via the direct ID URLs.
+
 
 ## Prerequisites
 
