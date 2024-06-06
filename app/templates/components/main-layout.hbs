@@ -12,9 +12,7 @@
       {{#each result.contents as |content|}}
         <DeprecationArticle @model={{content}}>
           <h3 id="{{id-for-deprecation (or content.displayId content.id) content.anchor}}">
-            <a href="#{{id-for-deprecation (or content.displayId content.id) content.anchor}}" title={{content.title}} class="toc-anchor">
-              §
-            </a>
+            <LinkTo @route="id" @model={{content.id}} title={{content.title}} class="toc-anchor">§</LinkTo>
             {{markdown-to-html
               content.title
               extensions="no-wrapper"
