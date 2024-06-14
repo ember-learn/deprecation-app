@@ -125,7 +125,7 @@ someArray.isAny('isFruit'); // true
 After:
 ```js
 const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
-someArray.any(el => el.isFruit); // true
+someArray.some(el => el.isFruit); // true
 ```
 
 #### `isEvery`
