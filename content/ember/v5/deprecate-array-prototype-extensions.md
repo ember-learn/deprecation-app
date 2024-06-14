@@ -2,7 +2,7 @@
 id: deprecate-array-prototype-extensions
 title: "Deprecate array prototype extensions"
 until: '6.0.0'
-since: '5.0.0'
+since: '5.10.0'
 ---
 
 Ember historically extended the prototypes of native Javascript arrays to implement `Ember.Enumerable`, `Ember.MutableEnumerable`, `Ember.MutableArray`, `Ember.Array`. As of v5, the usages of array prototype extensions are deprecated.
