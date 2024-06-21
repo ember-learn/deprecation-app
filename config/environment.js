@@ -31,6 +31,17 @@ module.exports = function (environment) {
       algoliaId: 'Y1OMR4C7MF',
       algoliaKey: '5d01c83734dc36754d9e94cbf6f8964d',
     },
+
+    'ember-showdown-shiki': {
+      languages: [
+        'javascript',
+        'typescript',
+        'handlebars',
+        'json',
+        'diff',
+        'bash',
+      ],
+    },
   };
 
   if (environment === 'development') {
