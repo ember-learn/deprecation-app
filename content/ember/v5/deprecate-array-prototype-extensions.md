@@ -354,7 +354,7 @@ Before
 ```
 
 After
-```hbs
+```handlebars
 <Foo @bar={{get @list '0.name'}} />
 ```
 
