@@ -349,7 +349,7 @@ items.forEach(item => {
 If the `firstObject` and `lastObject` are used in a template, you can convert to use `get` helper safely as `get` helper handles the reactivity already.
 
 Before
-```hbs
+```handlebars
 <Foo @bar={{@list.firstObject.name}} />
 ```
 
