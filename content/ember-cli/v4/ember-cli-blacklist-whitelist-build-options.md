@@ -9,14 +9,12 @@ displayId: ember-cli.blacklist-whitelist-build-options
 Using the `blacklist` and `whitelist` build options has been deprecated. Please 
 use `exclude` and `include` respectively instead.
 
-```diff
-// ember-cli-build.js
-
+```js {data-filename="ember-cli-build.js" data-diff="-4,+5"}
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
     addons: {
--     blacklist: ['addon-name'],
-+     exclude: ['addon-name'],
+      blacklist: ['addon-name'],
+      exclude: ['addon-name'],
     },
   };
 };

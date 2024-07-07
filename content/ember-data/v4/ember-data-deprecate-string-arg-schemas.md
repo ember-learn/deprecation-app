@@ -9,7 +9,7 @@ Deprecates `schema.attributesDefinitionFor(type)` and `schema.relationshipsDefin
 
 To resolve change:
 
-```diff
-- store.getSchemaDefinitionService().attributesDefinitionFor('user')
-+ store.getSchemaDefinitionService().attributesDefinitionFor({ type: 'user' })
+```js {data-diff="-1,+2"}
+store.getSchemaDefinitionService().attributesDefinitionFor('user')
+store.getSchemaDefinitionService().attributesDefinitionFor({ type: 'user' })
 ```
