@@ -389,7 +389,7 @@ import { action } from '@ember/object';
 import { TrackedArray } from 'tracked-built-ins';
 
 export default class SampleComponent extends Component {
-  abc = new TrackedArray();
+  abc = new TrackedArray(['x', 'y', 'z', 'x']);
 
   get lastObj() {
     return this.abc.at(-1);
