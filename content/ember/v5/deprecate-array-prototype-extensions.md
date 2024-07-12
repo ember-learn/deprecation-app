@@ -251,8 +251,8 @@ someArray.uniq(); // [1, 2, 3, undefined]
 
 After:
 ```js
-const someArray = ['a', 'a', 'b', 'b']
-[...new Set(someArray)] // ['a', 'b']
+const someArray = [1, 2, 3, undefined, 3];
+[...new Set(someArray)] // [1, 2, 3, undefined]
 ```
 
 #### `uniqBy`
