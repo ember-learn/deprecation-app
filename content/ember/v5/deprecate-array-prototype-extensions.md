@@ -824,7 +824,7 @@ export default class SampleComponent extends Component {
   @action
   removeAt(start, len) {
     this.abc.splice(start, len);
-    this.abc = [...this.abc];
+    this.abc = this.abc;
   }
 }
 ```
