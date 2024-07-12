@@ -1,9 +1,9 @@
 ---
-id: ember-source-deprecation-without-since
 title: Without since
-until: '4.0.0'
-since: '3.24'
+until: 4.0.0
+since: "3.24"
 ---
+
 
 The `deprecate` function now requires passing the `since` option to indicate when the deprecation was introduced. Before:
 

@@ -1,9 +1,9 @@
 ---
-id: reversed-ember-observer-arguments
 title: Reversed Ember.observer Arguments
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 A little known feature of the observer function allowed for the arguments to be
 listed in the opposite order, with function first:

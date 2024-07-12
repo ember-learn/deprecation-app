@@ -9,7 +9,7 @@ table {
   display: grid;
   grid-template:
     "sidebar  main" auto /
-    15rem 3fr 300px;
+    25rem 3fr 300px;
 }
 
 .article-card {
@@ -64,7 +64,9 @@ table {
   top: 0;
   padding-top: 1rem;
 }
-
+.level-1:hover{
+  color: var(--color-link);
+}
 .level-1 {
   background-color: #ebeef2;
   margin-top: 0.25rem;
@@ -73,6 +75,7 @@ table {
   color: #42474f;
   font-size: 1.25rem;
   text-align: left;
+  cursor: pointer;
 }
 
 .level-3 {
@@ -552,7 +555,6 @@ p a:hover {
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: center;
 
   .item {
     margin: $spacing;
@@ -575,6 +577,7 @@ p a:hover {
   @media screen and (min-width: 0) and (max-width: 710px) {
     & {
       flex-wrap: wrap;
+      justify-content: center;
 
       .item {
         display: flex;

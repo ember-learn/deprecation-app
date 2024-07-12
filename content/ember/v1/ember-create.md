@@ -1,9 +1,9 @@
 ---
-id: ember-create
 title: Ember.create
-until: ''
-since: '1.13'
+until: ""
+since: "1.13"
 ---
+
 
 `Ember.create` is deprecated in favor for `Object.create`. For more information
 regarding `Object.create`, please

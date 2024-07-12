@@ -1,9 +1,10 @@
 ---
-id: computed-property.volatile
 title: Computed Property Volatility
-until: '4.0.0'
-since: '3.9'
+until: 4.0.0
+since: "3.9"
+displayId: computed-property.volatile
 ---
+
 
 *NOTE*: There is a bug in Native Getters in 3.9 that was fixed in 3.10. To upgrade to 3.9 directly, just add this to your deprecation workflow, and make the recommended fixes when you move to 3.10 or beyond.
 

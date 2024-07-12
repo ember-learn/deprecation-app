@@ -1,9 +1,9 @@
 ---
-id: argument-less-helper-paren-less-invocation
 title: Invoking Helpers Without Arguments and Parentheses In Named Argument Positions
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
 ---
+
 
 With [contextual helpers](https://emberjs.github.io/rfcs/0432-contextual-helpers.html)
 arriving in Ember, helpers, modifiers and components can increasingly be thought

@@ -1,9 +1,10 @@
 ---
-id: optional-feature.jquery-integration
 title: "Optional Feature: jquery-integration"
-until: '4.0.0'
-since: '3.26'
+until: 4.0.0
+since: "3.26"
+displayId: optional-feature.jquery-integration
 ---
+
 
 Setting the `jquery-integration` optional feature to `true` has been
 deprecated. You must set this feature to `false`, disabling jQuery integration.

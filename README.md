@@ -7,7 +7,7 @@ This is the app that serves https://deprecations.emberjs.com/
 
 ## Adding new deprecations
 
-The [content](https://github.com/ember-learn/deprecation-app/tree/main/content/) folder contains all the deprecations that are listed by the website. To add a new deprecation, add it to the appropriate folder by creating a new file. The content of the file needs to follow a specific format for the app to work. You can see [this sample](https://raw.githubusercontent.com/ember-learn/deprecation-app/main/content/ember/v3/getting-each.md) for reference.
+The [content](https://github.com/ember-learn/deprecation-app/tree/main/content/) folder contains all the deprecations that are listed by the website. To add a new deprecation, add it to the appropriate folder by creating a new file. The content of the file needs to follow a specific format for the app to work. You can see [this sample](https://raw.githubusercontent.com/ember-learn/deprecation-app/main/content/ember/v3/getting-the-each-property.md) for reference.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
+* [Ember CLI](https://cli.emberjs.com/release/)
 * [Google Chrome](https://google.com/chrome/)
 
 ## Installation
@@ -61,7 +61,7 @@ The app is continuously deployed to Netlify when a pull request is merged and pa
 ## Further Reading / Useful Links
 
 * [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
+* [ember-cli](https://cli.emberjs.com/release/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

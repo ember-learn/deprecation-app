@@ -1,9 +1,9 @@
 ---
-id: legacy-support-addons
 title: Legacy support addons
-until: '3.0.0'
-since: '2.6'
+until: 3.0.0
+since: "2.6"
 ---
+
 
 Ember provides addons [ember-legacy-views](https://github.com/emberjs/ember-legacy-views) and
 [ember-legacy-controllers](https://github.com/emberjs/ember-legacy-controllers) that allow for projects to continue

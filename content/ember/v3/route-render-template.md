@@ -1,9 +1,9 @@
 ---
-id: route-render-template
 title: Deprecate `Route#renderTemplate`
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
 ---
+
 
 The `Route#render` and `Route#renderTemplate` APIs have been deprecated. These APIs are largely holdovers from a time where components where not as prominent in your typical Ember application and are no longer relevant. See [RFC #418](https://emberjs.github.io/rfcs/0418-deprecate-route-render-methods.html).
 
@@ -13,8 +13,7 @@ __Migrating Named Outlets__
 
 Given:
 
-```js
-// app/routes/checkout.js
+```js {data-filename=app/routes/checkout.js}
 class CheckoutRoute extends Route {
   // ...
   renderTemplate() {
@@ -53,8 +52,7 @@ We can migrate this entirely to use components.
 
 __Migrating Hiearchy Escaping__
 
-```js
-// app/routes/checkout.js
+```js {data-filename=app/routes/checkout.js}
 class CheckoutRoute extends Route {
   // ...
 
@@ -90,8 +88,7 @@ class CheckoutRoute extends Route {
 
 This can transitioned to:
 
-```js
-// app/controller/checkout.js
+```js {data-filename=app/controller/checkout.js}
 class CheckoutController extends Controller {
   // ...
   @tracked isModalOpen = false;

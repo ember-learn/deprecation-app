@@ -1,9 +1,9 @@
 import Route from '@ember/routing/route';
+import processResults from '../utils/process-results';
 import { inject as service } from '@ember/service';
-import RSVP from 'rsvp';
 
 export default class ShowRoute extends Route {
-  @service resultProcessor;
+  @service store;
 
   async model(params) {
     let query = await this.store.query('content', {
@@ -11,11 +11,9 @@ export default class ShowRoute extends Route {
       version: params.version,
     });
 
-    let sorted = await this.resultProcessor.processResults.perform(query);
-
-    return RSVP.hash({
+    return {
       query,
-      sorted,
-    });
+      sorted: processResults(query),
+    };
   }
 }

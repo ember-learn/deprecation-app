@@ -2,6 +2,12 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
+const PROJECTS = {
+  ember: 'Ember',
+  'ember-cli': 'Ember CLI',
+  'ember-data': 'Ember Data',
+};
+
 export default class ShowController extends Controller {
   @tracked displayMobileToc = false;
 
@@ -10,25 +16,11 @@ export default class ShowController extends Controller {
   }
 
   get version() {
-    let version = this.content.query.version;
-    return version.match(/[0-9].*/)[0];
+    return this.content.query.version.match(/[0-9].*/)[0];
   }
 
   get project() {
-    let projects = {
-      ember: 'Ember',
-      'ember-cli': 'Ember CLI',
-      'ember-data': 'Ember Data',
-    };
-    let project = this.content.query.path;
-    return projects[project];
-  }
-
-  get renderIdOrUntil() {
-    let version = this.content.query.version;
-    let versionsWithoutId = ['v1.x'];
-
-    return !versionsWithoutId.includes(version);
+    return PROJECTS[this.content.query.path];
   }
 
   @action

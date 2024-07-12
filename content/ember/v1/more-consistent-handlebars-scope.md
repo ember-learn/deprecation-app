@@ -1,9 +1,9 @@
 ---
-id: more-consistent-handlebars-scope
 title: More Consistent Handlebars Scope
-until: ''
-since: '1.9'
+until: ""
+since: "1.9"
 ---
+
 
 In Ember 1.9, the `each` and `with` helpers come in two flavors: a "context-switching" flavor and a "named-parameter" flavor.
 

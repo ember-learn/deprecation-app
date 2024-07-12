@@ -1,9 +1,9 @@
 ---
-id: transition-state
 title: Transition State Removal
-until: '3.9.0'
-since: '3.6'
+until: 3.9.0
+since: "3.6"
 ---
+
 
 The `Transition` object is a public interface that actually exposed internal state used by router.js to perform routing. Accessing `state`, `queryParams` or `params` on the `Transition` has been removed. If you need access to information about the routes, you are probably better served injecting the router service as it exposes a publically supported version of the `RouteInfo`s. You can access them in the following ways:
 

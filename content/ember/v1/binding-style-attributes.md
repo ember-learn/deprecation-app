@@ -1,9 +1,9 @@
 ---
-id: binding-style-attributes
 title: Binding Style Attributes
-until: ''
-since: '1.11'
+until: ""
+since: "1.11"
 ---
+
 <a id="toc_warning-when-binding-style-attributes"></a>
 
 Content in Handlebars templates is automatically HTML-escaped to help

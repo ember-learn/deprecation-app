@@ -1,10 +1,11 @@
 ---
-id: ember-string.prototype-extensions
 title: String prototype extensions
-until: '4.0.0'
-since: '3.24'
+until: 4.0.0
+since: "3.24"
 anchor: toc_ember-string-prototype_extensions
+displayId: ember-string.prototype-extensions
 ---
+
 
 Calling one of the [Ember `String` methods](https://api.emberjs.com/ember/3.22/classes/String) (camelize, capitalize, classify, dasherize, decamelize, htmlSafe, underscore) directly on a string is deprecated.
 
@@ -54,8 +55,7 @@ Keep in mind that different libraries will behave in slightly different ways, so
 
 You can also [disable String prototype extensions](https://guides.emberjs.com/release/configuring-ember/disabling-prototype-extensions/) by editing your environment file:
 
-```js
-// config/environment.js
+```js {data-filename=config/environment.js}
 ENV = {
   EmberENV: {
     EXTEND_PROTOTYPES: {

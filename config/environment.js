@@ -6,7 +6,7 @@ module.exports = function (environment) {
     environment,
     apiHost: '',
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'history',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -30,6 +30,17 @@ module.exports = function (environment) {
     algolia: {
       algoliaId: 'Y1OMR4C7MF',
       algoliaKey: '5d01c83734dc36754d9e94cbf6f8964d',
+    },
+
+    'ember-showdown-shiki': {
+      languages: [
+        'javascript',
+        'typescript',
+        'handlebars',
+        'json',
+        'diff',
+        'bash',
+      ],
     },
   };
 
@@ -55,11 +66,6 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
-
-    let fastlyDomain = process.env.FASTLY_DOMAIN;
-    if (fastlyDomain) {
-      ENV.apiHost = `https://${fastlyDomain}`;
-    }
   }
 
   return ENV;

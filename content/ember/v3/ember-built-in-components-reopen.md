@@ -1,9 +1,10 @@
 ---
-id: ember.built-in-components.reopen
 title: Reopening Legacy Built-in Components
-until: '4.0.0'
-since: '3.27'
+until: 4.0.0
+since: "3.27"
+displayId: ember.built-in-components.reopen
 ---
+
 
 Historically, the implementation classes of the built-in components `<Input>`,
 `<Textarea>` and `<LinkTo>` were made available publicly. This is sometimes
@@ -77,9 +78,7 @@ Checkbox.reopen({
 
 After:
 
-```js
-// app/components/my-checkbox.js
-
+```js {data-filename=app/components/my-checkbox.js}
 import { Checkbox } from '@ember/legacy-built-in-components';
 
 export default class MyCheckbox extends Checkbox {
@@ -158,9 +157,7 @@ Component.reopen({
 
 After:
 
-```js
-// app/components/base.js
-
+```js {data-filename=app/components/base.js}
 import Component from '@ember/component';
 
 // Subclass from this in your app, instead of subclassing from Ember.Component

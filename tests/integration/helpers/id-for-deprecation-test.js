@@ -10,16 +10,16 @@ module('Integration | Helper | id-for-deprecation', function (hooks) {
     test('anchor id is prefixed with toc_', async function (assert) {
       this.set('inputValue', 'toJSON');
 
-      await render(hbs`{{id-for-deprecation inputValue}}`);
+      await render(hbs`{{id-for-deprecation this.inputValue}}`);
 
-      assert.equal(this.element.textContent.trim(), 'toc_toJSON');
+      assert.strictEqual(this.element.textContent.trim(), 'toc_toJSON');
     });
     test('anchor id has periods, commas, and colons replaced with dashes', async function (assert) {
       this.set('inputValue', 'ember-data:object.init,constructor');
 
-      await render(hbs`{{id-for-deprecation inputValue}}`);
+      await render(hbs`{{id-for-deprecation this.inputValue}}`);
 
-      assert.equal(
+      assert.strictEqual(
         this.element.textContent.trim(),
         'toc_ember-data-object-init-constructor'
       );
@@ -27,9 +27,9 @@ module('Integration | Helper | id-for-deprecation', function (hooks) {
     test('anchor id has whitespace stripped out', async function (assert) {
       this.set('inputValue', 'ember_object.some property');
 
-      await render(hbs`{{id-for-deprecation inputValue}}`);
+      await render(hbs`{{id-for-deprecation this.inputValue}}`);
 
-      assert.equal(
+      assert.strictEqual(
         this.element.textContent.trim(),
         'toc_ember_object-someproperty'
       );
@@ -41,8 +41,10 @@ module('Integration | Helper | id-for-deprecation', function (hooks) {
     this.set('deprecationId', 'my-deprecation');
     this.set('optionalAnchorId', anchor);
 
-    await render(hbs`{{id-for-deprecation deprecationId optionalAnchorId}}`);
+    await render(
+      hbs`{{id-for-deprecation this.deprecationId this.optionalAnchorId}}`
+    );
 
-    assert.equal(this.element.textContent.trim(), anchor);
+    assert.strictEqual(this.element.textContent.trim(), anchor);
   });
 });
