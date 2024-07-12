@@ -758,7 +758,7 @@ export default class SampleComponent extends Component {
 
   @action
   pushObjects(values) {
-    this.abc.splice(this.abc.length, 0, ...values);
+    this.abc.push(...values);
   }
 }
 ```
