@@ -855,14 +855,7 @@ export default class SampleComponent extends Component {
 
   @action
   removeObject(value) {
-    let loc = this.abc.length || 0;
-    while (--loc >= 0) {
-      let curValue = this.abc.at(loc);
-
-      if (curValue === value) {
-        this.abc.splice(loc, 1);
-      }
-    }
+    this.abc.filter(item => item !== value);
   }
 }
 ```
