@@ -1,5 +1,4 @@
 ---
-id: deprecate-array-prototype-extensions
 title: "Deprecate array prototype extensions"
 until: '6.0.0'
 since: '5.10.0'
