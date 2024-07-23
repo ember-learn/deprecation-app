@@ -97,8 +97,7 @@
     "edition": "octane"
   },
   "engines": {
-    "node": "12.* || 14.* || >= 16",
-    "npm": "8"
+    "node": ">= 18"
   },
   "ember-addon": {
     "paths": [
@@ -107,5 +106,6 @@
   },
   "fastbootDependencies": [
     "crypto"
-  ]
+  ],
+  "packageManager": "pnpm@9.5.0"
 }
