@@ -2,5 +2,8 @@
   "name": "content-docs-generator",
   "keywords": [
     "ember-addon"
-  ]
+  ],
+  "dependencies": {
+    "broccoli-merge-trees": "*"
+  }
 }
