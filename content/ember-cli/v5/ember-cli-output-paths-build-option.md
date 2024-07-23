@@ -10,21 +10,21 @@ Using the `outputPaths` build option is deprecated, as output paths will no long
 
 To resolve the deprecation, please remove the `outputPaths` build option from your `ember-cli-build.js` file:
 
-```diff
+```js {data-diff="-3,-4,-5,-6,-7"}
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
--   outputPaths: {
--     app: {
--       js: `/assets/foo.js`,
--     },
--   },
+    outputPaths: {
+      app: {
+        js: `/assets/foo.js`,
+      },
+    },
   };
 };
 ```
 
 And update your `app/index.html` file accordingly:
 
-```diff
+```html {data-diff="-20,+21"}
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,8 +44,8 @@ And update your `app/index.html` file accordingly:
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
--   <script src="{{rootURL}}assets/foo.js"></script>
-+   <script src="{{rootURL}}assets/my-app-name.js"></script>
+    <script src="{{rootURL}}assets/foo.js"></script>
+    <script src="{{rootURL}}assets/my-app-name.js"></script>
 
     {{content-for "body-footer"}}
   </body>
