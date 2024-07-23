@@ -1,0 +1,18 @@
+{
+  "default": false,
+  "MD040": {
+    "allowed_languages": [
+      "js",
+      "ts",
+      "javascript",
+      "typescript",
+      "bash",
+      "shell",
+      "handlebars",
+      "plaintext",
+      "json",
+      "html",
+      "css"
+    ]
+  }
+}
