@@ -586,7 +586,9 @@ p a:hover {
         .ember-version-graphic {
           $height: 132px;
           width: $height;
-          height: $height;
+          min-height: $height;
+          height: inherit;
+          background-position-y: center;
 
           .text {
             font-size: 64px;
