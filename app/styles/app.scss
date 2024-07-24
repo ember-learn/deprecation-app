@@ -23,6 +23,36 @@ table {
   padding: 2rem;
 }
 
+// 404 styling
+.whoops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-6)
+}
+
+.whoops img {
+    width: 240px;
+    margin: var(--spacing-2);
+}
+
+@media (max-width: 450px) {
+  .whoops {
+    flex-direction: column;
+    padding: var(--spacing-3);
+  }
+
+  .whoops img {
+    width: 80%;
+    margin: var(--spacing-4);
+  }
+
+  .whoops__message {
+    margin: var(--spacing-2);
+    text-align: center;
+  }
+}
+
 // override ember-styleguide. Needed to contain code blocks.
 .main {
   grid-area: main;
