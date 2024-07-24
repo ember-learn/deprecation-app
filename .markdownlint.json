@@ -10,6 +10,7 @@
       "shell",
       "handlebars",
       "plaintext",
+      "text",
       "json",
       "html",
       "css"
