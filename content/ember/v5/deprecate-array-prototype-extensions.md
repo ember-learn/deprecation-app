@@ -6,6 +6,16 @@ since: '5.10.0'
 
 Ember historically extended the prototypes of native Javascript arrays to implement `Ember.Enumerable`, `Ember.MutableEnumerable`, `Ember.MutableArray`, `Ember.Array`. As of v5, the usages of array prototype extensions are deprecated.
 
+To disable the extention of array prototypes, in `config/environment.js`, ensure that `EXTEND_PROTOYPES` is set to false on EmberENV:
+
+```
+EmberENV: {
+  EXTEND_PROTOTYPES: false,
+....
+```
+
+Once it is set to false, audit your project for any breakage from the following methods no longer being available on native arrays. Exceptions will be thrown where they are in use:
+
 For convenient functions like `filterBy`, `compact`, you can directly convert to use native array methods.
 
 For mutation functions (like `pushObject`, `replace`) or observable properties (`firstObject`, `lastObject`), in order to keep the reactivity, you should take following steps:
