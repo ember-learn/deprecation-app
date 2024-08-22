@@ -8,11 +8,12 @@ Ember historically extended the prototypes of native Javascript arrays to implem
 
 To disable the extention of array prototypes, in `config/environment.js`, ensure that `EXTEND_PROTOYPES` is set to false on EmberENV:
 
-```
+```js
 EmberENV: {
   EXTEND_PROTOTYPES: false,
-....
-```
+  // ...
+},
+// ...
 
 Once it is set to false, audit your project for any breakage from the following methods no longer being available on native arrays. Exceptions will be thrown where they are in use:
 
