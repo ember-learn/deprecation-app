@@ -14,6 +14,7 @@ EmberENV: {
   // ...
 },
 // ...
+```
 
 Once it is set to false, audit your project for any breakage from the following methods no longer being available on native arrays. Exceptions will be thrown where they are in use:
 
