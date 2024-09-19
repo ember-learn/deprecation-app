@@ -48,7 +48,7 @@ someArray.compact();
 
 After:
 ```js
-someArray.filter(val => val !== undefined && val !== null);
+someArray = someArray.filter(val => val !== undefined && val !== null);
 ```
 #### `filterBy`
 
@@ -60,8 +60,8 @@ someArray.filterBy('food', 'beans'); // [{ food: 'beans', isFruit: false }]
 
 After:
 ```js
-const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
-someArray.filter(el => el.food === 'beans'); // [{ food: 'beans', isFruit: false }]
+let someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray = someArray.filter(el => el.food === 'beans'); // [{ food: 'beans', isFruit: false }]
 ```
 #### `findBy`
 
@@ -205,8 +205,8 @@ someArray.reject(el => el.isFruit); // [{ food: 'beans', isFruit: false }]
 
 After:
 ```js
-const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
-someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
+let someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray = someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
 ```
 #### `rejectBy`
 
@@ -218,8 +218,8 @@ someArray.rejectBy('isFruit'); // [{ food: 'beans', isFruit: false }]
 
 After:
 ```js
-const someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
-someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
+let someArray = [{ food: 'apple', isFruit: true }, { food: 'beans', isFruit: false }];
+someArray = someArray.filter(el => !el.isFruit); // [{ food: 'beans', isFruit: false }]
 ```
 #### `sortBy`
 
@@ -301,8 +301,8 @@ someArray.without('a'); // ['b', 'c']
 
 After
 ```js
-const someArray = ['a', 'b', 'c'];
-someArray.filter(el => el !== 'a'); // ['b', 'c']
+let someArray = ['a', 'b', 'c'];
+someArray = someArray.filter(el => el !== 'a'); // ['b', 'c']
 ```
 
 Please make sure `without` reactivity is fully tested.
@@ -866,7 +866,10 @@ export default class SampleComponent extends Component {
 
   @action
   removeObject(value) {
-    this.abc.filter(item => item !== value);
+    const index = this.abc.indexOf(value);
+    if (index !== -1) {
+      this.abc.splice(index, 1);
+    }
   }
 }
 ```
