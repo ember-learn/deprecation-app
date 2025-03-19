@@ -3,6 +3,7 @@ title: V1 addon contentFor types
 since: 6.3.0
 until: 7.0.0
 ---
+`app-prefix`, `app-suffix`, `tests-prefix`, and `tests-suffix` are deprecated as types passed to `contentFor`. See [RFC 1029](https://rfcs.emberjs.com/id/1029-deprecate-app-prefix) for more information.
 
 #### app-prefix
 
