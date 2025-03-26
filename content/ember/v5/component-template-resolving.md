@@ -17,7 +17,7 @@ Specifically, these layouts are no longer supported:
 <table style="width:100%"><thead><tr><th>Classic</th><th>Pods</th></thead>
 <tbody><tr><td style="vertical-align:top; width:50%;">
 
-```
+```text
 {app,addon}/
   components/
     foo.js
@@ -32,7 +32,7 @@ Specifically, these layouts are no longer supported:
 
 </td><td style="vertical-align:top">
 
-```
+```text
 {app,addon}/
   components/
     foo/
@@ -50,7 +50,7 @@ Specifically, these layouts are no longer supported:
 
 The above example(s) can be migrated to:
 
-```
+```text
 {app,addon}/
   components/
     foo.js 
@@ -62,7 +62,7 @@ The above example(s) can be migrated to:
 
 Or using `--component-structure=nested`
 
-```
+```text
 {app,addon}/
   components/
     foo/

@@ -1,4 +1,3 @@
-/* global atob */
 module.exports = function () {
   return {
     buildSandboxGlobals(defaultGlobals) {

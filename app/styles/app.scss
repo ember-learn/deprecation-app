@@ -23,6 +23,36 @@ table {
   padding: 2rem;
 }
 
+// 404 styling
+.whoops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-6)
+}
+
+.whoops img {
+    width: 240px;
+    margin: var(--spacing-2);
+}
+
+@media (max-width: 450px) {
+  .whoops {
+    flex-direction: column;
+    padding: var(--spacing-3);
+  }
+
+  .whoops img {
+    width: 80%;
+    margin: var(--spacing-4);
+  }
+
+  .whoops__message {
+    margin: var(--spacing-2);
+    text-align: center;
+  }
+}
+
 // override ember-styleguide. Needed to contain code blocks.
 .main {
   grid-area: main;
@@ -95,24 +125,6 @@ table {
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-// anchor links used on h3 headings
-.toc-anchor {
-  display: inline;
-  margin-right: var(--spacing-1);
-
-  &,
-  main &,
-  main &:link,
-  main &:visited {
-    background: none;
-    color: var(--color-gray-500);
-  }
-
-  &:hover {
-    opacity: 0.75;
-  }
 }
 
 @media (max-width: 1007px) {
@@ -586,7 +598,9 @@ p a:hover {
         .ember-version-graphic {
           $height: 132px;
           width: $height;
-          height: $height;
+          min-height: $height;
+          height: inherit;
+          background-position-y: center;
 
           .text {
             font-size: 64px;
