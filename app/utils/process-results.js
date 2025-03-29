@@ -5,6 +5,9 @@ const GLIMMER = 'Glimmer Internals';
 
 export default function processResults(query) {
   let results = query.toArray().reduce((results, item) => {
+    if (item.parent) {
+      return results;
+    }
     let since = results.find((result) => result.since === item.since);
     if (!since) {
       since = { since: item.since, contents: [] };
