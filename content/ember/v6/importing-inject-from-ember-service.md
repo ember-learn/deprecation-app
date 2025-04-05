@@ -19,3 +19,10 @@ export default class MyRoute extends Route {
 ```
 
 You can use the [ember-codemod-remove-inject-as-service](https://github.com/ijlee2/ember-codemod-remove-inject-as-service) codemod, to fix all violations.
+
+If you're working on a library that needs to support ember-source prior to 4.1, you can support both styles of `service` via:
+```js
+import * as emberService from '@ember/service';
+
+const service = emberService.service ?? emberService.inject;
+```
