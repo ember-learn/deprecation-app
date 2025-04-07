@@ -24,6 +24,16 @@ describe('Json Tests', function () {
           `You don't need to define a displayId if it's the same as the file name`
         );
       }
+
+      // since is manditory and must be a string
+      if (typeof contents.since !== 'string') {
+        throw new Error('since frontmatter must be a string');
+      }
+
+      // if you define an until then it must be a string
+      if (contents.until && typeof contents.until !== 'string') {
+        throw new Error('until frontmatter must be a string');
+      }
     });
   });
 });
