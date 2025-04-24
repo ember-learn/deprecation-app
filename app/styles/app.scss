@@ -207,6 +207,18 @@ table {
   }
 }
 
+@media (min-width: 1007px) and (max-width: 1261px) {
+  .layout-grid {
+    grid-template:
+      "sidebar main" auto /
+      20rem 1fr;
+  }
+  
+  .main {
+    width: auto;
+  }
+}
+
 @media (min-width: 1007px) {
   .toc-toggle {
     display: none;
