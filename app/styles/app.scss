@@ -56,7 +56,7 @@ table {
 // override ember-styleguide. Needed to contain code blocks.
 .main {
   grid-area: main;
-  max-width: 700px;
+  width: 700px;
 }
 
 // override ember-styleguide. Looks like normal text otherwise.
@@ -152,7 +152,7 @@ table {
     grid-area: main;
     overflow: auto;
     margin-left: 0;
-    max-width: 100%;
+    width: 100%;
   }
 
   .padding-vertical-small {
@@ -204,6 +204,18 @@ table {
     right: 1rem;
     padding-top: 1rem;
     z-index: 102;
+  }
+}
+
+@media (min-width: 1007px) and (max-width: 1261px) {
+  .layout-grid {
+    grid-template:
+      "sidebar main" auto /
+      20rem 1fr;
+  }
+  
+  .main {
+    width: auto;
   }
 }
 
