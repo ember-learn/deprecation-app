@@ -7,7 +7,7 @@ displayId: warp-drive:deprecate-tracking-package
 
 Using WarpDrive with EmberJS requires configuring it to use Ember's reactivity system.
 
-This deprecation removes the use of the package **@ember-data/tracking** which
+The use of the package **@ember-data/tracking** is now deprecated. It
 historically provided the bindings into Ember's reactivity system.
  
 This package is no longer needed as the configuration is now
