@@ -27,7 +27,7 @@ To resolve this deprecation, follow these steps:
 - Add `@warp-drive/ember` to tsconfig.json - the types import follows the same pattern (currently this means adding `@warp-drive/ember/unstable-preview-types` to the types array)
 - Add `import '@warp-drive/ember/install';` to the top of your `app.js` or `app.ts` file
 
-### 3. Remove the deprecation
+### 3. Clear the deprecation
 
 Once the above steps are complete, the deprecation can be silenced and the automatic fallback
 registration of reactivity from `@ember-data/tracking` can be removed by updating your [WarpDrive
