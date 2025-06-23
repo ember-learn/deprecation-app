@@ -2,6 +2,7 @@
 title: Ember.libraries
 until: 7.0.0
 since: 6.5.0
+parent: deprecate-import-ember-from-ember
 ---
 
 
