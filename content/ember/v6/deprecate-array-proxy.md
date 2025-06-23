@@ -4,7 +4,29 @@ until: 7.0.0
 since: 6.5.0
 ---
 
-`ArrayProxy` is deprecated. In modern Ember, you can replace `ArrayProxy` with native JavaScript classes and proxies. The best replacement depends on how you were using `ArrayProxy`. Some example use cases are shown below.
+`ArrayProxy` is deprecated. In modern Ember, you should use tracked arrays and modern patterns instead. The best replacement depends on how you were using `ArrayProxy`. Some example use cases are shown below.
+
+## Recommended: Use Tracked Arrays
+
+For most use cases, the modern Ember approach is to use tracked arrays from [`tracked-built-ins`](https://github.com/tracked-tools/tracked-built-ins):
+
+```javascript
+import { TrackedArray } from 'tracked-built-ins';
+
+// Instead of ArrayProxy, use TrackedArray directly
+const pets = new TrackedArray(['dog', 'cat', 'fish']);
+
+// The array is automatically tracked and will update templates
+pets.push('bird');
+pets[0]; // 'dog'
+pets.length; // 4
+```
+
+This provides automatic tracking without the complexity of proxies and follows modern Ember patterns.
+
+## Advanced Use Cases
+
+If you need more advanced behavior like content swapping or transformation, you can use the approaches below.
 
 ### Swapping Content
 
@@ -138,7 +160,7 @@ transformedPets.length; // 3
 
 ### Sorted or Filtered Content (`arrangedContent`)
 
-If you were using `arrangedContent` to provide a sorted or filtered view of an array, you can use a native `Proxy` to create a dynamic, sorted view that updates when the original data changes.
+If you were using `arrangedContent` to provide a sorted or filtered view of an array, the modern approach is to use tracked properties and getters:
 
 Before:
 
@@ -165,7 +187,34 @@ people.pushObject({ name: 'Chris' });
 proxy.get('arrangedContent.firstObject.name'); // 'Chris'
 ```
 
-After:
+After (modern Ember approach with tracked properties):
+
+```javascript
+import { TrackedArray } from 'tracked-built-ins';
+import { cached } from '@glimmer/tracking';
+
+class PeopleManager {
+  // Use TrackedArray for automatic reactivity
+  people = new TrackedArray([{name: 'Yehuda'}, {name: 'Tom'}]);
+
+  @cached
+  get arrangedContent() {
+    // Automatically recomputes when people array changes
+    return [...this.people].sort((a, b) => a.name.localeCompare(b.name));
+  }
+}
+
+const manager = new PeopleManager();
+manager.arrangedContent[0].name; // 'Tom'
+
+// Mutating the content...
+manager.people.push({ name: 'Chris' });
+
+// ...is reflected in arrangedContent due to @cached and TrackedArray.
+manager.arrangedContent[0].name; // 'Chris'
+```
+
+For more complex use cases where you need a native `Proxy` for dynamic behavior:
 
 ```javascript
 // The original data, which can be mutated.
@@ -206,3 +255,13 @@ peopleProxy.push({ name: 'Chris' });
 // The `arranged` property now reflects the change because the cache was invalidated.
 peopleProxy.arranged[0].name; // 'Chris'
 ```
+
+## Migration Strategy
+
+When migrating from `ArrayProxy`, consider:
+
+1. **First choice**: Use `TrackedArray` from `tracked-built-ins` for automatic reactivity
+2. **For computed arrays**: Use `@cached` getters with tracked data
+3. **Only if needed**: Use native `Proxy` for complex dynamic behavior that can't be achieved with tracked properties
+
+The modern Ember approach favors explicit tracking and computed properties over proxy-based solutions, which are easier to understand, debug, and optimize.

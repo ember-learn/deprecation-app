@@ -35,7 +35,7 @@ const proxy = PromiseObject.create({ promise });
 
 After (using `async/await` and tracked properties in a component):
 
-```javascript
+```gjs
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { task } from 'ember-concurrency';
@@ -52,26 +52,26 @@ export default class MyComponent extends Component {
       throw e;
     }
   }
+
+  get lastTask() {
+    return this.loadData.last;
+  }
+
+  <template>
+    {{#if this.lastTask.isRunning}}
+      Loading...
+    {{else if this.lastTask.isSuccessful}}
+      Value: {{this.lastTask.value}}
+    {{else if this.lastTask.error}}
+      Error: {{this.lastTask.error}}
+    {{/if}}
+  </template>
 }
-```
-
-And in your template:
-
-```handlebars
-{{#let this.loadData.last as |taskInstance|}}
-  {{#if taskInstance.isRunning}}
-    Loading...
-  {{else if taskInstance.isSuccessful}}
-    Value: {{taskInstance.value.value}}
-  {{else if taskInstance.error}}
-    Error: {{taskInstance.error}}
-  {{/if}}
-{{/let}}
 ```
 
 For simpler cases where you don't need the full power of a library like `ember-concurrency`, you can manage the state manually with `@tracked` properties:
 
-```javascript
+```gjs
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
@@ -96,19 +96,29 @@ export default class MyComponent extends Component {
       this.isLoading = false;
     }
   }
+
+  <template>
+    {{#if this.isLoading}}
+      Loading...
+    {{else if this.content}}
+      Value: {{this.content.value}}
+    {{else if this.error}}
+      Error: {{this.error}}
+    {{/if}}
+  </template>
 }
 ```
 
-With a corresponding template:
+Using a library like [ember-concurrency](https://ember-concurrency.com/docs/introduction) is highly recommended for managing concurrent asynchronous user-initiated tasks in Ember applications, as it provides robust solutions for handling loading/error states, cancellation, and more.
 
-```handlebars
-{{#if this.isLoading}}
-  Loading...
-{{else if this.content}}
-  Value: {{this.content.value}}
-{{else if this.error}}
-  Error: {{this.error}}
-{{/if}}
-```
+For data loading specifically, you may also want to consider using [WarpDrive](https://warp-drive.io) (formerly Ember Data) which provides a number of utilities around tracking for data.
 
-Using a library like [ember-concurrency](https://ember-concurrency.com/docs/introduction) is highly recommended for managing asynchronous tasks in Ember applications, as it provides robust solutions for handling loading/error states, cancellation, and more.
+## Migration Strategy
+
+When migrating from `PromiseProxyMixin`, consider:
+
+1. **First choice**: Use `ember-concurrency` for user-initiated async tasks (button clicks, form submissions)
+2. **For data loading**: Consider `getRequestState` from warp-drive for request state management
+3. **For simple cases**: Use `@tracked` properties with `async/await` and manual state management
+
+The modern Ember approach uses explicit async/await patterns and proper state management libraries rather than proxy-based promise wrappers.

@@ -4,7 +4,30 @@ until: 7.0.0
 since: 6.5.0
 ---
 
-`ObjectProxy` is deprecated. In modern Ember, you can replace `ObjectProxy` with native JavaScript `Proxy` objects. The best replacement depends on how you were using `ObjectProxy`. Some example use cases are shown below.
+`ObjectProxy` is deprecated. In modern Ember, you should use tracked properties and native JavaScript patterns instead. The best replacement depends on how you were using `ObjectProxy`. Some example use cases are shown below.
+
+## Recommended: Use Tracked Properties
+
+For most use cases, the modern Ember approach is to use tracked properties directly:
+
+```javascript
+import { tracked } from '@glimmer/tracking';
+
+class PersonManager {
+  @tracked person = { name: 'Tom' };
+
+  // Easy to swap content and templates will update automatically
+  updatePerson(newPerson) {
+    this.person = newPerson;
+  }
+}
+```
+
+This provides automatic tracking without the complexity of proxies and follows modern Ember patterns.
+
+## Advanced Use Cases
+
+If you need more advanced behavior like content swapping with a stable reference or property interception, you can use the approaches below.
 
 ### Swapping Content
 
@@ -87,7 +110,7 @@ person.name; // 'Thomas'
 
 ### Adding/Overriding Properties
 
-If you had computed properties on your proxy or were using it to add or override behavior, you can use a native `Proxy` to intercept property access.
+If you had computed properties on your proxy or were using it to add or override behavior, you often don't need a proxy at all. You can simply add a getter to the object:
 
 Before:
 
@@ -109,6 +132,22 @@ proxy.get('fullName'); // 'Tom Dale'
 ```
 
 After:
+
+```javascript
+const person = {
+  firstName: 'Tom',
+  lastName: 'Dale',
+  get fullName() {
+    // or person.firstName person.lastName
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+
+person.fullName; // 'Tom Dale'
+person.firstName; // 'Tom'
+```
+
+If you need to add properties to an object you can't modify, you can use a native `Proxy`:
 
 ```javascript
 const person = { firstName: 'Tom', lastName: 'Dale' };
@@ -166,3 +205,13 @@ const proxy = new Proxy(data, handler);
 proxy.a; // 1
 proxy.b; // "Property 'b' does not exist."
 ```
+
+## Migration Strategy
+
+When migrating from `ObjectProxy`, consider:
+
+1. **First choice**: Use `@tracked` properties and direct object access
+2. **For computed properties**: Add getters directly to objects when possible
+3. **Only if needed**: Use native `Proxy` for dynamic property access or when you can't modify the original object
+
+The modern Ember approach favors explicit tracked properties and direct object access over proxy-based solutions, which are easier to understand, debug, and have better performance characteristics.
