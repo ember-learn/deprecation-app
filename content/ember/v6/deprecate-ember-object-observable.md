@@ -80,25 +80,26 @@ person.name = 'Jane Doe';
 
 ### A Note on Legacy Computed Properties and Setters
 
-When working with classic `EmberObject` instances, the way you set properties matters for reactivity.
+When working with legacy computed properties, the way you set matters for reactivity.
 
 #### Updating Plain Properties
 
-To trigger reactivity (like re-computing a dependent computed property) when changing a plain property on a classic object, you **must** use the `set` function. A native JavaScript assignment (`person.firstName = 'Jane'`) will change the value but will **not** trigger reactivity.
+To trigger reactivity (like re-computing a dependent computed property) when changing a plain property, you **must** use the `set` function. A native JavaScript assignment (`person.firstName = 'Jane'`) will change the value but will **not** trigger reactivity.
 
 ```javascript
 import { computed, set } from '@ember/object';
 import EmberObject from '@ember/object';
 
-const Person = EmberObject.extend({
+class Person {
   // These properties are NOT tracked
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName = 'John';
+  lastName = 'Doe';
 
-  fullName: computed('firstName', 'lastName', function() {
-    return `${this.get('firstName')} ${this.get('lastName')}`;
-  })
-});
+  @computed('firstName', 'lastName')
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
 
 const person = Person.create();
 console.log(person.fullName); // 'John Doe'
@@ -118,23 +119,21 @@ In contrast, if a computed property is defined with its own setter, you **can** 
 import { computed } from '@ember/object';
 import EmberObject from '@ember/object';
 
-const Person = EmberObject.extend({
-  firstName: 'John',
-  lastName: 'Doe',
+class Person { 
+  firstName = 'John';
+  lastName = 'Doe';
 
-  fullName: computed('firstName', 'lastName', {
-    get() {
-      return `${this.get('firstName')} ${this.get('lastName')}`;
-    },
-    set(key, value) {
-      const [firstName, lastName] = value.split(' ');
-      // Note: `this.set` is still used inside the setter itself
-      this.set('firstName', firstName);
-      this.set('lastName', lastName);
-      return value;
-    }
-  })
-});
+  @computed('firstName', 'lastName')
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  set fullName(value) {
+    const [firstName, lastName] = value.split(' ');
+    // Note: `set` is still used inside the setter itself
+    set(this, 'firstName', firstName);
+    set(this, 'lastName', lastName);
+  }
+}
 
 const person = Person.create();
 
