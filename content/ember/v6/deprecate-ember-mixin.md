@@ -4,7 +4,7 @@ until: 7.0.0
 since: 6.5.0
 ---
 
-`Ember.Mixin` is deprecated. This is part of the legacy `@ember/object` API and is not fully compatible with native classes. Instead of using mixins, you should refactor your code to use class-based patterns.
+`Ember.Mixin` is deprecated. This is part of the legacy `@ember/object` API and is not compatible with native classes. Instead of using mixins, you should refactor your code to use class-based patterns.
 
 One common pattern to replace mixins is to use class decorators.
 
@@ -71,4 +71,4 @@ export default class Comment extends EmberObject {
 }
 ```
 
-This approach provides the same functionality as the mixin but uses standard JavaScript features, making the code easier to understand and maintain.
+This approach provides the same functionality as the mixin but uses standard JavaScript features, making the code easier to understand.
