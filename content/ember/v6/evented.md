@@ -8,7 +8,7 @@ The `Ember.Evented` mixin, the underlying `@ember/object/events` module (`addLis
 
 These APIs provided a way for Ember objects to send and receive events. With modern JavaScript features and patterns, we recommend more explicit and standard approaches. For eventing, we recommend refactoring to use a library like [emittery](https://www.npmjs.com/package/emittery).
 
-Please note: The methods from `Evented` (`on`, `one`, `off`, `trigger`, `has`) were also available on `Ember.Component`, `Ember.Route`, and `Ember.Router`. While usage on these objects is deprecated, the methods will continue to be supported on the `Ember.RouterService`, since key parts of its functionality are difficult to reproduce without them.
+Please note: The methods from `Evented` (`on`, `one`, `off`, `trigger`, `has`) were also available on `Ember.Component`, `Ember.Route`, and `Ember.Router`. While usage on these objects is deprecated, the methods will continue to be supported and not deprecated on the `RouterService`, since key parts of its functionality are difficult to reproduce without them.
 
 ### Replacing `Evented` with `emittery`
 
@@ -23,7 +23,7 @@ pnpm add --save-dev emittery
 
 Here is an example of a session service that used `Evented`:
 
-Before:
+#### Before
 ```javascript
 // app/services/session.js
 import Service from '@ember/service';
@@ -75,7 +75,7 @@ export default class SomeComponent extends Component {
 
 After refactoring to use `emittery`, the service manages its own event emitter and provides clear methods for subscribing.
 
-After:
+#### After
 ```javascript
 // app/services/session.js
 import Service from '@ember/service';
