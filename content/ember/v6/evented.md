@@ -52,6 +52,7 @@ A consumer might use it like this:
 // app/components/some-component.js
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
+import { registerDestructor } from '@ember/destroyable';
 
 export default class SomeComponent extends Component {
   @service session;
@@ -59,11 +60,10 @@ export default class SomeComponent extends Component {
   constructor(owner, args) {
     super(owner, args);
     this.session.on('loggedIn', this, 'handleLogin');
-  }
 
-  willDestroy() {
-    super.willDestroy();
-    this.session.off('loggedIn', this, 'handleLogin');
+    registerDestructor(this, () => {
+      this.session.off('loggedIn', this, 'handleLogin');
+    });
   }
 
   handleLogin(user) {
@@ -109,27 +109,25 @@ export default class SessionService extends Service {
 }
 ```
 
-The listening object now receives a dedicated `unsubscribe` function, which simplifies teardown logic.
+The listening object can then use `registerDestructor` from `@ember/destroyable` to tie the subscription's lifetime to its own. This removes the need for a `willDestroy` hook and manual cleanup.
 
 ```javascript
 // app/components/some-component.js
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
+import { registerDestructor } from '@ember/destroyable';
 
 export default class SomeComponent extends Component {
   @service session;
-  unsubscribe;
 
   constructor(owner, args) {
     super(owner, args);
-    this.unsubscribe = this.session.onLoggedIn((user) => {
+
+    const unsubscribe = this.session.onLoggedIn((user) => {
       this.handleLogin(user);
     });
-  }
 
-  willDestroy() {
-    super.willDestroy();
-    this.unsubscribe();
+    registerDestructor(this, unsubscribe);
   }
 
   handleLogin(user) {
