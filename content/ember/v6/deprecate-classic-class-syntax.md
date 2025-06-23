@@ -15,7 +15,7 @@ The `extend` method was used to create a new class that inherited from a parent 
 ```javascript
 import EmberObject from '@ember/object';
 
-const MyComponent = EmberObject.extend({
+const MyService = EmberObject.extend({
   // ...
 });
 ```
@@ -25,7 +25,7 @@ const MyComponent = EmberObject.extend({
 ```javascript
 import EmberObject from '@ember/object';
 
-class MyComponent extends EmberObject {
+class MyService extends EmberObject {
   // ...
 }
 ```
@@ -37,9 +37,9 @@ The `reopen` method was used to modify an existing class by adding new propertie
 **Before:**
 
 ```javascript
-import MyComponent from './my-component';
+import MyService from './my-service';
 
-MyComponent.reopen({
+MyService.reopen({
   // ...
 });
 ```
@@ -49,9 +49,9 @@ MyComponent.reopen({
 There is no direct replacement for `reopen`. You should refactor your code to avoid this pattern. If you need to add functionality, consider creating a subclass:
 
 ```javascript
-import MyComponent from './my-component';
+import MyService from './my-service';
 
-class ExtendedComponent extends MyComponent {
+class ExtendedService extends MyService {
   // ...
 }
 ```
@@ -63,10 +63,10 @@ The `reopenClass` method was used to add static properties and methods to a clas
 **Before:**
 
 ```javascript
-import MyComponent from './my-component';
+import MyService from './my-service';
 
-MyComponent.reopenClass({
-  isMyComponent: true,
+MyService.reopenClass({
+  isMyService: true,
 });
 ```
 
@@ -75,7 +75,7 @@ MyComponent.reopenClass({
 ```javascript
 import EmberObject from '@ember/object';
 
-class MyComponent extends EmberObject {
-  static isMyComponent = true;
+class MyService extends EmberObject {
+  static isMyService = true;
 }
 ```
