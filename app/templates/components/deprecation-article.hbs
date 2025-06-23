@@ -11,12 +11,12 @@
         <span class="bold">included in: </span>
         <LinkTo @route="id" @model={{@model.parent.id}}>
           {{or @model.parent.displayId @model.parent.id}}
-        </LinkTo> 
+        </LinkTo>
       </div>
     {{/if}}
     {{#if @model.children.length}}
       <div>
-        <span class="bold">includes: </span> {{@model.children.length}} deprecations 
+        <span class="bold">includes: </span> {{@model.children.length}} deprecations
         <button type="button" {{on "click" this.toggleChildDeprecations}}>
           {{(if this.showChildDeprecations 'Collapse all' 'Expand all')}}
         </button>
@@ -25,7 +25,7 @@
   </div>
   <section>
     {{markdown-to-html @model.content}}
-    {{#if this.showChildDeprecations}}
+    <div class="{{unless this.showChildDeprecations 'hide'}}">
       {{#each @model.children as |child|}}
         <DeprecationArticle @model={{child}}>
           <hr>
@@ -38,6 +38,6 @@
           </h3>
         </DeprecationArticle>
       {{/each}}
-    {{/if}}
+    </div>
   </section>
 </div>
