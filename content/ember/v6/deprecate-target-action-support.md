@@ -4,7 +4,7 @@ until: 7.0.0
 since: 6.8.0
 ---
 
-The `actions` hash on components, controllers, and routes, along with the `send` method, is deprecated. These APIs were primarily used with the now-deprecated `{{action}}` modifier and helper.
+The `actions` hash on components, controllers, and routes, along with the `send` method, is deprecated. These APIs were primarily used with the previously-deprecated `{{action}}` modifier and helper.
 
 The modern approach is to use standard class methods decorated with the `@action` decorator, and to pass functions directly.
 
