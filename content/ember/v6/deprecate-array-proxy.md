@@ -4,7 +4,8 @@ until: 7.0.0
 since: 6.5.0
 ---
 
-`ArrayProxy` is deprecated. In modern Ember, you should use tracked arrays and modern patterns instead. The best replacement depends on how you were using `ArrayProxy`. Some example use cases are shown below.
+
+`ArrayProxy` is deprecated. In modern Ember, you should use tracking primitives—such as tracked arrays and tracked properties—whenever possible. This is almost always the best approach going forward. Some of the examples below demonstrate alternatives using proxies or advanced patterns, but these are generally not ideal. You should strongly consider refactoring your code to use tracking if at all possible, as it leads to simpler, more maintainable, and idiomatic Ember code. However, the best replacement depends on how you were using `ArrayProxy`. Some example use cases are shown below.
 
 ## Recommended: Use Tracked Arrays
 
@@ -24,13 +25,15 @@ pets.length; // 4
 
 This provides automatic tracking without the complexity of proxies and follows modern Ember patterns.
 
+
 ## Advanced Use Cases
 
-If you need more advanced behavior like content swapping or transformation, you can use the approaches below.
+If you need more advanced behavior like content swapping or transformation, you can use the approaches below. However, these patterns are generally not recommended unless you have a strong reason not to use tracked arrays and properties. In most cases, refactoring to use tracking primitives will result in better, more future-proof code.
 
 ### Swapping Content
 
-If you were using `ArrayProxy` to easily swap out the underlying array while keeping a stable reference, you can achieve a similar, transparent effect using a native `Proxy` backed by a class with a `@tracked` property.
+
+If you were using `ArrayProxy` to easily swap out the underlying array while keeping a stable reference, you can achieve a similar, transparent effect using a native `Proxy` backed by a class with a `@tracked` property. Again, prefer tracked arrays and properties if you can refactor your code to use them.
 
 Before:
 
@@ -112,7 +115,8 @@ pets.length; // 2
 
 ### Transforming Content
 
-If you were using `objectAtContent` to transform the array's content, you can use a native JavaScript `Proxy` to achieve the same result with standard array syntax.
+
+If you were using `objectAtContent` to transform the array's content, you can use a native JavaScript `Proxy` to achieve the same result with standard array syntax. This is an advanced pattern and should only be used if refactoring to tracked properties is not feasible.
 
 Before:
 
@@ -214,7 +218,8 @@ manager.people.push({ name: 'Chris' });
 manager.arrangedContent[0].name; // 'Chris'
 ```
 
-For more complex use cases where you need a native `Proxy` for dynamic behavior:
+
+For more complex use cases where you need a native `Proxy` for dynamic behavior, you can use the following pattern. However, this is rarely necessary and should be avoided if you can use tracked properties and computed values instead:
 
 ```javascript
 // The original data, which can be mutated.
@@ -258,10 +263,11 @@ peopleProxy.arranged[0].name; // 'Chris'
 
 ## Migration Strategy
 
+
 When migrating from `ArrayProxy`, consider:
 
-1. **First choice**: Use `TrackedArray` from `tracked-built-ins` for automatic reactivity
-2. **For computed arrays**: Use `@cached` getters with tracked data
-3. **Only if needed**: Use native `Proxy` for complex dynamic behavior that can't be achieved with tracked properties
+1. **First choice (strongly recommended)**: Use `TrackedArray` from `tracked-built-ins` and tracked properties for automatic reactivity and idiomatic Ember code.
+2. **For computed arrays**: Use `@cached` getters with tracked data.
+3. **Only if truly necessary**: Use native `Proxy` for complex dynamic behavior that cannot be achieved with tracked properties. This should be rare.
 
-The modern Ember approach favors explicit tracking and computed properties over proxy-based solutions, which are easier to understand, debug, and optimize.
+The modern Ember approach strongly favors explicit tracking and computed properties over proxy-based solutions. Tracking primitives are easier to understand, debug, and optimize, and will be the best choice for almost all use cases going forward.
