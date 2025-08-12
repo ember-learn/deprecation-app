@@ -7,6 +7,8 @@ displayId: array.foundations
 
 The foundational APIs of `@ember/array`, including the `A()` function and the core mixins (`EmberArray`, `MutableArray`, `NativeArray`), are deprecated. These were used to create and extend arrays with Ember's observability. The modern approach is to use native JavaScript arrays, and `TrackedArray` from `tracked-built-ins` when reactivity is needed.
 
+> Warning: If you have Computed Properties that rely on EmberArray values, you may find their behavior affected when you migrate. Please consider migrating these Computed Properties to use native getters before beginning the EmberArray migration.
+
 ### `A()` Function and Core Mixins
 
 The `A()` function would wrap a native array, making it an `EmberArray`. The `EmberArray` and `MutableArray` mixins could be used to build custom array-like classes.
