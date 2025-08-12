@@ -6,13 +6,13 @@ since: 6.6.0
 
 The `Ember.Evented` mixin, the underlying `@ember/object/events` module (`addListener`, `removeListener`, `sendEvent`), and the `on()` function from `@ember/object/evented` are all deprecated.
 
-These APIs provided a way for Ember objects to send and receive events. With modern JavaScript features and patterns, we recommend more explicit and standard approaches. For eventing, we recommend refactoring to use a library like [emittery](https://www.npmjs.com/package/emittery).
+These APIs provided a way for Ember objects to send and receive events. With modern JavaScript features and patterns, we recommend more explicit and standard approaches. For eventing, we recommend refactoring to use a modern asynchronous library like [emittery](https://www.npmjs.com/package/emittery) or (if you need to preserve synchronous semantics) a library such as [`nanoevents`](https://www.npmjs.com/package/nanoevents) or [`mitt`](https://www.npmjs.com/package/mitt).
+
+> ⚠️ Important: `Ember.Evented` emits events *synchronously*. Changing to a library with asynchronous behavior, while recommended, may lead to subtle changes in your application's behavior.
 
 Please note: The methods from `Evented` (`on`, `one`, `off`, `trigger`, `has`) were also available on `Ember.Component`, `Ember.Route`, and `Ember.Router`. While usage on these objects is deprecated, the methods will continue to be supported and not deprecated on the `RouterService`, since key parts of its functionality are difficult to reproduce without them.
 
 ### Replacing `Evented` with `emittery`
-
-We recommend the [emittery](https://www.npmjs.com/package/emittery) library, which is a modern, promise-based event emitter. This is useful for services that need to broadcast state changes across an application, such as a session service that announces login and logout events.
 
 First, add `emittery` to your project:
 ```bash
