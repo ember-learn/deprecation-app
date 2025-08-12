@@ -87,8 +87,7 @@ When working with legacy computed properties, the way you set matters for reacti
 To trigger reactivity (like re-computing a dependent computed property) when changing a plain property, you **must** use the `set` function. A native JavaScript assignment (`person.firstName = 'Jane'`) will change the value but will **not** trigger reactivity.
 
 ```javascript
-import { computed, set } from '@ember/object';
-import EmberObject from '@ember/object';
+import EmberObject, { computed, set } from '@ember/object';
 
 class Person {
   // These properties are NOT tracked
@@ -116,8 +115,7 @@ console.log(person.fullName); // 'Jane Doe'
 In contrast, if a computed property is defined with its own setter, you **can** use a native JavaScript assignment to update it. Ember will correctly intercept this and run your setter logic.
 
 ```javascript
-import { computed } from '@ember/object';
-import EmberObject from '@ember/object';
+import EmberObject, { computed, set } from '@ember/object';
 
 class Person { 
   firstName = 'John';

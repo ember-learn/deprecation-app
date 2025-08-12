@@ -210,4 +210,104 @@ This approach is much cleaner because:
 2.  It clearly separates the component's data and template from the DOM-specific logic.
 3.  The modifier's lifecycle (setup, update, teardown) is managed by Ember, making it more robust.
 
+### Replacing Observer-Based Waiting Patterns
 
+Sometimes observers were used not just to mirror state into another property or invoke a side effect immediately, but to "wait" until a property reached a certain condition (e.g. became non-null / a flag flipped) and then continue logic. Instead of wiring an observer that removes itself when the predicate passes, choose one of these approaches:
+
+#### 1. Prefer Reactive Rendering (Often You Need Nothing Extra)
+
+If the goal is just to show different UI when something becomes ready, branch in the template:
+
+```hbs
+{{#if this.isReady}}
+  <LoadedState @data={{this.data}} />
+{{else}}
+  <LoadingSpinner />
+{{/if}}
+```
+
+`this.isReady` should be a `@tracked` property (or derived from other tracked state). No explicit watcher is required; changes trigger re-render automatically.
+
+#### 2. requestAnimationFrame Polling (UI-Frame Cadence)
+
+Use when a rapidly changing UI-related value will settle soon and you want per-frame checks without observers:
+
+```js
+export class RafWaiter {
+  constructor(object, key, predicate, callback, { maxFrames = Infinity } = {}) {
+    this.object = object;
+    this.key = key;
+    this.predicate = predicate;
+    this.callback = callback;
+    this.maxFrames = maxFrames;
+    this._frame = 0;
+    this._stopped = false;
+  }
+
+  start() {
+    const tick = () => {
+      if (this._stopped) return;
+      let value = this.object[this.key];
+      if (this.predicate(value)) {
+        this.callback(value);
+        this.stop();
+        return;
+      }
+      if (++this._frame < this.maxFrames) {
+        this._rafId = requestAnimationFrame(tick);
+      }
+    };
+    tick(); // initial synchronous check
+    return () => this.stop();
+  }
+
+  stop() {
+    this._stopped = true;
+    if (this._rafId) cancelAnimationFrame(this._rafId);
+  }
+}
+
+// Usage:
+// const cancel = new RafWaiter(model, 'isReady', v => v === true, value => doSomething(value)).start();
+```
+
+#### 3. ember-concurrency Task (Interval / Backoff Friendly)
+
+Provides structured cancellation and adjustable cadence; integrate with destruction for safety.
+
+```js
+import { task, timeout } from 'ember-concurrency';
+import { registerDestructor } from '@ember/destroyable';
+
+class WaitServiceLike {
+  constructor(object) {
+    this.object = object;
+    registerDestructor(this, () => this.waitFor?.cancelAll?.());
+  }
+
+  waitFor = task(async (key, predicate, { interval = 50, maxChecks = Infinity } = {}) => {
+    let checks = 0;
+    while (checks < maxChecks) {
+      let value = this.object[key];
+      if (predicate(value)) {
+        return value;
+      }
+      checks++;
+      await timeout(interval);
+    }
+    throw new Error('Condition not met before maxChecks');
+  });
+}
+
+// Usage:
+// let waiter = new WaitServiceLike(model);
+// let result = await waiter.waitFor.perform('isReady', v => v === true, { interval: 30 });
+```
+
+#### Choosing an Approach
+
+- Template branching: simplest; no manual cleanup.
+- `requestAnimationFrame`: sync with paint loop for short-lived UI readiness waits.
+- `ember-concurrency` task: tunable intervals, cancellation, good for async processes.
+
+Avoid reimplementing implicit observer semantics. Favor explicit state + rendering or cancellable tasks.
