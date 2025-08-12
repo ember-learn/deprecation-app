@@ -263,6 +263,8 @@ peopleProxy.arranged[0].name; // 'Chris'
 
 ## Migration Strategy
 
+> Warning: Any ComputedProperties that depend on ArrayProxy values may behave differently after removing ArrayProxy. Please consider
+> migrating to native getters first.
 
 When migrating from `ArrayProxy`, consider:
 
