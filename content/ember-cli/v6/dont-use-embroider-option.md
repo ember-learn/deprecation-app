@@ -1,6 +1,6 @@
 ---
 title: Don't use `--embroider` option for `ember init` or `ember new`
-since: 6.7.0
+since: 6.8.0
 until: 7.0.0
 ---
 
