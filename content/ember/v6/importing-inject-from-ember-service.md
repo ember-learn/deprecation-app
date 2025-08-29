@@ -18,7 +18,9 @@ export default class MyRoute extends Route {
 }
 ```
 
-You can use the [ember-codemod-remove-inject-as-service](https://github.com/ijlee2/ember-codemod-remove-inject-as-service) codemod, to fix all violations.
+You may ignore this deprecation via babel plugin (for both app and addon code), here: [babel-plugin-undeprecate-inject-from-at-ember-service](https://github.com/NullVoxPopuli/undeprecate-inject-from-at-ember-service).
+
+For violations within your own code, this deprecation can be dealt with one a single pass via the [ember-codemod-remove-inject-as-service](https://github.com/ijlee2/ember-codemod-remove-inject-as-service) codemod.
 
 If you're working on a library that needs to support ember-source prior to 4.1, you can support both styles of `service` via:
 ```js
