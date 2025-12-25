@@ -12,4 +12,10 @@ import Ember from 'ember';
 Ember.testing
 ```
 
-There is no replacement for this API.
+You can replace this with an import from the [`@embroider/macros`](https://github.com/embroider-build/embroider/tree/main/packages/macros) package:
+
+```js
+import { isTesting } from '@embroider/macros';
+
+isTesting()
+```
