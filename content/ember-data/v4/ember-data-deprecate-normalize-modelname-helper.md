@@ -1,6 +1,6 @@
 ---
-displayId: ember-data:deprecate-promise-many-array-behaviors
-title: Deprecate Promise Many Array Behaviors
+displayId: ember-data:deprecate-normalize-modelname-helper
+title: Deprecate normalizeModelName Helper
 until: '5.0'
 since: '4.7'
 ---

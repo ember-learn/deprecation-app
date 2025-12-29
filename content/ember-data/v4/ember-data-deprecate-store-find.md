@@ -1,6 +1,6 @@
 ---
-displayId: ember-data:deprecate-promise-many-array-behaviors
-title: Deprecate Promise Many Array Behaviors
+displayId: ember-data:deprecate-store-find
+title: Deprecate hasRecordForId
 until: '5.0'
 since: '4.5'
 ---
