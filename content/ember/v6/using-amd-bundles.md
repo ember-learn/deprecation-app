@@ -7,7 +7,7 @@ rfc: https://rfcs.emberjs.com/id/1101-deprecate-ember-vendor-bundles
 
 Ember will no longer publish legacy AMD-specific Ember builds. To opt-in to
 consuming Ember as ES modules and clear this deprecation, enable the
-`ember-modules` optional feature by running `ember feature:enable ember-modules`.
+`use-ember-modules` optional feature by running `npx ember feature:enable use-ember-modules`.
 
 This applies only to the classic build system or to Embroider < 4.0 without the
 `staticEmberSource: true` option. If you see this deprecation warning in these
