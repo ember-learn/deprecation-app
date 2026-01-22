@@ -3,6 +3,7 @@ title: Non Strict Types
 until: '6.0'
 since: '5.3'
 displayId: ember-data:deprecate-non-strict-types
+rfc: https://rfcs.emberjs.com/id/0740-ember-data-deprecate-non-strict-types
 ---
 
 Currently, EmberData expects that the `type` property associated with a resource follows several conventions.
@@ -20,3 +21,5 @@ E.G. It will matter not that your string is in a specific format like singular, 
 If using @ember-data/model, there will always be a restriction that the `type` must match the path on disk where the model is defined.
 
 e.g. `app/models/foo/bar-bem.js` must have a type of `foo/bar-bem`
+
+This deprecation was introduced in RFC [#0740](https://rfcs.emberjs.com/id/0740-ember-data-deprecate-non-strict-types).
