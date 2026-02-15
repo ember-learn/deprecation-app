@@ -3,9 +3,6 @@
     Deprecations by Version:
   </h2>
   {{#each @sortedGroupedResults as |result|}}
-    <TocSection
-      @result={{result}}
-      @displayMobileToc={{@displayMobileToc}}
-    />
+    <TocSection @result={{result}} @displayMobileToc={{@displayMobileToc}} />
   {{/each}}
 </div>

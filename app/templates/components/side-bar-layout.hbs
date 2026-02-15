@@ -1,7 +1,7 @@
 {{#if @sortedGroupedResults}}
   {{#if @displayMobileToc}}
     <nav
-      class="mobile-sidebar {{if @displayMobileToc "mobile" "desktop"}}"
+      class="mobile-sidebar {{if @displayMobileToc 'mobile' 'desktop'}}"
       aria-label="Mobile Table of Contents"
       data-test-mobile-table-of-contents
     >
@@ -12,10 +12,7 @@
     </nav>
   {{/if}}
 
-  <nav
-    class="sidebar"
-    aria-label="Desktop Table of Contents"
-  >
+  <nav class="sidebar" aria-label="Desktop Table of Contents">
     <TableOfContents
       @sortedGroupedResults={{@sortedGroupedResults}}
       @displayMobileToc={{@displayMobileToc}}

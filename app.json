@@ -1,17 +1,13 @@
 {
   "name": "Ember deprecations app",
-  "scripts": {
-  },
-  "env": {
-  },
+  "scripts": {},
+  "env": {},
   "formation": {
     "web": {
       "quantity": 1
     }
   },
-  "addons": [
-
-  ],
+  "addons": [],
   "buildpacks": [
     {
       "url": "https://github.com/stonecircle/heroku-buildpack-ember-static"

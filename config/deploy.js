@@ -1,11 +1,10 @@
-/* eslint-env node */
 'use strict';
 
 let credentials;
 
 try {
-  // eslint-disable-next-line node/no-missing-require
   credentials = require('./credentials.json');
+  // eslint-disable-next-line no-unused-vars
 } catch (e) {
   credentials = {};
 }

@@ -15,13 +15,13 @@ describe('Json Tests', function () {
 
       if (contents.id) {
         throw new Error(
-          `You can't define an ID for a deprecation. If you need an ID that is different from the file name then use displayId`
+          `You can't define an ID for a deprecation. If you need an ID that is different from the file name then use displayId`,
         );
       }
 
       if (contents.displayId && contents.displayId === basename(file, '.md')) {
         throw new Error(
-          `You don't need to define a displayId if it's the same as the file name`
+          `You don't need to define a displayId if it's the same as the file name`,
         );
       }
 
