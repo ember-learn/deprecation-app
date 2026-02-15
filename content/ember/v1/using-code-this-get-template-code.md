@@ -1,7 +1,7 @@
 ---
 title: Using `this.get('template')`
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 

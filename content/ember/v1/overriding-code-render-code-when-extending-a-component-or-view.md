@@ -1,7 +1,7 @@
 ---
 title: Overriding `render` When Extending a Component or View
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 

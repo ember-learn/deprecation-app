@@ -1,7 +1,7 @@
 ---
 title: Relationship Remote update clearing Local state
-until: '6.0'
-since: '5.3'
+until: 6.0.0
+since: 5.3.0
 displayId: ember-data:deprecate-relationship-remote-update-clearing-local-state
 ---
 

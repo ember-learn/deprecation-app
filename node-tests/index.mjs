@@ -36,7 +36,7 @@ describe('Frontmatter Validation', function () {
       }
 
       // verify `since` is a version or a special value
-      if (!semver.valid(semver.coerce(front.since))) {
+      if (!semver.valid(front.since)) {
         if (!SINCE_NON_VERSIONS.includes(front.since)) {
           errors.push(
             `since frontmatter must be a valid version, found "${front.since}"`,
@@ -51,7 +51,7 @@ describe('Frontmatter Validation', function () {
         }
 
         // verify `until` is a version or an empty string
-        if (!semver.valid(semver.coerce(front.until))) {
+        if (!semver.valid(front.until)) {
           if (![''].includes(front.until)) {
             errors.push(
               `until frontmatter must be a valid version, found "${front.until}"`,

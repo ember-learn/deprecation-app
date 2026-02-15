@@ -1,7 +1,7 @@
 ---
 title: Using the `{{with}}` Helper with the `controller` option
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 

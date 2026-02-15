@@ -1,7 +1,7 @@
 ---
 title: "`@ember/string#loc` and `{{loc}}`"
 until: 4.0.0
-since: "3.24"
+since: 3.24.0
 displayId: ember-string.loc
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Ember.Map, Ember.MapWithDefault, and Ember.OrderedSet are deprecated
 until: 2.16.0
-since: "2.13"
+since: 2.13.0
 ---
 
 

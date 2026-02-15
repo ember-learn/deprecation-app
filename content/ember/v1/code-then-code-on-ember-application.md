@@ -1,7 +1,7 @@
 ---
 title: .then on Ember.Application
 until: ""
-since: "1.7"
+since: 1.7.0
 ---
 
 

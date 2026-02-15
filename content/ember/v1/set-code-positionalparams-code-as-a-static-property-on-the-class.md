@@ -1,7 +1,7 @@
 ---
 title: Set positionalParams as a static property on the class
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 

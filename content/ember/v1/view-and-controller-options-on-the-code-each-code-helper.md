@@ -1,7 +1,7 @@
 ---
 title: View and Controller options on the `{{each}}` helper
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: ObjectController
 until: ""
-since: "1.11"
+since: 1.11.0
 ---
 
 

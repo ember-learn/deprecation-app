@@ -1,7 +1,7 @@
 ---
 title: Ember Freezable
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 The Freezable Mixin has been deprecated because the spec has been added to

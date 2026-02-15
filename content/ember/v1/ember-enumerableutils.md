@@ -1,7 +1,7 @@
 ---
 title: Ember.EnumerableUtils
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 `EnumerableUtils` has been deprecated in favor of native implementations. You can consult the

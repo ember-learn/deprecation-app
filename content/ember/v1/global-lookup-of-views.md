@@ -1,7 +1,7 @@
 ---
 title: Global lookup of views
 until: ""
-since: "1.8"
+since: 1.8.0
 ---
 
 

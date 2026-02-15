@@ -1,7 +1,7 @@
 ---
 title: render helper with block
 until: 2.4.0
-since: "2.4"
+since: 2.4.0
 ---
 
 

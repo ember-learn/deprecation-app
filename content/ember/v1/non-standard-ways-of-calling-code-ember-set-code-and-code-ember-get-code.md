@@ -1,7 +1,7 @@
 ---
 title: Non-Standard Ways of Calling `Ember.set` and `Ember.get`
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 

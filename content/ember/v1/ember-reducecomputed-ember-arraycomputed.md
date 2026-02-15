@@ -1,7 +1,7 @@
 ---
 title: Ember.ReduceComputedProperty / Ember.ArrayComputedProperty
 until: ""
-since: "1.13"
+since: 1.13.0
 ---
 
 

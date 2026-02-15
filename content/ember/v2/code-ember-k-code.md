@@ -1,7 +1,7 @@
 ---
 title: Ember.K
 until: 3.0.0
-since: "2.12"
+since: 2.12.0
 ---
 
 

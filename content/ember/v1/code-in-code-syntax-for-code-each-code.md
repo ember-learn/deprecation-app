@@ -1,7 +1,7 @@
 ---
 title: in syntax for {{each}}
 until: ""
-since: "1.12"
+since: 1.12.0
 ---
 
 

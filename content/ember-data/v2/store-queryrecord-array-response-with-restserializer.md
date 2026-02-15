@@ -1,7 +1,7 @@
 ---
 title: Store.queryRecord Array Response with RESTSerializer
 until: 3.0.0
-since: "2.7"
+since: 2.7.0
 ---
 
 

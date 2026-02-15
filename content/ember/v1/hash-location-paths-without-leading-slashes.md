@@ -1,7 +1,7 @@
 ---
 title: Hash Location Paths Without Leading Slashes
 until: ""
-since: "1.8"
+since: 1.8.0
 ---
 
 

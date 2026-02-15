@@ -1,7 +1,7 @@
 ---
 title: Binding Style Attributes
 until: ""
-since: "1.11"
+since: 1.11.0
 ---
 
 <a id="toc_warning-when-binding-style-attributes"></a>

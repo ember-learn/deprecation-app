@@ -1,7 +1,7 @@
 ---
 title: Observing container views like arrays
 until: ""
-since: "1.7"
+since: 1.7.0
 ---
 
 

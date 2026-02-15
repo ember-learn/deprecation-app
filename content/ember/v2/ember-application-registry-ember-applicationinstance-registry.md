@@ -1,7 +1,7 @@
 ---
 title: Ember.Application#registry / Ember.ApplicationInstance#registry
 until: 3.0.0
-since: "2.1"
+since: 2.1.0
 ---
 
 

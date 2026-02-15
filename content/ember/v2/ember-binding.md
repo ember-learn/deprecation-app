@@ -1,7 +1,7 @@
 ---
 title: Ember.Binding
 until: 3.0.0
-since: "2.7"
+since: 2.7.0
 ---
 
 `Ember.Binding` has not been needed for some time and is deprecated in favor of
