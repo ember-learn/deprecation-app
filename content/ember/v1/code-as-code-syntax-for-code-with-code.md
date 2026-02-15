@@ -1,6 +1,6 @@
 ---
 title: as syntax for {{with}}
-until: ""
+until: 2.0.0
 since: 1.12.0
 ---
 

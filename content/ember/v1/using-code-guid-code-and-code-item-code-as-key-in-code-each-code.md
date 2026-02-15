@@ -1,6 +1,6 @@
 ---
 title: Using @guid and @item as key in {{each}}
-until: ""
+until: 2.0.0
 since: 1.13.0
 ---
 

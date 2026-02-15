@@ -1,6 +1,6 @@
 ---
 title: Using the `{{with}}` Helper with the `controller` option
-until: ""
+until: 2.0.0
 since: 1.13.0
 ---
 

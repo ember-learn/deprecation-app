@@ -1,6 +1,6 @@
 ---
 title: Ember.EnumerableUtils
-until: ""
+until: 2.0.0
 since: 1.13.0
 ---
 

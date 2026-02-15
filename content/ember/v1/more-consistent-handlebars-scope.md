@@ -1,6 +1,6 @@
 ---
 title: More Consistent Handlebars Scope
-until: ""
+until: 2.0.0
 since: 1.9.0
 ---
 
