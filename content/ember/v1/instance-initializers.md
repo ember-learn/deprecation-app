@@ -1,7 +1,7 @@
 ---
 title: Access to Instance Initializers
 until: 2.0.0
-since: 1.13.0
+since: 1.0.0
 ---
 
 
