@@ -2,11 +2,7 @@
 <LinkTo @route="index">&laquo; All deprecation guides</LinkTo>
 <h1>
   Deprecation Guide for
-  {{markdown-to-html
-    @model.title
-    extensions="no-wrapper"
-    tagName=""
-  }}
+  {{markdown-to-html @model.title extensions="no-wrapper" tagName=""}}
 </h1>
 <DeprecationArticle @model={{@model}} />
 
