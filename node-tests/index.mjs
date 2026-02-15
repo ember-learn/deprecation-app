@@ -44,19 +44,17 @@ describe('Frontmatter Validation', function () {
         }
       }
 
-      // if you define an `until` then it must be a string
-      if (front.until) {
-        if (typeof front.until !== 'string') {
-          errors.push('until frontmatter must be a string');
-        }
+      // `until` is manditory and must be a string
+      if (typeof front.until !== 'string') {
+        errors.push('until frontmatter must be a string');
+      }
 
-        // verify `until` is a version or an empty string
-        if (!semver.valid(front.until)) {
-          if (![''].includes(front.until)) {
-            errors.push(
-              `until frontmatter must be a valid version, found "${front.until}"`,
-            );
-          }
+      // verify `until` is a version or an empty string
+      if (!semver.valid(front.until)) {
+        if (![''].includes(front.until)) {
+          errors.push(
+            `until frontmatter must be a valid version, found "${front.until}"`,
+          );
         }
       }
 
