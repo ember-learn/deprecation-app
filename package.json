@@ -97,6 +97,7 @@
     "remark-cli": "^11.0.0",
     "remark-lint": "^9.1.1",
     "sass": "^1.58.0",
+    "semver": "^7.7.4",
     "semver-compare": "^1.0.0",
     "walk-sync": "^3.0.0",
     "webpack": "^5.89.0",
