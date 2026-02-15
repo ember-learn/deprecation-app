@@ -1,3 +1,9 @@
+# markdown content files
+/content/**/*.md
+
+# Sass file
+/app/styles/**/*.scss
+
 # unconventional js
 /blueprints/*/files/
 /vendor/
@@ -15,6 +21,9 @@
 !.*
 .eslintcache
 .lint-todo/
+/pnpm-lock.yaml
+.github/dependabot.yml
+*.html
 
 # ember-try
 /.node_modules.ember-try/
