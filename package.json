@@ -17,6 +17,7 @@
     "lint:dependency": "ember dependency-lint",
     "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" --prefixColors auto && pnpm format",
     "lint:format": "prettier . --cache --check",
+    "lint:frontmatter": "mocha --reporter ./lib/mocha-quiet.cjs node-tests",
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint --ignore-pattern ./content/**/*.md . --cache",
@@ -25,7 +26,6 @@
     "lint:markdownlint": "markdownlint \"content/**/*.md\" --config .markdownlint.json",
     "start": "ember serve",
     "test": "concurrently \"pnpm:test:*\" --names \"test:\" --prefixColors auto",
-    "test:node": "mocha node-tests",
     "test:ember": "ember test"
   },
   "devDependencies": {
