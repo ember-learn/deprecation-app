@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-runloop */
 import Component from '@glimmer/component';
 import { action, set } from '@ember/object';
 import { later } from '@ember/runloop';
@@ -58,3 +59,4 @@ export default class SearchInput extends Component {
     );
   }
 }
+/* eslint-enable ember/no-runloop */

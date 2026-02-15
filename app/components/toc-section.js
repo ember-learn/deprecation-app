@@ -1,5 +1,6 @@
 /* eslint-disable ember/no-classic-components */
 /* eslint-disable ember/require-tagless-components */
+/* eslint-disable ember/no-runloop */
 import Component from '@ember/component';
 import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
@@ -50,3 +51,4 @@ export default class TocSection extends Component {
 
 /* eslint-enable ember/no-classic-components */
 /* eslint-enable ember/require-tagless-components */
+/* eslint-enable ember/no-runloop */
