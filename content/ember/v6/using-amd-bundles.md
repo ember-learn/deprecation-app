@@ -32,3 +32,6 @@ A known addon that previously relied on accessing Ember from `vendor` is
 [ember-cli-deprecation-workflow](https://github.com/ember-cli/ember-cli-deprecation-workflow).
 Please ensure you are on the latest version of this addon as that reliance has
 been removed.
+
+`ember-cli-htmlbars` will also need to be at `>= 7.x` in your entire dependency graph. We recommend you use your
+package manager's facility for `overrides` if necessary.
