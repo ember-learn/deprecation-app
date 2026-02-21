@@ -1,7 +1,7 @@
 ---
 title: LinkTo @disabled-when argument
 until: 4.0.0
-since: "3.27"
+since: 3.27.0
 displayId: ember.link-to.disabled-when
 ---
 

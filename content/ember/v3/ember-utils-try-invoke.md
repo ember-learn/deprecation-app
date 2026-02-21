@@ -1,7 +1,7 @@
 ---
 title: tryInvoke from @ember/utils
 until: 4.0.0
-since: "3.24"
+since: 3.24.0
 displayId: ember-utils.try-invoke
 ---
 

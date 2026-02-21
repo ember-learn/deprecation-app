@@ -1,7 +1,7 @@
 ---
 title: Enumerable#contains
 until: 3.0.0
-since: "2.8"
+since: 2.8.0
 displayId: ember-runtime.enumerable-contains
 ---
 

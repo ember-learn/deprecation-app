@@ -1,7 +1,7 @@
 ---
 title: "`Component#isVisible`"
 until: 4.0.0
-since: "3.15"
+since: 3.15.0
 displayId: ember-component.is-visible
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: mouseEnter/Leave/Move events in `{{action}}` modifier
 until: 4.0.0
-since: "3.13"
+since: 3.13.0
 displayId: action.mouseenter-leave-move
 ---
 

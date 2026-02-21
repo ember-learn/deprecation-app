@@ -1,7 +1,7 @@
 ---
 title: Access to Instances in Initializers
-until: ""
-since: "1.11"
+until: 2.0.0
+since: 1.11.0
 ---
 
 

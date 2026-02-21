@@ -8,6 +8,7 @@ import { concat, fn } from '@ember/helper';
 import { on } from '@ember/modifier';
 import not from '../helpers/not';
 import idForDeprecation from '../helpers/id-for-deprecation';
+import SemVer from './sem-ver';
 
 export default class TocSection extends Component {
   @service router;
@@ -61,7 +62,8 @@ export default class TocSection extends Component {
         data-test-toc-list-item
         {{on "click" (fn (mut this.open) (not this.open))}}
       >
-        {{@result.since}}
+        <SemVer @version={{@result.since}} @precision="minor" />
+
       </button>
 
       {{#if this.open}}

@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-has-record-for-id
 title: Deprecate Has Record For Id
-until: '5.0'
-since: '4.5'
+until: 5.0.0
+since: 4.5.0
 ---
 
 Deprecates `store.hasRecordForId(type, id)` in favor of `store.peekRecord({ type, id }) !== null`.

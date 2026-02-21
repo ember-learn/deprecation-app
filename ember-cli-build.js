@@ -53,9 +53,5 @@ module.exports = function (defaults) {
     },
   });
 
-  app.import('node_modules/semver-compare/index.js', {
-    using: [{ transformation: 'cjs', as: 'semver-compare' }],
-  });
-
   return app.toTree();
 };
