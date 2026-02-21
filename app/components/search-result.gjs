@@ -1,6 +1,10 @@
 import Component from '@glimmer/component';
 import hrefTo from 'ember-href-to/helpers/href-to';
-// import { htmlSafe } from '@ember/template';
+import { htmlSafe as templateHtmlSafe } from '@ember/template';
+import { helper } from '@ember/component/helper';
+
+// We can't use plain functions as helpers yet, so wrap this:
+const htmlSafe = helper(templateHtmlSafe);
 
 export default class SearchResult extends Component {
   get project() {
@@ -51,10 +55,7 @@ export default class SearchResult extends Component {
                   {{#if index}}
                     >
                   {{/if}}
-                  {{!htmlSafe heading.value}}
-                  {{! template-lint-disable no-log }}
-                  {{log "FIX htmlSafe" heading.value}}
-                  TODO: FIX htmlSafe
+                  {{htmlSafe heading.value}}
                 {{/each}}
               </div>
             </a>
