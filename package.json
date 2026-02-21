@@ -117,5 +117,9 @@
   "fastbootDependencies": [
     "crypto"
   ],
-  "packageManager": "pnpm@9.5.0"
+  "packageManager": "pnpm@9.5.0",
+  "exports": {
+    "./tests/*": "./tests/*",
+    "./*": "./app/*"
+  }
 }
