@@ -28,4 +28,8 @@ export default class SemVer extends Component {
 
     return display;
   }
+
+  <template>
+    <span data-version={{@version}}>{{this.displayVersion}}</span>
+  </template>
 }

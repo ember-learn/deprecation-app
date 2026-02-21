@@ -44,10 +44,6 @@ module.exports = function (defaults) {
       ],
     },
 
-    'ember-cli-string-helpers': {
-      only: ['html-safe'],
-    },
-
     babel: {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
