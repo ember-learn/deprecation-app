@@ -1,7 +1,7 @@
 ---
 title: mouseEnter/Leave/Move component methods
 until: 4.0.0
-since: "3.13"
+since: 3.13.0
 displayId: component.mouseenter-leave-move
 ---
 

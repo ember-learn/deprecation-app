@@ -1,7 +1,7 @@
 ---
 title: Component Manager Factory Function
 until: 4.0.0
-since: "3.8"
+since: 3.8.0
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: Deprecate Array Like
-until: '5.0'
-since: '4.7'
+until: 5.0.0
+since: 4.7.0
 displayId: ember-data:deprecate-array-like
 ---
 

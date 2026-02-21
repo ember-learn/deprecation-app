@@ -1,7 +1,7 @@
 ---
 title: Ember.DeferredMixin and Ember.Deferred
-until: ""
-since: "1.7"
+until: 2.0.0
+since: 1.7.0
 ---
 
 

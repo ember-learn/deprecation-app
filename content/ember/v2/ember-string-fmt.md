@@ -1,7 +1,7 @@
 ---
 title: Ember.String.fmt
 until: 3.0.0
-since: "2.0"
+since: 2.0.0
 ---
 
 

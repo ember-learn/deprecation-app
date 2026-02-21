@@ -1,7 +1,7 @@
 ---
 title: Use closure actions instead of `sendAction`
 until: 4.0.0
-since: "3.4"
+since: 3.4.0
 displayId: ember-component.send-action
 ---
 

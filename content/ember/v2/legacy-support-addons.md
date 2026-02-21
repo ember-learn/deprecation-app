@@ -1,7 +1,7 @@
 ---
 title: Legacy support addons
 until: 3.0.0
-since: "2.6"
+since: 2.6.0
 ---
 
 

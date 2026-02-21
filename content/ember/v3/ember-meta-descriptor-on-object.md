@@ -1,7 +1,7 @@
 ---
 title: Use defineProperty to define computed properties
 until: 3.5.0
-since: "3.2"
+since: 3.2.0
 displayId: ember-meta.descriptor-on-object
 ---
 

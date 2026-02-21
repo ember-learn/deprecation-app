@@ -1,7 +1,7 @@
 ---
 title: Use ember-cli resolver rather than legacy globals resolver
 until: 4.0.0
-since: "3.16"
+since: 3.16.0
 displayId: ember.globals-resolver
 ---
 

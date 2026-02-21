@@ -1,7 +1,7 @@
 ---
 title: Reopening Legacy Built-in Components
 until: 4.0.0
-since: "3.27"
+since: 3.27.0
 displayId: ember.built-in-components.reopen
 ---
 

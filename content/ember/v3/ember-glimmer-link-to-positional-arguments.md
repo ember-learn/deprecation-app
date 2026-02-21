@@ -1,7 +1,7 @@
 ---
 title: "`<LinkTo>` positional arguments"
 until: 4.0.0
-since: "3.26"
+since: 3.26.0
 displayId: ember-glimmer.link-to.positional-arguments
 ---
 

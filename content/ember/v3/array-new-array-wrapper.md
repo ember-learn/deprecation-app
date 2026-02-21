@@ -1,7 +1,7 @@
 ---
 title: Calling `A` as a constructor
 until: 3.9.0
-since: "3.6"
+since: 3.6.0
 displayId: array.new-array-wrapper
 ---
 

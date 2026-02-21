@@ -1,7 +1,7 @@
 ---
 title: Injected container access
 until: 3.0.0
-since: "2.3"
+since: 2.3.0
 ---
 
 

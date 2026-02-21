@@ -1,7 +1,7 @@
 ---
 title: Reopening Classic Component Super Class
 until: 4.0.0
-since: "3.27"
+since: 3.27.0
 displayId: ember.component.reopen
 ---
 

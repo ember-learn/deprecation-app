@@ -1,7 +1,7 @@
 ---
 title: Migrating from _lookupFactory to factoryFor
 until: 2.13.0
-since: "2.12"
+since: 2.12.0
 ---
 
 
