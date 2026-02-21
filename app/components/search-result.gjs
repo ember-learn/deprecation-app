@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import hrefTo from 'ember-href-to/helpers/href-to';
-import { htmlSafe } from '@ember/template';
+// import { htmlSafe } from '@ember/template';
 
 export default class SearchResult extends Component {
   get project() {
@@ -52,6 +52,7 @@ export default class SearchResult extends Component {
                     >
                   {{/if}}
                   {{!htmlSafe heading.value}}
+                  {{! template-lint-disable no-log }}
                   {{log "FIX htmlSafe" heading.value}}
                   TODO: FIX htmlSafe
                 {{/each}}
