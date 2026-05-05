@@ -12,12 +12,30 @@ Ember will no longer publish legacy AMD-specific Ember builds. There are two way
 To clear this build-time deprecation, you may need to upgrade any of the following deps (if you have them in package.json) to these minimums:
 
  - ember-cli-htmlbars 7.0.0
+ - ember-cli-babel 8.3.1
  - babel-plugin-ember-template-compilation 3.1.0 or 4.0.0
  - ember-auto-import 2.13.1
  - @embroider/compat 4.1.16
  - @embroider/core 4.4.7
 
 Of these, ember-cli-htmlbars is the only one that must be recursively updated -- if any of your addons depend on ember-cli-htmlbars 6.x, you will continue to hit this deprecation warning and won't be able to upgrade Ember 7 until it's addressed. It is usually safe to use your package manager to override the ember-cli-htmlbars version, because the vast majority of v1 addons don't care which version they're using.
+
+Example overrides in pnpm:
+```
+"pnpm": {
+  "overrides":  {
+    "ember-cli-htmlbars": "7.0.1",
+    "ember-cli-babel": "8.3.1"
+  }
+}
+```
+Example override in npm:
+```
+"overrides":  {
+  "ember-cli-htmlbars": "7.0.1",
+  "ember-cli-babel": "8.3.1"
+}
+```
 
 ### Runtime use of ember.debug.js, ember.prod.js, ember-testing.js AMD bundles
 
