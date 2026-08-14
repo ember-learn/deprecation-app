@@ -136,7 +136,7 @@ Derived state cannot go stale, and there is no listener left to leak.
 
 ### Call methods directly
 
-Sometimes an event does trigger real work rather than a state update, such as clearing a cache or starting a request. If the object that triggers the event already knows the object that handles it, replace the event with a method call.
+Sometimes an event does trigger real work rather than a state update, such as clearing a cache or starting a request. If the object that triggers the event already knows the object that handles it, replace the event with a method call:
 
 #### Before
 ```javascript
