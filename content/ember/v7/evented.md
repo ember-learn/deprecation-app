@@ -113,7 +113,6 @@ export default class GreetingComponent extends Component {
 }
 ```
 
-The component no longer keeps its own copy of the state, so the subscription and its destructor are gone. The two handlers that had to agree with each other are now one getter.
 
 Often the getter is not needed either, because the template can derive the value:
 
