@@ -76,7 +76,7 @@ export default class GreetingComponent extends Component {
 }
 ```
 
-The service keeps the tracked state. The component derives from it:
+The service owns the tracked state. The component derives from it:
 
 #### After
 ```javascript
