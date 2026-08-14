@@ -132,7 +132,6 @@ get completedCount() {
 }
 ```
 
-Derived state cannot go stale, and there is no listener left to leak.
 
 ### Call methods directly
 
