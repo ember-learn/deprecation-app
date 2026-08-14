@@ -1,6 +1,6 @@
 ---
 title: Ember.Evented and @ember/object/events
-until: 7.0.0
+until: 8.0.0
 since: 6.6.0
 ---
 
