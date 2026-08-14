@@ -1,7 +1,7 @@
 ---
 title: Ember.Evented and @ember/object/events
 until: 8.0.0
-since: 6.6.0
+since: 7.4.0
 ---
 
 The `Ember.Evented` mixin, the underlying `@ember/object/events` module (`addListener`, `removeListener`, `sendEvent`), and the `on()` function from `@ember/object/evented` are all deprecated.
