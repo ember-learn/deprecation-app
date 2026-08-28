@@ -4,6 +4,8 @@
     "allowed_languages": [
       "js",
       "ts",
+      "gjs",
+      "gts",
       "javascript",
       "typescript",
       "bash",
