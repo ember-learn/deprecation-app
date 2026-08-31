@@ -1,6 +1,5 @@
 ---
 title: Deprecate Comparable mixin
-id: deprecate-comparable-mixin
 until: 8.0.0
 since: 7.2.0
 ---
@@ -25,13 +24,14 @@ const Rectangle = EmberObject.extend(Comparable, {
 After:
 
 ```js
-import EmberObject from '@ember/object';
-
-const Rectangle = EmberObject.extend({
+class Rectangle {
+  // Returns -1, 0, 1
   compare(other) {
     // custom comparison logic
   },
-});
+}
 ```
 
-Defining `compare(other)` directly is sufficient. Ember's `compare()` function uses duck-typing and will call a function-valued `compare` method when one is present, so the `Comparable` mixin is no longer required.
+Defining `compare(other)` directly is sufficient. 
+
+However, if you need to `sort` a list of your objects, you will want to define a separate [`comparator function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description).
