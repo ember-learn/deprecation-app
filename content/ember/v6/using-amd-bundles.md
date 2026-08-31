@@ -20,17 +20,14 @@ To clear this build-time deprecation, you may need to upgrade any of the followi
 
 Of these, ember-cli-htmlbars is the only one that must be recursively updated -- if any of your addons depend on ember-cli-htmlbars 6.x, you will continue to hit this deprecation warning and won't be able to upgrade Ember 7 until it's addressed. It is usually safe to use your package manager to override the ember-cli-htmlbars version, because the vast majority of v1 addons don't care which version they're using.
 
-Example overrides in pnpm:
+Example overrides in [ pnpm ](https://pnpm.io/settings/dependency-resolution#overrides):
+```yaml
+"overrides":
+  "ember-cli-htmlbars": "7.0.1"
+  "ember-cli-babel": "8.3.1"
 ```
-"pnpm": {
-  "overrides":  {
-    "ember-cli-htmlbars": "7.0.1",
-    "ember-cli-babel": "8.3.1"
-  }
-}
-```
-Example override in npm:
-```
+Example override in [ npm ](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides):
+```json
 "overrides":  {
   "ember-cli-htmlbars": "7.0.1",
   "ember-cli-babel": "8.3.1"

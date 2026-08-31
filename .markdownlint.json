@@ -13,7 +13,8 @@
       "text",
       "json",
       "html",
-      "css"
+      "css",
+      "yaml"
     ]
   }
 }
