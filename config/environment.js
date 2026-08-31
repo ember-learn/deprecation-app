@@ -36,6 +36,8 @@ module.exports = function (environment) {
       languages: [
         'javascript',
         'typescript',
+        'glimmer-js',
+        'glimmer-ts',
         'handlebars',
         'json',
         'diff',
