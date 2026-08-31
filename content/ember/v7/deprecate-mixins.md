@@ -4,9 +4,7 @@ until: 8.0.0
 since: 7.4.0
 ---
 
-`Mixin` from `@ember/object/mixin` is deprecated. This includes defining mixins with `Mixin.create()` and applying them with `.extend(SomeMixin)` or `.reopen(SomeMixin)`. Mixins are part of the legacy `EmberObject` class system and do not work with native class syntax.
-
-The framework-provided mixins, such as `Observable`, `Enumerable`, and `PromiseProxyMixin`, are deprecated as well. Each has its own deprecation guide.
+`Mixin` from `@ember/object/mixin` is deprecated. Mixins are part of the legacy `EmberObject` class system and do not work with native class syntax.
 
 If your code still uses classic class syntax, convert it to native classes first, for example with the [ember-native-class-codemod](https://github.com/ember-codemods/ember-native-class-codemod). Then remove the mixins using one of the patterns below.
 
@@ -70,8 +68,8 @@ Because the factory returns a class expression, it also works as a class decorat
 
 Depending on what a mixin was doing, a different pattern may fit better:
 
-- Shared state or behavior used across the app belongs in a service, injected where needed.
-- Stateless helpers can be plain functions exported from a module.
-- Behavior only used by one class hierarchy can move into a common base class.
+- Shared state or behavior used across the app belongs in a service or service-like abstraction, injected where needed.
+- Stateless helpers can be plain functions exported from a module (these are also easier to unit test).
+- Behavior only used by one class hierarchy can move into a common base class (though composition is **strongly** recommended instead of inheritance).
 
 For more background, read [RFC 1116](https://github.com/emberjs/rfcs/pull/1116).
