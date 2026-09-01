@@ -4,7 +4,7 @@ until: 8.0.0
 since: 7.2.0
 ---
 
-The `Comparable` mixin is deprecated.
+The `Comparable` mixin is deprecated. This mixin was private but as it may have been intimate API, per our policy we've added a deprecation that will remain for at least one LTS. 
 
 Apps and addons should stop importing or extending `Comparable`. To provide custom comparison behavior, define a function-valued `compare(other)` method directly on the object or class instead.
 
