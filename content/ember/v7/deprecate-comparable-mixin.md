@@ -1,6 +1,6 @@
 ---
 title: Deprecate Comparable mixin
-until: 8.0.0
+until: 7.5.0
 since: 7.2.0
 ---
 
