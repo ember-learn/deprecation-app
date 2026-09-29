@@ -289,14 +289,17 @@ class TodoList {
 
 `empty` and `notEmpty` update when code changes the array with methods such as `pushObject`. A getter updates only when it reads tracked data. Keep the array in a `trackedArray`, as in the example, or assign a new array to a `@tracked` property.
 
-In a classic class, use `computed` with the same dependent key:
+If the code changes `todos` with `set` instead of tracked properties, put `@computed` with the same dependent key on the getter:
 
 ```js
 import EmberObject, { computed } from '@ember/object';
 
-const TodoList = EmberObject.extend({
-  isDone: computed('todos.length', function () {
+class TodoList extends EmberObject {
+  todos = [];
+
+  @computed('todos.length')
+  get isDone() {
     return this.todos.length === 0;
-  }),
-});
+  }
+}
 ```
