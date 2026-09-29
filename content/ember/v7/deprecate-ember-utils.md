@@ -195,21 +195,18 @@ if (Array.isArray(value)) {
 The native check for each result of `typeOf`:
 
 ```js
-import EmberObject from '@ember/object';
-
 value === null; // 'null'
 value === undefined; // 'undefined'
 typeof value === 'string'; // 'string'
 typeof value === 'number'; // 'number'
 typeof value === 'boolean'; // 'boolean'
-typeof value === 'function'; // 'function'
+typeof value === 'function'; // 'function' and 'class'
 Array.isArray(value); // 'array'
 value instanceof Date; // 'date'
 value instanceof RegExp; // 'regexp'
 value instanceof Error; // 'error'
 value instanceof FileList; // 'filelist'
-typeof value === 'function' && EmberObject.detect(value); // 'class'
-value instanceof EmberObject; // 'instance'
+value instanceof Person; // 'instance', with the class that you expect
 typeof value === 'object'; // 'object', after all the other checks
 ```
 
@@ -288,18 +285,3 @@ class TodoList {
 ```
 
 `empty` and `notEmpty` update when code changes the array with methods such as `pushObject`. A getter updates only when it reads tracked data. Keep the array in a `trackedArray`, as in the example, or assign a new array to a `@tracked` property.
-
-If the code changes `todos` with `set` instead of tracked properties, put `@computed` with the same dependent key on the getter:
-
-```js
-import EmberObject, { computed } from '@ember/object';
-
-class TodoList extends EmberObject {
-  todos = [];
-
-  @computed('todos.length')
-  get isDone() {
-    return this.todos.length === 0;
-  }
-}
-```
