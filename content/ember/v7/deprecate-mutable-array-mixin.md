@@ -6,7 +6,7 @@ since: 7.4.0
 
 The `MutableArray` mixin, exported from `@ember/array` and `@ember/array/mutable`, is deprecated. Use native arrays and native array methods instead.
 
-`MutableArray` built on [`EmberArray`](/id/deprecate-ember-array-mixin) and added the mutation API: `pushObject`, `removeObject`, `insertAt`, `replace`, `clear`, and so on. These methods existed so the classic observer system could see array changes. With tracked arrays, native mutation is already observed.
+`MutableArray` built on [`EmberArray`](/id/deprecate-ember-array-mixin) and added the mutation API: `pushObject`, `removeObject`, `insertAt`, `replace`, `clear`, and so on. These methods existed so the classic reactivity system could see array changes. With tracked arrays, native mutation is already observed.
 
 ### Before: a custom mutable collection
 
