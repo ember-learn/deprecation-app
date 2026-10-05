@@ -6,7 +6,7 @@ since: 7.4.0
 
 The `ActionHandler` mixin from `@ember/-internals/runtime` is deprecated. This mixin was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.
 
-`ActionHandler` gave an object an `actions` hash and a `send` method. Both are already deprecated on their own (refer to the [`send` deprecation](/id/deprecate-target-action-support)). The replacement is a plain method, decorated with `@action` when it is passed around as a callback.
+`ActionHandler` gave an object an `actions` hash and a `send` method. Both are already deprecated on their own (refer to the [`send` deprecation](/id/deprecate-target-action-support)). The replacement is a plain method, decorated with `@action` when it is passed around as a callback, for example to a modifier.
 
 ### Before
 
