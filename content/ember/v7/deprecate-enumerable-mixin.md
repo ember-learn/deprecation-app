@@ -1,10 +1,10 @@
 ---
-title: 'Enumerable and MutableEnumerable'
-until: 8.0.0
+title: "Enumerable and MutableEnumerable"
+until: 7.9.0
 since: 7.4.0
 ---
 
-`Enumerable` from `@ember/enumerable` and `MutableEnumerable` from `@ember/enumerable/mutable` are deprecated.
+`Enumerable` from `@ember/enumerable` and `MutableEnumerable` from `@ember/enumerable/mutable` are deprecated. This mixin was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.
 
 These mixins have been empty for a long time. The mixins were kept only so that existing `.detect()` checks kept working. They are now deprecated along with the rest of the mixin system.
 
@@ -15,7 +15,7 @@ These mixins have been empty for a long time. The mixins were kept only so that 
 Before:
 
 ```javascript
-import Enumerable from '@ember/enumerable';
+import Enumerable from "@ember/enumerable";
 
 function printAll(maybeList) {
   if (Enumerable.detect(maybeList)) {
@@ -38,7 +38,7 @@ Or, to accept any iterable (`Map`, `Set`, generators, and so on):
 
 ```javascript
 function printAll(maybeList) {
-  if (typeof maybeList?.[Symbol.iterator] === 'function') {
+  if (typeof maybeList?.[Symbol.iterator] === "function") {
     for (let item of maybeList) {
       console.log(item);
     }
@@ -66,8 +66,8 @@ class Queue {
 }
 
 let queue = new Queue();
-queue.add('a');
-queue.add('b');
+queue.add("a");
+queue.add("b");
 
 [...queue]; // ['a', 'b']
 ```
