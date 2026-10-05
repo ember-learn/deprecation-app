@@ -4,7 +4,7 @@ until: 8.0.0
 since: 7.4.0
 ---
 
-`ProxyMixin`, exported as `_ProxyMixin` from `@ember/-internals/runtime`, is deprecated. This mixin was private, but was importable.
+`ProxyMixin`, exported as `_ProxyMixin` from `@ember/-internals/runtime`, is deprecated. This mixin was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.
 
 `ProxyMixin` is what gives [`ObjectProxy`](/id/deprecate-object-proxy) its behavior: every property not defined on the proxy is forwarded to `content`. Applying the mixin directly to another `EmberObject` subclass is deprecated along with `ObjectProxy` itself.
 
