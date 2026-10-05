@@ -285,3 +285,5 @@ class TodoList {
 ```
 
 `empty` and `notEmpty` update when code changes the array with methods such as `pushObject`. A getter updates only when it reads tracked data. Keep the array in a `trackedArray`, as in the example, or assign a new array to a `@tracked` property.
+
+With any usage of computed macros, this may be the tip of the iceberg and you may want to follow the [Octane migration guide](https://guides.emberjs.com/v5.7.0/upgrading/current-edition/tracked-properties/) in case there is more migration to do than what is shown here.
