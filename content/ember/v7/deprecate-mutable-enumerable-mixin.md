@@ -4,7 +4,7 @@ until: 7.9.0
 since: 7.4.0
 ---
 
-`MutableEnumerable` from `@ember/enumerable/mutable` is deprecated.
+`MutableEnumerable` from `@ember/enumerable/mutable` is deprecated. This mixin was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.
 
 Like `Enumerable`, this mixin has been empty for a long time and was kept only so `.detect()` checks kept working. The migration is the same as for [`Enumerable`](/id/deprecate-enumerable-mixin): replace `.detect()` checks with `Array.isArray` or an iterable check, and replace custom collection classes with native arrays or `trackedArray`.
 
