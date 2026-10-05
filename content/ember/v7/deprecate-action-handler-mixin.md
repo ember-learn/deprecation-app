@@ -46,6 +46,8 @@ export default class Uploader {
 
 `@action` is only needed when the method is handed to something else (an `{{on}}` modifier, a child component argument, an event listener) and must keep its `this`. A method that is only called as `this.start()` does not need it.
 
+This newer pattern can also be used in existing `EmberObject` classes and its descendents.
+
 If the mixin was used for bubbling through `target`, pass the function down as an argument instead of naming it and bubbling by string.
 
 For more background, read [RFC 1116](https://github.com/emberjs/rfcs/pull/1116).
