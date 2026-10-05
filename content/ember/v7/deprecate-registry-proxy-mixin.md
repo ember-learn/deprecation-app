@@ -1,6 +1,6 @@
 ---
 title: 'RegistryProxyMixin'
-until: 8.0.0
+until: 7.9.0
 since: 7.4.0
 ---
 
