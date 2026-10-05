@@ -240,7 +240,7 @@ A sort callback can return any negative or positive number. If the code needs ex
 let result = Math.sign(a - b);
 ```
 
-### `empty`, `notEmpty` and `none`
+### `empty`, `notEmpty` and `none` computed macros
 
 Use a getter.
 
