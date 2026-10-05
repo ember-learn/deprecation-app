@@ -4,7 +4,7 @@ until: 7.9.0
 since: 7.4.0
 ---
 
-`ContainerProxyMixin` from `@ember/-internals/runtime` is deprecated. This mixin was private, but was importable.
+`ContainerProxyMixin` from `@ember/-internals/runtime` is deprecated. This mixin was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.
 
 There is no migration for applying the mixin yourself. Remove it. If you built a custom object that forwarded to a container, look up what you need through the owner instead:
 
