@@ -4,7 +4,7 @@ until: 7.9.0
 since: 7.4.0
 ---
 
-`ControllerMixin` from `@ember/controller` is deprecated. Extend `Controller` from the same module instead. `ControllerMixin` was private but was importable.
+`ControllerMixin` from `@ember/controller` is deprecated. Extend `Controller` from the same module instead. `ControllerMixin` was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.
 
 ### Before
 
