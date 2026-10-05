@@ -68,4 +68,9 @@ Any template or getter that reads `selection` updates when it changes. If the va
 | `clear()` | `arr.length = 0` or `arr.splice(0)` |
 | `reverseObjects()` | `arr.reverse()` |
 
+
+As with any usage of the classic, pre-Octane system, there are interop considerations with `tracked`. Follow the [Octane migration guide](https://guides.emberjs.com/v5.7.0/upgrading/current-edition/tracked-properties/) to ensure you migrate in a safe manner.
+
+At this point, all of `EmberObject` included `computed` is planned to be deprecated under [RFC #1234](https://github.com/emberjs/rfcs/blob/main/text/1234-deprecate-ember-object.md) so fully moving to `tracked` is recommended.
+
 For more background, read [RFC 1116](https://github.com/emberjs/rfcs/pull/1116).
