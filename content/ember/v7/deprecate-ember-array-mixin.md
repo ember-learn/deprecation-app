@@ -83,4 +83,8 @@ export default class Pages {
 
 Reactivity note: `sortBy`, `filterBy`, and friends were often used inside computed properties with `[]` or `@each` dependent keys. With tracked arrays, a plain getter that calls the native method re-computes on its own.
 
+As with any usage of the classic, pre-Octane system, there are interop considerations with `tracked`. Follow the [Octane migration guide](https://guides.emberjs.com/v5.7.0/upgrading/current-edition/tracked-properties/) to ensure you migrate in a safe manner.
+
+At this point, all of `EmberObject` included `computed` is planned to be deprecated under [RFC #1234](https://github.com/emberjs/rfcs/blob/main/text/1234-deprecate-ember-object.md) so fully moving to `tracked` is recommended.
+
 For more background, read [RFC 1116](https://github.com/emberjs/rfcs/pull/1116).
