@@ -1,6 +1,7 @@
 import showdown from 'showdown';
 
 export function initialize() {
+  showdown.setOption('tables', true);
   showdown.subParser('ellipsis', function (text, options, globals) {
     text = globals.converter._dispatch(
       'ellipsis.before',

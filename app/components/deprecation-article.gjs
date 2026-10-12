@@ -24,7 +24,7 @@ export default class DeprecationArticle extends Component {
         {{/if}}
       </div>
       <section>
-        <MarkdownToHtml @markdown={{@model.content}} />
+        <MarkdownToHtml @markdown={{@model.content}} class="markdown-body" />
       </section>
     </div>
   </template>
