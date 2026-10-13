@@ -1,10 +1,10 @@
 ---
-title: 'Enumerable and MutableEnumerable'
-until: 8.0.0
+title: "Enumerable and MutableEnumerable"
+until: 7.9.0
 since: 7.4.0
 ---
 
-`Enumerable` from `@ember/enumerable` and `MutableEnumerable` from `@ember/enumerable/mutable` are deprecated.
+`Enumerable` from `@ember/enumerable` and `MutableEnumerable` from `@ember/enumerable/mutable` are deprecated. This mixin was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.
 
 These mixins have been empty for a long time. The mixins were kept only so that existing `.detect()` checks kept working. They are now deprecated along with the rest of the mixin system.
 
@@ -15,7 +15,7 @@ These mixins have been empty for a long time. The mixins were kept only so that 
 Before:
 
 ```javascript
-import Enumerable from '@ember/enumerable';
+import Enumerable from "@ember/enumerable";
 
 function printAll(maybeList) {
   if (Enumerable.detect(maybeList)) {
@@ -38,7 +38,7 @@ Or, to accept any iterable (`Map`, `Set`, generators, and so on):
 
 ```javascript
 function printAll(maybeList) {
-  if (typeof maybeList?.[Symbol.iterator] === 'function') {
+  if (typeof maybeList?.[Symbol.iterator] === "function") {
     for (let item of maybeList) {
       console.log(item);
     }
@@ -66,12 +66,16 @@ class Queue {
 }
 
 let queue = new Queue();
-queue.add('a');
-queue.add('b');
+queue.add("a");
+queue.add("b");
 
 [...queue]; // ['a', 'b']
 ```
 
 The enumerable methods themselves (`firstObject`, `mapBy`, `pushObject`, and friends) live on `EmberArray` and `MutableArray`, which are deprecated as well. Replace them with native equivalents such as `arr[0]`, `map`, and `push`, using `trackedArray` where mutation needs to be tracked.
+
+As with any usage of the classic, pre-Octane system, there are interop considerations with `tracked`. Follow the [Octane migration guide](https://guides.emberjs.com/v5.7.0/upgrading/current-edition/tracked-properties/) to ensure you migrate in a safe manner.
+
+At this point, all of `EmberObject` included `computed` is planned to be deprecated under [RFC #1234](https://github.com/emberjs/rfcs/blob/main/text/1234-deprecate-ember-object.md) so fully moving to `tracked` is recommended.
 
 For more background, read [RFC 1116](https://github.com/emberjs/rfcs/pull/1116).
