@@ -96,8 +96,8 @@ importers:
         specifier: ^11.0.1
         version: 11.0.1
       ember-cli-showdown:
-        specifier: ^7.0.0
-        version: 7.0.0(ember-source@4.4.5(@babel/core@7.24.9)(webpack@5.93.0))(webpack@5.93.0)
+        specifier: ^10.0.0
+        version: 10.0.0(@babel/core@7.24.9)
       ember-cli-sri:
         specifier: ^2.1.1
         version: 2.1.1
@@ -139,7 +139,7 @@ importers:
         version: 1.0.2
       ember-showdown-shiki:
         specifier: ^1.2.1
-        version: 1.2.1(@babel/core@7.24.9)(showdown@1.9.1)
+        version: 1.2.1(@babel/core@7.24.9)(showdown@2.1.0)
       ember-source:
         specifier: ~4.4.0
         version: 4.4.5(@babel/core@7.24.9)(webpack@5.93.0)
@@ -215,6 +215,9 @@ importers:
       semver:
         specifier: ^7.7.4
         version: 7.7.4
+      showdown:
+        specifier: ^2.1.0
+        version: 2.1.0
       walk-sync:
         specifier: ^3.0.0
         version: 3.0.0
@@ -2793,6 +2796,10 @@ packages:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
 
+  commander@9.5.0:
+    resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
+    engines: {node: ^12.20.0 || >=14}
+
   common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
 
@@ -3547,11 +3554,9 @@ packages:
     resolution: {integrity: sha512-RMlFPMK4kaB+67seF/IIoY3EC4rRd+L58q+lyElrxB3FcQTgph/qmGwtqf9Up7m3SDbPiA7cccCOSmgReMgCXA==}
     engines: {node: '>= 10.*'}
 
-  ember-cli-showdown@7.0.0:
-    resolution: {integrity: sha512-xpmqv+pSK1hMG50CD8DqClS0uEyTGF+jE1c/32otiZTslDMcISQC1xysdtdx2RHC+Uu0EpiS+WGp0oDznrH+WA==}
-    engines: {node: 14.* || 16.* || >= 18}
-    peerDependencies:
-      ember-source: ^3.12.0 || >4.0.0
+  ember-cli-showdown@10.0.0:
+    resolution: {integrity: sha512-NMEHVXC/eURvekkt1rIQY6frFxpgPsolnHVVcZWeztkXx83RLBzxMkFnx0GWk28QQTMCAXZ3ppaezg1RTdoNJQ==}
+    engines: {node: '>= 18'}
 
   ember-cli-sri@2.1.1:
     resolution: {integrity: sha512-YG/lojDxkur9Bnskt7xB6gUOtJ6aPl/+JyGYm9HNDk3GECVHB3SMN3rlGhDKHa1ndS5NK2W2TSLb9bzRbGlMdg==}
@@ -7138,6 +7143,10 @@ packages:
 
   showdown@1.9.1:
     resolution: {integrity: sha512-9cGuS382HcvExtf5AHk7Cb4pAeQQ+h0eTr33V1mu+crYWV4KvWAw6el92bDrqGEk5d46Ai/fhbEUwqJ/mTCNEA==}
+    hasBin: true
+
+  showdown@2.1.0:
+    resolution: {integrity: sha512-/6NVYu4U819R2pUIk79n67SYgJHWCce0a5xTP979WbNp0FL9MN1I1QK662IDU1b6JzKTvmhgI7T7JYIxBi3kMQ==}
     hasBin: true
 
   side-channel@1.0.6:
@@ -12174,6 +12183,8 @@ snapshots:
 
   commander@8.3.0: {}
 
+  commander@9.5.0: {}
+
   common-ancestor-path@1.0.1: {}
 
   common-tags@1.8.2: {}
@@ -13097,17 +13108,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-cli-showdown@7.0.0(ember-source@4.4.5(@babel/core@7.24.9)(webpack@5.93.0))(webpack@5.93.0):
+  ember-cli-showdown@10.0.0(@babel/core@7.24.9):
     dependencies:
-      ember-auto-import: 2.7.4(webpack@5.93.0)
-      ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.3.0
-      ember-source: 4.4.5(@babel/core@7.24.9)(webpack@5.93.0)
-      showdown: 1.9.1
+      '@embroider/addon-shim': 1.8.9
+      decorator-transforms: 2.3.1(@babel/core@7.24.9)
+      showdown: 2.1.0
     transitivePeerDependencies:
-      - '@glint/template'
+      - '@babel/core'
       - supports-color
-      - webpack
 
   ember-cli-sri@2.1.1:
     dependencies:
@@ -13600,13 +13608,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-showdown-shiki@1.2.1(@babel/core@7.24.9)(showdown@1.9.1):
+  ember-showdown-shiki@1.2.1(@babel/core@7.24.9)(showdown@2.1.0):
     dependencies:
       '@embroider/addon-shim': 1.8.9
       '@shikijs/transformers': 1.11.0
       decorator-transforms: 1.2.1(@babel/core@7.24.9)
       shiki: 1.11.0
-      showdown: 1.9.1
+      showdown: 2.1.0
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
@@ -17912,6 +17920,10 @@ snapshots:
   showdown@1.9.1:
     dependencies:
       yargs: 14.2.3
+
+  showdown@2.1.0:
+    dependencies:
+      commander: 9.5.0
 
   side-channel@1.0.6:
     dependencies:
