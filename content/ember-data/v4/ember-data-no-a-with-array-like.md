@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:no-a-with-array-like
 title: No A With Array Like
-until: '5.0'
-since: '4.7'
+until: 5.0.0
+since: 4.7.0
 ---
 
 Deprecates calling `A()` when an EmberData ArrayLike class is detected. This deprecation may not always trigger due to complexities in ember-source versions and the use (or disabling) of prototype extensions.

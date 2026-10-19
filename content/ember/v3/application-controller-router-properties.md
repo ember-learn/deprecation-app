@@ -1,7 +1,7 @@
 ---
 title: Application controller router properties
 until: 4.0.0
-since: "3.9"
+since: 3.9.0
 displayId: application-controller.router-properties
 ---
 

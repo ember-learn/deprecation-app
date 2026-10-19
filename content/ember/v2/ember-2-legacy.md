@@ -1,7 +1,7 @@
 ---
 title: Ember 2 Legacy
-until: "3.4"
-since: "2.16"
+until: 3.4.0
+since: 2.16.0
 ---
 
 

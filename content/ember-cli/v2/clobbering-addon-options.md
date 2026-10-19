@@ -1,6 +1,7 @@
 ---
 title: Clobbering Addon#options
 since: 2.12.0
+until: 3.0.0
 ---
 
 

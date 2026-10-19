@@ -1,7 +1,7 @@
 ---
 title: Use Ember getter and explicitly check for undefined
 until: 4.0.0
-since: "3.21"
+since: 3.21.0
 displayId: ember-metal.get-with-default
 ---
 

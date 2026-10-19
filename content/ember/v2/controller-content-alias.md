@@ -1,7 +1,7 @@
 ---
 title: Controller#content alias
 until: 2.17.0
-since: "2.16"
+since: 2.16.0
 ---
 
 

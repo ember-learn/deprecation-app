@@ -1,7 +1,7 @@
 ---
 title: Built-in Components Legacy HTML Attribute Arguments
 until: 4.0.0
-since: "3.27"
+since: 3.27.0
 displayId: ember.built-in-components.legacy-attribute-arguments
 ---
 

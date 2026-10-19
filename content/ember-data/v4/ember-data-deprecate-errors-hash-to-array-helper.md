@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-errors-hash-to-array-helper
 title: Deprecate Errors Hash To Array Helper
-until: '5.0'
-since: '4.7'
+until: 5.0.0
+since: 4.7.0
 ---
 
 Deprecates `errorsHashToArray` `errorsArrayToHash` and `normalizeModelName`.

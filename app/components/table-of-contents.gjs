@@ -1,0 +1,12 @@
+import TocSection from './toc-section';
+
+<template>
+  <div class="padding-vertical-small bg-light-muted rounded-sm">
+    <h2 class="large padding-bottom-small">
+      Deprecations by Version:
+    </h2>
+    {{#each @sortedGroupedResults as |result|}}
+      <TocSection @result={{result}} @displayMobileToc={{@displayMobileToc}} />
+    {{/each}}
+  </div>
+</template>

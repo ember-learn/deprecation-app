@@ -1,7 +1,7 @@
 ---
 title: Private property `Route.router` has been renamed to `Route._router`
 until: 3.5.0
-since: "3.2"
+since: 3.2.0
 displayId: ember-routing.route-router
 ---
 

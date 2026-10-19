@@ -1,7 +1,7 @@
 ---
 title: Meta Destruction APIs
 until: 3.25.0
-since: "3.21"
+since: 3.21.0
 ---
 
 

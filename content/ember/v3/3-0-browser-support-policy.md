@@ -1,7 +1,7 @@
 ---
 title: Browser Support Policy
 until: 4.0.0
-since: "3.26"
+since: 3.26.0
 ---
 
 

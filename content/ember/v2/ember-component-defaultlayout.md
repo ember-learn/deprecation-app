@@ -1,7 +1,7 @@
 ---
 title: Ember.Component#defaultLayout
 until: 3.0.0
-since: "2.1"
+since: 2.1.0
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: "{{render helper"
 until: 3.0.0
-since: "2.11"
+since: 2.11.0
 displayId: ember-template-compiler.deprecate-render
 ---
 

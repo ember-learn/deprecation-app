@@ -1,7 +1,7 @@
 ---
 title: Legacy Imports
-until: '6.0'
-since: '5.5'
+until: 6.0.0
+since: 5.5.0
 displayId: warp-drive:deprecate-tracking-package
 ---
 

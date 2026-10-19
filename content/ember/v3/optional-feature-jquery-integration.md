@@ -1,7 +1,7 @@
 ---
 title: "Optional Feature: jquery-integration"
 until: 4.0.0
-since: "3.26"
+since: 3.26.0
 displayId: optional-feature.jquery-integration
 ---
 

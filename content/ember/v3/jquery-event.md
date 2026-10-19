@@ -1,7 +1,7 @@
 ---
 title: Use native events instead of jQuery.Event
 until: 4.0.0
-since: "3.3"
+since: 3.3.0
 ---
 
 

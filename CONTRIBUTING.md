@@ -36,7 +36,7 @@ changes requested.
 ## Keeping your fork updated
 
 As you tackle new Issues, you'll want to be sure that you always start by working
-on the most recent code. To sync up your fork's  `main` with a parent repository's
+on the most recent code. To sync up your fork's `main` with a parent repository's
 main, set an upstream and pull from it. For this to work, you should make sure
 you're always committing to a branch, not main.
 

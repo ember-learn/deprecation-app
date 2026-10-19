@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-v1-cache
 title: Deprecate V1 Cache
-until: '5.0'
-since: '4.7'
+until: 5.0.0
+since: 4.7.0
 ---
 
 Deprecates instantiating a non-singleton cache via `store.createRecordDataFor` in favor of a singleton-cache via `store.createCache`.

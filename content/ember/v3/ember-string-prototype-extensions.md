@@ -1,7 +1,7 @@
 ---
 title: String prototype extensions
 until: 4.0.0
-since: "3.24"
+since: 3.24.0
 anchor: toc_ember-string-prototype_extensions
 displayId: ember-string.prototype-extensions
 ---

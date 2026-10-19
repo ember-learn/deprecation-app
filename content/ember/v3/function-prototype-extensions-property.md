@@ -1,7 +1,7 @@
 ---
 title: Function.prototype.property
 until: 4.0.0
-since: "3.11"
+since: 3.11.0
 displayId: function-prototype-extensions.property
 ---
 

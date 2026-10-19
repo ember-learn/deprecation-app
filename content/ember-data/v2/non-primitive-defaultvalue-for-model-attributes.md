@@ -1,7 +1,7 @@
 ---
 title: Non-primitive defaultValue for Model Attributes
 until: 3.0.0
-since: "2.3"
+since: 2.3.0
 ---
 
 

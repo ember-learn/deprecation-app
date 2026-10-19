@@ -1,7 +1,7 @@
 ---
 title: Unused Initializers
 until: 3.0.0
-since: "2.13"
+since: 2.13.0
 ---
 
 

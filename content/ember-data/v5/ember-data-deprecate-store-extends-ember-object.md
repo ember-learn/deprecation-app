@@ -1,7 +1,7 @@
 ---
 title: Store will no longer extend EmberObject in 6.0
-until: '6.0'
-since: '5.4'
+until: 6.0.0
+since: 5.4.0
 displayId: ember-data:deprecate-store-extends-ember-object
 ---
 

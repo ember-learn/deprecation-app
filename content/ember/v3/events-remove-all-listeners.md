@@ -1,7 +1,7 @@
 ---
 title: Remove All Listeners/Observers
 until: 3.9.0
-since: "3.6"
+since: 3.6.0
 displayId: events.remove-all-listeners
 ---
 

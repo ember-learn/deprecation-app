@@ -8,4 +8,12 @@ export default class EmberVersionGraphic extends Component {
   get textContent() {
     return this.args.text || '';
   }
+
+  <template>
+    <div class="ember-version-graphic {{this.mascotName}}">
+      <span class="text">
+        {{this.textContent}}
+      </span>
+    </div>
+  </template>
 }

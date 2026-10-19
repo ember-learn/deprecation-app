@@ -1,7 +1,7 @@
 ---
 title: Use console rather than Ember.Logger
 until: 4.0.0
-since: "3.2"
+since: 3.2.0
 displayId: ember-console.deprecate-logger
 ---
 

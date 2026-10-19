@@ -1,7 +1,7 @@
 ---
 title: 3.4 Component Manager Capabilities
 until: 4.0.0
-since: "3.26"
+since: 3.26.0
 displayId: manager-capabilities.components-3-4
 ---
 

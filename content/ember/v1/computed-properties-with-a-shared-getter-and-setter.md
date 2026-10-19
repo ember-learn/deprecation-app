@@ -1,7 +1,7 @@
 ---
 title: Computed Properties With a Shared Getter And Setter
-until: ""
-since: "1.12"
+until: 2.0.0
+since: 1.12.0
 ---
 
 Ember.js 1.12 introduces an improved syntax for computed properties with

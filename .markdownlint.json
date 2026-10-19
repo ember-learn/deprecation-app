@@ -4,8 +4,12 @@
     "allowed_languages": [
       "js",
       "ts",
+      "gjs",
+      "gts",
       "javascript",
       "typescript",
+      "gjs",
+      "gts",
       "bash",
       "shell",
       "handlebars",

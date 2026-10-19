@@ -1,7 +1,7 @@
 ---
 title: Ember.Date.parse
 until: 3.0.0
-since: "2.7"
+since: 2.7.0
 ---
 
 

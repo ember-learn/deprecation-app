@@ -1,7 +1,7 @@
 ---
 title: Store.serialize
 until: 3.0.0
-since: "2.11"
+since: 2.11.0
 ---
 
 

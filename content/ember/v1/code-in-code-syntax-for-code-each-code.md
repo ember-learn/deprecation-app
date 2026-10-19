@@ -1,7 +1,7 @@
 ---
 title: in syntax for {{each}}
-until: ""
-since: "1.12"
+until: 2.0.0
+since: 1.12.0
 ---
 
 

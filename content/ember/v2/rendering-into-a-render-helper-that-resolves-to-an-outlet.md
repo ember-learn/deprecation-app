@@ -1,7 +1,7 @@
 ---
 title: Rendering into a {{render}} helper that resolves to an {{outlet}}
 until: 3.0.0
-since: "2.11"
+since: 2.11.0
 ---
 
 

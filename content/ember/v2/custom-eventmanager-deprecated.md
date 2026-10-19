@@ -1,7 +1,7 @@
 ---
 title: Custom eventManager deprecated
 until: 2.17.0
-since: "2.14"
+since: 2.14.0
 ---
 
 

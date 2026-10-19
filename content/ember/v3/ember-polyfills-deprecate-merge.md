@@ -1,7 +1,7 @@
 ---
 title: Ember.merge
 until: 4.0.0
-since: "3.6"
+since: 3.6.0
 displayId: ember-polyfills.deprecate-merge
 ---
 

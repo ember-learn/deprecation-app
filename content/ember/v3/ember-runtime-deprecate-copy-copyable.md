@@ -1,7 +1,7 @@
 ---
 title: Use ember-copy addon instead of copy method and Copyable mixin.
 until: 4.0.0
-since: "3.3"
+since: 3.3.0
 displayId: ember-runtime.deprecate-copy-copyable
 ---
 

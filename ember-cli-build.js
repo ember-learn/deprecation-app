@@ -44,10 +44,6 @@ module.exports = function (defaults) {
       ],
     },
 
-    'ember-cli-string-helpers': {
-      only: ['html-safe'],
-    },
-
     babel: {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
@@ -55,10 +51,6 @@ module.exports = function (defaults) {
     fastboot: {
       moduleWhitelist: ['algoliasearch'],
     },
-  });
-
-  app.import('node_modules/semver-compare/index.js', {
-    using: [{ transformation: 'cjs', as: 'semver-compare' }],
   });
 
   return app.toTree();

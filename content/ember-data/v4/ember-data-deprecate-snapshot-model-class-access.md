@@ -1,8 +1,8 @@
 ---
 displayId: ember-data:deprecate-snapshot-model-class-access
 title: Deprecate Snapshot Model Class Access
-until: '5.0'
-since: '4.5'
+until: 5.0.0
+since: 4.5.0
 ---
 
 Deprecates accessing the factory class for a given resource type via properties on various classes.
