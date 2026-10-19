@@ -1,7 +1,7 @@
 ---
 title: 'PromiseProxyMixin'
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 `PromiseProxyMixin` from `@ember/object/promise-proxy-mixin` is deprecated. Use `async/await` with tracked state instead.

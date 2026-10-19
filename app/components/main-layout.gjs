@@ -35,15 +35,11 @@ import MarkdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
                 content.anchor
               }}"
             >
-              {{!markdown-to-html
-                content.title
-                extensions="no-wrapper"
-                tagName=""
-              }}
+
               <MarkdownToHtml
                 @markdown={{content.title}}
                 @extensions="no-wrapper"
-                @tagName=""
+                class="display-inline"
               />
               <LinkTo @route="id" @model={{content.id}} title={{content.title}}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
