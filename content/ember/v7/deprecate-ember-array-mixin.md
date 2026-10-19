@@ -1,7 +1,7 @@
 ---
 title: 'EmberArray mixin'
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 The `EmberArray` mixin, the default export of `@ember/array`, is deprecated. Use native arrays and native array methods instead.

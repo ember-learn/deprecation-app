@@ -1,7 +1,7 @@
 ---
 title: 'ObjectProxy'
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 `ObjectProxy` from `@ember/object/proxy` is deprecated. Use tracked properties and direct property access, or a native `Proxy` for the rare cases that need interception.

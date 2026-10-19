@@ -1,7 +1,7 @@
 ---
 title: 'NativeArray mixin'
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 The `NativeArray` mixin from `@ember/array` is deprecated.

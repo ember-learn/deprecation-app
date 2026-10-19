@@ -1,7 +1,7 @@
 ---
 title: 'Observable mixin'
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 The `Observable` mixin from `@ember/object/observable` is deprecated.

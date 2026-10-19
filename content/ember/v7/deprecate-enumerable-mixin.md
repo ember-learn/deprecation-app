@@ -1,7 +1,7 @@
 ---
 title: "Enumerable and MutableEnumerable"
 until: 7.9.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 `Enumerable` from `@ember/enumerable` and `MutableEnumerable` from `@ember/enumerable/mutable` are deprecated. This mixin was private but since it may have been used we have added a deprecation as a courtesy through the next LTS.

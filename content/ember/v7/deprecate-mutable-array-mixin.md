@@ -1,7 +1,7 @@
 ---
 title: 'MutableArray mixin'
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 The `MutableArray` mixin, exported from `@ember/array` and `@ember/array/mutable`, is deprecated. Use native arrays and native array methods instead.

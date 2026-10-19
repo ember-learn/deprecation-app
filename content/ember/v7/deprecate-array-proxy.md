@@ -1,7 +1,7 @@
 ---
 title: 'ArrayProxy'
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 `ArrayProxy` from `@ember/array/proxy` is deprecated. Use a tracked array, or a plain array behind a `@tracked` property, instead.
