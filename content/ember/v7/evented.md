@@ -115,7 +115,6 @@ export default class GreetingComponent extends Component {
 }
 ```
 
-
 Often the getter is not needed either, because the template can derive the value:
 
 ```handlebars
@@ -133,7 +132,6 @@ get completedCount() {
   return this.todos.items.filter((item) => item.isComplete).length;
 }
 ```
-
 
 ### Call methods directly
 
