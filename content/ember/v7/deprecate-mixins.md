@@ -1,7 +1,7 @@
 ---
 title: Deprecation of @ember/object/mixin
 until: 8.0.0
-since: 7.4.0
+since: 7.5.0
 ---
 
 `Mixin` from `@ember/object/mixin` is deprecated. Mixins are part of the legacy `EmberObject` class system and do not work with native class syntax.
