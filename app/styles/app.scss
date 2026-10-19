@@ -1,8 +1,24 @@
 @import "_search-input";
 
+.display-inline {
+  display: inline;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.markdown-body table {
+  margin-bottom: var(--spacing-2);
+}
+
+.markdown-body table th {
+  text-align: center;
+}
+
+.markdown-body table th, .markdown-body table td {
+  border: 1px solid var(--color-gray-500);
 }
 
 .layout-grid {
