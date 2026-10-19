@@ -12,7 +12,7 @@ These APIs provided a way for Ember objects to send and receive events. Most exi
 2. Call the method directly. When the emitter already knows its one consumer, an event adds indirection without decoupling anything.
 3. Use an event emitter library. Only when the emitter must not know who is listening.
 
-One usage does not fit that list. If you subscribed to a classic component's own lifecycle, such as `this.on('didInsertElement', ...)`, refer to the section on classic component lifecycle hooks below.
+One usage does not fit that list. If you subscribed to a classic component's own lifecycle, such as `this.on('didInsertElement', ...)`, refer to the section on component lifecycle hooks below.
 
 Please note: The methods from `Evented` (`on`, `one`, `off`, `trigger`, `has`) were also available on `Ember.Component`, `Ember.Route`, and `Ember.Router`. While usage on these objects is deprecated, the methods will continue to be supported and not deprecated on the `RouterService`, since key parts of its functionality are difficult to reproduce without them.
 
@@ -180,31 +180,31 @@ export default class CartService extends Service {
 
 The call is type-safe, and `logout` now states what it does instead of hiding the wiring in a subscription registered somewhere else.
 
-### Classic component lifecycle hooks
+### Component lifecycle hooks
 
-`@ember/component` mixes in `Evented`, so a classic component could subscribe to its own lifecycle with `this.on(...)`. Each lifecycle hook was also triggered as an event, which made this look like a way to register setup and teardown without overriding the hook:
+`@ember/component` mixes in `Evented`, so a classic component could subscribe to its own lifecycle with `this.on(...)`. Each lifecycle hook was also triggered as an event, which made this look like a way to register setup and teardown without overriding the hook. `@ember/component` is itself being phased out, so the migration below moves off it rather than only off `Evented`.
 
 #### Before
 ```javascript
 // app/components/chart.js
 import Component from '@ember/component';
 
-export default Component.extend({
+export default class ChartComponent extends Component {
   init() {
-    this._super(...arguments);
+    super.init(...arguments);
 
-    this.on('didInsertElement', this, 'setupChart');
-    this.on('willDestroyElement', this, 'teardownChart');
-  },
+    this.on('didInsertElement', this, this.setupChart);
+    this.on('willDestroyElement', this, this.teardownChart);
+  }
 
   setupChart() {
     this.chart = new Chart(this.element, this.data);
-  },
+  }
 
   teardownChart() {
     this.chart.destroy();
-  },
-});
+  }
+}
 ```
 
 The imported `on()` from `@ember/object/evented` was used for the same purpose, written as `setupChart: on('didInsertElement', function () { ... })`. Both forms migrate the same way.
@@ -241,48 +241,48 @@ export default class ChartComponent extends Component {}
 
 Here is where each classic hook goes:
 
-| Classic lifecycle event  | Modern equivalent                                 |
-| ------------------------ | ------------------------------------------------- |
-| `init`                   | `constructor`                                     |
-| `didReceiveAttrs`        | a getter that derives from `this.args`            |
-| `didInsertElement`       | the body of a modifier                            |
-| `didRender`, `didUpdate` | a modifier that re-runs when its arguments change |
-| `willDestroyElement`     | the teardown function returned by the modifier    |
-| `willDestroy`            | `registerDestructor` from `@ember/destroyable`    |
+- `init`: the `constructor`
+- `didReceiveAttrs`: a getter that derives from `this.args`
+- `didInsertElement`: the body of a modifier
+- `didRender`, `didUpdate`: a modifier that re-runs when its arguments change
+- `willDestroyElement`: the teardown function returned by the modifier
+- `willDestroy`: `registerDestructor` from `@ember/destroyable`
 
-If you cannot move to `@glimmer/component` yet, you can still drop the deprecated subscription today. Every name in that table is a hook the component already calls on itself, so override the hook rather than listening for it:
+If you cannot move to `@glimmer/component` yet, you can still drop the deprecated subscription today. Every hook in that list is one the component already calls on itself, so override the hook rather than listening for it:
 
 ```javascript
 // app/components/chart.js
 import Component from '@ember/component';
 
-export default Component.extend({
+export default class ChartComponent extends Component {
   didInsertElement() {
-    this._super(...arguments);
+    super.didInsertElement(...arguments);
     this.chart = new Chart(this.element, this.data);
-  },
+  }
 
   willDestroyElement() {
     this.chart.destroy();
-    this._super(...arguments);
-  },
-});
+    super.willDestroyElement(...arguments);
+  }
+}
 ```
 
-That clears the deprecation and leaves the move to `@glimmer/component` as a separate change.
+That clears the deprecation and leaves the move to `@glimmer/component` as a separate change. Components written with `Component.extend({ ... })` follow the same rule: define `didInsertElement` and `willDestroyElement` in the `extend` hash, call `this._super(...arguments)`, and remove the `this.on(...)` calls.
 
 `Evented` on a component also allowed the component to announce its own events with `this.trigger(...)`, for a parent to pick up with `this.on(...)`:
 
 ```javascript
 // app/components/item-list.js
 import Component from '@ember/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
+export default class ItemListComponent extends Component {
+  @action
   selectItem(item) {
-    this.set('selected', item);
+    this.selected = item;
     this.trigger('itemSelected', item);
-  },
-});
+  }
+}
 ```
 
 Pass a callback down as an argument instead. The parent supplies the handler at the call site, so the wiring is visible in the template:
@@ -303,6 +303,62 @@ export default class ItemListComponent extends Component {
 ```handlebars
 <ItemList @onSelect={{this.handleSelect}} />
 ```
+
+### Routes and the router
+
+`Route` and `Router` also mixed in `Evented`, and routes have the same lifecycle events as components. Subscribing to a route's own events is replaced by overriding the hook:
+
+#### Before
+```javascript
+// app/routes/dashboard.js
+import Route from '@ember/routing/route';
+
+export default class DashboardRoute extends Route {
+  init() {
+    super.init(...arguments);
+    this.on('activate', this, this.startPolling);
+    this.on('deactivate', this, this.stopPolling);
+  }
+}
+```
+
+#### After
+```javascript
+// app/routes/dashboard.js
+import Route from '@ember/routing/route';
+
+export default class DashboardRoute extends Route {
+  activate() {
+    super.activate(...arguments);
+    this.startPolling();
+  }
+
+  deactivate() {
+    super.deactivate(...arguments);
+    this.stopPolling();
+  }
+}
+```
+
+Listening for transitions on the `router:main` object, such as `didTransition` and `willTransition`, is replaced by the `router` service. Its `on`, `off` and `one` methods are not deprecated, and it emits `routeWillChange` and `routeDidChange`:
+
+```javascript
+// app/services/page-views.js
+import Service, { service } from '@ember/service';
+
+export default class PageViewsService extends Service {
+  @service router;
+
+  constructor() {
+    super(...arguments);
+    this.router.on('routeDidChange', this, this.track);
+  }
+}
+```
+
+### Addons
+
+Some addons exposed `Evented` objects, and you may be calling `.on(...)` on them without having written the `Evented` yourself. The most common is the `session` service from [ember-simple-auth](https://github.com/mainmatter/ember-simple-auth), where code subscribed to `authenticationSucceeded` and `invalidationSucceeded`. Recent releases of ember-simple-auth no longer use `Evented` for the session service. Upgrade the addon and follow its release notes for the replacement API, rather than writing your own emitter around it.
 
 ### Use an event emitter library
 
