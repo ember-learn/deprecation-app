@@ -465,7 +465,7 @@ export default class ChartComponent extends Component {
 }
 ```
 
-That clears the deprecation, and the move to `@glimmer/component` stays a separate change. Components written with `Component.extend({ ... })` follow the same rule. Define `didInsertElement` and `willDestroyElement` in the `extend` hash, call `this._super(...arguments)`, and remove the `this.on(...)` calls.
+Components written with `Component.extend({ ... })` follow the same rule. Define `didInsertElement` and `willDestroyElement` in the `extend` hash, call `this._super(...arguments)`, and remove the `this.on(...)` calls.
 
 `Evented` on a component also let the component announce its own events with `this.trigger(...)`, for a parent to receive with `this.on(...)`:
 
