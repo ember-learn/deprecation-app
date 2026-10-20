@@ -101,7 +101,6 @@ export default class SessionService extends Service {
 ```
 
 ```gjs {data-filename=app/components/greeting.gjs}
-// app/components/greeting.gjs
 import Component from '@glimmer/component';
 import { service } from '@ember/service';
 
@@ -145,7 +144,6 @@ Sometimes an event does trigger real work rather than a state update, such as cl
 #### Before
 
 ```js {data-filename=app/services/session.js}
-// app/services/session.js
 export default class SessionService extends Service.extend(Evented) {
   logout() {
     this.user = null;
