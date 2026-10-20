@@ -12,7 +12,7 @@ These APIs let Ember objects send and receive events. Most existing usage is not
 2. Call the method directly.
 3. Use an event emitter library. Only when the emitter must not know who is listening.
 
-One usage does not fit that list. If you subscribed to a classic component's own lifecycle, such as `this.on('didInsertElement', ...)`, refer to the section on classic component lifecycle hooks below.
+There is one exception to the above list. If you subscribed to a classic component's own lifecycle, such as `this.on('didInsertElement', ...)`, refer to the section on classic component lifecycle hooks below.
 
 The methods from `Evented` (`on`, `one`, `off`, `trigger`, `has`) were also available on `Ember.Component`, `Ember.Route`, and `Ember.Router`. Usage on these objects is deprecated. The `RouterService` keeps these methods, and they are not deprecated there, because key parts of its functionality are difficult to reproduce without them.
 
