@@ -467,6 +467,8 @@ export default class ChartComponent extends Component {
 
 Components written with `Component.extend({ ... })` follow the same rule. Define `didInsertElement` and `willDestroyElement` in the `extend` hash, call `this._super(...arguments)`, and remove the `this.on(...)` calls.
 
+#### Before
+
 `Evented` on a component also let the component announce its own events with `this.trigger(...)`, for a parent to receive with `this.on(...)`:
 
 ```js {data-filename=app/components/item-list.js}
@@ -481,6 +483,8 @@ export default class ItemListComponent extends Component {
   }
 }
 ```
+
+#### After
 
 Pass a callback down as an argument instead. The parent supplies the handler at the call site, so the wiring is visible in the template:
 
