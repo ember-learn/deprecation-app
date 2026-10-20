@@ -414,7 +414,7 @@ export default class ChartComponent extends Component {
 }
 ```
 
-Code that used the imported `on()` from `@ember/object/evented` did the same thing, written as `setupChart: on('didInsertElement', function () { ... })`. Both forms migrate the same way.
+Code that used the imported `on()` from `@ember/object/evented` did the same thing, written as `setupChart: on('didInsertElement', function () { ... })`. 
 
 The recommended migration is to replace `@ember/component` with `@glimmer/component`. Glimmer components have no DOM lifecycle hooks. DOM setup and teardown belong in a modifier, which ties the work to the element rather than to the component. This also removes the wrapper element and the two-way bindings of classic components.
 
