@@ -453,7 +453,7 @@ This is where each classic hook goes:
 - `init`: the `constructor`
 - `didReceiveAttrs`: a getter that derives from `this.args`
 - `didInsertElement`: the body of a modifier
-- `didRender`, `didUpdate`: a modifier that re-runs when its arguments change
+- `didRender`, `didUpdate`: avoid "effectful" patterns -- it can lead to buggy and laggy UI -- if you must retain these for migration purposes, calling a function that uses the arguments you want to "watch" `{{ (this.myBehavior) }}` _may_ be sufficient
 - `willDestroyElement`: the teardown function returned by the modifier
 - `willDestroy`: `registerDestructor` from `@ember/destroyable`
 
