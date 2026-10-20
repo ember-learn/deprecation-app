@@ -25,7 +25,6 @@ This session service uses `Evented` to announce a login:
 #### Before
 
 ```js {data-filename=app/services/session.js}
-// app/services/session.js
 import Service from '@ember/service';
 import Evented from '@ember/object/evented';
 import { tracked } from '@glimmer/tracking';
