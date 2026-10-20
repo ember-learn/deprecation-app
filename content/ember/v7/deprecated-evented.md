@@ -349,7 +349,7 @@ import Component from '@glimmer/component';
 import { service } from '@ember/service';
 import { registerDestructor } from '@ember/destroyable';
 
-export default class SomeComponent extends Component {
+The listener can then use `registerDestructor` from `@ember/destroyable` to tie the lifetime of the subscription to its own.
   @service session;
 
   constructor(owner, args) {
