@@ -447,7 +447,7 @@ This is where each classic hook goes:
 - `willDestroyElement`: the teardown function returned by the modifier
 - `willDestroy`: `registerDestructor` from `@ember/destroyable`
 
-If you cannot move to `@glimmer/component` yet, you can still remove the deprecated subscription today. The component already calls every hook in that list on itself, so override the hook rather than listening for it:
+If you cannot move to `@glimmer/component` yet, you can still remove the deprecated subscription. The component already calls every hook in that list on itself, so override the hook rather than listening for it:
 
 ```js {data-filename=app/components/chart.js}
 import Component from '@ember/component';
