@@ -18,7 +18,7 @@ The methods from `Evented` (`on`, `one`, `off`, `trigger`, `has`) were also avai
 
 ### Prefer derived state
 
-Events were commonly used to push a value from one object into another so that the second object could re-render. Tracked properties already do this. The listener needs neither its own copy of the value nor a subscription. It reads the value from the source, and Ember invalidates whatever consumed it.
+Events were commonly used to push a value from one object into another so that the second object could re-render. The solution to this is [tracked properties](https://guides.emberjs.com/release/in-depth-topics/autotracking-in-depth/).
 
 This session service uses `Evented` to announce a login:
 
