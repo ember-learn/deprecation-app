@@ -83,8 +83,7 @@ The service owns the tracked state. The component derives from it:
 
 #### After
 
-```javascript
-// app/services/session.js
+```javascript {data-filename=app/services/session.js}
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
@@ -101,7 +100,7 @@ export default class SessionService extends Service {
 }
 ```
 
-```gjs
+```gjs {data-filename=app/components/greeting.gjs}
 // app/components/greeting.gjs
 import Component from '@glimmer/component';
 import { service } from '@ember/service';
@@ -145,7 +144,7 @@ Sometimes an event does trigger real work rather than a state update, such as cl
 
 #### Before
 
-```javascript
+```js {data-filename=app/services/session.js}
 // app/services/session.js
 export default class SessionService extends Service.extend(Evented) {
   logout() {
@@ -153,8 +152,8 @@ export default class SessionService extends Service.extend(Evented) {
     this.trigger('loggedOut');
   }
 }
-
-// app/services/cart.js
+```
+```js {data-filename=app/services/cart.js}
 export default class CartService extends Service {
   @service session;
 
@@ -169,8 +168,7 @@ export default class CartService extends Service {
 
 #### After
 
-```javascript
-// app/services/session.js
+```js {data-filename=app/services/session.js}
 export default class SessionService extends Service {
   @service cart;
 
@@ -179,8 +177,9 @@ export default class SessionService extends Service {
     this.cart.clear();
   }
 }
+```
 
-// app/services/cart.js
+```js {data-filename=app/services/cart.js}
 export default class CartService extends Service {
   clear() { /* ... */ }
 }
@@ -194,8 +193,7 @@ The call is type-safe. Also, `logout` now states what it does instead of hiding 
 
 #### Before
 
-```javascript
-// app/routes/dashboard.js
+```js {data-filename=app/routes/dashboard.js}
 import Route from '@ember/routing/route';
 
 export default class DashboardRoute extends Route {
@@ -209,8 +207,7 @@ export default class DashboardRoute extends Route {
 
 #### After
 
-```javascript
-// app/routes/dashboard.js
+```js {data-filename=app/routes/dashboard.js}
 import Route from '@ember/routing/route';
 
 export default class DashboardRoute extends Route {
@@ -228,8 +225,7 @@ export default class DashboardRoute extends Route {
 
 To listen for transitions such as `didTransition` and `willTransition` on the `router:main` object, use the `router` service instead. It emits `routeWillChange` and `routeDidChange`, and its `on`, `off`, and `one` methods are not deprecated:
 
-```javascript
-// app/services/page-views.js
+```js {data-filename=app/services/page-views.js}
 import Service, { service } from '@ember/service';
 
 export default class PageViewsService extends Service {
@@ -266,8 +262,7 @@ Using the session service again, the service manages its own event emitter and p
 
 #### Before
 
-```javascript
-// app/services/session.js
+```js {data-filename=app/services/session.js}
 import Service from '@ember/service';
 import Evented from '@ember/object/evented';
 import { tracked } from '@glimmer/tracking';
@@ -290,8 +285,7 @@ export default class SessionService extends Service.extend(Evented) {
 
 A consumer can use it like this:
 
-```javascript
-// app/components/some-component.js
+```js {data-filename=app/components/some-component.js}
 import Component from '@glimmer/component';
 import { service } from '@ember/service';
 import { registerDestructor } from '@ember/destroyable';
@@ -317,8 +311,7 @@ export default class SomeComponent extends Component {
 
 #### After
 
-```javascript
-// app/services/session.js
+```js {data-filename=app/services/session.js}
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import Emittery from 'emittery';
@@ -351,8 +344,7 @@ export default class SessionService extends Service {
 
 The listener can then use `registerDestructor` from `@ember/destroyable` to tie the lifetime of the subscription to its own. No `willDestroy` hook or manual cleanup is necessary.
 
-```javascript
-// app/components/some-component.js
+```js {data-filename=app/components/some-component.js}
 import Component from '@glimmer/component';
 import { service } from '@ember/service';
 import { registerDestructor } from '@ember/destroyable';
@@ -401,8 +393,7 @@ The same pattern works for other asynchronous libraries that return a promise fr
 
 #### Before
 
-```javascript
-// app/components/chart.js
+```js {data-filename=app/components/chart.js}
 import Component from '@ember/component';
 
 export default class ChartComponent extends Component {
@@ -431,8 +422,7 @@ Move the DOM work into a modifier. The function it returns is the teardown, so `
 
 #### After
 
-```gjs
-// app/components/chart.gjs
+```gjs {data-filename=app/components/chart.gjs}
 import { modifier } from 'ember-modifier';
 
 const chart = modifier((element, [data]) => {
@@ -459,8 +449,7 @@ This is where each classic hook goes:
 
 If you cannot move to `@glimmer/component` yet, you can still remove the deprecated subscription today. The component already calls every hook in that list on itself, so override the hook rather than listening for it:
 
-```javascript
-// app/components/chart.js
+```js {data-filename=app/components/chart.js}
 import Component from '@ember/component';
 
 export default class ChartComponent extends Component {
@@ -480,8 +469,7 @@ That clears the deprecation, and the move to `@glimmer/component` stays a separa
 
 `Evented` on a component also let the component announce its own events with `this.trigger(...)`, for a parent to receive with `this.on(...)`:
 
-```javascript
-// app/components/item-list.js
+```js {data-filename=app/components/item-list.js}
 import Component from '@ember/component';
 import { action } from '@ember/object';
 
@@ -496,8 +484,7 @@ export default class ItemListComponent extends Component {
 
 Pass a callback down as an argument instead. The parent supplies the handler at the call site, so the wiring is visible in the template:
 
-```gjs
-// app/components/item-list.gjs
+```gjs {data-filename=app/components/item-list.gjs}
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { fn } from '@ember/helper';
