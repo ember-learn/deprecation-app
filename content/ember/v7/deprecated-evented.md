@@ -371,7 +371,7 @@ The listener can then use `registerDestructor` from `@ember/destroyable` to tie 
 
 #### Test waiters
 
-With synchronous events, tests did not need to wait for listeners. Asynchronous listeners run after `emit` returns. `settled()` does not know about them, and neither do the DOM helpers that call it, such as `click()`. A test can then make assertions before the listeners finish.
+Test helpers are not aware of events from third-party libraries. With synchronous events, tests did not need to wait for listeners. But, asynchronous listeners run after `emit` returns. `settled()` does not know about them, and neither do the DOM helpers that call it, such as `click()`. 
 
 `emit` from `emittery` returns a promise that resolves when all listeners finish. Wrap that promise in `waitForPromise` from `@ember/test-waiters` so that `settled()` waits for it:
 
