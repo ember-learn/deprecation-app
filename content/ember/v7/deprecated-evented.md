@@ -45,7 +45,7 @@ export default class SessionService extends Service.extend(Evented) {
 }
 ```
 
-```gjs
+```gjs {data-filename=app/components/greeting.gjs}
 // app/components/greeting.gjs
 import Component from '@glimmer/component';
 import { service } from '@ember/service';
