@@ -8,7 +8,7 @@ The `Ember.Evented` mixin, the underlying `@ember/object/events` module (`addLis
 
 These APIs let Ember objects send and receive events. Most existing usage is not really eventing. It is one object telling another object to update state that the second object could read directly. Migrate in this order, and stop at the first step that applies:
 
-1. Derive the state. Replace the event and the listener's copy of the state with a getter that reads tracked state from the source. This removes the subscription entirely.
+1. Derive the state. Replace the event and the listener's copy of the state with a getter that reads tracked state from the source. 
 2. Call the method directly. When the emitter already knows its one consumer, an event adds indirection without decoupling anything.
 3. Use an event emitter library. Only when the emitter must not know who is listening.
 
