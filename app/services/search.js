@@ -1,51 +1,46 @@
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 import { getOwner } from '@ember/application';
-import { denodeify } from 'rsvp';
-import { task } from 'ember-concurrency-decorators';
+import { restartableTask } from 'ember-concurrency-decorators';
 import { timeout } from 'ember-concurrency';
+import search from '../utils/search';
 
-const SEARCH_DEBOUNCE_PERIOD = 300;
+const SEARCH_DEBOUNCE_PERIOD = 150;
 
 export default class SearchService extends Service {
-  @tracked algolia = null;
-  @tracked index = null;
-  @tracked searchFunction = null;
   @tracked searchResults = null;
 
-  async setupSearch() {
-    const config = getOwner(this).resolveRegistration('config:environment');
-    const { algoliaId, algoliaKey } = config['algolia'];
+  #index = null;
 
-    /**
-     * In order to prevent algoliasearch from crashing, we must define process on window.
-     * https://stackoverflow.com/questions/50313745/angular-6-process-is-not-defined-when-trying-to-serve-application
-     */
-    window.process = {
-      env: { DEBUG: undefined },
-    };
-    let module = await import('algoliasearch');
-    this.algolia = module.default(algoliaId, algoliaKey);
+  @action
+  loadIndex() {
+    if (!this.#index) {
+      let { rootURL } =
+        getOwner(this).resolveRegistration('config:environment');
 
-    this.index = this.algolia.initIndex('ember-deprecations');
-    this.searchFunction = denodeify(this.index.search.bind(this.index));
+      this.#index = fetch(`${rootURL}search-index.json`)
+        .then((response) => response.json())
+        .catch((error) => {
+          this.#index = null;
+          throw error;
+        });
+    }
+
+    return this.#index;
   }
 
-  @task()
+  @restartableTask
   search = function* (query) {
     yield timeout(SEARCH_DEBOUNCE_PERIOD);
 
-    if (!query) {
-      return null;
+    if (!query?.trim()) {
+      this.searchResults = null;
+      return;
     }
 
-    const searchObj = {
-      hitsPerPage: 15,
-      query,
-    };
+    let entries = yield this.loadIndex();
 
-    let results = yield this.searchFunction(searchObj);
-
-    this.searchResults = results;
+    this.searchResults = search(entries, query);
   };
 }

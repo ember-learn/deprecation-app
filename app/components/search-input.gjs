@@ -25,9 +25,7 @@ export default class SearchInput extends Component {
   }
 
   @action
-  async setup() {
-    await this.searchService.setupSearch();
-
+  setup() {
     later(
       this,
       function () {
@@ -45,6 +43,15 @@ export default class SearchInput extends Component {
       },
       200
     );
+  }
+
+  get showResults() {
+    return this.searchService.searchResults !== null;
+  }
+
+  @action
+  clearResults() {
+    this.searchService.searchResults = null;
   }
 
   @action
@@ -72,6 +79,7 @@ export default class SearchInput extends Component {
         placeholder="Search deprecations"
         autocomplete="off"
         {{on "input" (perform this.searchService.search value="target.value")}}
+        {{on "focus" this.searchService.loadIndex}}
       />
     </div>
 
@@ -83,7 +91,7 @@ export default class SearchInput extends Component {
       @constraints={{this._resultTetherConstraints}}
       class="ds-dropdown-results"
     >
-      {{#if this.searchService.searchResults.hits}}
+      {{#if this.showResults}}
         <span class="ds-suggestions ds-dropdown-menu">
           <div class="ds-suggestion">
             <div
@@ -99,21 +107,18 @@ export default class SearchInput extends Component {
               <div class="algolia-docsearch-suggestion--wrapper"></div>
             </div>
           </div>
-          {{#each this.searchService.searchResults.hits as |result|}}
-            <SearchResult @result={{result}} />
-          {{/each}}
-          <div class="powered-by-algolia">
-            <a
-              href="https://www.algolia.com/"
-              rel="noopener noreferrer"
-              target="_blank"
+          {{#each this.searchService.searchResults as |result|}}
+            <SearchResult @result={{result}} @onSelect={{this.clearResults}} />
+          {{else}}
+            <div
+              class="algolia-docsearch-suggestion ds-suggestion"
+              data-test-search-no-results
             >
-              <img
-                src="/images/search-by-algolia.svg"
-                alt="Search Powered by Algolia"
-              />
-            </a>
-          </div>
+              <div class="algolia-docsearch-suggestion--content">
+                No deprecations match your search.
+              </div>
+            </div>
+          {{/each}}
         </span>
       {{/if}}
     </EmberTether>
