@@ -4,12 +4,13 @@ import { action } from '@ember/object';
 import { getOwner } from '@ember/application';
 import { restartableTask } from 'ember-concurrency-decorators';
 import { timeout } from 'ember-concurrency';
-import search from '../utils/search';
+import search, { queryTerms } from '../utils/search';
 
 const SEARCH_DEBOUNCE_PERIOD = 150;
 
 export default class SearchService extends Service {
   @tracked searchResults = null;
+  @tracked searchTerms = [];
 
   #index = null;
 
@@ -41,6 +42,7 @@ export default class SearchService extends Service {
 
     let entries = yield this.loadIndex();
 
+    this.searchTerms = queryTerms(query);
     this.searchResults = search(entries, query);
   };
 }

@@ -7,6 +7,7 @@ import SearchResult from './search-result';
 import EmberTether from 'ember-tether/components/ember-tether';
 import { on } from '@ember/modifier';
 import perform from 'ember-concurrency/helpers/perform';
+import highlightMatches from '../modifiers/highlight-matches';
 
 export default class SearchInput extends Component {
   @service('search') searchService;
@@ -92,7 +93,13 @@ export default class SearchInput extends Component {
       class="ds-dropdown-results"
     >
       {{#if this.showResults}}
-        <span class="ds-suggestions ds-dropdown-menu">
+        <span
+          class="ds-suggestions ds-dropdown-menu"
+          {{highlightMatches
+            this.searchService.searchTerms
+            results=this.searchService.searchResults
+          }}
+        >
           <div class="ds-suggestion">
             <div
               class="algolia-docsearch-suggestion algolia-docsearch-suggestion__main"

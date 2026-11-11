@@ -106,6 +106,12 @@ function score(entry, query, terms) {
   };
 }
 
+export function queryTerms(query) {
+  let trimmed = query.trim().toLowerCase();
+
+  return trimmed ? trimmed.split(/\s+/) : [];
+}
+
 /**
  * Every word in the query must appear in the id, the title, or the text.
  * Id matches rank above title matches, and title matches rank above
@@ -118,7 +124,7 @@ export default function search(entries, rawQuery) {
     return [];
   }
 
-  let terms = query.split(/\s+/);
+  let terms = queryTerms(query);
   let results = [];
 
   for (let entry of entries) {

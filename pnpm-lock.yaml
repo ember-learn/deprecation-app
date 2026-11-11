@@ -122,6 +122,9 @@ importers:
       ember-load-initializers:
         specifier: ^2.1.2
         version: 2.1.2(@babel/core@7.24.9)
+      ember-modifier:
+        specifier: ^4.2.2
+        version: 4.3.0(@babel/core@7.24.9)
       ember-page-title:
         specifier: ^7.0.0
         version: 7.0.0
@@ -3451,6 +3454,9 @@ packages:
   ember-modifier-manager-polyfill@1.2.0:
     resolution: {integrity: sha512-bnaKF1LLKMkBNeDoetvIJ4vhwRPKIIumWr6dbVuW6W6p4QV8ZiO+GdF8J7mxDNlog9CeL9Z/7wam4YS86G8BYA==}
     engines: {node: 6.* || 8.* || >= 10.*}
+
+  ember-modifier@4.3.0:
+    resolution: {integrity: sha512-O0rirSLQbGg0VJ/NqoQ4uN1bh2iAekZC/Ykma+FkjCM2ofrO38u+d8n3+AK6uVWeMJmogGX2KL+Is5fofoInJg==}
 
   ember-named-blocks-polyfill@0.2.5:
     resolution: {integrity: sha512-OVMxzkfqJrEvmiky7gFzmuTaImCGm7DOudHWTdMBPO7E+dQSunrcRsJMgO9ZZ56suqBIz/yXbEURrmGS+avHxA==}
@@ -12650,6 +12656,14 @@ snapshots:
       ember-cli-babel: 7.26.11
       ember-cli-version-checker: 2.2.0
       ember-compatibility-helpers: 1.2.7(@babel/core@7.24.9)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+
+  ember-modifier@4.3.0(@babel/core@7.24.9):
+    dependencies:
+      '@embroider/addon-shim': 1.8.9
+      decorator-transforms: 2.3.1(@babel/core@7.24.9)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color

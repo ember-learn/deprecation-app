@@ -17,6 +17,14 @@ module('Acceptance | search', function (hooks) {
     await fillIn('#search-input', query);
   }
 
+  function highlightedText() {
+    let highlight = CSS.highlights.get('search-match');
+
+    return highlight
+      ? Array.from(highlight, (range) => range.toString().toLowerCase())
+      : [];
+  }
+
   function resultIds() {
     return Array.from(
       document.querySelectorAll('[data-test-search-result]'),
@@ -66,5 +74,25 @@ module('Acceptance | search', function (hooks) {
 
     assert.strictEqual(currentURL(), '/id/deprecated-evented');
     assert.dom('[data-test-search-result]', document).doesNotExist();
+  });
+
+  test('matched words are highlighted', async function (assert) {
+    await search('Evented api');
+
+    let words = highlightedText();
+
+    assert.true(words.includes('evented'), 'evented is highlighted');
+    assert.true(words.includes('api'), 'api is highlighted');
+    assert.true(
+      words.every((word) => word === 'evented' || word === 'api'),
+      'only the query words are highlighted'
+    );
+  });
+
+  test('the highlight goes away with the results', async function (assert) {
+    await search('deprecated-evented');
+    await click(result('deprecated-evented'));
+
+    assert.deepEqual(highlightedText(), []);
   });
 });

@@ -156,6 +156,12 @@ $dropdown-min-width-large: 600px;
   text-align: left;
 }
 
+// Matched query words, set by the highlight-matches modifier
+::highlight(search-match) {
+  color: $color-highlight-text;
+  background-color: $linen;
+}
+
 // Each suggestion
 .algolia-docsearch-suggestion {
   color: #333;
