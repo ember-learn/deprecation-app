@@ -8,9 +8,6 @@ The default export of `@ember/component`, the classic `Component` class, is depr
 
 Ember reports the deprecation when your app creates an instance of a classic component.
 
-Classic and Glimmer components work together in the same app and in the same template. You can migrate one component at a time, in any order. Start with the components that do not render other classic components.
-
-The references at the end of this page have more before and after examples.
 
 ### A component with no class
 
