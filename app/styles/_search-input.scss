@@ -156,6 +156,12 @@ $dropdown-min-width-large: 600px;
   text-align: left;
 }
 
+// Matched query words, set by the highlight-matches modifier
+::highlight(search-match) {
+  color: $color-highlight-text;
+  background-color: $linen;
+}
+
 // Each suggestion
 .algolia-docsearch-suggestion {
   color: #333;
@@ -229,15 +235,6 @@ $dropdown-min-width-large: 600px;
 }
 .algolia-docsearch-suggestion--title {
   display: inline;
-}
-
-// Footer
-.powered-by-algolia {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: .5em;
-  margin-top: 8px;
-  margin-right: 7px;
 }
 
 // BREAKPOINT 1:
