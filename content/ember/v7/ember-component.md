@@ -8,17 +8,9 @@ The default export of `@ember/component`, the classic `Component` class, is depr
 
 Ember reports the deprecation when your app creates an instance of a classic component.
 
-The other exports of `@ember/component` are not deprecated:
-
-- `setComponentTemplate`
-- `getComponentTemplate`
-- `setComponentManager`
-- `capabilities`
-- `@ember/component/template-only`
-
 Classic and Glimmer components work together in the same app and in the same template. You can migrate one component at a time, in any order. Start with the components that do not render other classic components.
 
-The [Octane vs Classic cheat sheet](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/) and the [Glimmer Components upgrade guide](https://guides.emberjs.com/v5.12.0/upgrading/current-edition/glimmer-components/) have more before and after examples.
+The references at the end of this page have more before and after examples.
 
 ### A component with no class
 
@@ -263,3 +255,15 @@ After:
 ```handlebars
 <Avatar @user={{this.user}} @size={{this.size}} />
 ```
+
+### References
+
+- [Migrating to Octane](https://guides.emberjs.com/v5.12.0/upgrading/current-edition/), the step by step upgrade guide:
+  - [Native Classes](https://guides.emberjs.com/v5.12.0/upgrading/current-edition/native-classes/)
+  - [Tracked Properties](https://guides.emberjs.com/v5.12.0/upgrading/current-edition/tracked-properties/)
+  - [`@action`, `{{on}}` and `{{fn}}`](https://guides.emberjs.com/v5.12.0/upgrading/current-edition/action-on-and-fn/)
+  - [Glimmer Components](https://guides.emberjs.com/v5.12.0/upgrading/current-edition/glimmer-components/)
+- [Octane vs Classic cheat sheet](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
+- [Template Lifecycle, DOM, and Modifiers](https://guides.emberjs.com/release/components/template-lifecycle-dom-and-modifiers/)
+- [Template Tag Format](https://guides.emberjs.com/release/components/template-tag-format/)
+- [RFC 1216](https://rfcs.emberjs.com/id/1216-deprecate-ember-component), which deprecates the classic component
