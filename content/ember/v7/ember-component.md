@@ -7,7 +7,7 @@ since: 7.6.0
 The default export of `@ember/component`, the classic `Component` class, is deprecated. Use a Glimmer component from `@glimmer/component`, or a template-only component.
 
 Ember reports the deprecation when your app creates an instance of a classic component.
-
+See also: [The Glimmer Component Octane Migration Guide](https://guides.emberjs.com/v5.12.0/upgrading/current-edition/glimmer-components/).
 
 ### A component with no class
 
