@@ -95,7 +95,7 @@ export default defineConfig([
       '**/*.cjs',
       'config/**/*.js',
       'ember-cli-build.js',
-      'lib/content-docs-generator/index.js',
+      'lib/content-docs-generator/*.js',
       'testem.js',
     ],
     plugins: {
